@@ -60,11 +60,11 @@
         onCustomWidgetDestroy(){
         }
 
-        get widgetText() {
+        get widgetValues() {
 			return this._tagIncreaseText;
 		}
 
-        set widgetText(valInicial, valFinal) {
+        set widgetValues(valInicial, valFinal) {
             if (isset(valInicial) && isset(valFinal)) {
                 valInicial = parseInt(valInicial);
                 valFinal =  parseInt(valFinal);

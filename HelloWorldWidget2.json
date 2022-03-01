@@ -32,9 +32,21 @@
 		}
 	},
 	"methods": {
-        "setBar": {
-			"description": "Update the hX tag of the KPI field to h1",
-			"body": ""
+        "setValues": {
+			"description": "Set the text value of the widget",
+			"parameters": [
+				{
+					"name": "valInicial",
+					"type": "integer",
+					"description": "The displayed angle of the gauge"
+				},
+                {
+					"name": "valFinal",
+					"type": "integer",
+					"description": "The displayed angle of the gauge"
+				}
+			],
+			"body": "this.widgetValues = valInicial, valFinal;"
 		}
 	},
 	"events": {
