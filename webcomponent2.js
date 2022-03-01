@@ -26,8 +26,8 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
-            this._tagContainer;
-            this._tagIncreaseText = "h1";
+            // this._tagContainer;
+            // this._tagIncreaseText = "h1";
             this._tagTextValue = '';
             this._tagBar = document.getElementById('Bar').style.width;
             
@@ -60,17 +60,28 @@
         onCustomWidgetDestroy(){
         }
 
-        get widgetValues() {
+        get widgetIncrease() {
 			return this._tagTextValue;
 		}
-
-        set widgetValues(valInicial, valFinal) {
-            if (isset(valInicial) && isset(valFinal)) {
-                let progressionGrowth = ((valFinal - valInicial) / valInicial) * 100;
-                this._barWidth = (200 * progressionGrowth) / 100; 
-                this._tagTextValue = 'There was an increase in ' + progressionGrowth + '%';
-            }
+        set widgetIncrease(val) {
+            this._barWidth = (200 * val) / 100; 
+            this._tagTextValue = 'There was an increase in ' + val + '%';
 		}
+        
+        // get widgetInicialValue() {
+		// 	return this._shadowRoot.getElementById("aps_valInicial").value;
+		// }
+        // set widgetInicialValue(valInicial) {
+		// 	this._shadowRoot.getElementById("aps_valInicial").value = valInicial;
+		// }
+
+        // set widgetValues(valInicial, valFinal) {
+        //     if (isset(valInicial) && isset(valFinal)) {
+        //         let progressionGrowth = ((valFinal - valInicial) / valInicial) * 100;
+        //         this._barWidth = (200 * progressionGrowth) / 100; 
+        //         this._tagTextValue = 'There was an increase in ' + progressionGrowth + '%';
+        //     }
+		// }
 
 
         redraw(){

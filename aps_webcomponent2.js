@@ -35,14 +35,31 @@
 			}));
 		}
 
-		set widgetValues(valInicial, valFinal) {
-			this._shadowRoot.getElementById("aps_valInicial").value = valInicial;
+        set widgetIncrease(valInicial, valFinal) {
+            this._shadowRoot.getElementById("aps_valInicial").value = valInicial;
             this._shadowRoot.getElementById("aps_valFinal").value = valFinal;
+        }
+        get widgetIncrease() {
+            let valInicial = this._shadowRoot.getElementById("aps_valInicial").value;
+			let total = this._shadowRoot.getElementById("aps_valFinal").value - this._shadowRoot.getElementById("aps_valInicial").value;
+            let progressionGrowth = (total / valInicial) * 100;
+			return progressionGrowth;
 		}
-
-		get widgetValues() {
-			return this._shadowRoot.getElementById("aps_valInicial").value, this._shadowRoot.getElementById("aps_valFinal").value;
-		}
+        
+		// set widgetInicialValue(valInicial) {
+		// 	this._shadowRoot.getElementById("aps_valInicial").value = valInicial;
+        //     this._valInicial = valInicial;
+		// }
+        // set widgetFinalValue(valFinal) {
+        //     this._shadowRoot.getElementById("aps_valFinal").value = valFinal;
+        //     this._valFinal = valFinal;
+		// }
+        // get widgetInicialValue() {
+		// 	return this._shadowRoot.getElementById("aps_valInicial").value;
+		// }
+        // get widgetFinalValue() {
+        //     return this._shadowRoot.getElementById("aps_valFinal").value;
+		// }
 	}
 
 customElements.define("com-sap-sample-helloworld2-aps", HelloWorldAps2);

@@ -25,7 +25,7 @@
 		}
     ],
 	"properties": {
-		"widgetValues": {
+        "widgetIncrease": {
 			"type": "integer",
 			"description": "The text to be displayed in the widget",
 			"default" : 0
