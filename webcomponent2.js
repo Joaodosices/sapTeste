@@ -28,6 +28,8 @@
             this._firstConnection = false;
             // this._tagContainer;
             // this._tagIncreaseText = "h1";
+            this._inicialValue;
+            this._finalValue;
             this._tagTextValue = '';
             this._tagBar = document.getElementById('Bar').style.width;
             
@@ -60,28 +62,27 @@
         onCustomWidgetDestroy(){
         }
 
-        get widgetIncrease() {
-			return this._tagTextValue;
+        set widgetInicialValue(valInicial) {
+			this._inicialValue = valInicial;
 		}
+        get widgetInicialValue() {
+			return this._inicialValue
+		}
+
+        set widgetFinalValue(valFinal) {
+            this._finalValue = valFinal;
+		}
+        get widgetFinalValue() {
+            return this._finalValue
+		}
+
         set widgetIncrease(val) {
             this._barWidth = (200 * val) / 100; 
             this._tagTextValue = 'There was an increase in ' + val + '%';
 		}
-        
-        // get widgetInicialValue() {
-		// 	return this._shadowRoot.getElementById("aps_valInicial").value;
-		// }
-        // set widgetInicialValue(valInicial) {
-		// 	this._shadowRoot.getElementById("aps_valInicial").value = valInicial;
-		// }
-
-        // set widgetValues(valInicial, valFinal) {
-        //     if (isset(valInicial) && isset(valFinal)) {
-        //         let progressionGrowth = ((valFinal - valInicial) / valInicial) * 100;
-        //         this._barWidth = (200 * progressionGrowth) / 100; 
-        //         this._tagTextValue = 'There was an increase in ' + progressionGrowth + '%';
-        //     }
-		// }
+        get widgetIncrease() {
+			return this._tagTextValue;
+		}
 
 
         redraw(){

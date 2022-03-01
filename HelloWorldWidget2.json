@@ -29,6 +29,16 @@
 			"type": "integer",
 			"description": "The text to be displayed in the widget",
 			"default" : 0
+		},
+        "widgetInicialValue": {
+			"type": "integer",
+			"description": "The text to be displayed in the widget",
+			"default" : 0
+		},
+		"widgetFinalValue": {
+			"type": "integer",
+			"description": "The text to be displayed in the widget",
+			"default" : 0
 		}
 	},
 	"methods": {
