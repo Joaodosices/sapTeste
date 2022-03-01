@@ -64,7 +64,7 @@
 					"description": "The displayed angle of the gauge"
 				}
 			],
-			"body": "this.widgetText = newTextValue;"
+			"body": "this.widgetIncrease = newTextValue;"
 		}
 	},
 	"events": {
