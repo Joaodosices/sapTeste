@@ -29,7 +29,7 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							widgetText: this.widgetText
+							widgetValues: this.widgetValues
 						}
 					}
 			}));

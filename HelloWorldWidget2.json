@@ -33,17 +33,17 @@
 	},
 	"methods": {
         "setValues": {
-			"description": "Set the text value of the widget",
+			"description": "Set values to calculate growth",
 			"parameters": [
 				{
 					"name": "valInicial",
-					"type": "integer",
-					"description": "The displayed angle of the gauge"
+					"type": "string",
+					"description": "Inicial Value"
 				},
                 {
 					"name": "valFinal",
-					"type": "integer",
-					"description": "The displayed angle of the gauge"
+					"type": "string",
+					"description": "Final Value"
 				}
 			],
 			"body": "this.widgetValues = valInicial, valFinal;"
