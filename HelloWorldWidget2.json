@@ -37,12 +37,12 @@
 			"parameters": [
 				{
 					"name": "valInicial",
-					"type": "string",
+					"type": "integer",
 					"description": "Inicial Value"
 				},
                 {
 					"name": "valFinal",
-					"type": "string",
+					"type": "integer",
 					"description": "Final Value"
 				}
 			],

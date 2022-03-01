@@ -1,10 +1,6 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <h1 id="progressTotal">20</h1>
-        <div class="progressionBar">
-            <div id="Bar"></div>      
-        </div>
         <style>
         .progressionBar{
             width: 200px;
@@ -66,8 +62,8 @@
 
         set widgetValues(valInicial, valFinal) {
             if (isset(valInicial) && isset(valFinal)) {
-                valInicial = parseInt(valInicial);
-                valFinal =  parseInt(valFinal);
+                // valInicial = parseInt(valInicial);
+                // valFinal =  parseInt(valFinal);
 
                 let progressionGrowth = ((valFinal - valInicial) / valInicial) * 100;
                 let barWidth = (200 * progressionGrowth) / 100;

@@ -7,9 +7,9 @@
 				<table>
 					<tr>
 						<td>Inicial Value:</td>
-						<td><input id="aps_valInicial" type="string"></td>
+						<td><input id="aps_valInicial" type="integer"></td>
                         <td>Final Value:</td>
-						<td><input id="aps_valFinal" type="string"></td>
+						<td><input id="aps_valFinal" type="integer"></td>
 					</tr>
 				</table>
 			</fieldset>
