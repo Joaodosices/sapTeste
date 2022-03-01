@@ -11,6 +11,11 @@
             height: 20px;
         }
         </style>
+
+        <h1 id="progressTotal"></h1>
+        <div class='progressionBar'>
+            <div id='Bar'></div>
+        </div>
     `;
 
     customElements.define('com-sap-sample-helloworld2', class HelloWorld2 extends HTMLElement {
@@ -24,7 +29,6 @@
             this._tagContainer;
             this._tagIncreaseText = "h1";
             this._tagTextValue = '';
-            this._tagProgressionBar = "<div class='progressionBar'><div id='Bar'></div></div>";
             this._tagBar = document.getElementById('Bar').style.width;
             
         }
@@ -57,37 +61,35 @@
         }
 
         get widgetValues() {
-			return this._tagIncreaseText;
+			return this._tagTextValue;
 		}
 
         set widgetValues(valInicial, valFinal) {
             if (isset(valInicial) && isset(valFinal)) {
-                // valInicial = parseInt(valInicial);
-                // valFinal =  parseInt(valFinal);
-
                 let progressionGrowth = ((valFinal - valInicial) / valInicial) * 100;
-                let barWidth = (200 * progressionGrowth) / 100;
-                if (barWidth > 200) {
-                    document.getElementById('Bar').style.width = '200px';
-                } else {
-                    document.getElementById('Bar').style.width = barWidth + 'px';
-                }
+                this._barWidth = (200 * progressionGrowth) / 100; 
                 this._tagTextValue = 'There was an increase in ' + progressionGrowth + '%';
             }
 		}
 
 
         redraw(){
-                if (this._tagContainer){
-                    this._tagContainer.parentNode.removeChild(this._tagContainer);
+
+                document.getElementById('progressTotal').innerText = this._tagTextValue;
+
+                if (this._barWidth > 200) {
+                    document.getElementById('Bar').style.width = '200px';
+                } else {
+                    document.getElementById('Bar').style.width = barWidth + 'px';
                 }
-        
-                var shadow = window.getSelection(this._shadowRoot);
-                this._tagContainer = document.createElement(this._tagIncreaseText);
-                var theText = document.createTextNode(this._tagTextValue);    
-                this._tagContainer.appendChild(theText); 
-                this._shadowRoot.appendChild(this._tagContainer);
-                this._shadowRoot.appendChild(this._tagProgressionBar);
+            
+
+                // if (this._tagContainer){
+                //     this._tagContainer.parentNode.removeChild(this._tagContainer);
+                // }
+                // this._tagContainer = document.createElement(this._tagIncreaseText);
+                // var theText = document.createTextNode(this._tagTextValue);    
+                // this._tagContainer.appendChild(theText); 
             }
     });
 })();
