@@ -17,7 +17,7 @@
         </style>
     `;
 
-    customElements.define('com-sap-sample-helloworld1', class HelloWorld1 extends HTMLElement {
+    customElements.define('com-sap-sample-helloworld2', class HelloWorld2 extends HTMLElement {
 
 
 		constructor() {
