@@ -54,10 +54,10 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this._inicialValue && this._finalValue) {
                 let some = this._inicialValue + this._finalValue;
+                console.log("Some of the 2 numbers: " + some)
                 let progressionGrowth = (some / this._inicialValue) * 100;
                 this._barWidth = (200 * progressionGrowth) / 100; 
                 this._tagTextValue = 'There was an increase in ' + progressionGrowth + '%';
-                console.log(this._inicialValue && this._finalValue);
             }
             if (this._firstConnection){
                 this.redraw();
@@ -69,14 +69,14 @@
         }
 
         set widgetInicialValue(valInicial) {
-			this._inicialValue = valInicial;
+			this._inicialValue = parseInt(valInicial);
 		}
         get widgetInicialValue() {
 			return this._inicialValue
 		}
 
         set widgetFinalValue(valFinal) {
-            this._finalValue = valFinal;
+            this._finalValue = parseIn(valFinal);
 		}
         get widgetFinalValue() {
             return this._finalValue
