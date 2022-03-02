@@ -28,8 +28,8 @@
             this._firstConnection = false;
             // this._tagContainer;
             // this._tagIncreaseText = "h1";
-            this._inicialValue;
-            this._finalValue;
+            this._inicialValue = '';
+            this._finalValue = '';
             this._tagTextValue = 'Hello';
         }
 
@@ -87,7 +87,7 @@
                     if (this._barWidth > 200) {
                         document.getElementById('Bar').style.width = '200px';
                     } else {
-                        document.getElementById('Bar').style.width = barWidth + 'px';
+                        document.getElementById('Bar').style.width = this._barWidth + 'px';
                     }
                 // }
                 // if (this._tagContainer){
