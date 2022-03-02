@@ -21,17 +21,12 @@
         "widgetInicialValue": {
 			"type": "string",
 			"description": "Get inicial values",
-			"default" : 0
+			"default" : "0"
 		},
 		"widgetFinalValue": {
 			"type": "string",
 			"description": "Get final values",
-			"default" : 0
-		},
-        "widgetIncrease": {
-			"type": "string",
-			"description": "The text to be displayed in the widget",
-			"default" : "There was an increase in 0%"
+			"default" : "0"
 		}
 	},
 	"methods": {

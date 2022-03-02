@@ -52,6 +52,13 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
+            if (this._inicialValue && this._finalValue) {
+                let some = this._inicialValue + this._finalValue;
+                let progressionGrowth = (some / this._inicialValue) * 100;
+                this._barWidth = (200 * progressionGrowth) / 100; 
+                this._tagTextValue = 'There was an increase in ' + progressionGrowth + '%';
+                console.log(this._inicialValue && this._finalValue);
+            }
             if (this._firstConnection){
                 this.redraw();
             }
@@ -75,14 +82,14 @@
             return this._finalValue
 		}
 
-        set widgetIncrease(val) {
-            let progressionGrowth = (val / this._inicialValue) * 100;
-            this._barWidth = (200 * progressionGrowth) / 100; 
-            this._tagTextValue = 'There was an increase in ' + progressionGrowth + '%';
-		}
-        get widgetIncrease() {
-			return this._tagTextValue;
-		}
+        // set widgetIncrease(val) {
+        //     let progressionGrowth = (val / this._inicialValue) * 100;
+        //     this._barWidth = (200 * progressionGrowth) / 100; 
+        //     this._tagTextValue = 'There was an increase in ' + progressionGrowth + '%';
+		// }
+        // get widgetIncrease() {
+		// 	return this._tagTextValue;
+		// }
 
 
         redraw(){
