@@ -18,8 +18,56 @@
         }
     ],
 	"properties": {
+		"widgetInicialValue": {
+			"type": "integer",
+			"description": "Get inicial values",
+			"default" : 0
+		},
+		"widgetFinalValue": {
+			"type": "integer",
+			"description": "Get final values",
+			"default" : 0
+		},
+        "widgetIncrease": {
+			"type": "string",
+			"description": "The text to be displayed in the widget",
+			"default" : "There was an increase in 0%"
+		}
 	},
 	"methods": {
+		"setInitialValue": {
+			"description": "Set initial value",
+			"parameters": [
+				{
+					"name": "initialValue",
+					"type": "integer",
+					"description": "Inicial Value"
+				}
+			],
+			"body": "this.widgetInicialValue = initialValue;"
+		},
+        "setFinalValue": {
+			"description": "Set final value",
+			"parameters": [
+				{
+					"name": "finalValue",
+					"type": "integer",
+					"description": "Inicial Value"
+				}
+			],
+			"body": "this.widgetFinalValue = finalValue;"
+		},
+        "setIncrease": {
+			"description": "Set values to calculate growth",
+			"parameters": [
+				{
+					"name": "val",
+					"type": "string",
+					"description": "Inicial Value"
+				}
+			],
+			"body": "this.widgetIncrease = val;"
+		}
 	},
 	"events": {
 		
