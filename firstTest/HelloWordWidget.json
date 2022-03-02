@@ -12,14 +12,14 @@
         {
 			"kind": "main",
 			"tag": "com-sap-sample-helloworld1",
-            "url": "https://joaodosices.github.io/sapTeste/webcomponent.js",
+            "url": "https://joaodosices.github.io/sapTeste/firstTest/webcomponent.js",
             "integrity": "",
             "ignoreIntegrity" : true
         },
 		{
 			"kind": "styling",
 			"tag": "com-sap-sample-helloworld1-aps",
-            "url": "https://joaodosices.github.io/sapTeste/aps_webcomponent.js",
+            "url": "https://joaodosices.github.io/sapTeste/firstTest/aps_webcomponent.js",
 			"integrity": "",
             "ignoreIntegrity" : true
 		}
@@ -64,7 +64,7 @@
 					"description": "The displayed angle of the gauge"
 				}
 			],
-			"body": "this.widgetIncrease = newTextValue;"
+			"body": "this.widgetText = newTextValue;"
 		}
 	},
 	"events": {

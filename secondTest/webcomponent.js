@@ -101,5 +101,5 @@
                 // this._tagContainer.appendChild(theText); 
             }
     };
-    customElements.define('com-sap-sample-helloworld2', HelloWorld2);
+    customElements.define('com-sap-sample-Increase', HelloWorld2);
 })();

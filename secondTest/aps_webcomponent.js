@@ -59,5 +59,5 @@
 		}
 	}
 
-customElements.define("com-sap-sample-helloworld2-aps", HelloWorldAps2);
+customElements.define("com-sap-sample-Increase-aps", HelloWorldAps2);
 })();
