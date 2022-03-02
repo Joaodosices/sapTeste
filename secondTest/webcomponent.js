@@ -79,16 +79,17 @@
 		}
 
         redraw(){
-                window.onload = () => {
-                    var theText = document.createTextNode(this._tagTextValue);
-                    document.getElementById('progressTotal').appendChild(theText);
+                // window.onload = () => {
+                    // var theText = document.createTextNode(this._tagTextValue);
+                    // document.getElementById('progressTotal').appendChild(theText);
+                    document.getElementById('progressTotal').innerHTML(this._tagTextValue);
 
                     if (this._barWidth > 200) {
                         document.getElementById('Bar').style.width = '200px';
                     } else {
                         document.getElementById('Bar').style.width = barWidth + 'px';
                     }
-                }
+                // }
                 // if (this._tagContainer){
                 //     this._tagContainer.parentNode.removeChild(this._tagContainer);
                 // }
