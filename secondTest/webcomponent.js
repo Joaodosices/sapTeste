@@ -13,7 +13,7 @@
         }
         </style>
 
-        <h1 id="progressTotal"></h1>
+        <h1 id="progressTotal">Value</h1>
         <div class='progressionBar'>
             <div id='Bar'></div>
         </div>
@@ -79,13 +79,15 @@
 		}
 
         redraw(){
-                var theText = document.createTextNode(this._tagTextValue);
-                document.getElementById('progressTotal').appendChild(theText);
+                window.onload = () => {
+                    var theText = document.createTextNode(this._tagTextValue);
+                    document.getElementById('progressTotal').appendChild(theText);
 
-                if (this._barWidth > 200) {
-                    document.getElementById('Bar').style.width = '200px';
-                } else {
-                    document.getElementById('Bar').style.width = barWidth + 'px';
+                    if (this._barWidth > 200) {
+                        document.getElementById('Bar').style.width = '200px';
+                    } else {
+                        document.getElementById('Bar').style.width = barWidth + 'px';
+                    }
                 }
                 // if (this._tagContainer){
                 //     this._tagContainer.parentNode.removeChild(this._tagContainer);
