@@ -18,7 +18,7 @@
         </div>
     `;
 
-    customElements.define('com-sap-sample-helloworld2', class HelloWorld2 extends HTMLElement {
+    class HelloWorld2 extends HTMLElement {
 
 
 		constructor() {
@@ -86,7 +86,6 @@
 
 
         redraw(){
-
                 document.getElementById('progressTotal').innerText = this._tagTextValue;
 
                 if (this._barWidth > 200) {
@@ -94,8 +93,6 @@
                 } else {
                     document.getElementById('Bar').style.width = barWidth + 'px';
                 }
-            
-
                 // if (this._tagContainer){
                 //     this._tagContainer.parentNode.removeChild(this._tagContainer);
                 // }
@@ -103,5 +100,6 @@
                 // var theText = document.createTextNode(this._tagTextValue);    
                 // this._tagContainer.appendChild(theText); 
             }
-    });
+    };
+    customElements.define('com-sap-sample-helloworld2', HelloWorld2);
 })();
