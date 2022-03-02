@@ -76,7 +76,8 @@
 		}
 
         set widgetIncrease(val) {
-            this._barWidth = (200 * val) / 100; 
+            let progressionGrowth = (val / this._inicialValue) * 100;
+            this._barWidth = (200 * progressionGrowth) / 100; 
             this._tagTextValue = 'There was an increase in ' + val + '%';
 		}
         get widgetIncrease() {
