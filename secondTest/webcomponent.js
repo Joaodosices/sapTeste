@@ -5,6 +5,7 @@
         .progressionBar{
             width: 200px;
             height: 20px;
+            background: black;
         }
         #Bar{
             width: 0px;
