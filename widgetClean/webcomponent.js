@@ -51,7 +51,6 @@
         //When the custom widget is removed from the canvas or the analytic application is closed
         onCustomWidgetDestroy(){
         }
-
     };
     customElements.define('com-sap-sample-clean', HelloWorld2);
 })();
