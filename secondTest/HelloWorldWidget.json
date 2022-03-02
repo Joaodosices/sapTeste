@@ -12,14 +12,14 @@
         {
 			"kind": "main",
 			"tag": "com-sap-sample-helloworld2",
-            "url": "https://joaodosices.github.io/sapTeste/webcomponent2.js",
+            "url": "https://joaodosices.github.io/sapTeste/webcomponent.js",
             "integrity": "",
             "ignoreIntegrity" : true
         },
 		{
 			"kind": "styling",
 			"tag": "com-sap-sample-helloworld2-aps",
-            "url": "https://joaodosices.github.io/sapTeste/aps_webcomponent2.js",
+            "url": "https://joaodosices.github.io/sapTeste/aps_webcomponent.js",
 			"integrity": "",
             "ignoreIntegrity" : true
 		}
