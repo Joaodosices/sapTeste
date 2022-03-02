@@ -1,7 +1,22 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <h1>APARECI</h1>
+        <style>
+        .progressionBar{
+            width: 200px;
+            height: 20px;
+            background: black;
+        }
+        #Bar{
+            width: 0px;
+            height: 20px;
+        }
+        </style>
+
+        <h1 id="progressTotal"></h1>
+        <div class='progressionBar'>
+            <div id='Bar'></div>
+        </div>
     `;
 
     class HelloWorld2 extends HTMLElement {
