@@ -34,11 +34,6 @@
 			"type": "integer",
 			"description": "Get final values",
 			"default" : 0
-		},
-        "widgetIncrease": {
-			"type": "string",
-			"description": "The text to be displayed in the widget",
-			"default" : "There was an increase in 0%"
 		}
 	},
 	"methods": {
@@ -63,17 +58,6 @@
 				}
 			],
 			"body": "this.widgetFinalValue = finalValue;"
-		},
-        "setIncrease": {
-			"description": "Set values to calculate growth",
-			"parameters": [
-				{
-					"name": "val",
-					"type": "string",
-					"description": "Inicial Value"
-				}
-			],
-			"body": "this.widgetIncrease = val;"
 		}
 	},
 	"events": {

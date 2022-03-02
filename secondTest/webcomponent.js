@@ -30,9 +30,7 @@
             // this._tagIncreaseText = "h1";
             this._inicialValue;
             this._finalValue;
-            this._tagTextValue = '';
-            this._tagBar = document.getElementById('Bar').style.width;
-            
+            this._tagTextValue = 'Hello';
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -54,6 +52,10 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this._firstConnection){
+                let some = parseInt(this._inicialValue) + parseInt(this._finalValue);
+                let progressionGrowth = (some / parseInt(this._inicialValue)) * 100;
+                this._barWidth = (200 * progressionGrowth) / 100; 
+                this._tagTextValue = 'There was an increase in ' + progressionGrowth + '%';
                 this.redraw();
             }
         }
@@ -76,18 +78,9 @@
             return this._finalValue
 		}
 
-        set widgetIncrease(val) {
-            let progressionGrowth = (val / this._inicialValue) * 100;
-            this._barWidth = (200 * progressionGrowth) / 100; 
-            this._tagTextValue = 'There was an increase in ' + val + '%';
-		}
-        get widgetIncrease() {
-			return this._tagTextValue;
-		}
-
-
         redraw(){
-                document.getElementById('progressTotal').innerText = this._tagTextValue;
+                var theText = document.createTextNode(this._tagTextValue);
+                document.getElementById('progressTotal').appendChild(theText);
 
                 if (this._barWidth > 200) {
                     document.getElementById('Bar').style.width = '200px';

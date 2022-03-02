@@ -82,15 +82,6 @@
             return this._finalValue
 		}
 
-        // set widgetIncrease(val) {
-        //     let progressionGrowth = (val / this._inicialValue) * 100;
-        //     this._barWidth = (200 * progressionGrowth) / 100; 
-        //     this._tagTextValue = 'There was an increase in ' + progressionGrowth + '%';
-		// }
-        // get widgetIncrease() {
-		// 	return this._tagTextValue;
-		// }
-
 
         redraw(){
                 var theText = document.createTextNode(this._tagTextValue);
