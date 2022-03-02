@@ -13,7 +13,7 @@
         }
         </style>
 
-        <h1 id="progressTotal"></h1>
+        <h1 id="progressTotal">Olá</h1>
         <div class='progressionBar'>
             <div id='Bar'></div>
         </div>
@@ -30,7 +30,7 @@
             // this._tagIncreaseText = "h1";
             this._inicialValue;
             this._finalValue;
-            this._tagTextValue = '';
+            this._tagTextValue = 'Olá';
             
         }
 
@@ -76,7 +76,7 @@
 		}
 
         set widgetFinalValue(valFinal) {
-            this._finalValue = parseIn(valFinal);
+            this._finalValue = parseInt(valFinal);
 		}
         get widgetFinalValue() {
             return this._finalValue
