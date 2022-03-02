@@ -46,7 +46,8 @@
 
          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
-
+            this._barWidth = (200 * this._progressionGrowth) / 100; 
+            this._tagTextValue = 'There was an increase in ' + number + '%';
 		}
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
@@ -78,10 +79,7 @@
 
         set widgetIncrease(val) {
             let number = parseInt(val);
-            let progressionGrowth = (number / this._inicialValue) * 100;
-            this._barWidth = (200 * progressionGrowth) / 100; 
-            this._tagTextValue = 'There was an increase in ' + number + '%';
-            this.redraw();
+            this._progressionGrowth = (number / this._inicialValue) * 100;
 		}
         get widgetIncrease() {
 			return this._tagTextValue;
