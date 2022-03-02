@@ -28,9 +28,10 @@
             this._firstConnection = false;
             this._tagContainer;
             this._tagIncreaseText = "h1";
-            this._inicialValue;
-            this._finalValue;
-            this._tagTextValue = '';
+            this._inicialValue = 0;
+            this._finalValue = 0;
+            this._tagTextValue = 'No increase';
+            this._barWidth = 0;
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -46,8 +47,10 @@
 
          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
-            this._barWidth = (200 * this._progressionGrowth) / 100; 
-            this._tagTextValue = 'There was an increase in ' + number + '%';
+            if (this._firstConnection) {
+                this._barWidth = (200 * this._progressionGrowth) / 100; 
+                this._tagTextValue = 'There was an increase in ' + this._progressionGrowth + '%';
+            }
 		}
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
@@ -87,12 +90,6 @@
 
         redraw(){
             if (this._tagTextValue != null) {
-                // if (this._tagContainer){
-                //     this._tagContainer.parentNode.removeChild(this._tagContainer);
-                // }
-                // this._tagContainer = document.createElement(this._tagIncreaseText);
-                // var theText = document.createTextNode(this._tagTextValue);    
-                // this._tagContainer.appendChild(theText); 
                 document.getElementById('progressTotal').innerText = this._tagTextValue;
     
                 if (this._barWidth > 200) {
