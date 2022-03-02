@@ -13,7 +13,7 @@
         }
         </style>
 
-        <h1 id="progressTotal"></h1>
+        <h1 id="progressTotal">0</h1>
         <div class='progressionBar'>
             <div id='Bar'></div>
         </div>
@@ -60,28 +60,31 @@
         }
 
         set widgetInicialValue(valInicial) {
-			this._inicialValue = valInicial;
+            let number = parseInt(valInicial);
+			this._inicialValue = number;
 		}
         get widgetInicialValue() {
 			return this._inicialValue
 		}
 
         set widgetFinalValue(valFinal) {
-            this._finalValue = valFinal;
+            let number = parseInt(valFinal);
+            this._finalValue = number;
 		}
         get widgetFinalValue() {
             return this._finalValue
 		}
 
         set widgetIncrease(val) {
-            let progressionGrowth = (val / this._inicialValue) * 100;
+            let number = parseInt(val);
+            let progressionGrowth = (number / this._inicialValue) * 100;
             this._barWidth = (200 * progressionGrowth) / 100; 
-            this._tagTextValue = 'There was an increase in ' + val + '%';
+            this._tagTextValue = 'There was an increase in ' + number + '%';
 		}
         get widgetIncrease() {
 			return this._tagTextValue;
 		}
-        
+
         redraw(){
             document.getElementById('progressTotal').innerText = this._tagTextValue;
 
