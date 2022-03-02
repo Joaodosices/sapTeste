@@ -20,7 +20,6 @@
 
     class HelloWorld2 extends HTMLElement {
 
-
 		constructor() {
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
@@ -101,5 +100,5 @@
                 // this._tagContainer.appendChild(theText); 
             }
     };
-    customElements.define('com-sap-sample-helloworld2_1', HelloWorld2);
+    customElements.define('com-sap-sample-helloworld2', HelloWorld2);
 })();

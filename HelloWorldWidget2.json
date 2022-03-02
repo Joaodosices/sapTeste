@@ -27,12 +27,12 @@
 	"properties": {
         "widgetInicialValue": {
 			"type": "integer",
-			"description": "The text to be displayed in the widget",
+			"description": "Get inicial values",
 			"default" : 0
 		},
 		"widgetFinalValue": {
 			"type": "integer",
-			"description": "The text to be displayed in the widget",
+			"description": "Get final values",
 			"default" : 0
 		},
         "widgetIncrease": {
@@ -43,7 +43,7 @@
 	},
 	"methods": {
         "setInitialValue": {
-			"description": "Set values to calculate growth",
+			"description": "Set initial value",
 			"parameters": [
 				{
 					"name": "initialValue",
@@ -54,7 +54,7 @@
 			"body": "this.widgetInicialValue = initialValue;"
 		},
         "setFinalValue": {
-			"description": "Set values to calculate growth",
+			"description": "Set final value",
 			"parameters": [
 				{
 					"name": "finalValue",
