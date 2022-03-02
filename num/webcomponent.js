@@ -19,7 +19,7 @@
         </div>
     `;
 
-    class HelloWorld2 extends HTMLElement {
+    class HelloWorld5 extends HTMLElement {
 
 		constructor() {
 			super(); 
@@ -108,5 +108,5 @@
                 // this._tagContainer.appendChild(theText); 
             }
     };
-    customElements.define('com-sap-sample-nums', HelloWorld2);
+    customElements.define('com-sap-sample-nums5', HelloWorld5);
 })();
