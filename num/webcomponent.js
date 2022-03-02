@@ -13,7 +13,7 @@
         }
         </style>
 
-        <h1 id="progressTotal">0</h1>
+        <h1 id="progressTotal"></h1>
         <div class='progressionBar'>
             <div id='Bar'></div>
         </div>
@@ -26,12 +26,12 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
-            this._tagContainer;
-            this._tagIncreaseText = "h1";
-            this._inicialValue = 0;
-            this._finalValue = 0;
-            this._tagTextValue = 'No increase';
-            this._barWidth = 0;
+            // this._tagContainer;
+            // this._tagIncreaseText = "h1";
+            this._inicialValue;
+            this._finalValue;
+            this._tagTextValue = '';
+            
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -47,10 +47,7 @@
 
          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
-            if (this._firstConnection) {
-                this._barWidth = (200 * this._progressionGrowth) / 100; 
-                this._tagTextValue = 'There was an increase in ' + this._progressionGrowth + '%';
-            }
+
 		}
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
@@ -65,40 +62,44 @@
         }
 
         set widgetInicialValue(valInicial) {
-            let number = parseInt(valInicial);
-			this._inicialValue = number;
+			this._inicialValue = valInicial;
 		}
         get widgetInicialValue() {
 			return this._inicialValue
 		}
 
         set widgetFinalValue(valFinal) {
-            let number = parseInt(valFinal);
-            this._finalValue = number;
+            this._finalValue = valFinal;
 		}
         get widgetFinalValue() {
             return this._finalValue
 		}
 
         set widgetIncrease(val) {
-            let number = parseInt(val);
-            this._progressionGrowth = (number / this._inicialValue) * 100;
+            let progressionGrowth = (val / this._inicialValue) * 100;
+            this._barWidth = (200 * progressionGrowth) / 100; 
+            this._tagTextValue = 'There was an increase in ' + progressionGrowth + '%';
 		}
         get widgetIncrease() {
 			return this._tagTextValue;
 		}
 
+
         redraw(){
-            if (this._tagTextValue != null) {
-                document.getElementById('progressTotal').innerText = this._tagTextValue;
-    
-                if (this._barWidth > 200) {
-                    document.getElementById('Bar').style.width = '200px';
-                } else {
-                    document.getElementById('Bar').style.width = barWidth + 'px';
-                }
+                var theText = document.createTextNode(this._tagTextValue);
+                document.getElementById('progressTotal').appendChild(theText)
+                // if (this._barWidth > 200) {
+                //     document.getElementById('Bar').style.width = '200px';
+                // } else {
+                //     document.getElementById('Bar').style.width = barWidth + 'px';
+                // }
+                // if (this._tagContainer){
+                //     this._tagContainer.parentNode.removeChild(this._tagContainer);
+                // }
+                // this._tagContainer = document.createElement(this._tagIncreaseText);
+                // var theText = document.createTextNode(this._tagTextValue);    
+                // this._tagContainer.appendChild(theText); 
             }
-        }
     };
-    customElements.define('com-sap-sample-clean', HelloWorld2);
+    customElements.define('com-sap-sample-nums', HelloWorld2);
 })();
