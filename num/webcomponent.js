@@ -108,5 +108,5 @@
                 // this._tagContainer.appendChild(theText); 
             }
     };
-    customElements.define('com-sap-sample-nums5', HelloWorld5);
+    customElements.define('com-sap-sample-numsxd', HelloWorld5);
 })();
