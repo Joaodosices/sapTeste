@@ -18,8 +18,24 @@
         }
     ],
 	"properties": {
+        "textOutput": {
+			"type": "string",
+			"description": "The text to be displayed in the widget",
+			"default" : "Hello World"
+		}
 	},
 	"methods": {
+        "setText": {
+			"description": "Set the text value of the widget",
+			"parameters": [
+				{
+					"name": "newTextValue",
+					"type": "string",
+					"description": "The displayed angle of the gauge"
+				}
+			],
+			"body": "this.textOutput = newTextValue;"
+		}
 	},
 	"events": {
 	}
