@@ -56,7 +56,7 @@
             let growth = (sum / valInicial) * 100;
             console.log(growth);
 
-            return "There was an increase in " + growth + "%"
+            return "There was an increase in " + sum
         }
 
         //Getters and Setters
