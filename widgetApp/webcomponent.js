@@ -1,7 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <h1 id="val1">0</h1>
+        <h1 id="val1">1</h1>
         <h1 id="val2">0</h1>
         <h1 id="val3"> </h1>
     `;
@@ -51,11 +51,12 @@
         calcGrowth() {
             let valInicial = parseInt(this._valInicial);
             let valFinal = parseInt(this._valFinal);
+            console.log(valInicial);
+            console.log(valFinal);
 
             let sum = valFinal - valFinal;
             let growth = (sum / valInicial) * 100;
-            console.log(growth);
-            growthString = growth.toString();
+            let growthString = growth.toString();
             console.log(growthString);
 
             return "There was an increase in " + growthString + "%"
