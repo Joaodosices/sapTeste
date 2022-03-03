@@ -36,14 +36,14 @@
         onCustomWidgetDestroy(){
         }
 
-        // //Getters and Setters
-        // get textOutput() {
-        //     return this._text;
-        // }
+        //Getters and Setters
+        get textOutput() {
+            return this._text;
+        }
 
-        // set textOutput(value) {
-        //     this._textOutput = value;
-        // }
+        set textOutput(value) {
+            this._textOutput = value;
+        }
 
     };
     customElements.define('com-sap-sample-widgetapp', WidgetApp);
