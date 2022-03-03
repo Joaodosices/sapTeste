@@ -1,7 +1,8 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <h1 id="title">Hello</h1>
+        <h1 id="val1">Hello BOMBA</h1>
+        <h1 id="val2">Hello SOMBRA</h1>
     `;
 
     class WidgetApp extends HTMLElement {
@@ -10,11 +11,14 @@
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this._textOutput = '';
+            this.firstConnection = false;
+            this._valInicial = '';
+            this._valFinal = '';
         }
 
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
+            this.firstConnection = true;
         }
 
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
@@ -29,7 +33,10 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            this._shadowRoot.getElementById('title').innerHTML = this._textOutput;
+            if (this.firstConnection === true) {
+                this._shadowRoot.getElementById('val1').innerHTML = this._valInicial;
+                this._shadowRoot.getElementById('val2').innerHTML = this._valFinal;
+            }
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
@@ -37,14 +44,21 @@
         }
 
         //Getters and Setters
-        get textOutput() {
-            return this._text;
+        get valInicial() {
+            return this._valInicial;
         }
 
-        set textOutput(value) {
-            this._textOutput = value;
+        set valInicial(value) {
+            this._valInicial = value;
         }
 
+        get valFinal() {
+            return this._valFinal;
+        }
+
+        set valFinal(value) {
+            this._valFinal = value;
+        }
     };
     customElements.define('com-sap-sample-widgetapp', WidgetApp);
 })();
