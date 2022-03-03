@@ -29,7 +29,7 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            this._shadowRoot.getElementsByTagName('h1').innerHTML = oChangedProperties['textOutput'];
+            this._shadowRoot.getElementsByTagName('h1').value = this._textOutput;
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
