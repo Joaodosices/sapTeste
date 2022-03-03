@@ -3,7 +3,6 @@
     tmpl.innerHTML = `
         <style>
         .progressionBar{
-            width: 200px;
             height: 20px;
             background: black;
         }
@@ -28,12 +27,14 @@
             this.firstConnection = false;
             this._valInicial = '';
             this._valFinal = '';
+            this._totalbarWidth = 200;
             this._barWidth = 0;
         }
 
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
             this.firstConnection = true;
+            this._shadowRoot.getElementById('progressionBar').style.width = `${this._totalbarWidth}px`;  
         }
 
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
@@ -53,7 +54,7 @@
                 this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth;
 
                 if (this._barWidth > 200) {
-                    this._shadowRoot.getElementById('Bar').style.width = `200px`;
+                    this._shadowRoot.getElementById('Bar').style.width = `${this._totalbarWidth}px`;
                 } else {
                     this._shadowRoot.getElementById('Bar').style.width = `${this._barWidth}px`;
                 }
@@ -75,7 +76,9 @@
                growth = 0;
             }
 
-            this._barWidth = (200 * growth) / 100;
+            let totalbarWidth = parseInt(this._totalbarWidth);
+
+            this._barWidth = (totalbarWidth * growth) / 100;
 
             return `There was an increase in ${growth}%`
         }
@@ -96,6 +99,13 @@
         set valFinal(value) {
             this._valFinal = value;
         }
+
+        set totalbarWidth(valInicial) {
+			this._totalbarWidth = valInicial;
+		}
+        get totalbarWidth() {
+			return this._totalbarWidth;
+		}
     };
     customElements.define('com-sap-sample-widgetapp', WidgetApp);
 })();

@@ -22,7 +22,15 @@
             "url": "https://joaodosices.github.io/sapTeste/widgetApp/aps_webcomponent.js",
 			"integrity": "",
             "ignoreIntegrity" : true
-		}
+		},
+        {
+        "kind": "builder",
+        "tag": "com-sap-sample-widgetapp-apb",
+        "url": "https://joaodosices.github.io/sapTeste/widgetApp/apb_webcomponent.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+        }
+       
     ],
 	"properties": {
         "valInicial": {
@@ -34,6 +42,11 @@
 			"type": "string",
 			"description": "The text to be displayed in the widget",
 			"default" : "0"
+		},
+        "totalbarWidth": {
+			"type": "string",
+			"description": "The text to be displayed in the widget",
+			"default" : "200"
 		}
 	},
 	"methods": {

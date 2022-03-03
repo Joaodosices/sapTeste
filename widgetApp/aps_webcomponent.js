@@ -3,7 +3,6 @@
 	template.innerHTML = `
 		<form id="formInicialVal">
 			<fieldset>
-				<legend>Inicial Value</legend>
 				<table>
 					<tr>
 						<td>Inicial Value:</td>
@@ -14,11 +13,10 @@
 		</form>
 		<form id="formFinalVal">
 			<fieldset>
-				<legend>Final Value</legend>
 				<table>
 					<td>Final Value:</td>
 					<td><input id="aps_valFinal" type="text"></td>
-					/table>
+				</table>
 			</fieldset>
 		</form>
 	`;
