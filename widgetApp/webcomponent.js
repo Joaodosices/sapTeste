@@ -3,7 +3,7 @@
     tmpl.innerHTML = `
         <h1 id="val1">0</h1>
         <h1 id="val2">0</h1>
-        <h1 id="val3">0</h1>
+        <h1 id="val3"> </h1>
     `;
 
     class WidgetApp extends HTMLElement {
@@ -38,13 +38,29 @@
                 this._shadowRoot.getElementById('val1').innerHTML = this._valInicial;
                 this._shadowRoot.getElementById('val2').innerHTML = this._valFinal;
 
-                let numsAdded = parseInt(this._valInicial) + parseInt(this._valFinal);
-                this._shadowRoot.getElementById('val3').innerHTML = String(numsAdded);
+                let progressionGrowth = this.calcGrowth();
+
+                this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth;
             }
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
         onCustomWidgetDestroy(){
+        }
+        
+        calcGrowth() {
+            let valInicial = parseInt(this._valInicial);
+            let valFinal = parseInt(this._valFinal);
+
+            if (valInicial < 0 || valFinal < 0) {
+                return ""
+            }
+
+            let sum = valFinal - valFinal;
+            let growth = (sum / valInicial) * 100;
+            growth = String(growth);
+
+            return "There was an increase in " + growth + "%"
         }
 
         //Getters and Setters

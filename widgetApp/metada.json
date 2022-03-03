@@ -1,12 +1,12 @@
 {
-	"name": "WidgetApp3",
+	"name": "WidgetApp4",
 	"description": "Custom Widget Template",
 	"eula": "",
 	"vendor": "",
 	"license": "",
-	"id": "com.sap.sample.widgetapp3",
-	"newInstancePrefix": "WidgetApp3",
-	"version": "0.0.6",
+	"id": "com.sap.sample.widgetapp4",
+	"newInstancePrefix": "WidgetApp4",
+	"version": "0.0.7",
 	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAAb1BMVEX///+ZmZl4dXdBPj9hYGGOjpE6ODo8OjwvLC0lISIpJSaMiooyLzH/cjMxLi9GREb/ZSk2MzV9fX1MSks4NjcrJyn/WR9ycnJRT1AtKiv/TRVdXF1ra2v7VCfJyMk+PD6tra+rqqtUUlU0MTNqaGpjxDg2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKhJREFUGNM9z9EagiAMBeDpEGkWNAGhqFTq/Z8xwK/+q7PtZgeg6npEMcBPJ0d1Kmg6ZnFGRZcLESnR7tpoouuVSCPPZYHWee+XxTsrvQeYQrwV97tL5uZigMeoqucTUSnWEVBX4fWaW2BYz1W3bXsLDPldcD8MoYZ3glmMjNbGLJk5igDgnLTGHazdAPo1Gdms2bZXhRmbMuNR5rNWJuX075sMYg57jV94IQ2Xqt1atQAAAABJRU5ErkJggg==",
 	"webcomponents": [
         {
@@ -21,12 +21,12 @@
         "valInicial": {
 			"type": "string",
 			"description": "The text to be displayed in the widget",
-			"default" : "Hello BOMBA"
+			"default" : "0"
 		},
         "valFinal": {
 			"type": "string",
 			"description": "The text to be displayed in the widget",
-			"default" : "Hello SOMBRA"
+			"default" : "0"
 		}
 	},
 	"methods": {
