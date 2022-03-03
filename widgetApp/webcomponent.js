@@ -1,8 +1,9 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <h1 id="val1">Hello BOMBA</h1>
-        <h1 id="val2">Hello SOMBRA</h1>
+        <h1 id="val1">0</h1>
+        <h1 id="val2">0</h1>
+        <h1 id="val3">0</h1>
     `;
 
     class WidgetApp extends HTMLElement {
@@ -36,6 +37,9 @@
             if (this.firstConnection === true) {
                 this._shadowRoot.getElementById('val1').innerHTML = this._valInicial;
                 this._shadowRoot.getElementById('val2').innerHTML = this._valFinal;
+
+                let numsAdded = parseInt(this._valInicial) + parseInt(this._valFinal);
+                this._shadowRoot.getElementById('val3').innerHTML = String(numsAdded);
             }
         }
         
