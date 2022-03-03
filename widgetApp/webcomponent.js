@@ -52,15 +52,11 @@
             let valInicial = parseInt(this._valInicial);
             let valFinal = parseInt(this._valFinal);
 
-            if (valInicial < 0 || valFinal < 0) {
-                return ""
-            }
-
             let sum = valFinal - valFinal;
             let growth = (sum / valInicial) * 100;
-            growth = String(growth);
+            growthString = growth.toString();
 
-            return "There was an increase in " + growth + "%"
+            return "There was an increase in " + growthString + "%"
         }
 
         //Getters and Setters
