@@ -53,7 +53,7 @@
                 let progressionGrowth = this.calcGrowth();
                 this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth;
 
-                if (this._barWidth > 200) {
+                if (this._barWidth > parseInt(this._totalbarWidth)) {
                     this._shadowRoot.getElementById('Bar').style.width = `${this._totalbarWidth}px`;
                 } else {
                     this._shadowRoot.getElementById('Bar').style.width = `${this._barWidth}px`;
@@ -76,9 +76,7 @@
                growth = 0;
             }
 
-            let totalbarWidth = parseInt(this._totalbarWidth);
-
-            this._barWidth = (totalbarWidth * growth) / 100;
+            this._barWidth = (parseInt(this._totalbarWidth) * growth) / 100;
 
             return `There was an increase in ${growth}%`
         }
