@@ -54,7 +54,9 @@
 
             let sum = valFinal - valFinal;
             let growth = (sum / valInicial) * 100;
+            console.log(growth);
             growthString = growth.toString();
+            console.log(growthString);
 
             return "There was an increase in " + growthString + "%"
         }
