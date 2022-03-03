@@ -1,7 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <h1>Hello World</h1>
+        <h1 id="title">Hello</h1>
     `;
 
     class WidgetApp extends HTMLElement {
@@ -29,7 +29,7 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            this._shadowRoot.getElementsByTagName('h1').value = this._textOutput;
+            this._shadowRoot.getElementById('title').innerHTML = this._textOutput;
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
