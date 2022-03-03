@@ -51,7 +51,7 @@
             if (this.firstConnection === true) {
                 let progressionGrowth = this.calcGrowth();
                 this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth;
-                
+
                 if (this._barWidth > 200) {
                     this._shadowRoot.getElementById('Bar').style.width = `200px`;
                 } else {
@@ -70,6 +70,10 @@
 
             let sum = valFinal - valInicial;
             let growth = (sum / valInicial) * 100;
+
+            if (growth < 0 || growth === undefined || growth === null) {
+               growth = 0;
+            }
 
             this._barWidth = (200 * growth) / 100;
 
