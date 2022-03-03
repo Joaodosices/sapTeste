@@ -51,15 +51,12 @@
         calcGrowth() {
             let valInicial = parseInt(this._valInicial);
             let valFinal = parseInt(this._valFinal);
-            console.log(valInicial);
-            console.log(valFinal);
 
             let sum = valFinal - valFinal;
             let growth = (sum / valInicial) * 100;
-            let growthString = growth.toString();
-            console.log(growthString);
+            console.log(growth);
 
-            return "There was an increase in " + growthString + "%"
+            return "There was an increase in " + growth + "%"
         }
 
         //Getters and Setters
