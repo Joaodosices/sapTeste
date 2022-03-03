@@ -1,9 +1,22 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <h1 id="val1">0</h1>
-        <h1 id="val2">0</h1>
+        <style>
+        .progressionBar{
+            width: 200px;
+            height: 20px;
+            background: black;
+        }
+        #Bar{
+            width: 0px;
+            height: 20px;
+            background: red;
+        }
+        </style>
         <h1 id="val3">Final</h1>
+        <div class='progressionBar'>
+            <div id='Bar'></div>
+        </div>
     `;
 
     class WidgetApp extends HTMLElement {
@@ -15,6 +28,7 @@
             this.firstConnection = false;
             this._valInicial = '';
             this._valFinal = '';
+            this._barWidth = 0;
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -35,12 +49,14 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true) {
-                this._shadowRoot.getElementById('val1').innerHTML = this._valInicial;
-                this._shadowRoot.getElementById('val2').innerHTML = this._valFinal;
-
                 let progressionGrowth = this.calcGrowth();
-
                 this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth;
+                
+                if (this._barWidth > 200) {
+                    this._shadowRoot.getElementById('Bar').style.width = `200px`;
+                } else {
+                    this._shadowRoot.getElementById('Bar').style.width = `${this._barWidth}px`;
+                }
             }
         }
         
@@ -54,6 +70,8 @@
 
             let sum = valFinal - valInicial;
             let growth = (sum / valInicial) * 100;
+
+            this._barWidth = (200 * growth) / 100;
 
             return `There was an increase in ${growth}%`
         }
