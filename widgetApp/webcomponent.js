@@ -2,7 +2,7 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style>
-        .progressionBar{
+        #progressionBar{
             width: 200px;
             height: 20px;
             background: black;
@@ -48,8 +48,7 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true) {
-                this._shadowRoot.getElementById('progressionBar').style.width = this._totalbarWidth;
-                console.log(this._shadowRoot.getElementById('progressionBar').style.width);
+                this._shadowRoot.getElementById('progressionBar').style.width = `${this._totalbarWidth}px`;
 
                 let progressionGrowth = this.calcGrowth();
                 this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth; 
