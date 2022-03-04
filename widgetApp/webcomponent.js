@@ -64,7 +64,7 @@
             let sum = valFinal - valInicial;
             let growth = (sum / valInicial) * 100;
 
-            if (growth < 0 || isNaN(growth) || isFinite(growth) || growth === null) {
+            if (growth < 0 || isNaN(growth) || !isFinite(growth) || growth === null) {
                 growth = 0;
             }
 
