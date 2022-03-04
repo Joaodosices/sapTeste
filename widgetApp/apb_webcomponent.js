@@ -32,8 +32,8 @@
 			}));
 		}
 
-		set totalbarWidth(valInicial) {
-			this._shadowRoot.getElementById("apb_barWith").value = valInicial;
+		set totalbarWidth(valWidth) {
+			this._shadowRoot.getElementById("apb_barWith").value = valWidth;
 		}
         get totalbarWidth() {
 			return this._shadowRoot.getElementById("apb_barWith").value;

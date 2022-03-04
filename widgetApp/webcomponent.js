@@ -33,8 +33,7 @@
 
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
-            this.firstConnection = true;
-            this._shadowRoot.getElementById('progressionBar').style.width = `${this._totalbarWidth}px`;  
+            this.firstConnection = true; 
         }
 
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
@@ -51,7 +50,9 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true) {
                 let progressionGrowth = this.calcGrowth();
+
                 this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth;
+                this._shadowRoot.getElementById('progressionBar').style.width = `${this._totalbarWidth}px`; 
 
                 if (this._barWidth > parseInt(this._totalbarWidth)) {
                     this._shadowRoot.getElementById('Bar').style.width = `${this._totalbarWidth}px`;
@@ -98,8 +99,8 @@
             this._valFinal = value;
         }
 
-        set totalbarWidth(valInicial) {
-			this._totalbarWidth = valInicial;
+        set totalbarWidth(valWidth) {
+			this._totalbarWidth = parseInt(valWidth);
 		}
         get totalbarWidth() {
 			return this._totalbarWidth;
