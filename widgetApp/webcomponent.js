@@ -99,7 +99,7 @@
         }
 
         set totalbarWidth(valWidth) {
-			this._totalbarWidth = parseInt(valWidth);
+			this._totalbarWidth = valWidth;
 		}
         get totalbarWidth() {
 			return this._totalbarWidth;
