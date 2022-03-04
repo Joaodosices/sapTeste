@@ -36,9 +36,9 @@
 			"default" : "0"
 		},
         "totalbarWidth": {
-			"type": "string",
+			"type": "number",
 			"description": "The text to be displayed in the widget",
-			"default" : "200"
+			"default" : 200
 		}
 	},
 	"methods": {

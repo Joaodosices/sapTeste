@@ -3,6 +3,7 @@
     tmpl.innerHTML = `
         <style>
         .progressionBar{
+            width: 100%;
             height: 20px;
             background: black;
         }
@@ -27,14 +28,14 @@
             this.firstConnection = false;
             this._valInicial = '';
             this._valFinal = '';
-            this._totalbarWidth;
+            this._totalbarWidth = 200;
             this._barWidth = 0;
         }
 
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
             this.firstConnection = true; 
-            this._shadowRoot.getElementById('progressionBar').style.width = `${this._totalbarWidth}px`;
+            this._shadowRoot.getElementById('progressionBar').style.maxWidth = `${this._totalbarWidth}px`;
         }
 
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
