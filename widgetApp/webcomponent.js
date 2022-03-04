@@ -48,16 +48,8 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true) {
-                this._shadowRoot.getElementById('progressionBar').style.width = `${this._totalbarWidth}px`;
-
                 let progressionGrowth = this.calcGrowth();
-                this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth; 
-
-                if (this._barWidth > this._totalbarWidth) {
-                    this._shadowRoot.getElementById('Bar').style.width = `${this._totalbarWidth}px`;
-                } else {
-                    this._shadowRoot.getElementById('Bar').style.width = `${this._barWidth}px`;
-                }
+                this.valueRefresh(progressionGrowth);
             }
         }
         
@@ -74,19 +66,24 @@
 
             if (growth < 0 || isNaN(growth) || isFinite(growth) || growth === null) {
                 this._barWidth = 0;
-                console.log('menor que zero')
-                console.log(growth);
-                console.log(`Bar width: ${this._barWidth}`);
-                return `There was an increase in ${growth}%`
-            } else {
-                console.log('menor que zero')
-                console.log(growth);
-                console.log(`Bar width: ${this._barWidth}`);
-                this._barWidth = (this._totalbarWidth * growth) / 100;
                 return `There was an increase in ${growth}%`
             }
+
+            this._barWidth = (this._totalbarWidth * growth) / 100;
+            return `There was an increase in ${growth}%`
         }
 
+        valueRefresh(progressionGrowth) {
+            this._shadowRoot.getElementById('progressionBar').style.width = `${this._totalbarWidth}px`;
+
+            this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth; 
+
+            if (this._barWidth > this._totalbarWidth) {
+                this._shadowRoot.getElementById('Bar').style.width = `${this._totalbarWidth}px`;
+            } else {
+                this._shadowRoot.getElementById('Bar').style.width = `${this._barWidth}px`;
+            }
+        }
         //Getters and Setters
         get valInicial() {
             return this._valInicial;
