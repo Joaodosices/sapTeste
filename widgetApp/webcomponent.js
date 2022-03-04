@@ -3,7 +3,7 @@
     tmpl.innerHTML = `
         <style>
         .progressionBar{
-            width: 100%;
+            width: 200px;
             height: 20px;
             background: black;
         }
@@ -35,7 +35,6 @@
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
             this.firstConnection = true; 
-            this._shadowRoot.getElementById('progressionBar').style.maxWidth = `${this._totalbarWidth}px`;
         }
 
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
@@ -50,8 +49,11 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true) {
-                let progressionGrowth = this.calcGrowth();
+                if (this._shadowRoot.getElementById('progressionBar').offsetWidth != this._totalbarWidth) {
+                    this._shadowRoot.getElementById('progressionBar').offsetWidth = this._totalbarWidth;
+                }
 
+                let progressionGrowth = this.calcGrowth();
                 this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth; 
 
                 if (this._barWidth > this._totalbarWidth) {
@@ -73,10 +75,11 @@
             let sum = valFinal - valInicial;
             let growth = (sum / valInicial) * 100;
 
-            if (growth < 0 || isNaN(growth) || growth === null) {
+            if (growth < 0 || isNaN(growth) || isFinite(growth) || growth === null) {
                growth = 0;
             }
 
+            //maybe passar linha 81 para o onCustomWidgetAfterUpdate
             this._barWidth = (this._totalbarWidth * growth) / 100;
 
             return `There was an increase in ${growth}%`
@@ -99,11 +102,12 @@
             this._valFinal = value;
         }
 
-        set totalbarWidth(valWidth) {
-			this._totalbarWidth = valWidth;
-		}
         get totalbarWidth() {
 			return this._totalbarWidth;
+		}
+
+        set totalbarWidth(valWidth) {
+			this._totalbarWidth = valWidth;
 		}
     };
     customElements.define('com-sap-sample-widgetapp', WidgetApp);
