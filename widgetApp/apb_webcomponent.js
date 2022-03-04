@@ -1,7 +1,7 @@
 (function() {
 	let template = document.createElement("template");
 	template.innerHTML = `
-		<form id="form">
+		<form id="formWidth">
 			<fieldset>
 				<table>
 					<tr>
@@ -18,15 +18,15 @@
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
-			this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
+			this._shadowRoot.getElementById("formWidth").addEventListener("submit", this._submitWidth.bind(this));
 		}
 
-		_submit(e) {
+		_submitWidth(e) {
 			e.preventDefault();
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							totalbarWidth: this.totalbarWidth
+							totalbarWidth: this._totalbarWidth
 						}
 					}
 			}));

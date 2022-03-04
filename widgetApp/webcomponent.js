@@ -3,7 +3,6 @@
     tmpl.innerHTML = `
         <style>
         .progressionBar{
-            width: 200px;
             height: 20px;
             background: black;
         }
@@ -13,7 +12,7 @@
             background: red;
         }
         </style>
-        <h1 id="val3">Final</h1>
+        <h1 id="val3">There was an increase in 0%</h1>
         <div class='progressionBar'>
             <div id='Bar'></div>
         </div>
@@ -35,6 +34,7 @@
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
             this.firstConnection = true; 
+            this._shadowRoot.getElementById('progressionBar').style.width = `${this._totalbarWidth}px`;
         }
 
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
@@ -51,8 +51,7 @@
             if (this.firstConnection === true) {
                 let progressionGrowth = this.calcGrowth();
 
-                this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth;
-                this._shadowRoot.getElementById('progressionBar').style.width = `${this._totalbarWidth}px`; 
+                this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth; 
 
                 if (this._barWidth > this._totalbarWidth) {
                     this._shadowRoot.getElementById('Bar').style.width = `100%`;
