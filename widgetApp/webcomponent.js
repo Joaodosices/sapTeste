@@ -14,7 +14,7 @@
         }
         </style>
         <h1 id="val3">There was an increase in 0%</h1>
-        <div class='progressionBar'>
+        <div id='progressionBar'>
             <div id='Bar'></div>
         </div>
     `;
@@ -43,14 +43,14 @@
 
          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
-            this._shadowRoot.getElementById('progressionBar').style.width = this._totalbarWidth;
-
-            console.log(this._shadowRoot.getElementById('progressionBar').style.width);
 		}
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true) {
+                this._shadowRoot.getElementById('progressionBar').style.width = this._totalbarWidth;
+                console.log(this._shadowRoot.getElementById('progressionBar').style.width);
+
                 let progressionGrowth = this.calcGrowth();
                 this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth; 
 
