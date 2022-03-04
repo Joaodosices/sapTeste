@@ -3,6 +3,7 @@
     tmpl.innerHTML = `
         <style>
         .progressionBar{
+            width: 200px;
             height: 20px;
             background: black;
         }
@@ -27,7 +28,7 @@
             this.firstConnection = false;
             this._valInicial = '';
             this._valFinal = '';
-            this._totalbarWidth = 200;
+            this._totalbarWidth;
             this._barWidth = 0;
         }
 
@@ -38,7 +39,6 @@
 
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
         disconnectedCallback(){
-        
         }
 
          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
@@ -54,8 +54,8 @@
                 this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth;
                 this._shadowRoot.getElementById('progressionBar').style.width = `${this._totalbarWidth}px`; 
 
-                if (this._barWidth > parseInt(this._totalbarWidth)) {
-                    this._shadowRoot.getElementById('Bar').style.width = `${this._totalbarWidth}px`;
+                if (this._barWidth > this._totalbarWidth) {
+                    this._shadowRoot.getElementById('Bar').style.width = `100%`;
                 } else {
                     this._shadowRoot.getElementById('Bar').style.width = `${this._barWidth}px`;
                 }
@@ -77,7 +77,7 @@
                growth = 0;
             }
 
-            this._barWidth = (parseInt(this._totalbarWidth) * growth) / 100;
+            this._barWidth = (this._totalbarWidth * growth) / 100;
 
             return `There was an increase in ${growth}%`
         }
