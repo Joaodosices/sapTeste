@@ -73,13 +73,18 @@
             let growth = (sum / valInicial) * 100;
 
             if (growth < 0 || isNaN(growth) || isFinite(growth) || growth === null) {
-               growth = 0;
+                this._barWidth = 0;
+                console.log('menor que zero')
+                console.log(growth);
+                console.log(`Bar width: ${this._barWidth}`);
+                return `There was an increase in ${growth}%`
+            } else {
+                console.log('menor que zero')
+                console.log(growth);
+                console.log(`Bar width: ${this._barWidth}`);
+                this._barWidth = (this._totalbarWidth * growth) / 100;
+                return `There was an increase in ${growth}%`
             }
-
-            //maybe passar linha 81 para o onCustomWidgetAfterUpdate
-            this._barWidth = (this._totalbarWidth * growth) / 100;
-
-            return `There was an increase in ${growth}%`
         }
 
         //Getters and Setters
