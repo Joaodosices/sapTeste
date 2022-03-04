@@ -6,7 +6,7 @@
 				<table>
 					<tr>
 						<td>Bar Width:</td>
-						<td><input type="range" min="100" max="500" value="200"  id="apb_barWith"></td>
+						<td><input type="number" id="apb_barWith"></td>
 					</tr>
 				</table>
 			</fieldset>
@@ -26,7 +26,7 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							totalbarWidth: this._totalbarWidth
+							totalbarWidth: this.totalbarWidth
 						}
 					}
 			}));
