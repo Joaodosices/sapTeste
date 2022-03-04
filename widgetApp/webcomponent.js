@@ -65,8 +65,7 @@
             let growth = (sum / valInicial) * 100;
 
             if (growth < 0 || isNaN(growth) || isFinite(growth) || growth === null) {
-                this._barWidth = 0;
-                return `There was an increase in ${growth}%`
+                growth = 0;
             }
 
             this._barWidth = (this._totalbarWidth * growth) / 100;
