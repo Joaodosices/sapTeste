@@ -43,16 +43,14 @@
 
          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
+            this._shadowRoot.getElementById('progressionBar').style.width = this._totalbarWidth;
 
+            console.log(this._shadowRoot.getElementById('progressionBar').style.width);
 		}
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true) {
-                this._shadowRoot.getElementById('progressionBar').style.width = this._totalbarWidth;
-
-                console.log(this._shadowRoot.getElementById('progressionBar').style.width);
-
                 let progressionGrowth = this.calcGrowth();
                 this._shadowRoot.getElementById('val3').innerHTML = progressionGrowth; 
 
@@ -106,8 +104,8 @@
 			return this._totalbarWidth;
 		}
 
-        set totalbarWidth(valWidth) {
-			this._totalbarWidth = valWidth;
+        set totalbarWidth(value) {
+			this._totalbarWidth = value;
 		}
     };
     customElements.define('com-sap-sample-widgetapp', WidgetApp);
