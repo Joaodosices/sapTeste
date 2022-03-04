@@ -1,12 +1,12 @@
 {
-	"name": "WidgetApp16",
+	"name": "WidgetApp17",
 	"description": "Custom Widget Template",
 	"eula": "",
 	"vendor": "",
 	"license": "",
-	"id": "com.sap.sample.widgetapp16",
-	"newInstancePrefix": "WidgetApp16",
-	"version": "0.2.2",
+	"id": "com.sap.sample.widgetapp17",
+	"newInstancePrefix": "WidgetApp17",
+	"version": "0.2.3",
 	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAAb1BMVEX///+ZmZl4dXdBPj9hYGGOjpE6ODo8OjwvLC0lISIpJSaMiooyLzH/cjMxLi9GREb/ZSk2MzV9fX1MSks4NjcrJyn/WR9ycnJRT1AtKiv/TRVdXF1ra2v7VCfJyMk+PD6tra+rqqtUUlU0MTNqaGpjxDg2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKhJREFUGNM9z9EagiAMBeDpEGkWNAGhqFTq/Z8xwK/+q7PtZgeg6npEMcBPJ0d1Kmg6ZnFGRZcLESnR7tpoouuVSCPPZYHWee+XxTsrvQeYQrwV97tL5uZigMeoqucTUSnWEVBX4fWaW2BYz1W3bXsLDPldcD8MoYZ3glmMjNbGLJk5igDgnLTGHazdAPo1Gdms2bZXhRmbMuNR5rNWJuX075sMYg57jV94IQ2Xqt1atQAAAABJRU5ErkJggg==",
 	"webcomponents": [
         {
@@ -22,15 +22,7 @@
             "url": "https://joaodosices.github.io/sapTeste/widgetApp/aps_webcomponent.js",
 			"integrity": "",
             "ignoreIntegrity" : true
-		},
-        {
-        "kind": "builder",
-        "tag": "com-sap-sample-widgetapp-apb",
-        "url": "https://joaodosices.github.io/sapTeste/widgetApp/apb_webcomponent.js",
-        "integrity": "",
-        "ignoreIntegrity": true
-        }
-       
+		}
     ],
 	"properties": {
         "valInicial": {
@@ -50,6 +42,17 @@
 		}
 	},
 	"methods": {
+		"setTotalBarWith": {
+			"description": "Set the text value of the widget",
+			"parameters": [
+				{
+					"name": "newBarWith",
+					"type": "string",
+					"description": "The displayed angle of the gauge"
+				}
+			],
+			"body": "this.totalbarWidth = newBarWith;"
+		},
         "setInicialValue": {
 			"description": "Set the text value of the widget",
 			"parameters": [
