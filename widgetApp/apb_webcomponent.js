@@ -6,7 +6,7 @@
 				<table>
 					<tr>
 						<td>Bar Width:</td>
-						<td><input id="apb_barWith" type="text"></td>
+						<td><input type="range" min="100" max="500" value="200"  id="apb_barWith"></td>
 					</tr>
 				</table>
 			</fieldset>
