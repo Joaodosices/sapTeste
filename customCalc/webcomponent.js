@@ -11,7 +11,7 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.firstConnection = false;
-            this._category;
+            this._category = '';
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -30,6 +30,7 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true) {
+                console.log(this._category);
                 document.getElementById('Category').innerHTML = this._category;
             }
         }
