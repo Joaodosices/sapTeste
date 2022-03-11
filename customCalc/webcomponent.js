@@ -30,8 +30,7 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true) {
-                console.log(this._category);
-                document.getElementById('Category').innerHTML = this._category;
+                this._shadowRoot.document.getElementById('Category').innerHTML = this._category;
             }
         }
         
