@@ -10,7 +10,6 @@
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this.firstConnection = false;
             this._category = '';
         }
 
@@ -29,9 +28,7 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            if (this.firstConnection === true) {
-                this._shadowRoot.getElementById('Category').innerHTML = this._category;
-            }
+            this._shadowRoot.getElementById('Category').innerHTML = this._category;
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
