@@ -21,8 +21,8 @@
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
         disconnectedCallback(){
         }
-
-         //When the custom widget is updated, the Custom Widget SDK framework executes this function first
+            
+        //When the custom widget is updated, the Custom Widget SDK framework executes this function first
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
 		}
 
