@@ -17,8 +17,9 @@
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this.lastCategory = '';
             this.firstConnection = false;
-            this.cleanArray = false;
+            this.turnOnCleaner = false;
             this._category = '';
             this._quantity = 0;
             this._unitPrice = [];
@@ -41,8 +42,9 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
-                if (this.cleanArray === true){
-                    this.updateAllValues();
+                this.updateAllValues();
+                if (this.turnOnCleaner === true){
+                    this.cleanVariableVal();
                 }
             }
         }
@@ -88,7 +90,7 @@
 
         set totalPrice(value) {
             this._totalPrice = value;
-            this.cleanArray = true;
+            this.turnOnCleaner = true;
         }
 
         updateAllValues(){
@@ -96,9 +98,14 @@
             this._shadowRoot.getElementById('Quantity').innerHTML = this._quantity;
             this._shadowRoot.getElementById('TotalPrice').innerHTML = this._totalPrice;
             this._shadowRoot.getElementById('UnitPrice').innerHTML = this._unitPrice.join(' - ');
+        }
 
+        cleanVariableVal(){
             this._unitPrice = [];
-            this.cleanArray = false;
+            this._category = ' ';
+            this._quantity = 0;
+            this._totalPrice = 0;
+            this.turnOnCleaner = false;
         }
     };
     customElements.define('com-sap-sample-customcalc', CustomCalc);
