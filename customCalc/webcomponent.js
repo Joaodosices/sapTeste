@@ -19,7 +19,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.lastCategory = '';
             this.firstConnection = false;
-            this.turnOnCleaner = false;
+            this.gotAllValues = false;
             this._category = '';
             this._quantity = 0;
             this._unitPrice = [];
@@ -43,7 +43,7 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
                 this.updateAllValues();
-                if (this.turnOnCleaner === true){
+                if (this.gotAllValues === true){
                     this.cleanVariableVal();
                 }
             }
@@ -90,14 +90,16 @@
 
         set totalPrice(value) {
             this._totalPrice = value;
-            this.turnOnCleaner = true;
+            this.gotAllValues = true;
         }
 
         updateAllValues(){
             this._shadowRoot.getElementById('Category').innerHTML = this._category;
             this._shadowRoot.getElementById('Quantity').innerHTML = this._quantity;
             this._shadowRoot.getElementById('TotalPrice').innerHTML = this._totalPrice;
-            this._shadowRoot.getElementById('UnitPrice').innerHTML = this._unitPrice.join(' - ');
+            if (this.gotAllValues === true){
+                this._shadowRoot.getElementById('UnitPrice').innerHTML = this._unitPrice.join(' - ');
+            }
         }
 
         cleanVariableVal(){
@@ -105,7 +107,7 @@
             this._category = ' ';
             this._quantity = 0;
             this._totalPrice = 0;
-            this.turnOnCleaner = false;
+            this.gotAllValues = false;
         }
     };
     customElements.define('com-sap-sample-customcalc', CustomCalc);
