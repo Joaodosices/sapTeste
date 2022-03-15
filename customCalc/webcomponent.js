@@ -1,7 +1,14 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-    <h1 id="Category"></h1>
+    <h1>Category:</h1>
+    <h2 id="Category"></h2>
+    <h1>Total quantity:</h1>
+    <h2 id="Quantity"></h2>
+    <h1>Total price:</h1>
+    <h2 id="TotalPrice"></h2>
+    <h1>Unit price:</h1>
+    <h3 id="UnitPrice"></h3>
     `;
 
     class CustomCalc extends HTMLElement {
@@ -10,7 +17,11 @@
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this.firstConnection = false;
             this._category = '';
+            this._quantity = 0;
+            this._unitPrice = [];
+            this._totalPrice = 0;
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -28,7 +39,9 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            this._shadowRoot.getElementById('Category').innerHTML = this._category;
+            if (this.firstConnection === true){
+                this.updateValues();
+            }
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
@@ -42,6 +55,43 @@
 
         set category(value) {
             this._category = value;
+        }
+
+        //
+
+        get quantity() {
+            return this._quantity;
+        }
+
+        set quantity(value) {
+            this._quantity = value;
+        }
+
+        //
+
+        get unitPrice() {
+            return this._unitPrice;
+        }
+
+        set unitPrice(value) {
+            this._unitPrice = [...value];
+        }
+
+        //
+
+        get totalPrice() {
+            return this._totalPrice;
+        }
+
+        set totalPrice(value) {
+            this._totalPrice = value;
+        }
+
+        updateValues(){
+            this._shadowRoot.getElementById('Category').innerHTML = this._category;
+            this._shadowRoot.getElementById('Quantity').innerHTML = this._quantity;
+            this._shadowRoot.getElementById('TotalPrice').innerHTML = this._totalPrice;
+            this._shadowRoot.getElementById('UnitPrice').innerHTML = this._unitPrice;
         }
     };
     customElements.define('com-sap-sample-customcalc', CustomCalc);

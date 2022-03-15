@@ -6,7 +6,7 @@
 	"license": "",
 	"id": "com.sap.sample.customcalc",
 	"newInstancePrefix": "CustomCalc",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAAb1BMVEX///+ZmZl4dXdBPj9hYGGOjpE6ODo8OjwvLC0lISIpJSaMiooyLzH/cjMxLi9GREb/ZSk2MzV9fX1MSks4NjcrJyn/WR9ycnJRT1AtKiv/TRVdXF1ra2v7VCfJyMk+PD6tra+rqqtUUlU0MTNqaGpjxDg2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKhJREFUGNM9z9EagiAMBeDpEGkWNAGhqFTq/Z8xwK/+q7PtZgeg6npEMcBPJ0d1Kmg6ZnFGRZcLESnR7tpoouuVSCPPZYHWee+XxTsrvQeYQrwV97tL5uZigMeoqucTUSnWEVBX4fWaW2BYz1W3bXsLDPldcD8MoYZ3glmMjNbGLJk5igDgnLTGHazdAPo1Gdms2bZXhRmbMuNR5rNWJuX075sMYg57jV94IQ2Xqt1atQAAAABJRU5ErkJggg==",
 	"webcomponents": [
         {
@@ -22,6 +22,21 @@
 			"type": "string",
 			"description": "The text to be displayed in the widget",
 			"default" : "Bars"
+		},
+		"quantity": {
+			"type": "integer",
+			"description": "The text to be displayed in the widget",
+			"default" : 0
+		},
+		"unitPrice": {
+			"type": "string",
+			"description": "The text to be displayed in the widget",
+			"default" : 0
+		},
+		"totalPrice": {
+			"type": "integer",
+			"description": "The text to be displayed in the widget",
+			"default" : 0
 		}
 	},
 	"methods": {
@@ -35,6 +50,39 @@
 				}
 			],
 			"body": "this.category = newCategory;"
+		},
+		"setQuantity": {
+			"description": "Set the text value of the widget",
+			"parameters": [
+				{
+					"name": "newQuantity",
+					"type": "integer",
+					"description": "The new category"
+				}
+			],
+			"body": "this.quantity = newQuantity;"
+		},
+		"setUnitPrice": {
+			"description": "Set the text value of the widget",
+			"parameters": [
+				{
+					"name": "newUnitPrice",
+					"type": "string",
+					"description": "The new category"
+				}
+			],
+			"body": "this.unitPrice = newUnitPrice;"
+		},
+		"setTotalPrice": {
+			"description": "Set the text value of the widget",
+			"parameters": [
+				{
+					"name": "newTotalPrice",
+					"type": "integer",
+					"description": "The new category"
+				}
+			],
+			"body": "this.totalPrice = newTotalPrice;"
 		}
 	},
 	"events": {
