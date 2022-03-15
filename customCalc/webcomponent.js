@@ -91,7 +91,11 @@
             this._shadowRoot.getElementById('Category').innerHTML = this._category;
             this._shadowRoot.getElementById('Quantity').innerHTML = this._quantity;
             this._shadowRoot.getElementById('TotalPrice').innerHTML = this._totalPrice;
-            this._shadowRoot.getElementById('UnitPrice').innerHTML = this._unitPrice;
+            this._shadowRoot.getElementById('UnitPrice').innerHTML = () => {
+                for (let i = 0; i < this._unitPrice.length; i++) {
+                    this._unitPrice[i] + ' - '
+                }
+            };
         }
     };
     customElements.define('com-sap-sample-customcalc', CustomCalc);
