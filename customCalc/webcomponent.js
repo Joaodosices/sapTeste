@@ -43,9 +43,6 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
                 this.updateAllValues();
-                // if (this.gotAllValues === true){
-                //     this.cleanVariableVal();
-                // }
             }
         }
         
@@ -102,14 +99,6 @@
                 console.log(this._unitPrice);
             }
         }
-
-        // cleanVariableVal(){
-        //     this._unitPrice = [];
-        //     this._category = ' ';
-        //     this._quantity = 0;
-        //     this._totalPrice = 0;
-        //     this.gotAllValues = false;
-        // }
     };
     customElements.define('com-sap-sample-customcalc', CustomCalc);
 })();
