@@ -19,7 +19,6 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.lastCategory = '';
             this.firstConnection = false;
-            this.gotAllValues = false;
             this._category = '';
             this._quantity = 0;
             this._unitPrice = [];
@@ -87,7 +86,6 @@
 
         set totalPrice(value) {
             this._totalPrice = value;
-            this.gotAllValues = true;
         }
 
         updateAllValues(){
