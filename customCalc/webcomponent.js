@@ -99,6 +99,7 @@
             this._shadowRoot.getElementById('TotalPrice').innerHTML = this._totalPrice;
             if (this.gotAllValues === true){
                 this._shadowRoot.getElementById('UnitPrice').innerHTML = this._unitPrice.join(' - ');
+                console.log(this._unitPrice);
             }
         }
 
