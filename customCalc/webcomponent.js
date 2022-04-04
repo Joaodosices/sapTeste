@@ -19,6 +19,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.lastCategory = '';
             this.firstConnection = false;
+            this.gotAllValues = false;
             this._category = '';
             this._quantity = 0;
             this._unitPrice = [];
@@ -42,6 +43,9 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
                 this.updateAllValues();
+                if (this.gotAllValues === true){
+                    this.cleanVariableVal();
+                }
             }
         }
         
@@ -86,6 +90,7 @@
 
         set totalPrice(value) {
             this._totalPrice = value;
+            this.gotAllValues = true;
         }
 
         updateAllValues(){
@@ -96,6 +101,14 @@
                 this._shadowRoot.getElementById('UnitPrice').innerHTML = this._unitPrice.join(' - ');
                 console.log(this._unitPrice);
             }
+        }
+
+        cleanVariableVal(){
+            this._unitPrice = [];
+            this._category = ' ';
+            this._quantity = 0;
+            this._totalPrice = 0;
+            this.gotAllValues = false;
         }
     };
     customElements.define('com-sap-sample-customcalc', CustomCalc);
