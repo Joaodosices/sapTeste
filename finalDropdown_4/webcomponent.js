@@ -54,5 +54,5 @@
             this._default = value;
         }
     };
-    customElements.define('com-sap-sample-finalDropdown', FinalDropdown);
+    customElements.define('com-sap-sample-finaldropdown', FinalDropdown);
 })();

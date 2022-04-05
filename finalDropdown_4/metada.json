@@ -11,7 +11,7 @@
 	"webcomponents": [
         {
 			"kind": "main",
-			"tag": "com-sap-sample-finalDropdown",
+			"tag": "com-sap-sample-finaldropdown",
             "url": "https://joaodosices.github.io/sapTeste/finalDropdown_4/webcomponent.js",
             "integrity": "",
             "ignoreIntegrity" : true
