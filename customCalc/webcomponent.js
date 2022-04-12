@@ -79,7 +79,7 @@
         }
 
         set unitPrice(value) {
-            this._unitPrice.push(value);
+            this._unitPrice = [...value];
         }
 
         //
