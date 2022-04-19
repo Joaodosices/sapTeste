@@ -19,7 +19,7 @@
     ],
 	"properties": {
         "listDimensions": {
-			"type": "any[]",
+			"type": "string[]",
 			"description": "List of dimensions",
 			"default" : []
 		}
@@ -29,14 +29,15 @@
 			"description": "Set the list of dimensions",
 			"parameters": [
 				{
-					"name": "table",
-					"type": "string",
+					"name": "newValue",
+					"type": "string[]",
 					"description": "The new category"
 				}
 			],
-			"body": "this.listDimensions = table.getDataSource().getDimensions();"
+			"body": "this.listDimensions = newValue;"
 		}
 	},
 	"events": {
-	}
+	},
+	"imports": ["datasource"]
 }
