@@ -12,6 +12,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.firstConnection = false;
             this._listDimensions = [];
+            this._cleanListDimensions = []
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -30,7 +31,12 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
-                this._shadowRoot.getElementById("root").innerHTML = this._listDimensions.join();
+                
+                for (let i = 0; i < this._listDimensions.length; i++) {
+                    this._cleanListDimensions[i] = this._listDimensions[i].split(",")
+                }
+                console.log(this._cleanListDimensions);
+                this._shadowRoot.getElementById("root").innerHTML = this._cleanListDimensions.join();
             }
         }
         
