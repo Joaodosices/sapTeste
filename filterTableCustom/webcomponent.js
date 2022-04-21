@@ -36,7 +36,7 @@
                     this._cleanListDimensions[i] = this._listDimensions[i].split(",")
                 }
                 console.log(this._cleanListDimensions);
-                this._shadowRoot.getElementById("root").innerHTML = this._cleanListDimensions.join();
+                this._shadowRoot.getElementById("root").innerHTML = this._cleanListDimensions.join("\n");
             }
         }
         
