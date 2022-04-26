@@ -66,10 +66,10 @@
             }
         }
         getMembersFromDimensions(){
-            
+
         }
         draw(){
-            this._shadowRoot.getElementById("root").innerHTML = this._cleanListDimensions.join("«»");
+            this._shadowRoot.getElementById("root").innerHTML = this._cleanListDimensions.join(")(");
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable);
