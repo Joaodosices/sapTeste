@@ -66,8 +66,8 @@
         }
         draw(){
             // this._cleanListDimensions.join(")(");
-            console.log(Table_1.getDataSource().getMembers(this._cleanListDimensions[0][0]));
-            this._shadowRoot.getElementById("root").innerHTML = Table_1.getDataSource().getMembers(this._cleanListDimensions[0][0]);
+            // console.log(Table_1.getDataSource().getMembers(this._cleanListDimensions[0][0]));
+            this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable);
