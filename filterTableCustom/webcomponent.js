@@ -32,10 +32,10 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
-                clearListDimensions();
-                getMembersFromDimensions();
+                this.clearListDimensions();
+                this.getMembersFromDimensions();
                 console.log(this._cleanListDimensions);~
-                draw();
+                this.draw();
             }
         }
         
