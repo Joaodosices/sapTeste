@@ -44,7 +44,6 @@
         
         //When the custom widget is removed from the canvas or the analytic application is closed
         onCustomWidgetDestroy(){
-            this.countMembers = 0;
         }
 
         //Getters and Setters
@@ -55,14 +54,6 @@
         set listDimensions(value) {
             this._listDimensions = [...value];
         }
-
-        get tableName() {
-            return this._tableName;
-        }
-
-        set tableName(value) {
-            this._tableName = value;
-        }
         
         get listMembers() {
             return this._listMembers;
@@ -71,7 +62,6 @@
         set listMembers(value) {
             this._listMembers = [...value];
             this.loadAllListMembers();
-            this.countMembers = this.countMembers + 1;
         }
 
         clearListDimensions(){
@@ -81,6 +71,7 @@
         }
         loadAllListMembers(){
             this.allListMembers[this.countMembers] = this._listMembers;
+            this.countMembers = this.countMembers + 1;
         }
         draw(){
             // this._cleanListDimensions.join(")(");
