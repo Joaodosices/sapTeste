@@ -72,6 +72,7 @@
         loadAllListMembers(){
             this.allListMembers[this.countMembers] = this._listMembers;
             this.countMembers = this.countMembers + 1;
+            console.log(this.countMembers)
         }
         draw(){
             // this._cleanListDimensions.join(")(");
