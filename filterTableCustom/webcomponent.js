@@ -33,7 +33,7 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
                 this.clearListDimensions();
-                console.log(this._cleanListDimensions);~
+                console.log(this._cleanListDimensions); 
                 this.draw();
             }
         }
@@ -65,7 +65,9 @@
             }
         }
         draw(){
-            this._shadowRoot.getElementById("root").innerHTML = this._cleanListDimensions.join(")(");
+            // this._cleanListDimensions.join(")(");
+            console.log(Table_1.getDataSource().getMembers(this._cleanListDimensions[0][0]));
+            this._shadowRoot.getElementById("root").innerHTML = Table_1.getDataSource().getMembers(this._cleanListDimensions[0][0]);
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable);
