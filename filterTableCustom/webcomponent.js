@@ -37,6 +37,7 @@
             if (this.firstConnection === true){
                 this.clearListDimensions();
                 console.log(this._cleanListDimensions); 
+                console.log(this.allListMembers);
                 this.draw();
             }
         }
