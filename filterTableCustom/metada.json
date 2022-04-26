@@ -22,6 +22,11 @@
 			"type": "string[]",
 			"description": "List of dimensions",
 			"default" : []
+		},
+		"listMembers": {
+			"type": "any",
+			"description": "List of dimensions",
+			"default" : []
 		}
 	},
 	"methods": {
@@ -40,6 +45,17 @@
 			"description": "Return the list of dimensions",
 			"body": "return this.listDimensions;",
 			"returnType": "string"
+		},
+		"setListMembers": {
+			"description": "Set the list of dimensions",
+			"parameters": [
+				{
+					"name": "newValue",
+					"type": "any",
+					"description": "The new category"
+				}
+			],
+			"body": "this.listMembers = newValue;"
 		}
 	},
 	"events": {

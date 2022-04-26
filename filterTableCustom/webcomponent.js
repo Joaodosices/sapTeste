@@ -14,6 +14,9 @@
             this._listDimensions = [];
             this._cleanListDimensions = []
             this._tableName;
+            this._listMembers = [];
+            this.countMembers = 0;
+            this.allListMembers = [];
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -40,6 +43,7 @@
         
         //When the custom widget is removed from the canvas or the analytic application is closed
         onCustomWidgetDestroy(){
+            this.countMembers = 0;
         }
 
         //Getters and Setters
@@ -58,11 +62,24 @@
         set tableName(value) {
             this._tableName = value;
         }
+        
+        get listMembers() {
+            return this._listMembers;
+        }
+
+        set listMembers(value) {
+            this._listMembers = [...value];
+            this.loadAllListMembers();
+            this.countMembers = this.countMembers + 1;
+        }
 
         clearListDimensions(){
             for (let i = 0; i < this._listDimensions.length; i++) {
                 this._cleanListDimensions[i] = this._listDimensions[i].split(",")
             }
+        }
+        loadAllListMembers(){
+            this.allListMembers[this.countMembers] = this._listMembers;
         }
         draw(){
             // this._cleanListDimensions.join(")(");
