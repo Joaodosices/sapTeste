@@ -22,11 +22,6 @@
 			"type": "string[]",
 			"description": "List of dimensions",
 			"default" : []
-		},
-		"tableName": {
-			"type": "string",
-			"description": "Name of the table",
-			"default" : ""
 		}
 	},
 	"methods": {
@@ -41,16 +36,10 @@
 			],
 			"body": "this.listDimensions = newValue;"
 		},
-		"setTableName": {
-			"description": "Set the name of the table",
-			"parameters": [
-				{
-					"name": "newValue",
-					"type": "string",
-					"description": "The new category"
-				}
-			],
-			"body": "this.tableName = newValue;"
+		"getListDimensions": {
+			"description": "Return the list of dimensions",
+			"body": "return this.listDimensions;",
+			"returnType": "string"
 		}
 	},
 	"events": {

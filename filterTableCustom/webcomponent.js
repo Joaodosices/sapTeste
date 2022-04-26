@@ -33,7 +33,6 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
                 this.clearListDimensions();
-                this.getMembersFromDimensions();
                 console.log(this._cleanListDimensions);~
                 this.draw();
             }
@@ -64,9 +63,6 @@
             for (let i = 0; i < this._listDimensions.length; i++) {
                 this._cleanListDimensions[i] = this._listDimensions[i].split(",")
             }
-        }
-        getMembersFromDimensions(){
-
         }
         draw(){
             this._shadowRoot.getElementById("root").innerHTML = this._cleanListDimensions.join(")(");
