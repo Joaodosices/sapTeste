@@ -13,6 +13,7 @@
             this.firstConnection = false;
             this._listDimensions = [];
             this._cleanListDimensions = []
+            this._tableName;
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -31,12 +32,10 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
-                
-                for (let i = 0; i < this._listDimensions.length; i++) {
-                    this._cleanListDimensions[i] = this._listDimensions[i].split(",")
-                }
-                console.log(this._cleanListDimensions);
-                this._shadowRoot.getElementById("root").innerHTML = this._cleanListDimensions.join("][");
+                clearListDimensions();
+                getMembersFromDimensions();
+                console.log(this._cleanListDimensions);~
+                draw();
             }
         }
         
@@ -51,6 +50,26 @@
 
         set listDimensions(value) {
             this._listDimensions = [...value];
+        }
+
+        get tableName() {
+            return this._tableName;
+        }
+
+        set tableName(value) {
+            this._tableName = value;
+        }
+
+        clearListDimensions(){
+            for (let i = 0; i < this._listDimensions.length; i++) {
+                this._cleanListDimensions[i] = this._listDimensions[i].split(",")
+            }
+        }
+        getMembersFromDimensions(){
+            
+        }
+        draw(){
+            this._shadowRoot.getElementById("root").innerHTML = this._cleanListDimensions.join("«»");
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable);
