@@ -15,6 +15,7 @@
             this._cleanListDimensions = []
             this._tableName;
             this._listMembers = [];
+            this._cleanListMembers = [];
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -35,6 +36,7 @@
             if (this.firstConnection === true){
                 this.clearListDimensions();
                 console.log(this._cleanListDimensions); 
+                this.clearListMembers();
                 console.log(this._listMembers);
                 this.draw();
             }
@@ -64,6 +66,19 @@
         clearListDimensions(){
             for (let i = 0; i < this._listDimensions.length; i++) {
                 this._cleanListDimensions[i] = this._listDimensions[i].split(",")
+            }
+        }
+        clearListMembers(){
+            let z = 0;
+            let tempArray = [];
+            for (let i = 0; i < this._listMembers.length; i++) {
+                if (this._listMembers[i] !== "PROGRAM_DIVIDER") {
+                    tempArray.push(this._listMembers[i]);
+                } else {
+                    this._cleanListMembers[z] = [...tempArray];
+                    tempArray = [];
+                    z = z + 1;
+                }
             }
         }
         draw(){
