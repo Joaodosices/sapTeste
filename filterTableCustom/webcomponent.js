@@ -12,8 +12,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.firstConnection = false;
             this._listDimensions = [];
-            this._cleanListDimensions = []
-            this._tableName;
+            this._cleanListDimensions = [];
             this._listMembers = [];
             this._cleanListMembers = [];
         }
@@ -74,7 +73,7 @@
             let tempArray = [];
             for (let i = 0; i < this._listMembers.length; i++) {
                 if (this._listMembers[i] !== "PROGRAM_DIVIDER") {
-                    tempArray.push(this._listMembers[i]);
+                    tempArray.push(this._listMembers[i].split(","));
                 } else {
                     this._cleanListMembers[z] = [...tempArray];
                     tempArray = [];
