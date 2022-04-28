@@ -37,7 +37,8 @@
                 this.clearListDimensions();
                 console.log(this._cleanListDimensions); 
                 this.clearListMembers();
-                console.log(this._listMembers);
+                console.log(this._cleanListMembers);
+                console.log("DONE");
                 this.draw();
             }
         }
