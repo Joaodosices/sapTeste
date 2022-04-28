@@ -15,8 +15,6 @@
             this._cleanListDimensions = []
             this._tableName;
             this._listMembers = [];
-            this.countMembers = 0;
-            this.allListMembers = [];
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -37,7 +35,7 @@
             if (this.firstConnection === true){
                 this.clearListDimensions();
                 console.log(this._cleanListDimensions); 
-                console.log(this.allListMembers);
+                console.log(this._listMembers);
                 this.draw();
             }
         }
@@ -61,18 +59,12 @@
 
         set listMembers(value) {
             this._listMembers = [...value];
-            this.loadAllListMembers();
         }
 
         clearListDimensions(){
             for (let i = 0; i < this._listDimensions.length; i++) {
                 this._cleanListDimensions[i] = this._listDimensions[i].split(",")
             }
-        }
-        loadAllListMembers(){
-            this.allListMembers[this.countMembers] = this._listMembers;
-            this.countMembers = this.countMembers + 1;
-            console.log(this.countMembers)
         }
         draw(){
             // this._cleanListDimensions.join(")(");
