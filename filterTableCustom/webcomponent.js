@@ -29,8 +29,8 @@
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-
             _id = createGuid();
+            console.log(_id);
             this._shadowRoot.querySelector("#oView").id = _id + "_oView";
 
             this.firstConnection = false;
@@ -39,7 +39,11 @@
             this._listMembers = [];
             this._cleanListMembers = [];
         }
-
+        createGuid(){
+            return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+                (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+            );
+        }
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
             this.firstConnection = true; 
