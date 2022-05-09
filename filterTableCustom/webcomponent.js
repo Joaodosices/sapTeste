@@ -110,7 +110,7 @@
             }
         }
         draw(){
-            this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
+            // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable);
