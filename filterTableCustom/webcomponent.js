@@ -5,7 +5,7 @@
             <slot name="content"></slot>
         </div>
 
-        <script id="Oview" name ="Oview" type="sapui5/xmlview">
+        <script id="oView" name ="Oview" type="sapui5/xmlview">
             <mvc:View
                 controllerName="myView.Template"
                 xmlns:l="sap.ui.layout"
@@ -39,7 +39,7 @@
             this._listMembers = [];
             this._cleanListMembers = [];
         }
-        
+
         createGuid(){
             //Using UUID for now
             return self.crypto.randomUUID();
