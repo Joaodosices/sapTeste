@@ -29,7 +29,7 @@
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            _id = createGuid();
+            _id = this.createGuid();
             console.log(_id);
             this._shadowRoot.querySelector("#oView").id = _id + "_oView";
 
