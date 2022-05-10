@@ -1,6 +1,8 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
+        <style>
+        </style>
         <div id="ui5_content" name="ui5_content">
             <slot name="content"></slot>
         </div>
@@ -10,7 +12,7 @@
                 controllerName="myView.Template"
                 xmlns:l="sap.ui.layout"
                 xmlns:mvc="sap.ui.core.mvc"
-                xmlns="sap.m">
+                xmlns:m="sap.m">
 
                 <l:VerticalLayout
                     class="sapUiContentPadding"
