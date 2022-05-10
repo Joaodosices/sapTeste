@@ -30,7 +30,7 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._id = this.createGuid();
-            console.log(this._id);
+
             this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
 
             this.firstConnection = false;
@@ -61,6 +61,7 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
+                console.log(this._id);
                 this.clearListDimensions();
                 console.log(this._cleanListDimensions); 
                 this.clearListMembers();
