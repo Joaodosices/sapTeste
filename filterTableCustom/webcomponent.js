@@ -145,7 +145,7 @@
                 return Controller.extend("myView.Template", {
                     onButtonPress: function(oEvent){
                         _password = oView.byId("passwordInput").getValue();
-                        that._firePropertiesChanged();
+                        // that._firePropertiesChanged();
                         console.log(_password);
                     }
                 });
