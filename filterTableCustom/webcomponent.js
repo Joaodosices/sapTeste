@@ -7,7 +7,7 @@
             <slot name="content"></slot>
         </div>
 
-        <script id="oView" name ="Oview" type="sapui5/xmlview">
+        <script id="oView" name ="oView" type="sapui5/xmlview">
             <mvc:View
                 controllerName="myView.Template"
                 xmlns:l="sap.ui.layout"
@@ -136,7 +136,7 @@
     content.slot = "content";
     that_.appendChild(content);
 
-    console.log("loadthis WORKING");
+    console.log("loadthis WORKING x2");
     sap.ui.getCore().attachInit(function() {
         "use strict";
 
