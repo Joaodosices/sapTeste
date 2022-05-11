@@ -132,10 +132,11 @@
  function loadthis(that){
      var that_ = that;
 
-//     let content = document.createElement("div");
-//     content.slot = "content";
-//     that_.appendChild(content);
+    let content = document.createElement("div");
+    content.slot = "content";
+    that_.appendChild(content);
 
+    console.log("loadthis WORKING");
 //     sap.ui.getCore().attachInit(function() {
 //         "use strict";
 
