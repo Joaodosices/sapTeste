@@ -123,41 +123,44 @@
     };
     customElements.define('com-sap-sample-filtertable', FilterTable);
 
-    // UTILS
+    
 
-    function loadthis(that){
-        var that_ = that;
     
-        let content = document.createElement("div");
-        content.slot = "content";
-        that_.appendChild(content);
-    
-        sap.ui.getCore().attachInit(function() {
-            "use strict";
-    
-            // CONTROLLER
-            sap.ui.define([
-                "jquery.sap.global",
-                "sap/ui/core/mvc/Controller"
-            ], function(jQuery, Controller){
-                "use strict";
-    
-                return Controller.extend("myView.Template", {
-                    onButtonPress: function(oEvent){
-                        _password = oView.byId("passwordInput").getValue();
-                        // that._firePropertiesChanged();
-                        console.log(_password);
-                    }
-                });
-            });
-            var oView = sap.ui.xmlview({
-                viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html(),
-            });
-            oView.placeAt(content);
-    
-            if (that_._designMode) {
-                oView.byId("passwordInput").setEnabled(false);
-            }
-        });
-    }
 })();
+
+// UTILS
+function loadthis(that){
+    var that_ = that;
+
+    let content = document.createElement("div");
+    content.slot = "content";
+    that_.appendChild(content);
+
+    sap.ui.getCore().attachInit(function() {
+        "use strict";
+
+        // CONTROLLER
+        sap.ui.define([
+            "jquery.sap.global",
+            "sap/ui/core/mvc/Controller"
+        ], function(jQuery, Controller){
+            "use strict";
+
+            return Controller.extend("myView.Template", {
+                onButtonPress: function(oEvent){
+                    _password = oView.byId("passwordInput").getValue();
+                    // that._firePropertiesChanged();
+                    console.log(_password);
+                }
+            });
+        });
+        var oView = sap.ui.xmlview({
+            viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html(),
+        });
+        oView.placeAt(content);
+
+        if (that_._designMode) {
+            oView.byId("passwordInput").setEnabled(false);
+        }
+    });
+}
