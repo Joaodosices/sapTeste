@@ -68,7 +68,7 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
                 console.log(this._id);
-                loadthis(this);
+                // loadthis(this);
                 this.clearListDimensions();
                 console.log(this._cleanListDimensions); 
                 this.clearListMembers();
@@ -129,38 +129,38 @@
 })();
 
 // UTILS
-function loadthis(that){
-    var that_ = that;
+// function loadthis(that){
+//     var that_ = that;
 
-    let content = document.createElement("div");
-    content.slot = "content";
-    that_.appendChild(content);
+//     let content = document.createElement("div");
+//     content.slot = "content";
+//     that_.appendChild(content);
 
-    sap.ui.getCore().attachInit(function() {
-        "use strict";
+//     sap.ui.getCore().attachInit(function() {
+//         "use strict";
 
-        // CONTROLLER
-        sap.ui.define([
-            "jquery.sap.global",
-            "sap/ui/core/mvc/Controller"
-        ], function(jQuery, Controller){
-            "use strict";
+//         // CONTROLLER
+//         sap.ui.define([
+//             "jquery.sap.global",
+//             "sap/ui/core/mvc/Controller"
+//         ], function(jQuery, Controller){
+//             "use strict";
 
-            return Controller.extend("myView.Template", {
-                onButtonPress: function(oEvent){
-                    _password = oView.byId("passwordInput").getValue();
-                    // that._firePropertiesChanged();
-                    console.log(_password);
-                }
-            });
-        });
-        var oView = sap.ui.xmlview({
-            viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html(),
-        });
-        oView.placeAt(content);
+//             return Controller.extend("myView.Template", {
+//                 onButtonPress: function(oEvent){
+//                     _password = oView.byId("passwordInput").getValue();
+//                     // that._firePropertiesChanged();
+//                     console.log(_password);
+//                 }
+//             });
+//         });
+//         var oView = sap.ui.xmlview({
+//             viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html(),
+//         });
+//         oView.placeAt(content);
 
-        if (that_._designMode) {
-            oView.byId("passwordInput").setEnabled(false);
-        }
-    });
-}
+//         if (that_._designMode) {
+//             oView.byId("passwordInput").setEnabled(false);
+//         }
+//     });
+// }
