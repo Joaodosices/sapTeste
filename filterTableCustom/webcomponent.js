@@ -18,7 +18,7 @@
                     class="sapUiContentPadding"
                     width="100%">
                     <l:content>
-                        <Input id="passwordInput" type="Password placeholder="Teste input" liveChange="onButtonPress" />
+                        <Input id="passwordInput" type="Password" placeholder="Teste input" liveChange="onButtonPress" />
                     </l:content>
                 <l:VerticalLayout>
             ></mvc:View>
