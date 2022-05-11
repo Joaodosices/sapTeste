@@ -68,7 +68,7 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
                 console.log(this._id);
-                // loadthis(this);
+                loadthis(this);
                 this.clearListDimensions();
                 console.log(this._cleanListDimensions); 
                 this.clearListMembers();
@@ -129,8 +129,8 @@
 })();
 
 // UTILS
-// function loadthis(that){
-//     var that_ = that;
+ function loadthis(that){
+     var that_ = that;
 
 //     let content = document.createElement("div");
 //     content.slot = "content";
@@ -163,4 +163,4 @@
 //             oView.byId("passwordInput").setEnabled(false);
 //         }
 //     });
-// }
+ }
