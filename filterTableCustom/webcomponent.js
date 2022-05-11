@@ -156,8 +156,8 @@
             });
         });
         var oView = sap.ui.xmlview({
-            viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html()
-            // viewContent: "myView.Template"
+            // viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html()
+            viewContent: that_._shadowRoot.getElementById(that_._id + "_oView").value()
         });
         oView.placeAt(content);
 
