@@ -141,7 +141,7 @@
         "use strict";
 
         // CONTROLLER
-        sap.ui.define([
+        sap.ui.require([
             "jquery.sap.global",
             "sap/ui/core/mvc/Controller"
         ], function(jQuery, Controller){
