@@ -1,1 +1,1 @@
-import "@ui5/webcomponents/dist/Select.js";
+import "../mode_modules/@ui5/webcomponents/dist/Select.js";
