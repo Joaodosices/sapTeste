@@ -7,7 +7,7 @@
         <ui5-option icon="laptop" selected>Desktop</ui5-option>
     </ui5-select>
 
-    <script src="ui5webComponentsTest/uiComponents.js"></script>
+    <script src="https://joaodosices.github.io/sapTeste/ui5webComponentsTest/uiComponents.js"></script>
     `;
 
     class WebComponentTest extends HTMLElement {
