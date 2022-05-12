@@ -1,1 +1,1 @@
-import "ui5webComponentsTest/node_modules/@ui5/webcomponents/dist/Select.js";
+import "../ui5webComponentsTest/node_modules/@ui5/webcomponents/dist/Select.js";
