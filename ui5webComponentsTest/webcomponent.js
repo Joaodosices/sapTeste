@@ -1,7 +1,13 @@
+import "@ui5/webcomponents/dist/Select.js";
+
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-     <h1>TESTE</h1>
+    <ui5-select class="select">
+        <ui5-option icon="iphone">Phone</ui5-option>
+        <ui5-option icon="ipad">Tablet</ui5-option>
+        <ui5-option icon="laptop" selected>Desktop</ui5-option>
+    </ui5-select>
     `;
 
     class WebComponentTest extends HTMLElement {
