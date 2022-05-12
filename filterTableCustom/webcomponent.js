@@ -9,7 +9,7 @@
 
         <script id="oView" name ="oView" type="sapui5/xmlview">
             <mvc:View
-                controllerName="myView.Template"
+                controllerName="filterTableCustom.webcomponent"
                 xmlns:l="sap.ui.layout"
                 xmlns:mvc="sap.ui.core.mvc"
                 xmlns:m="sap.m">
@@ -143,7 +143,7 @@
         ], function(jQuery, Controller){
             "use strict";
 
-            return Controller.extend("myView.Template", {
+            return Controller.extend("filterTableCustom.webcomponent", {
                 onButtonPress: function(oEvent){
                     _password = oView.byId("passwordInput").getValue();
                     // that._firePropertiesChanged();
