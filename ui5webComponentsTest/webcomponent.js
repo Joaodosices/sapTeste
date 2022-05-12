@@ -4,7 +4,7 @@
      <h1>TESTE</h1>
     `;
 
-    class webComponentTest extends HTMLElement {
+    class WebComponentTest extends HTMLElement {
 
 		constructor() {
 			super(); 
@@ -38,5 +38,5 @@
         }
 
     };
-    customElements.define('com-sap-sample-webcomponentest', webComponentTest);
+    customElements.define('com-sap-sample-webcomponentest', WebComponentTest);
 })();
