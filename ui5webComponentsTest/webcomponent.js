@@ -1,6 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
+     <h1>TESTE</h1>
     `;
 
     class webComponentTest extends HTMLElement {
