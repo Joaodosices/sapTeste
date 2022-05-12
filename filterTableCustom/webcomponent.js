@@ -132,7 +132,6 @@
     content.slot = "content";
     that_.appendChild(content);
 
-    console.log("loadthis WORKING x2");
     sap.ui.getCore().attachInit(function() {
         "use strict";
 
