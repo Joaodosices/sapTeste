@@ -27,9 +27,9 @@
                 </m:Panel>
 
 
-                <ComboBox
+                <m:ComboBox
                     items="1, 2, 3">
-			    </ComboBox>
+			    </m:ComboBox>
             </mvc:View>
         </script>   
     `;
