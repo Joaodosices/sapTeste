@@ -27,6 +27,7 @@
                 </m:Panel>
             </mvc:View>
         </script>   
+        <h1>Banana</h1>
     `;
 
     class FilterTable extends HTMLElement {
