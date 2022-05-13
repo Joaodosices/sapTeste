@@ -1,0 +1,4 @@
+applications:
+- name: sac-custom-widgets
+  memory: 64M
+  instances: 1
