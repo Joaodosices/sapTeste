@@ -25,9 +25,13 @@
                         class="sapUiSmallMarginBottom"/>
                     
                 </m:Panel>
+
+
+                <ComboBox
+                    items="1, 2, 3">
+			    </ComboBox>
             </mvc:View>
         </script>   
-        <h1>Banana</h1>
     `;
 
     class FilterTable extends HTMLElement {
