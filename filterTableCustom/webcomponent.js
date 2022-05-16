@@ -131,7 +131,7 @@
                 for (let x = 0; x < tempCleanListMembers[z].length; x++) {
                     tempListObject.push({ key: tempCleanListMembers[z][x][0], text: tempCleanListMembers[z][x][1]})
                 }
-                this._cleanListMembers.z.push(tempListObject);
+                this._cleanListMembers.push(tempListObject);
             }
         }
         draw(){
