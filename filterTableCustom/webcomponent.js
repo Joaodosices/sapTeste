@@ -43,7 +43,7 @@
             this._listDimensions = [];
             this._cleanListDimensions = [];
             this._listMembers = [];
-            this._cleanListMembers = {};
+            this._cleanListMembers = [{}];
         }
 
         createGuid(){
