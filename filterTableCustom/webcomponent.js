@@ -129,8 +129,8 @@
             }
         }
         draw(){
-            let body = ' ';
-            for (let i = 0; i < this.clearListDimensions.length; i++) {
+            let body = ` `;
+            for (let i = 0; i < this._cleanListDimensions.length; i++) {
                 let tagID = "ComboBox " + i;
                 let combobox =`<m:ComboBox 
                                     id =" ` + tagID + ` " 
@@ -138,6 +138,8 @@
                                     class="sapUiSmallMarginBottom"/>`;
                 body.concat(combobox);
                 // addListToComboBox(i, tagID);
+                tagID = ``;
+                combobox = ``;
                 // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
             }
             console.log(body);
