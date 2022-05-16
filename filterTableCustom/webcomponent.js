@@ -132,9 +132,7 @@
         draw(){
             for (let i = 0; i < this._cleanListDimensions.length; i++) {
                 let tagID = "ComboBox " + i;
-                console.log(tagID);
                 let combobox =`<m:ComboBox  id ="` + tagID + `" change="handleChange" class="sapUiSmallMarginBottom"/>`;
-                console.log(combobox);
                 body = body.concat(combobox);
                 // addListToComboBox(i, tagID);
                 tagID = ``;
