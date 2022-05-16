@@ -15,17 +15,15 @@
             >
                 <m:Panel
                     id ="DatePanel"
-                    headerText="Choose Date"
+                    headerText="Filters"
                     width="auto">
                     <m:Label text="" labelFor="dateInput"/>
-                    <m:DatePicker
-                        id="dateInput"
-                        placeholder="Enter Date ..."
-                        change="handleChange"
-                        class="sapUiSmallMarginBottom"/>
                     
                     <m:ComboBox 
-                        id ="testeComboBox"/>
+                        id ="testeComboBox"
+                        change="handleChange"
+                        class="sapUiSmallMarginBottom"/>
+
                 </m:Panel>
             </mvc:View>
         </script>   
@@ -42,7 +40,7 @@
             this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
 
             this.firstConnection = false;
-            this._listDimensions = [];
+            this._listDimensions = {};
             this._cleanListDimensions = [];
             this._listMembers = [];
             this._cleanListMembers = [];
@@ -108,8 +106,12 @@
         }
 
         clearListDimensions(){
+            let arrayTemp = []
             for (let i = 0; i < this._listDimensions.length; i++) {
-                this._cleanListDimensions[i] = this._listDimensions[i].split(",")
+                arrayTemp[i] = this._listDimensions[i].split(",")
+            }
+            for (let z = 0; z < arrayTemp.length; z++) {
+                this._cleanListDimensions.push({ key: arrayTemp[z][0], text: arrayTemp[z][1]})
             }
         }
         clearListMembers(){
