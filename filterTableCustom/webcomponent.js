@@ -139,7 +139,7 @@
                 // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
             }
             var oView = sap.ui.xmlview({
-                viewContent: jQuery(this._shadowRoot.getElementById(that_._id + "_oView")).html()
+                viewContent: jQuery(this._shadowRoot.getElementById(this._id + "_oView")).html()
             });
             oView.byId("DatePanel").appendChild(body);
         }
