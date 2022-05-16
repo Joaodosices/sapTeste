@@ -24,11 +24,8 @@
                         change="handleChange"
                         class="sapUiSmallMarginBottom"/>
                     
+                    <m:ComboBox />
                 </m:Panel>
-
-                <m:ComboBox
-                    
-                </m:ComboBox>
             </mvc:View>
         </script>   
     `;
@@ -84,7 +81,6 @@
                 console.log(this._cleanListDimensions); 
                 this.clearListMembers();
                 console.log(this._cleanListMembers);
-                console.log("DONE X3");
                 this.draw();
             }
         }
