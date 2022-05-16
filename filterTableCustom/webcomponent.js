@@ -1,4 +1,5 @@
 (function()  {
+    let body = '';
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style>
@@ -19,10 +20,7 @@
                     width="auto">
                     <m:Label text="" labelFor="dateInput"/>
                     
-                    <m:ComboBox 
-                        id ="testeComboBox"
-                        change="handleChange"
-                        class="sapUiSmallMarginBottom"/>
+                   ` + body + ` 
 
                 </m:Panel>
             </mvc:View>
@@ -133,7 +131,13 @@
             }
         }
         draw(){
-            // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
+            
+            for (let i = 0; i < this.clearListDimensions.length; i++) {
+                let combobox = '<m:ComboBox id ="ComboBox' + i + '" change="handleChange" class="sapUiSmallMarginBottom"/>'
+                body.concat(combobox)
+                addItemToComboBox(i, "ComboBox " + i);
+                // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
+            }
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
@@ -181,15 +185,19 @@
         });
         oView.placeAt(content);
 
-        for (let i = 0; i < that_._cleanListMembers.length; i++) {
-            for (let x = 0; x < that_._cleanListMembers[i].length; x++) {
-                var newItem = new sap.ui.core.Item({ key: that_._cleanListMembers[i][x].key, text: that_._cleanListMembers[i][x].text});
-                oView.byId("testeComboBox").addItem(newItem);
-            }
-        }
-
         if (that_._designMode) {
             oView.byId("passwordInput").setEnabled(false);
         }
      });
  }
+
+ function addItemToComboBox(id ,idComboBox){
+    var oView = sap.ui.xmlview({
+        viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html()
+    });
+
+    for (let x = 0; x < that_._cleanListMembers[id].length; x++) {
+        var newItem = new sap.ui.core.Item({ key: that_._cleanListMembers[id][x].key, text: that_._cleanListMembers[id][x].text});
+        oView.byId(idComboBox).addItem(newItem);
+    }
+}
