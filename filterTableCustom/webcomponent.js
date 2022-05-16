@@ -138,9 +138,9 @@
                                     class="sapUiSmallMarginBottom"/>`;
                 body.concat(combobox);
                 // addListToComboBox(i, tagID);
-                console.log(body);
                 // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
             }
+            console.log(body);
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
