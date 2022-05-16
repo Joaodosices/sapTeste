@@ -125,11 +125,13 @@
                 }
             }
 
+            let tempListObject = {};
             for (let z = 0; z < tempCleanListMembers.length; z++) {
-                this._cleanListMembers.push({z: {}})
+                tempListObject = {};
                 for (let x = 0; x < tempCleanListMembers[z].length; x++) {
-                        this._cleanListMembers.z.push({ key: tempCleanListMembers[z][x][0], text: tempCleanListMembers[z][x][1]})
+                    tempListObject.push({ key: tempCleanListMembers[z][x][0], text: tempCleanListMembers[z][x][1]})
                 }
+                this._cleanListMembers.z.push(tempListObject);
             }
         }
         draw(){
