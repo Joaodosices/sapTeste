@@ -183,8 +183,9 @@
 
         for (let i = 0; i < that_._cleanListMembers.length; i++) {
             for (let x = 0; x < that_._cleanListMembers[i].length; x++) {
-            var newItem = new sap.ui.core.Item({ key: that_._cleanListMembers[i][x].key, text: that_._cleanListMembers[i][x].text});
-            oView.byId("testeComboBox").addItem(newItem);
+                var newItem = new sap.ui.core.Item({ key: that_._cleanListMembers[i][x].key, text: that_._cleanListMembers[i][x].text});
+                oView.byId("testeComboBox").addItem(newItem);
+            }
         }
 
         if (that_._designMode) {
