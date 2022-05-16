@@ -125,9 +125,9 @@
                 }
             }
 
-            let tempListObject = [{}];
+            let tempListObject = [];
             for (let z = 0; z < tempCleanListMembers.length; z++) {
-                tempListObject = [{}];
+                tempListObject = [];
                 for (let x = 0; x < tempCleanListMembers[z].length; x++) {
                     tempListObject.push({ key: tempCleanListMembers[z][x][0], text: tempCleanListMembers[z][x][1]})
                 }
