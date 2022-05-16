@@ -74,13 +74,10 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
-                console.log(this._id);
-                loadthis(this);
                 this.clearListDimensions();
-                console.log(this._cleanListDimensions); 
                 this.clearListMembers();
+                loadthis(this);
                 console.log(this._cleanListMembers);
-                console.log(this._cleanListMembers[0]);
                 this.draw();
             }
         }
@@ -184,7 +181,7 @@
         });
         oView.placeAt(content);
 
-        var newItem = new sap.ui.core.Item({ key: "all", text: "ALL"});
+        var newItem = new sap.ui.core.Item(this._cleanListMembers[1]);
         oView.byId("testeComboBox").addItem(newItem);
 
         if (that_._designMode) {
