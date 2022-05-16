@@ -1,5 +1,6 @@
 (function()  {
     let tmpl = document.createElement('template');
+    let body = ` `;
     tmpl.innerHTML = `
                 <style>
                 </style>
@@ -19,7 +20,7 @@
                             width="auto">
                             <m:Label text="" labelFor="dateInput"/>
                             
-                         
+                         ` + body + `
 
                         </m:Panel>
                     </mvc:View>
@@ -129,16 +130,12 @@
             }
         }
         draw(){
-            let body = ` `;
             for (let i = 0; i < this._cleanListDimensions.length; i++) {
                 let tagID = "ComboBox " + i;
                 console.log(tagID);
-                let combobox =`<m:ComboBox 
-                                    id =" ` + tagID + ` " 
-                                    change="handleChange" 
-                                    class="sapUiSmallMarginBottom"/>`;
+                let combobox =`<m:ComboBox  id ="` + tagID + `" change="handleChange" class="sapUiSmallMarginBottom"/>`;
                 console.log(combobox);
-                body.concat(combobox);
+                body = body.concat(combobox);
                 // addListToComboBox(i, tagID);
                 tagID = ``;
                 combobox = ``;
