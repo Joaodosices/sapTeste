@@ -135,9 +135,9 @@
                 let combobox =`<m:ComboBox 
                                     id =" ` + tagID + ` " 
                                     change="handleChange" 
-                                    class="sapUiSmallMarginBottom"/>`
-                body = body + combobox;
-                addListToComboBox(i, tagID);
+                                    class="sapUiSmallMarginBottom"/>`;
+                body.concat(combobox);
+                // addListToComboBox(i, tagID);
                 console.log(body);
                 // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
             }
