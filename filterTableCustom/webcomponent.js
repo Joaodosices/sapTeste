@@ -124,7 +124,7 @@
                     z = z + 1;
                 }
             }
-            this._cleanListMembers
+
             for (let z = 0; z < cleanListMembers.length; z++) {
                 this._cleanListMembers.push({z: [{}]})
                 for (let x = 0; x < cleanListMembers[z].length; x++) {
