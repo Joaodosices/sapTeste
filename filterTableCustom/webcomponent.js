@@ -113,22 +113,22 @@
         clearListMembers(){
             let z = 0;
             let tempArray = [];
-            var cleanListMembers = []
+            var tempCleanListMembers = []
 
             for (let i = 0; i < this._listMembers.length; i++) {
                 if (this._listMembers[i] !== "PROGRAM_DIVIDER") {
                     tempArray.push(this._listMembers[i].split(","));
                 } else {
-                    cleanListMembers[z] = [...tempArray];
+                    tempCleanListMembers[z] = [...tempArray];
                     tempArray = [];
                     z = z + 1;
                 }
             }
 
-            for (let z = 0; z < cleanListMembers.length; z++) {
-                this._cleanListMembers.push({z: []})
-                for (let x = 0; x < cleanListMembers[z].length; x++) {
-                        this._cleanListMembers.z.push({ key: cleanListMembers[z][x][0], text: cleanListMembers[z][x][1]})
+            for (let z = 0; z < tempCleanListMembers.length; z++) {
+                this._cleanListMembers.push({z: {}})
+                for (let x = 0; x < tempCleanListMembers[z].length; x++) {
+                        this._cleanListMembers.z.push({ key: tempCleanListMembers[z][x][0], text: tempCleanListMembers[z][x][1]})
                 }
             }
         }
