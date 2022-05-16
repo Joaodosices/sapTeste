@@ -138,7 +138,10 @@
                 combobox = ``;
                 // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
             }
-            this._shadowRoot.querySelector("#DatePanel").appendChild(body);
+            var oView = sap.ui.xmlview({
+                viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html()
+            });
+            oView.byId("DatePanel").appendChild(body);
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
