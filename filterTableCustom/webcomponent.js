@@ -25,6 +25,10 @@
                         class="sapUiSmallMarginBottom"/>
                     
                 </m:Panel>
+
+                <m:ComboBox
+                    
+                </m:ComboBox>
             </mvc:View>
         </script>   
     `;
