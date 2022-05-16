@@ -174,10 +174,8 @@
         });
         oView.placeAt(content);
 
-        var oSelect = that_.getView().byId("testeComboBox");
         var newItem = new sap.ui.core.Item({ key: "all", text: "ALL"});
-        
-        oSelect.addItem(newItem);
+        oView.byId("testeComboBox").addItem(newItem);
 
         if (that_._designMode) {
             oView.byId("passwordInput").setEnabled(false);
