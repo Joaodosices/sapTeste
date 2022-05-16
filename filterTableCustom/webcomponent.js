@@ -40,10 +40,10 @@
             this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
 
             this.firstConnection = false;
-            this._listDimensions = {};
+            this._listDimensions = [];
             this._cleanListDimensions = [];
             this._listMembers = [];
-            this._cleanListMembers = [];
+            this._cleanListMembers = {};
         }
 
         createGuid(){
@@ -106,24 +106,29 @@
         }
 
         clearListDimensions(){
-            let arrayTemp = []
             for (let i = 0; i < this._listDimensions.length; i++) {
-                arrayTemp[i] = this._listDimensions[i].split(",")
-            }
-            for (let z = 0; z < arrayTemp.length; z++) {
-                this._cleanListDimensions.push({ key: arrayTemp[z][0], text: arrayTemp[z][1]})
+                this._cleanListDimensions[i] = this._listDimensions[i].split(",")
             }
         }
         clearListMembers(){
             let z = 0;
             let tempArray = [];
+            var cleanListMembers = []
+
             for (let i = 0; i < this._listMembers.length; i++) {
                 if (this._listMembers[i] !== "PROGRAM_DIVIDER") {
                     tempArray.push(this._listMembers[i].split(","));
                 } else {
-                    this._cleanListMembers[z] = [...tempArray];
+                    cleanListMembers[z] = [...tempArray];
                     tempArray = [];
                     z = z + 1;
+                }
+            }
+            this._cleanListMembers
+            for (let z = 0; z < cleanListMembers.length; z++) {
+                this._cleanListMembers.push({z: [{}]})
+                for (let x = 0; x < cleanListMembers[z].length; x++) {
+                        this._cleanListMembers.z.push({ key: cleanListMembers[z][x][0], text: cleanListMembers[z][x][1]})
                 }
             }
         }
