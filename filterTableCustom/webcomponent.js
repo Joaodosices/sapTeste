@@ -43,7 +43,7 @@
             this._listDimensions = [];
             this._cleanListDimensions = [];
             this._listMembers = [];
-            this._cleanListMembers = [{}];
+            this._cleanListMembers = [];
         }
 
         createGuid(){
@@ -80,6 +80,7 @@
                 console.log(this._cleanListDimensions); 
                 this.clearListMembers();
                 console.log(this._cleanListMembers);
+                console.log(this._cleanListMembers[0]);
                 this.draw();
             }
         }
