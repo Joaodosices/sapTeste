@@ -10,7 +10,7 @@
                 </div>
                 <script id="oView" name="oView" type="sapui5/xmlview">
                     <mvc:View
-                        controllerName="sap.m.sample.DatePicker.Group"
+                        controllerName="sap.m.sample.ComboBox.Component"
                         xmlns:mvc="sap.ui.core.mvc"
                         xmlns:l="sap.ui.layout"
                         xmlns:m="sap.m"
@@ -165,7 +165,7 @@
             ], function (jQuery, Controller) {
                 "use strict";
 
-                return Controller.extend("sap.m.sample.DatePicker.Group", {
+                return Controller.extend("sap.m.sample.ComboBox.Component", {
                     onButtonPressed: function (oEvent) {
                         // console.log(oView.byId("dateInput").getDateValue());
                         // _date = oView.byId("dateInput").getDateValue().toString();
