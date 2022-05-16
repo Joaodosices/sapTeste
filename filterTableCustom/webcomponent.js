@@ -176,6 +176,7 @@
 
         var oSelect = that_.getView().byId("testeComboBox");
         var newItem = new sap.ui.core.Item({ key: "all", text: "ALL"});
+        
         oSelect.addItem(newItem);
 
         if (that_._designMode) {
