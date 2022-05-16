@@ -2,13 +2,38 @@
     let tmpl = document.createElement('template');
     let body = ` `;
 
-    class FilterTable extends HTMLElement {
+    tmpl.innerHTML = `
+                <style>
+                </style>
+                <div id="ui5_content" name="ui5_content">
+                    <slot name="content"></slot>
+                </div>
+                <script id="oView" name="oView" type="sapui5/xmlview">
+                    <mvc:View
+                        controllerName="sap.m.sample.DatePicker.Group"
+                        xmlns:mvc="sap.ui.core.mvc"
+                        xmlns:l="sap.ui.layout"
+                        xmlns:m="sap.m"
+                    >
+                        <m:Panel
+                            id ="DatePanel"
+                            headerText="Filters"
+                            width="auto">
+                            <m:Label text="" labelFor="dateInput"/>
 
+                        </m:Panel>
+                    </mvc:View>
+                </script>   
+            `;
+
+    class FilterTable extends HTMLElement {
 		constructor() {
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._id = this.createGuid();
+
+            this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
 
             this.firstConnection = false;
             this._listDimensions = [];
@@ -113,33 +138,7 @@
                 combobox = ``;
                 // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
             }
-            
-            tmpl.innerHTML = `
-                <style>
-                </style>
-                <div id="ui5_content" name="ui5_content">
-                    <slot name="content"></slot>
-                </div>
-                <script id="oView" name="oView" type="sapui5/xmlview">
-                    <mvc:View
-                        controllerName="sap.m.sample.DatePicker.Group"
-                        xmlns:mvc="sap.ui.core.mvc"
-                        xmlns:l="sap.ui.layout"
-                        xmlns:m="sap.m"
-                    >
-                        <m:Panel
-                            id ="DatePanel"
-                            headerText="Filters"
-                            width="auto">
-                            <m:Label text="" labelFor="dateInput"/>
-                            
-                         ` + body + `
-
-                        </m:Panel>
-                    </mvc:View>
-                </script>   
-            `;
-            this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
+            this._shadowRoot.querySelector("#DatePanel").appendChild(body);
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
