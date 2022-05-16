@@ -24,7 +24,8 @@
                         change="handleChange"
                         class="sapUiSmallMarginBottom"/>
                     
-                    <m:ComboBox />
+                    <m:ComboBox 
+                        id ="testeComboBox"/>
                 </m:Panel>
             </mvc:View>
         </script>   
@@ -172,6 +173,10 @@
             viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html()
         });
         oView.placeAt(content);
+
+        var oSelect = this.getView().byId("testeComboBox");
+        var newItem = new sap.ui.core.Item({ key: "all", text: "ALL"});
+        oSelect.addItem(newItem);
 
         if (that_._designMode) {
             oView.byId("passwordInput").setEnabled(false);
