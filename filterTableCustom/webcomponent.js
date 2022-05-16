@@ -129,14 +129,14 @@
             }
         }
         draw(){
-            let body = '';
+            let body = ' ';
             for (let i = 0; i < this.clearListDimensions.length; i++) {
                 let tagID = "ComboBox " + i;
                 let combobox =`<m:ComboBox 
                                     id =" ` + tagID + ` " 
                                     change="handleChange" 
                                     class="sapUiSmallMarginBottom"/>`
-                body.concat(combobox)
+                body = body + combobox;
                 addListToComboBox(i, tagID);
                 console.log(body);
                 // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
