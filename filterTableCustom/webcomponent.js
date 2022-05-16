@@ -181,7 +181,7 @@
         });
         oView.placeAt(content);
 
-        var newItem = new sap.ui.core.Item(this._cleanListMembers[1]);
+        var newItem = new sap.ui.core.Item(that_._cleanListMembers[1]);
         oView.byId("testeComboBox").addItem(newItem);
 
         if (that_._designMode) {
