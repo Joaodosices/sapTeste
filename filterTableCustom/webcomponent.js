@@ -1,31 +1,5 @@
 (function()  {
-    let body = '';
     let tmpl = document.createElement('template');
-    tmpl.innerHTML = `
-        <style>
-        </style>
-        <div id="ui5_content" name="ui5_content">
-            <slot name="content"></slot>
-        </div>
-        <script id="oView" name="oView" type="sapui5/xmlview">
-            <mvc:View
-                controllerName="sap.m.sample.DatePicker.Group"
-                xmlns:mvc="sap.ui.core.mvc"
-                xmlns:l="sap.ui.layout"
-                xmlns:m="sap.m"
-            >
-                <m:Panel
-                    id ="DatePanel"
-                    headerText="Filters"
-                    width="auto">
-                    <m:Label text="" labelFor="dateInput"/>
-                    
-                   ` + body + ` 
-
-                </m:Panel>
-            </mvc:View>
-        </script>   
-    `;
 
     class FilterTable extends HTMLElement {
 
@@ -131,13 +105,43 @@
             }
         }
         draw(){
-            
+            let body = '';
             for (let i = 0; i < this.clearListDimensions.length; i++) {
-                let combobox = '<m:ComboBox id ="ComboBox' + i + '" change="handleChange" class="sapUiSmallMarginBottom"/>'
+                let tagID = "ComboBox " + i;
+                let combobox =`<m:ComboBox 
+                                    id =" ` + tagID + ` " 
+                                    change="handleChange" 
+                                    class="sapUiSmallMarginBottom"/>`
                 body.concat(combobox)
-                addItemToComboBox(i, "ComboBox " + i);
+                addListToComboBox(i, tagID);
                 // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
             }
+
+            tmpl.innerHTML = `
+                <style>
+                </style>
+                <div id="ui5_content" name="ui5_content">
+                    <slot name="content"></slot>
+                </div>
+                <script id="oView" name="oView" type="sapui5/xmlview">
+                    <mvc:View
+                        controllerName="sap.m.sample.DatePicker.Group"
+                        xmlns:mvc="sap.ui.core.mvc"
+                        xmlns:l="sap.ui.layout"
+                        xmlns:m="sap.m"
+                    >
+                        <m:Panel
+                            id ="DatePanel"
+                            headerText="Filters"
+                            width="auto">
+                            <m:Label text="" labelFor="dateInput"/>
+                            
+                        ` + body + ` 
+
+                        </m:Panel>
+                    </mvc:View>
+                </script>   
+            `;
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
@@ -191,7 +195,7 @@
      });
  }
 
- function addItemToComboBox(id ,idComboBox){
+ function addListToComboBox(id ,idComboBox){
     var oView = sap.ui.xmlview({
         viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html()
     });
