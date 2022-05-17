@@ -109,7 +109,6 @@
                         change="handleChange" 
                         class="sapUiSmallMarginBottom"/> `;
                 body = body.concat(combobox);
-                addListToComboBox(this ,i , tagID);
                 tagID = ``;
                 combobox = ``;
             }
@@ -142,6 +141,7 @@
             `;
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
+            addListsToComboBoxs(this);
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
@@ -195,14 +195,18 @@ function loadthis(that){
     });
  }
 
- function addListToComboBox(that ,id ,idComboBox){
+ function addListsToComboBoxs(that){
     let that_ = that;
+    let tagID = "";
     var oView = sap.ui.xmlview({
         viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html()
     });
 
-    for (let x = 0; x < that_._cleanListMembers[id].length; x++) {
-        var newItem = new sap.ui.core.Item({ key: that_._cleanListMembers[id][x].key, text: that_._cleanListMembers[id][x].text});
-        oView.byId(idComboBox).addItem(newItem);
+    for (let i = 0; i < this._cleanListDimensions.length; i++) {
+        tagID = "ComboBox" + i;
+        for (let x = 0; x < that_._cleanListMembers[i].length; x++) {
+            var newItem = new sap.ui.core.Item({ key: that_._cleanListMembers[i][x].key, text: that_._cleanListMembers[i][x].text});
+            oView.byId(tagID).addItem(newItem);
+        }
     }
 }
