@@ -104,11 +104,16 @@
             for (let i = 0; i < this._cleanListDimensions.length; i++) {
                 let tagID = "ComboBox" + i;
                 let combobox =`
-                    <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagID + `"/>
-                    <m:ComboBox  
-                        id ="` + tagID + `" 
-                        change="handleChange" 
-                        class="sapUiSmallMarginBottom"/> `;
+                    <l:VerticalLayout
+                        class="sapUiContentPadding"
+                        width="100%">
+                        <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagID + `"/>
+                        <m:ComboBox  
+                            id ="` + tagID + `" 
+                            change="handleChange" 
+                            class="sapUiSmallMarginBottom"/> 
+                    <l:VerticalLayout>
+                        `;
                 body = body.concat(combobox);
                 tagID = ``;
                 combobox = ``;
