@@ -130,18 +130,18 @@
         }
         draw(){
             for (let i = 0; i < this._cleanListDimensions.length; i++) {
-                let tagID = "ComboBox " + i;
-                let combobox =`<m:ComboBox  id ="` + tagID + `" change="handleChange" class="sapUiSmallMarginBottom"/>`;
+                let tagID = "ComboBox" + i;
+                let combobox =` <m:ComboBox  id ="` + tagID + `" change="handleChange" class="sapUiSmallMarginBottom"/> `;
                 body = body.concat(combobox);
                 // addListToComboBox(i, tagID);
                 tagID = ``;
                 combobox = ``;
                 // this._shadowRoot.getElementById("root").innerHTML = "<h1>Hi!</h1>";
             }
-            var oView = sap.ui.xmlview({
-                viewContent: jQuery(this._shadowRoot.getElementById(this._id + "_oView")).html()
-            });
-            oView.byId("DatePanel").appendChild(body);
+            // var oView = sap.ui.xmlview({
+            //     viewContent: jQuery(this._shadowRoot.getElementById(this._id + "_oView")).html()
+            // });
+            // oView.byId("DatePanel").appendChild(body);
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
@@ -195,13 +195,13 @@ function loadthis(that){
     });
  }
 
- function addListToComboBox(id ,idComboBox){
-    var oView = sap.ui.xmlview({
-        viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html()
-    });
+//  function addListToComboBox(id ,idComboBox){
+//     var oView = sap.ui.xmlview({
+//         viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html()
+//     });
 
-    for (let x = 0; x < that_._cleanListMembers[id].length; x++) {
-        var newItem = new sap.ui.core.Item({ key: that_._cleanListMembers[id][x].key, text: that_._cleanListMembers[id][x].text});
-        oView.byId(idComboBox).addItem(newItem);
-    }
-}
+//     for (let x = 0; x < that_._cleanListMembers[id].length; x++) {
+//         var newItem = new sap.ui.core.Item({ key: that_._cleanListMembers[id][x].key, text: that_._cleanListMembers[id][x].text});
+//         oView.byId(idComboBox).addItem(newItem);
+//     }
+// }
