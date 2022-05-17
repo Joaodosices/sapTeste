@@ -10,7 +10,7 @@
                 </div>
                 <script id="oView" name="oView" type="sapui5/xmlview">
                     <mvc:View
-                        controllerName="sap.m.sample.ComboBox"
+                        controllerName="sap.ui.comp.smartfield.ComboBox"
                         xmlns:mvc="sap.ui.core.mvc"
                         xmlns:l="sap.ui.layout"
                         xmlns:m="sap.m"
@@ -148,41 +148,41 @@
 })();
 
 // UTILS
- function loadthis(that){
+function loadthis(that){
     var that_ = that;
 
-        let content = document.createElement('div');
-        content.slot = "content";
-        that_.appendChild(content);
+    let content = document.createElement('div');
+    content.slot = "content";
+    that_.appendChild(content);
 
-        sap.ui.getCore().attachInit(function () {
+    sap.ui.getCore().attachInit(function () {
+        "use strict";
+
+        //### Controller ###
+        sap.ui.define([
+            "jquery.sap.global",
+            "sap/ui/core/mvc/Controller"
+        ], function (jQuery, Controller) {
             "use strict";
 
-            //### Controller ###
-            sap.ui.define([
-                "jquery.sap.global",
-                "sap/ui/core/mvc/Controller"
-            ], function (jQuery, Controller) {
-                "use strict";
+            return Controller.extend("sap.ui.comp.smartfield.ComboBox", {
+                onButtonPressed: function (oEvent) {
+                    // console.log(oView.byId("dateInput").getDateValue());
+                    // _date = oView.byId("dateInput").getDateValue().toString();
+                    // that._firePropertiesChanged();
+                    // console.log(_date);
 
-                return Controller.extend("sap.m.sample.ComboBox", {
-                    onButtonPressed: function (oEvent) {
-                        // console.log(oView.byId("dateInput").getDateValue());
-                        // _date = oView.byId("dateInput").getDateValue().toString();
-                        // that._firePropertiesChanged();
-                        // console.log(_date);
+                    // this.settings = {};
+                    // this.settings.date = "";
 
-                        // this.settings = {};
-                        // this.settings.date = "";
-
-                        // that.dispatchEvent(new CustomEvent("onStart", {
-                        //     detail: {
-                        //         settings: this.settings
-                        //     }
-                        // }));
-                    }
-                });
+                    // that.dispatchEvent(new CustomEvent("onStart", {
+                    //     detail: {
+                    //         settings: this.settings
+                    //     }
+                    // }));
+                }
             });
+        });
 
         var oView = sap.ui.xmlview({
             viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html()
@@ -192,7 +192,7 @@
         if (that_._designMode) {
             oView.byId("passwordInput").setEnabled(false);
         }
-     });
+    });
  }
 
  function addListToComboBox(id ,idComboBox){
