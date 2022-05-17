@@ -105,7 +105,6 @@
                 let tagID = "ComboBox" + i;
                 let combobox =`
                     <l:VerticalLayout
-                        class="sapUiContentPadding"
                         width="100%">
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagID + `"/>
                         <m:ComboBox  
