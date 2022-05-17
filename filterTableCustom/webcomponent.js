@@ -109,7 +109,7 @@
                         change="handleChange" 
                         class="sapUiSmallMarginBottom"/> `;
                 body = body.concat(combobox);
-                addListToComboBox(i, tagID);
+                addListToComboBox(this ,i , tagID);
                 tagID = ``;
                 combobox = ``;
             }
