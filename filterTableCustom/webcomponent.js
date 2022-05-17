@@ -141,7 +141,6 @@
             `;
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
-            addListsToComboBoxs(this);
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
@@ -187,18 +186,19 @@ function loadthis(that){
         var oView = getOview(that);
         oView.placeAt(content);
 
+        addListsToComboBoxs(that, oView);
+
         if (that_._designMode) {
             oView.byId("passwordInput").setEnabled(false);
         }
     });
  }
 
- function addListsToComboBoxs(that){
+ function addListsToComboBoxs(that, oView){
     let that_ = that;
     let tagID = "";
-    var oView = getOview(that);
 
-    for (let i = 0; i < this._cleanListDimensions.length; i++) {
+    for (let i = 0; i < that_._cleanListDimensions.length; i++) {
         tagID = "ComboBox" + i;
         for (let x = 0; x < that_._cleanListMembers[i].length; x++) {
             var newItem = new sap.ui.core.Item({ key: that_._cleanListMembers[i][x].key, text: that_._cleanListMembers[i][x].text});
