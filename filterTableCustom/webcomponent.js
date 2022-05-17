@@ -166,6 +166,7 @@
                     </mvc:View>
                 </script>   
             `;
+            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
