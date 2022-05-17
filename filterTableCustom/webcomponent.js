@@ -112,7 +112,7 @@
                             id ="` + tagID + `" 
                             change="handleChange" 
                             class="sapUiSmallMarginBottom"/> 
-                    <l:VerticalLayout>
+                    </l:VerticalLayout>
                         `;
                 body = body.concat(combobox);
                 tagID = ``;
