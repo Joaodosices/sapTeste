@@ -195,7 +195,8 @@ function loadthis(that){
     });
  }
 
- function addListToComboBox(id ,idComboBox){
+ function addListToComboBox(that ,id ,idComboBox){
+    let that_ = that;
     var oView = sap.ui.xmlview({
         viewContent: jQuery(that_._shadowRoot.getElementById(that_._id + "_oView")).html()
     });
