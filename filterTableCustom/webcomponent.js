@@ -142,30 +142,31 @@
             //     viewContent: jQuery(this._shadowRoot.getElementById(this._id + "_oView")).html()
             // });
             // oView.byId("DatePanel").appendChild(body);
-            tmpl.innerHTML = `
-                <style>
-                </style>
-                <div id="ui5_content" name="ui5_content">
-                    <slot name="content"></slot>
-                </div>
-                <script id="oView" name="oView" type="sapui5/xmlview">
-                    <mvc:View
-                        controllerName="sap.m.sample.DatePicker.Group"
-                        xmlns:mvc="sap.ui.core.mvc"
-                        xmlns:l="sap.ui.layout"
-                        xmlns:m="sap.m"
-                    >
-                        <m:Panel
-                            id ="DatePanel"
-                            headerText="Filters"
-                            width="auto">
-                            <m:Label text="" labelFor="dateInput"/>
+            let holder = `
+            <style>
+            </style>
+            <div id="ui5_content" name="ui5_content">
+                <slot name="content"></slot>
+            </div>
+            <script id="oView" name="oView" type="sapui5/xmlview">
+                <mvc:View
+                    controllerName="sap.m.sample.DatePicker.Group"
+                    xmlns:mvc="sap.ui.core.mvc"
+                    xmlns:l="sap.ui.layout"
+                    xmlns:m="sap.m"
+                >
+                    <m:Panel
+                        id ="DatePanel"
+                        headerText="Filters"
+                        width="auto">
+                        <m:Label text="" labelFor="dateInput"/>
 
-                            ` + body + `
-                        </m:Panel>
-                    </mvc:View>
-                </script>   
-            `;
+                        ` + body + `
+                    </m:Panel>
+                </mvc:View>
+            </script>   
+        `;
+            tmpl.innerHTML = holder;
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
         }
     };
