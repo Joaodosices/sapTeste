@@ -104,6 +104,7 @@
             for (let i = 0; i < this._cleanListDimensions.length; i++) {
                 let tagID = "ComboBox" + i;
                 let combobox =`
+                    <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagID + `"/>
                     <m:ComboBox  
                         id ="` + tagID + `" 
                         change="handleChange" 
