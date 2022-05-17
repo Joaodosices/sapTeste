@@ -146,7 +146,7 @@
             //     viewContent: jQuery(this._shadowRoot.getElementById(this._id + "_oView")).html()
             // });
             // oView.byId("DatePanel").appendChild(body);
-            window.onload=function(){
+                tmpl = document.createElement('template');
                 tmpl.innerHTML = `
                 <style>
                 </style>
@@ -172,7 +172,6 @@
                 </script>   
             `;
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            }
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
