@@ -1,39 +1,39 @@
 (function()  {
-    let tmpl = document.createElement('template');
-    let body = ` `;
+    // let tmpl = document.createElement('template');
+    // let body = ` `;
 
-    tmpl.innerHTML = `
-                <style>
-                </style>
-                <div id="ui5_content" name="ui5_content">
-                    <slot name="content"></slot>
-                </div>
-                <script id="oView" name="oView" type="sapui5/xmlview">
-                    <mvc:View
-                        controllerName="sap.m.sample.DatePicker.Group"
-                        xmlns:mvc="sap.ui.core.mvc"
-                        xmlns:l="sap.ui.layout"
-                        xmlns:m="sap.m"
-                    >
-                        <m:Panel
-                            id ="DatePanel"
-                            headerText="Filters"
-                            width="auto">
-                            <m:Label text="" labelFor="dateInput"/>
+    // tmpl.innerHTML = `
+    //             <style>
+    //             </style>
+    //             <div id="ui5_content" name="ui5_content">
+    //                 <slot name="content"></slot>
+    //             </div>
+    //             <script id="oView" name="oView" type="sapui5/xmlview">
+    //                 <mvc:View
+    //                     controllerName="sap.m.sample.DatePicker.Group"
+    //                     xmlns:mvc="sap.ui.core.mvc"
+    //                     xmlns:l="sap.ui.layout"
+    //                     xmlns:m="sap.m"
+    //                 >
+    //                     <m:Panel
+    //                         id ="DatePanel"
+    //                         headerText="Filters"
+    //                         width="auto">
+    //                         <m:Label text="" labelFor="dateInput"/>
 
-                        </m:Panel>
-                    </mvc:View>
-                </script>   
-            `;
+    //                     </m:Panel>
+    //                 </mvc:View>
+    //             </script>   
+    //         `;
 
     class FilterTable extends HTMLElement {
 		constructor() {
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
-            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            // this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._id = this.createGuid();
 
-            this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
+            // this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
 
             this.firstConnection = false;
             this._listDimensions = [];
@@ -129,6 +129,7 @@
             }
         }
         draw(){
+            let body = ` `;
             for (let i = 0; i < this._cleanListDimensions.length; i++) {
                 let tagID = "ComboBox" + i;
                 let combobox =`
@@ -146,7 +147,8 @@
             //     viewContent: jQuery(this._shadowRoot.getElementById(this._id + "_oView")).html()
             // });
             // oView.byId("DatePanel").appendChild(body);
-                tmpl = document.createElement('template');
+            let tmpl = document.createElement('template');
+            
                 tmpl.innerHTML = `
                 <style>
                 </style>
@@ -172,6 +174,7 @@
                 </script>   
             `;
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
