@@ -1,4 +1,4 @@
 applications:
-- name: sac-custom-widgets
+- name: filterTableCustom
   memory: 64M
   instances: 1
