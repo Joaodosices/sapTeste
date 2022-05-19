@@ -171,7 +171,9 @@ function loadthis(that){
 
             return Controller.extend("sap.m.sample.DatePicker.Group", {
                 selectionChange: function (e) {
-                    var value = e.target.value;
+                    let oView = getOview(that);
+                    var value = 
+                    
                     
                     console.log(value);
                 }

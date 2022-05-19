@@ -55,5 +55,8 @@
 		}
 	},
 	"events": {
+		"onChange": {
+			"description": "Called when the user changes value"
+		}
 	}
 }
