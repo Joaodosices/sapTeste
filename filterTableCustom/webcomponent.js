@@ -109,7 +109,7 @@
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagID + `"/>
                         <m:ComboBox  
                             id ="` + tagID + `" 
-                            change="handleChange" 
+                            selectionChange="selectionChange" 
                             class="sapUiSmallMarginBottom"/> 
                     </l:VerticalLayout>
                         `;
@@ -170,7 +170,7 @@ function loadthis(that){
             "use strict";
 
             return Controller.extend("sap.m.sample.DatePicker.Group", {
-                handleChange: function (e) {
+                selectionChange: function (e) {
                     var value = e.getSource().getSelected();
                     
                     console.log(value);
