@@ -170,8 +170,10 @@ function loadthis(that){
             "use strict";
 
             return Controller.extend("sap.m.sample.DatePicker.Group", {
-                handleChange: function (oEvent) {
-                    
+                handleChange: function (e) {
+                    var value = e.getParameter('selectedItem');
+                    var bindingOption = value.getBindingContext('options').getObject();
+                    console.log(bindingOption);
                 }
                 // onButtonPressed: function (oEvent) {
                     // console.log(oView.byId("dateInput").getDateValue());
