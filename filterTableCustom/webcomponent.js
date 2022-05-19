@@ -171,7 +171,7 @@ function loadthis(that){
 
             return Controller.extend("sap.m.sample.DatePicker.Group", {
                 handleChange: function (e) {
-                    var value = e.getParameter("selectedItem").getText();
+                    var value = e.getSource().getSelected();
                     
                     console.log(value);
                 }
