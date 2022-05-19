@@ -171,7 +171,7 @@ function loadthis(that){
 
             return Controller.extend("sap.m.sample.DatePicker.Group", {
                 selectionChange: function (e) {
-                    var value = e.getSource().getSelected();
+                    var value = e.target.value;
                     
                     console.log(value);
                 }
@@ -207,14 +207,17 @@ function loadthis(that){
  function addListsToComboBoxs(that, oView){
     let that_ = that;
     let tagID = "";
-
     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
         tagID = "ComboBox" + i;
+        createModel(i);
         for (let x = 0; x < that_._cleanListMembers[i].length; x++) {
             var newItem = new sap.ui.core.Item({ key: that_._cleanListMembers[i][x].key, text: that_._cleanListMembers[i][x].text});
             oView.byId(tagID).addItem(newItem);
         }
     }
+}
+function createModel(idDimension){
+
 }
 function getOview(that) {
     var oView = sap.ui.xmlview({
