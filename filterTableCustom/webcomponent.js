@@ -111,7 +111,7 @@
                             id ="` + tagID + `" 
                             selectionChange="handleChange" 
                             class="sapUiSmallMarginBottom"/> 
-                        <m:button 
+                        <m:Button 
                             text="Clear"
                             press="handlePress"/>
                     </l:VerticalLayout>
