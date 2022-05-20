@@ -192,6 +192,7 @@ function loadthis(that){
                             var oSel = oView.byId("ComboBox" + i);
 
                             oSel.setSelectedKey(" ");
+                            oSel.setSelectedText(" ");
                         }
                      }
                 }
