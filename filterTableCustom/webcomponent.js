@@ -174,7 +174,6 @@ function loadthis(that){
                     let oView = getOview(that);
                     var value = oView.getParameters().selectedItem();
                     
-                    
                     console.log(value);
                 }
                 // onButtonPressed: function (oEvent) {
