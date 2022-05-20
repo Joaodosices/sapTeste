@@ -119,7 +119,8 @@
                     </l:VerticalLayout>
                         `;
                 body = body.concat(combobox);
-                tagID = ``;
+                tagIDcombobox = ``;
+                tagIDbutton = ``;
                 combobox = ``;
             }
             
