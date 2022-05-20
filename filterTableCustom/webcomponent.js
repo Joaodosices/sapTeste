@@ -107,7 +107,7 @@
                 let combobox =`
                     <l:VerticalLayout
                         width="100%">
-                        <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagID + `"/>
+                        <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagIDcombobox + `"/>
                         <m:ComboBox  
                             id ="` + tagIDcombobox + `" 
                             selectionChange="handleChange" /> 
