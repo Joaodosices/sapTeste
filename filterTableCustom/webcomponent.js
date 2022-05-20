@@ -187,12 +187,13 @@ function loadthis(that){
                 handlePress: function (e) {
                     console.log("BANANA");
                     var button = e.getSource();
-                    console.log(button);
-                    // for (let i = 0; i < that_._cleanListDimensions.length; i++) {
-                    //     var oSel = oView.byId("Button" + i);
-                        
-                    //     listSelected[i] = oSel.getSelectedKey();
-                    //  }
+                    for (let i = 0; i < that_._cleanListDimensions.length; i++) {
+                        if (button.sId == "__xmlview1--Button" + i){
+                            var oSel = oView.byId("ComboBox" + i);
+
+                            oSel.setSelectedKey(" ");
+                        }
+                     }
                 }
                 // onButtonPressed: function (oEvent) {
                     // console.log(oView.byId("dateInput").getDateValue());
