@@ -102,18 +102,20 @@
         draw(){
             let body = ` `;
             for (let i = 0; i < this._cleanListDimensions.length; i++) {
-                let tagID = "ComboBox" + i;
+                let tagIDcombobox = "ComboBox" + i;
+                let tagIDbutton = "Button" + i;
                 let combobox =`
                     <l:VerticalLayout
                         width="100%">
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagID + `"/>
                         <m:ComboBox  
-                            id ="` + tagID + `" 
-                            selectionChange="handleChange" 
-                            class="sapUiSmallMarginBottom"/> 
+                            id ="` + tagIDcombobox + `" 
+                            selectionChange="handleChange" /> 
                         <m:Button 
+                            id"` + tagIDbutton + `"
                             text="Clear"
-                            press="handlePress"/>
+                            press="handlePress"
+                            class="sapUiSmallMarginBottom"/>
                     </l:VerticalLayout>
                         `;
                 body = body.concat(combobox);
@@ -183,6 +185,7 @@ function loadthis(that){
                     console.log(listSelected);
                 },
                 handlePress: function (e) {
+                    console.log("BANANA");
                     // for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                     //     var oSel = oView.byId("ComboBox" + i);
                         
