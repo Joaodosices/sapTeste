@@ -169,10 +169,12 @@ function loadthis(that){
         ], function (jQuery, Controller) {
             "use strict";
 
+            var oView = getOview(that);
+            oView.placeAt(content);
+
             return Controller.extend("sap.m.sample.DatePicker.Group", {
                 selectionChange: function (e) {
-                    let oView = getOview(that);
-                    var value = e.getParameters.selectedItem();
+                    var value = oView.getParameters.selectedItem();
                     
                     console.log(value);
                 }
@@ -193,10 +195,6 @@ function loadthis(that){
                 // }
             });
         });
-
-        var oView = getOview(that);
-        oView.placeAt(content);
-
         addListsToComboBoxs(that, oView);
 
         if (that_._designMode) {
