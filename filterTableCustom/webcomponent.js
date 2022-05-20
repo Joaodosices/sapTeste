@@ -11,6 +11,12 @@
             this._cleanListDimensions = [];
             this._listMembers = [];
             this._cleanListMembers = [];
+            this._listSelected = [];
+
+            that_.addEventListener("change", event => {
+                var event = new Event("onChange");
+                this.dispatchEvent(event);
+            });
         }
 
         createGuid(){
@@ -68,6 +74,14 @@
 
         set listMembers(value) {
             this._listMembers = [...value];
+        }
+
+        get listSelected() {
+            return this._listSelected;
+        }
+
+        set listSelected(value) {
+            this._listSelected = [...value];
         }
 
         clearListDimensions(){
@@ -177,15 +191,13 @@ function loadthis(that){
 
             return Controller.extend("sap.m.sample.DatePicker.Group", {
                 handleChange: function (e) {
-                    var listSelected = [];
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                        var oSel = oView.byId("ComboBox" + i);
-                       listSelected[i] = oSel.getSelectedKey();
+                       that_._listSelected[i] = oSel.getSelectedKey();
                     }
-                    console.log(listSelected);
+                    console.log(that_._listSelected);
                 },
                 handlePress: function (e) {
-                    console.log("BANANA");
                     var button = e.getSource();
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                         if (button.sId == "__xmlview1--Button" + i){
@@ -195,21 +207,6 @@ function loadthis(that){
                         }
                      }
                 }
-                // onButtonPressed: function (oEvent) {
-                    // console.log(oView.byId("dateInput").getDateValue());
-                    // _date = oView.byId("dateInput").getDateValue().toString();
-                    // that._firePropertiesChanged();
-                    // console.log(_date);
-
-                    // this.settings = {};
-                    // this.settings.date = "";
-
-                    // that.dispatchEvent(new CustomEvent("onStart", {
-                    //     detail: {
-                    //         settings: this.settings
-                    //     }
-                    // }));
-                // }
             });
         });
 
