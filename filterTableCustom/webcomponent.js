@@ -13,7 +13,7 @@
             this._cleanListMembers = [];
             this._listSelected = [];
 
-            that_.addEventListener("change", event => {
+            this.addEventListener("change", event => {
                 var event = new Event("onChange");
                 this.dispatchEvent(event);
             });
