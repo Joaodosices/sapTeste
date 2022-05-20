@@ -109,8 +109,11 @@
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagID + `"/>
                         <m:ComboBox  
                             id ="` + tagID + `" 
-                            selectionChange="selectionChange" 
+                            selectionChange="handleChange" 
                             class="sapUiSmallMarginBottom"/> 
+                        <m:button 
+                            text="Clear"
+                            press="handlePress"/>
                     </l:VerticalLayout>
                         `;
                 body = body.concat(combobox);
@@ -170,15 +173,21 @@ function loadthis(that){
             "use strict";
 
             return Controller.extend("sap.m.sample.DatePicker.Group", {
-                selectionChange: function (e) {
+                handleChange: function (e) {
                     var listSelected = [];
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                        var oSel = oView.byId("ComboBox" + i);
+                       
                        listSelected[i] = oSel.getSelectedKey();
                     }
-                    // var value = e.getParameters.selectedItem;
-                    
                     console.log(listSelected);
+                },
+                handlePress: function (e) {
+                    // for (let i = 0; i < that_._cleanListDimensions.length; i++) {
+                    //     var oSel = oView.byId("ComboBox" + i);
+                        
+                    //     listSelected[i] = oSel.getSelectedKey();
+                    //  }
                 }
                 // onButtonPressed: function (oEvent) {
                     // console.log(oView.byId("dateInput").getDateValue());
