@@ -173,9 +173,8 @@ function loadthis(that){
             return Controller.extend("sap.m.sample.DatePicker.Group", {
                 selectionChange: function (e) {
                     var listSelected = [];
-                    var allComboBoxs = document.getElementsByClassName("sapComboBox");
-                    for (let i = 0; i < allComboBoxs.length; i++) {
-                       var oSel = sap.ui.getCore().byId(allComboBoxs.item(i).id);
+                    for (let i = 0; i < that_._cleanListDimensions.length; i++) {
+                       var oSel = oView.byId("ComboBox" + i);
                        listSelected[i] = oSel.getSelectedKey();
                     }
                     // var value = e.getParameters.selectedItem;
