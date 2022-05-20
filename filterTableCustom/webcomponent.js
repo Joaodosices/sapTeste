@@ -191,8 +191,7 @@ function loadthis(that){
                         if (button.sId == "__xmlview1--Button" + i){
                             var oSel = oView.byId("ComboBox" + i);
 
-                            oSel.setSelectedKey(" ");
-                            oSel.setSelectedText(" ");
+                            oSel.setSelectedKey("");
                         }
                      }
                 }
