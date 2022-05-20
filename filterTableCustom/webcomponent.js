@@ -177,12 +177,14 @@ function loadthis(that){
             return Controller.extend("sap.m.sample.DatePicker.Group", {
                 handleChange: function (e) {
                     var listSelected = [];
+                    var listText = [];
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                        var oSel = oView.byId("ComboBox" + i);
-                       
+                       listText[i] = oSel.getSelectedText();
                        listSelected[i] = oSel.getSelectedKey();
                     }
                     console.log(listSelected);
+                    console.log(listText);
                 },
                 handlePress: function (e) {
                     console.log("BANANA");
