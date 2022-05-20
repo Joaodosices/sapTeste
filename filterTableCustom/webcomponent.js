@@ -13,6 +13,10 @@
             this._cleanListMembers = [];
             this._listSelected = [];
 
+            this.addEventListener("change", event => {
+                var event = new Event("onSelect");
+                this.dispatchEvent(event);
+            });
         }
 
         createGuid(){
@@ -192,11 +196,6 @@ function loadthis(that){
                        that_._listSelected[i] = oSel.getSelectedKey();
                     }
                     console.log(that_._listSelected);
-
-                    that_.addEventListener("change", event => {
-                        var event = new Event("onChange");
-                        that_.dispatchEvent(event);
-                    });
                 },
                 handlePress: function (e) {
                     var button = e.getSource();
