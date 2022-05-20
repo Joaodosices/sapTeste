@@ -109,7 +109,6 @@
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagID + `"/>
                         <m:ComboBox  
                             id ="` + tagID + `" 
-                            class="sapComboBox"
                             selectionChange="selectionChange" 
                             class="sapUiSmallMarginBottom"/> 
                     </l:VerticalLayout>
