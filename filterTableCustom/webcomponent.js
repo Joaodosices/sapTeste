@@ -109,6 +109,7 @@
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagID + `"/>
                         <m:ComboBox  
                             id ="` + tagID + `" 
+                            class="sapComboBox"
                             selectionChange="selectionChange" 
                             class="sapUiSmallMarginBottom"/> 
                     </l:VerticalLayout>
@@ -171,9 +172,15 @@ function loadthis(that){
 
             return Controller.extend("sap.m.sample.DatePicker.Group", {
                 selectionChange: function (e) {
-                    var value = e.getParameters.selectedItem();
+                    var listSelected = [];
+                    var allComboBoxs = document.getElementsByClassName("sapComboBox");
+                    for (let i = 0; i < allComboBoxs.length; i++) {
+                       var oSel = sap.ui.getCore().byId(allComboBoxs.item(i).id);
+                       listSelected[i] = oSel.getSelectedKey();
+                    }
+                    // var value = e.getParameters.selectedItem;
                     
-                    console.log(value);
+                    console.log(listSelected);
                 }
                 // onButtonPressed: function (oEvent) {
                     // console.log(oView.byId("dateInput").getDateValue());
