@@ -112,7 +112,6 @@
                             id ="` + tagIDcombobox + `" 
                             selectionChange="handleChange" /> 
                         <m:Button 
-                            id"` + tagIDbutton + `"
                             text="Clear"
                             press="handlePress"
                             class="sapUiSmallMarginBottom"/>
