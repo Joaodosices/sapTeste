@@ -13,9 +13,14 @@
             this._listMembers = [];
             this._cleanListMembers = [];
             this._listSelected = [];
+            this._DimensionToClear = [];
 
             this.addEventListener("change", event => {
                 var event = new Event("onChange");
+                this.dispatchEvent(event);
+            });
+            this.addEventListener("click", event => {
+                var event = new Event("onClick");
                 this.dispatchEvent(event);
             });
         }
@@ -123,6 +128,22 @@
 
         getListIdDimensions(){
             return this._ListIdDimensions
+        }
+
+        setDimensionToClear(newDimensionToClear){
+            this._DimensionToClear = newDimensionToClear;
+            // fire "properties changed"
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+            detail: {
+                properties: {
+                    text: this._DimensionToClear
+                }
+            }
+            }));
+        }
+
+        getDimensionToClear(){
+            return this._DimensionToClear;
         }
 
         clearListDimensions(){
@@ -241,17 +262,18 @@ function loadthis(that){
                        that_._listSelected[i] = oSel.getSelectedKey();
                     }
                     that_.setListSelected(that_._listSelected);
-                    console.log(that_._listSelected);
                 },
                 handlePress: function (e) {
                     var button = e.getSource();
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                         if (button.sId == "__xmlview1--Button" + i){
                             var oSel = oView.byId("ComboBox" + i);
-
                             oSel.setSelectedKey("");
+
+                            that_._DimensionToClear = i;
                         }
                      }
+                    that_.setDimensionToClear(that_._DimensionToClear);
                 }
             });
         });
