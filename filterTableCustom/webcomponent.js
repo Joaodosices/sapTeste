@@ -9,6 +9,7 @@
             this.firstConnection = false;
             this._listDimensions = [];
             this._cleanListDimensions = [];
+            this._ListIdDimensions = [];
             this._listMembers = [];
             this._cleanListMembers = [];
             this._listSelected = [];
@@ -84,17 +85,20 @@
             this._listSelected = [...value];
         }
 
-        get CleanListDimensions() {
-            return this._cleanListDimensions;
+        get ListIdDimensions() {
+            return this._ListIdDimensions;
         }
 
-        set CleanListDimensions(value) {
-            this._cleanListDimensions = [...value];
+        set ListIdDimensions(value) {
+            this._ListIdDimensions = [...value];
         }
 
         clearListDimensions(){
             for (let i = 0; i < this._listDimensions.length; i++) {
                 this._cleanListDimensions[i] = this._listDimensions[i].split(",")
+            }
+            for (let x = 0; x < this._cleanListDimensions.length; x++) {
+                this._ListIdDimensions[x] = this._cleanListDimensions[x][0];
             }
         }
         clearListMembers(){
