@@ -82,7 +82,7 @@
         }
 
         set listSelected(value) {
-            this._listSelected = [...value];
+            this._listSelected = [];
         }
 
         get ListIdDimensions() {
@@ -90,7 +90,7 @@
         }
 
         set ListIdDimensions(value) {
-            this._ListIdDimensions = [...value];
+            this._ListIdDimensions = [];
         }
 
         clearListDimensions(){
