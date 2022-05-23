@@ -24,6 +24,11 @@
 			"description": "List of dimensions",
 			"default" : []
 		},
+		"CleanListDimensions": {
+			"type": "string[]",
+			"description": "List of dimensions",
+			"default" : []
+		},
 		"listMembers": {
 			"type": "any",
 			"description": "List of dimensions",
@@ -59,6 +64,11 @@
 			"body": "this.listMembers = newValue;"
 		},
 		"getListSelected": {
+			"description": "Get the list with the values to filter",
+			"body": "return this.listSelected;",
+			"returnType": "string[]"
+		},
+		"getCleanListDimensions": {
 			"description": "Get the list with the values to filter",
 			"body": "return this.listSelected;",
 			"returnType": "string[]"

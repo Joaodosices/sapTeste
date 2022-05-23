@@ -84,6 +84,14 @@
             this._listSelected = [...value];
         }
 
+        get CleanListDimensions() {
+            return this._cleanListDimensions;
+        }
+
+        set CleanListDimensions(value) {
+            this._cleanListDimensions = [...value];
+        }
+
         clearListDimensions(){
             for (let i = 0; i < this._listDimensions.length; i++) {
                 this._cleanListDimensions[i] = this._listDimensions[i].split(",")
