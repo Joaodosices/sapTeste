@@ -43,13 +43,13 @@
             if ("designMode" in oChangedProperties) {
                 this._designMode = oChangedProperties["designMode"];
             }
+            this.clearListDimensions();
+            this.clearListMembers();
 		}
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
-                this.clearListDimensions();
-                this.clearListMembers();
                 this.draw();
                 loadthis(this);
                 console.log(this._cleanListMembers);

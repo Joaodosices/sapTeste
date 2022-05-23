@@ -25,7 +25,7 @@
 			"default" : []
 		},
 		"ListIdDimensions": {
-			"type": "any",
+			"type": "string[]",
 			"description": "List of dimensions",
 			"default" : []
 		},
@@ -35,7 +35,7 @@
 			"default" : []
 		},
 		"listSelected": {
-			"type": "any",
+			"type": "string[]",
 			"description": "List of dimensions",
 			"default" : []
 		}
@@ -66,12 +66,12 @@
 		"getListSelected": {
 			"description": "Get the list with the values to filter",
 			"body": "return this.listSelected;",
-			"returnType": "any"
+			"returnType": "string[]"
 		},
 		"getListIdDimensions": {
 			"description": "Get the list with the values to filter",
 			"body": "return this.ListIdDimensions;",
-			"returnType": "any"
+			"returnType": "string[]"
 		}
 	},
 	"events": {
