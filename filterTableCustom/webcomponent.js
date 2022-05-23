@@ -132,6 +132,7 @@
             for (let x = 0; x < this._cleanListDimensions.length; x++) {
                 this._ListIdDimensions[x] = this._cleanListDimensions[x][0];
             }
+            this.setListIdDimensions(this._ListIdDimensions)
         }
         clearListMembers(){
             let z = 0;
@@ -239,7 +240,7 @@ function loadthis(that){
                        var oSel = oView.byId("ComboBox" + i);
                        that_._listSelected[i] = oSel.getSelectedKey();
                     }
-                    setListSelected(that_._listSelected);
+                    that_.setListSelected(that_._listSelected);
                     console.log(that_._listSelected);
                 },
                 handlePress: function (e) {
