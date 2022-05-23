@@ -32,6 +32,8 @@
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
             this.firstConnection = true; 
+            this.clearListDimensions();
+            this.clearListMembers();
         }
 
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
@@ -43,8 +45,6 @@
             if ("designMode" in oChangedProperties) {
                 this._designMode = oChangedProperties["designMode"];
             }
-            this.clearListDimensions();
-            this.clearListMembers();
 		}
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
