@@ -82,7 +82,7 @@
         }
 
         set listSelected(value) {
-            this.listSelected = this._listSelected;
+            this._listSelected = value;
         }
 
         get ListIdDimensions() {
@@ -90,7 +90,39 @@
         }
 
         set ListIdDimensions(value) {
-            this.ListIdDimensions = this._ListIdDimensions;
+            this._ListIdDimensions = value;
+        }
+
+        setListSelected(newListSelected){
+            this._listMembers = newListSelected;
+            // fire "properties changed"
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+            detail: {
+                properties: {
+                    text: this._listMembers
+                }
+            }
+            }));
+        }
+
+        getListSelected(){
+            return this._listMembers;
+        }
+
+        setListIdDimensions(newListIdDimensions){
+            this._ListIdDimensions = newListIdDimensions;
+            // fire "properties changed"
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+            detail: {
+                properties: {
+                    text: this._ListIdDimensions
+                }
+            }
+            }));
+        }
+
+        getListIdDimensions(){
+            return this._ListIdDimensions
         }
 
         clearListDimensions(){
@@ -207,6 +239,7 @@ function loadthis(that){
                        var oSel = oView.byId("ComboBox" + i);
                        that_._listSelected[i] = oSel.getSelectedKey();
                     }
+                    setListSelected(that_._listSelected);
                     console.log(that_._listSelected);
                 },
                 handlePress: function (e) {
