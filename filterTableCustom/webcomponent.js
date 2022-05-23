@@ -284,7 +284,7 @@ function loadthis(that){
         addListsToComboBoxs(that, oView);
 
         if (that_._designMode) {
-            oView.byId("passwordInput").setEnabled(false);
+            oView.byId(this._id + "_oView").setEnabled(false);
         }
     });
  }
