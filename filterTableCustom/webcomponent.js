@@ -81,17 +81,17 @@
             return this._listSelected;
         }
 
-        // set listSelected(value) {
-        //     this._listSelected = [];
-        // }
+        set listSelected(value) {
+            this.listSelected = this._listSelected;
+        }
 
         get ListIdDimensions() {
             return this._ListIdDimensions;
         }
 
-        // set ListIdDimensions(value) {
-        //     this._ListIdDimensions = [];
-        // }
+        set ListIdDimensions(value) {
+            this.ListIdDimensions = this._ListIdDimensions;
+        }
 
         clearListDimensions(){
             for (let i = 0; i < this._listDimensions.length; i++) {
