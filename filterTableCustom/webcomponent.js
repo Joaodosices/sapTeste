@@ -15,7 +15,7 @@
             this._listSelected = [];
 
             this.addEventListener("change", event => {
-                var event = new Event("onSelect");
+                var event = new Event("onChange");
                 this.dispatchEvent(event);
             });
         }
