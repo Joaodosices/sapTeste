@@ -43,8 +43,6 @@
             if ("designMode" in oChangedProperties) {
                 this._designMode = oChangedProperties["designMode"];
             }
-            this.clearListDimensions();
-            this.clearListMembers();
 		}
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
@@ -83,17 +81,17 @@
             return this._listSelected;
         }
 
-        set listSelected(value) {
-            this._listSelected = [];
-        }
+        // set listSelected(value) {
+        //     this._listSelected = [];
+        // }
 
         get ListIdDimensions() {
             return this._ListIdDimensions;
         }
 
-        set ListIdDimensions(value) {
-            this._ListIdDimensions = [];
-        }
+        // set ListIdDimensions(value) {
+        //     this._ListIdDimensions = [];
+        // }
 
         clearListDimensions(){
             for (let i = 0; i < this._listDimensions.length; i++) {
