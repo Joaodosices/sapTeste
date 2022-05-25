@@ -257,11 +257,11 @@ function loadthis(that){
             return Controller.extend("sap.m.sample.DatePicker.Group", {
                 handleChange: function (e) {
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
-                    //    var oSel = oView.byId("ComboBox" + i);
-                    //    that_._listSelected[i] = oSel.getSelectedKey();
+                       var oSel = oView.byId("ComboBox" + i);
+                       that_._listSelected[i] = oSel.getSelectedKey();
                     // that_._listSelected[i] = e.getSource();
                     }
-                    console.log(e.getSource()._lastValue);
+                    console.log(e.getSource());
                     that_.setListSelected(that_._listSelected);
                 },
                 handlePress: function (e) {
