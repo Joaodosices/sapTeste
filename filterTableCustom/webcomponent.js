@@ -57,7 +57,6 @@
                 this.clearListMembers();
                 this.draw();
                 loadthis(this);
-                console.log(this._cleanListMembers);
             }
         }
         
@@ -261,6 +260,7 @@ function loadthis(that){
                        var oSel = oView.byId("ComboBox" + i);
                        that_._listSelected[i] = oSel.getSelectedKey();
                     }
+                    console.log(that_._listSelected);
                     that_.setListSelected(that_._listSelected);
                 },
                 handlePress: function (e) {
