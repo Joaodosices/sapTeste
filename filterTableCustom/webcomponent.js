@@ -261,7 +261,7 @@ function loadthis(that){
                        that_._listSelected[i] = oSel.getSelectedKey();
                     // that_._listSelected[i] = e.getSource();
                     }
-                    console.log(e.getSource());
+                    console.log(e.getParameters);
                     that_.setListSelected(that_._listSelected);
                 },
                 handlePress: function (e) {
