@@ -15,10 +15,6 @@
             this._listSelected = [];
             this._DimensionToClear = [];
 
-            this.addEventListener("change", event => {
-                var event = new Event("onChange");
-                this.dispatchEvent(event);
-            });
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
                 this.dispatchEvent(event);
@@ -262,6 +258,11 @@ function loadthis(that){
                     }
                     console.log(that_._listSelected);
                     that_.setListSelected(that_._listSelected);
+                    
+                    this.addEventListener("change", event => {
+                        var event = new Event("onChange");
+                        this.dispatchEvent(event);
+                    });
                 },
                 handlePress: function (e) {
                     var button = e.getSource();
