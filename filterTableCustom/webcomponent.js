@@ -189,7 +189,7 @@
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagIDcombobox + `"/>
                         <m:ComboBox  
                             id ="` + tagIDcombobox + `" 
-                            change="handleChange" /> 
+                            selectionChange="handleChange" /> 
                         <m:Button 
                             id ="` + tagIDbutton + `" 
                             text="Clear"
