@@ -15,7 +15,7 @@
             this._listSelected = [];
             this._DimensionToClear = [];
 
-            this.addEventListener("change", event => {
+            this._listSelected.addEventListener("change", event => {
                 var event = new Event("onChange");
                 this.dispatchEvent(event);
             });
