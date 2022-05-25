@@ -258,8 +258,8 @@ function loadthis(that){
                     }
                     console.log(that_._listSelected);
                     that_.setListSelected(that_._listSelected);
-                    
-                    this.addEventListener("change", event => {
+
+                    that_.addEventListener("change", event => {
                         var event = new Event("onChange");
                         this.dispatchEvent(event);
                     });
