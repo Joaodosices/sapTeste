@@ -256,12 +256,15 @@ function loadthis(that){
 
             return Controller.extend("sap.m.sample.DatePicker.Group", {
                 handleChange: function (e) {
+                    if (e.getParameter("itemPressed") === true) {
+                        console.log(e.getSource());
+                    }
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                        var oSel = oView.byId("ComboBox" + i);
                        that_._listSelected[i] = oSel.getSelectedKey();
                     // that_._listSelected[i] = e.getSource();
                     }
-                    console.log(e.getParameter("itemPressed"));
+                    
                     that_.setListSelected(that_._listSelected);
                 },
                 handlePress: function (e) {
