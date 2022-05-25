@@ -257,7 +257,9 @@ function loadthis(that){
             return Controller.extend("sap.m.sample.DatePicker.Group", {
                 handleChange: function (e) {
                     if (e.getParameter("itemPressed") === true) {
-                        console.log(e.getSource());
+                        let value = e.getSource().mProperties.value;
+                        e.getSource().mProperties.value = " ";
+                        e.getSource().mProperties.value = value
                     }
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                        var oSel = oView.byId("ComboBox" + i);
