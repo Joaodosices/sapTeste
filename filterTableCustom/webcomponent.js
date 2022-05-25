@@ -259,9 +259,9 @@ function loadthis(that){
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                     //    var oSel = oView.byId("ComboBox" + i);
                     //    that_._listSelected[i] = oSel.getSelectedKey();
-                    that_._listSelected[i] = e.value;
+                    // that_._listSelected[i] = e.getSource();
                     }
-                    console.log(that_._listSelected);
+                    console.log(e.getSource());
                     that_.setListSelected(that_._listSelected);
                 },
                 handlePress: function (e) {
