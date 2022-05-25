@@ -15,10 +15,6 @@
             this._listSelected = [];
             this._DimensionToClear = [];
 
-            this._listSelected.addEventListener("change", event => {
-                var event = new Event("onChange");
-                this.dispatchEvent(event);
-            });
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
                 this.dispatchEvent(event);
@@ -281,6 +277,15 @@ function loadthis(that){
         var oView = getOview(that);
         oView.placeAt(content);
 
+        for (let i = 0; i < that_._cleanListDimensions.length; i++) {
+            var oSel = oView.byId("ComboBox" + i);
+            
+            oSel.addEventListener("change", event => {
+                var event = new Event("onChange");
+                this.dispatchEvent(event);
+            });
+        }
+        
         addListsToComboBoxs(that, oView);
 
         if (that_._designMode) {
