@@ -189,7 +189,7 @@
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagIDcombobox + `"/>
                         <m:ComboBox  
                             id ="` + tagIDcombobox + `" 
-                            selectionChange="handleChange" /> 
+                            change="handleChange" /> 
                         <m:Button 
                             id ="` + tagIDbutton + `" 
                             text="Clear"
@@ -259,7 +259,7 @@ function loadthis(that){
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                     //    var oSel = oView.byId("ComboBox" + i);
                     //    that_._listSelected[i] = oSel.getSelectedKey();
-                    that_._listSelected[i] = e.selectedItem;
+                    that_._listSelected[i] = e.value;
                     }
                     console.log(that_._listSelected);
                     that_.setListSelected(that_._listSelected);
