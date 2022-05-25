@@ -278,9 +278,9 @@ function loadthis(that){
         oView.placeAt(content);
 
         for (let i = 0; i < that_._cleanListDimensions.length; i++) {
-            var oSel = oView.byId("ComboBox" + i);
-            
-            oSel.addEventListener("change", event => {
+            var combobox = document.getElementById("ComboBox" + i);
+
+            combobox.addEventListener("change", event => {
                 var event = new Event("onChange");
                 this.dispatchEvent(event);
             });
