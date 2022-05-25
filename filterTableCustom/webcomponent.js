@@ -15,6 +15,10 @@
             this._listSelected = [];
             this._DimensionToClear = [];
 
+            this.addEventListener("change", event => {
+                var event = new Event("onChange");
+                this.dispatchEvent(event);
+            });
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
                 this.dispatchEvent(event);
@@ -185,7 +189,7 @@
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagIDcombobox + `"/>
                         <m:ComboBox  
                             id ="` + tagIDcombobox + `" 
-                            selectionChange="handleChange" /> 
+                            change="handleChange" /> 
                         <m:Button 
                             id ="` + tagIDbutton + `" 
                             text="Clear"
@@ -277,14 +281,14 @@ function loadthis(that){
         var oView = getOview(that);
         oView.placeAt(content);
 
-        for (let i = 0; i < that_._cleanListDimensions.length; i++) {
-            var combobox = document.getElementById("ComboBox" + i);
+        // for (let i = 0; i < that_._cleanListDimensions.length; i++) {
+        //     var combobox = document.getElementById("ComboBox" + i);
 
-            combobox.addEventListener("change", event => {
-                var event = new Event("onChange");
-                this.dispatchEvent(event);
-            });
-        }
+        //     combobox.addEventListener("change", event => {
+        //         var event = new Event("onChange");
+        //         this.dispatchEvent(event);
+        //     });
+        // }
         
         addListsToComboBoxs(that, oView);
 
