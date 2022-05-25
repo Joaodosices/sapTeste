@@ -259,7 +259,7 @@ function loadthis(that){
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                     //    var oSel = oView.byId("ComboBox" + i);
                     //    that_._listSelected[i] = oSel.getSelectedKey();
-                    that_._listSelected[i] = e.getParameters.selectedItem;
+                    that_._listSelected[i] = e.getParameters.selectedItem();
                     }
                     console.log(that_._listSelected);
                     that_.setListSelected(that_._listSelected);
