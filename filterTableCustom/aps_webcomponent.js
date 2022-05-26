@@ -26,8 +26,8 @@
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
-			this._shadowRoot.getElementById("formVerticalLayout").addEventListener("submit", this._submitVerticalLayout.bind(this));
-			this._shadowRoot.getElementById("formHorizontalLayout").addEventListener("submit", this._submitHorizontalLayout.bind(this));
+			this._shadowRoot.getElementById("aps_VerticalLayout").addEventListener("click", this._submitVerticalLayout.bind(this));
+			this._shadowRoot.getElementById("aps_HorizontalLayout").addEventListener("click", this._submitHorizontalLayout.bind(this));
 			this._option = "";
 		}
 
