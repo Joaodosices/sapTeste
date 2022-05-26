@@ -267,7 +267,8 @@ function loadthis(that){
                     //    }
                         if (e.getParameter("itemPressed") === true) {
                             if (e.getSource().sId == "__xmlview1--ComboBox" + i) {
-                                that_._shadowRoot.getElementById("__xmlview1--ComboBox" + i).dispatchEvent(new Event("change"));
+                                // document.getElementById("__xmlview1--ComboBox" + i).dispatchEvent(new Event("change"));
+                                that_.dispatchEvent(new Event("onChange"))
                                 console.log("SUCESS INSIDE");
                             }
                         }
