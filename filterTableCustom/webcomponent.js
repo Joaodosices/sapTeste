@@ -268,6 +268,7 @@ function loadthis(that){
                         if (e.getParameter("itemPressed") === true) {
                             if (e.getSource().sId == "__xmlview1--ComboBox" + i) {
                                 document.getElementById("__xmlview1--ComboBox" + i).dispatchEvent(new Event("change"));
+                                console.log("SUCESS INSIDE");
                             }
                         }
                        that_._listSelected[i] = oSel.getSelectedKey();
