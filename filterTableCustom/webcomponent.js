@@ -263,7 +263,7 @@ function loadthis(that){
                         }
                        that_._listSelected[i] = oSel.getSelectedKey();
                     }
-                    console.log(e.getSource());
+                    
                     that_.setListSelected(that_._listSelected);
                     if (e.getParameter("itemPressed") === true) { 
                         that_.dispatchEvent(new Event("onChange"))
