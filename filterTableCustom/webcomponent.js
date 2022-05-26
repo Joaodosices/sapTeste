@@ -263,7 +263,7 @@ function loadthis(that){
                         }
                        that_._listSelected[i] = oSel.getSelectedKey();
                     }
-                    
+
                     that_.setListSelected(that_._listSelected);
                     if (e.getParameter("itemPressed") === true) { 
                         that_.dispatchEvent(new Event("onChange"))
@@ -298,9 +298,9 @@ function loadthis(that){
         
         addListsToComboBoxs(that, oView);
 
-        if (that_._designMode) {
-            oView.byId(this._id + "_oView").setEnabled(false);
-        }
+        // if (that_._designMode) {
+        //     oView.byId(this._id + "_oView").setEnabled(false);
+        // }
     });
  }
 
