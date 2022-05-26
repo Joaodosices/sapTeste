@@ -193,7 +193,7 @@
                 let tagIDcombobox = "ComboBox" + i;
                 let tagIDbutton = "Button" + i;
                 let combobox =`
-                    <l:` + this._orientationStyle + `
+                    <l:VerticalLayout
                         width="100%">
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagIDcombobox + `"/>
                         <m:ComboBox  
@@ -204,7 +204,7 @@
                             text="Clear"
                             press="handlePress"
                             class="sapUiSmallMarginBottom"/>
-                    </l:` + this._orientationStyle + `>
+                    </l:VerticalLayout>
                         `;
                 body = body.concat(combobox);
                 tagIDcombobox = ``;
@@ -232,8 +232,11 @@
                             headerText="Filters"
                             width="auto">
                             <m:Label text="" labelFor="dateInput"/>
-
-                            ` + body + `
+                            
+                            <l:` + this._orientationStyle + `
+                                width="100%">
+                                ` + body + `
+                            </l:` + this._orientationStyle + `>
                         </m:Panel>
                     </mvc:View>
                 </script>   
