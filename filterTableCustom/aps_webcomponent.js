@@ -6,7 +6,7 @@
 				<table>
 					<tr>
 						<td>Vertical Layout:</td>
-						<td><input id="aps_VerticalLayout" type="radio"></td>
+						<td><input id="aps_VerticalLayout" type="radio" checked="checked"></td>
 					</tr>
 				</table>
 			</fieldset>
