@@ -266,10 +266,11 @@ function loadthis(that){
                     //         }
                     //    }
                         if (e.getParameter("itemPressed") === true) {
-                            oSel.dispatchEvent(new Event("onClick"));
+                            if (e.getSource().sId == "__xmlview1--ComboBox" + i) {
+                                document.getElementById("__xmlview1--ComboBox" + i).dispatchEvent(new Event("onClick"));
+                            }
                         }
                        that_._listSelected[i] = oSel.getSelectedKey();
-                    // that_._listSelected[i] = e.getSource();
                     }
                     console.log(e.getSource());
                     that_.setListSelected(that_._listSelected);
