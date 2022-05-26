@@ -6,6 +6,7 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._id = this.createGuid();
 
+            this._orientationStyle = "VerticalLayout";
             this.firstConnection = false;
             this._listDimensions = [];
             this._cleanListDimensions = [];
@@ -65,6 +66,14 @@
         }
 
         //Getters and Setters
+
+        set orientationStyle(val) {
+			this._orientationStyle = val;
+		}
+        get orientationStyle() {
+			return this._orientationStyle;
+		}
+
         get listDimensions() {
             return this._listDimensions;
         }
@@ -184,7 +193,7 @@
                 let tagIDcombobox = "ComboBox" + i;
                 let tagIDbutton = "Button" + i;
                 let combobox =`
-                    <l:VerticalLayout
+                    <l:` + this._orientationStyle + `
                         width="100%">
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagIDcombobox + `"/>
                         <m:ComboBox  
@@ -195,7 +204,7 @@
                             text="Clear"
                             press="handlePress"
                             class="sapUiSmallMarginBottom"/>
-                    </l:VerticalLayout>
+                    </l:` + this._orientationStyle + `>
                         `;
                 body = body.concat(combobox);
                 tagIDcombobox = ``;

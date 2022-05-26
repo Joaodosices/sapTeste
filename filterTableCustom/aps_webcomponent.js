@@ -60,8 +60,8 @@
 					}
 			}));
 		}
-		set orientationStyle(valInicial) {
-			this._option = valInicial;
+		set orientationStyle(val) {
+			this._option = val;
 		}
         get orientationStyle() {
 			return this._option;
