@@ -258,24 +258,16 @@ function loadthis(that){
                 handleChange: function (e) {
                     for (let i = 0; i < that_._cleanListDimensions.length; i++) {
                        var oSel = oView.byId("ComboBox" + i);
-                    //    if (e.getSource().sId == "__xmlview1--ComboBox" + i) {
-                    //         if (e.getParameter("itemPressed") === true) {
-                    //             let value = e.getSource().mProperties.value;
-                    //             oSel.setSelectedKey("");
-                    //             oSel.setSelectedKey(value);
-                    //         }
-                    //    }
-                        if (e.getParameter("itemPressed") === true) {
-                            if (e.getSource().sId == "__xmlview1--ComboBox" + i) {
-                                // document.getElementById("__xmlview1--ComboBox" + i).dispatchEvent(new Event("change"));
+                        if (e.getParameter("itemPressed") === true) { 
                                 that_.dispatchEvent(new Event("onChange"))
-                                console.log("SUCESS INSIDE");
-                            }
                         }
                        that_._listSelected[i] = oSel.getSelectedKey();
                     }
                     console.log(e.getSource());
                     that_.setListSelected(that_._listSelected);
+                    if (e.getParameter("itemPressed") === true) { 
+                        that_.dispatchEvent(new Event("onChange"))
+                    }
                 },
                 handlePress: function (e) {
                     var button = e.getSource();
