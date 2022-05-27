@@ -233,8 +233,7 @@
                             width="auto">
                             <m:Label text="" labelFor="dateInput"/>
                             
-                            <l:` + this._orientationStyle + `
-                                width="100%">
+                            <l:` + this._orientationStyle + `>
                                 ` + body + `
                             </l:` + this._orientationStyle + `>
                         </m:Panel>
