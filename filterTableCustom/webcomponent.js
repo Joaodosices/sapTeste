@@ -154,6 +154,8 @@
             return this._DimensionToClear;
         }
 
+        //Clear the data from the model in arrays
+
         clearListDimensions(){
             for (let i = 0; i < this._listDimensions.length; i++) {
                 this._cleanListDimensions[i] = this._listDimensions[i].split(",")
@@ -187,6 +189,9 @@
                 this._cleanListMembers.push(tempListObject);
             }
         }
+
+        //XML view
+
         draw(){
             let body = ` `;
             for (let i = 0; i < this._cleanListDimensions.length; i++) {
@@ -240,6 +245,7 @@
                     </mvc:View>
                 </script>   
             `;
+            console.log(this._shadowRoot.innerHTML());
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
         }
