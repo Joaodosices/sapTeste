@@ -57,10 +57,10 @@
             if (this.firstConnection === true){
                 this.clearListDimensions();
                 this.clearListMembers();
-                if (this._isStylerOptionsChoosen === true) {
+                // if (this._isStylerOptionsChoosen === true) {
                     this.draw();
                     loadthis(this);
-                }
+                // }
             }
         }
         
@@ -248,9 +248,9 @@
                             width="auto">
                             <m:Label text="" labelFor="dateInput"/>
                             
-                            <l:` + this._orientationStyle + `>
+                            <l:HorizontalLayout>
                                 ` + body + `
-                            </l:` + this._orientationStyle + `>
+                            </l:HorizontalLayout>
                         </m:Panel>
                     </mvc:View>
                 </script>   
