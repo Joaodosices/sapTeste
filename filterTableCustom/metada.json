@@ -92,12 +92,6 @@
 		},
 		"getDimensionToClear": {
 			"returnType": "integer"
-		},
-		"setLayoutOrientation": {
-			"parameters": [{"name": "newLayoutOrientation", "type": "string"}]
-		},
-		"getLayoutOrientation": {
-			"returnType": "string"
 		}
 	},
 	"events": {
