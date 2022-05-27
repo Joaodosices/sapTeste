@@ -28,7 +28,7 @@
 		_submitVerticalLayout(e) {
 			// e.preventDefault();
 			// this._shadowRoot.getElementById("aps_VerticalLayout").checked;
-			// this._shadowRoot.getElementById("aps_HorizontalLayout").checked = false;
+			this._shadowRoot.getElementById("aps_HorizontalLayout").checked = false;
 		
 			this._option = "VerticalLayout";
 			console.log(this._option);
@@ -44,7 +44,7 @@
 		_submitHorizontalLayout(e) {
 			// e.preventDefault();
 			// this._shadowRoot.getElementById("aps_HorizontalLayout").checked;
-			// this._shadowRoot.getElementById("aps_VerticalLayout").checked = false;
+			this._shadowRoot.getElementById("aps_VerticalLayout").checked = false;
 			
 			this._option = "HorizontalLayout";
 			console.log(this._option);
