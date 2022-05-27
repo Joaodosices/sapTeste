@@ -21,21 +21,10 @@
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
-			this._option = "";
-			this._isStylerOptionsChoosen
+			this._option;
+			this._isStylerOptionsChoosen;
 			this._shadowRoot.getElementById("aps_VerticalLayout").addEventListener("click", this._submitVerticalLayout.bind(this));
 			this._shadowRoot.getElementById("aps_HorizontalLayout").addEventListener("click", this._submitHorizontalLayout.bind(this));
-			console.log(this._option);
-			if(this._option == "VerticalLayout"){
-				this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: vertical layout";
-				this._shadowRoot.getElementById("aps_VerticalLayout").checked = true;
-				this._shadowRoot.getElementById("aps_HorizontalLayout").checked = false;
-			}
-			if (this._option == "HorizontalLayout") {
-				this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: horizontal layout";
-				this._shadowRoot.getElementById("aps_VerticalLayout").checked = false;
-				this._shadowRoot.getElementById("aps_HorizontalLayout").checked = true;
-			}
 		}
 
 		
@@ -44,16 +33,10 @@
 			// this._shadowRoot.getElementById("aps_VerticalLayout").checked;
 			this._shadowRoot.getElementById("aps_HorizontalLayout").checked = false;
 			this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: vertical layout";
-			this._option = "VerticalLayout";
+			this.setOrientationStyle("VerticalLayout");
 			console.log(this._option);
-			this.dispatchEvent(new CustomEvent("propertiesChanged", {
-					detail: {
-						properties: {
-							orientationStyle: this._option,
-						}
-					}
-			}));
 			this._isStylerOptionsChoosen = true;
+			
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 				detail: {
 					properties: {
@@ -68,16 +51,10 @@
 			// this._shadowRoot.getElementById("aps_HorizontalLayout").checked;
 			this._shadowRoot.getElementById("aps_VerticalLayout").checked = false;
 			this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: horizontal layout";
-			this._option = "HorizontalLayout";
+			this.setOrientationStyle("HorizontalLayout");
 			console.log(this._option);
-			this.dispatchEvent(new CustomEvent("propertiesChanged", {
-					detail: {
-						properties: {
-							orientationStyle: this._option
-						}
-					}
-			}));
 			this._isStylerOptionsChoosen = true;
+			
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 				detail: {
 					properties: {
@@ -99,6 +76,22 @@
         get isStylerOptionsChoosen() {
 			return this._isStylerOptionsChoosen;
 		}
+
+		setOrientationStyle(newOrientationStyle){
+            this._option = newOrientationStyle;
+            // fire "properties changed"
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+            detail: {
+                properties: {
+                    orientationStyle: this._option
+                }
+            }
+            }));
+        }
+
+        getOrientationStyle(){
+            return this._option;
+        }
 	}
 
 customElements.define("com-sap-sample-filtertable-aps", ApsWebComponent);
