@@ -201,8 +201,7 @@
         //XML view
 
         draw(){
-            if (this._isStylerOptionsChoosen === true) {
-                let body = ` `;
+            let body = ` `;
             for (let i = 0; i < this._cleanListDimensions.length; i++) {
                 let tagIDcombobox = "ComboBox" + i;
                 let tagIDbutton = "Button" + i;
@@ -255,10 +254,11 @@
                 </script>   
             `;
             this._shadowRoot.innerHTML = "";
-            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            if (this._isStylerOptionsChoosen === true) {
+                this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            }
             tmpl.innerHTML = ""; 
             this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
-            }
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
