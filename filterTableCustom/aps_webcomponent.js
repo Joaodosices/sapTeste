@@ -9,6 +9,7 @@
 						<td><input id="aps_VerticalLayout" type="radio" checked="checked"></td>
 						<td>Horizontal Layout:</td>
 						<td><input id="aps_HorizontalLayout" type="radio"></td>
+						<td><div id="currentStateLayout">"Current Layout: vertical layout</div></td>
 					</tr>
 				</table>
 			</fieldset>
@@ -20,16 +21,16 @@
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
+			this._option = "";
 			this._shadowRoot.getElementById("aps_VerticalLayout").addEventListener("click", this._submitVerticalLayout.bind(this));
 			this._shadowRoot.getElementById("aps_HorizontalLayout").addEventListener("click", this._submitHorizontalLayout.bind(this));
-			this._option = "";
 		}
 
 		_submitVerticalLayout(e) {
 			// e.preventDefault();
 			// this._shadowRoot.getElementById("aps_VerticalLayout").checked;
 			this._shadowRoot.getElementById("aps_HorizontalLayout").checked = false;
-		
+			this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: vertical layout";
 			this._option = "VerticalLayout";
 			console.log(this._option);
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
@@ -45,7 +46,7 @@
 			// e.preventDefault();
 			// this._shadowRoot.getElementById("aps_HorizontalLayout").checked;
 			this._shadowRoot.getElementById("aps_VerticalLayout").checked = false;
-			
+			this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: horizontal layout";
 			this._option = "HorizontalLayout";
 			console.log(this._option);
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
