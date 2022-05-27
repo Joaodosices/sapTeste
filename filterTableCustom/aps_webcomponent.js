@@ -25,6 +25,16 @@
 			this._isStylerOptionsChoosen
 			this._shadowRoot.getElementById("aps_VerticalLayout").addEventListener("click", this._submitVerticalLayout.bind(this));
 			this._shadowRoot.getElementById("aps_HorizontalLayout").addEventListener("click", this._submitHorizontalLayout.bind(this));
+			if(this._option == "VerticalLayout"){
+				this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: vertical layout";
+				this._shadowRoot.getElementById("aps_VerticalLayout").checked;
+				this._shadowRoot.getElementById("aps_HorizontalLayout").checked = false;
+			}
+			if (this._option == "HorizontalLayout") {
+				this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: horizontal layout";
+				this._shadowRoot.getElementById("aps_VerticalLayout").checked = false;
+				this._shadowRoot.getElementById("aps_HorizontalLayout").checked;
+			}
 		}
 
 		_submitVerticalLayout(e) {
