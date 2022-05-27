@@ -247,9 +247,9 @@
                             width="auto">
                             <m:Label text="" labelFor="dateInput"/>
                             
-                            <l:VerticalLayout>
-                                ` + body + `
-                            </l:VerticalLayout>
+                            <l:` + this._orientationStyle + `>
+                            ` + body + `
+                            </l:` + this._orientationStyle + `>
                         </m:Panel>
                     </mvc:View>
                 </script>   
