@@ -256,9 +256,9 @@
             this._shadowRoot.innerHTML = "";
             if (this._isStylerOptionsChoosen === true) {
                 this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+                tmpl.innerHTML = ""; 
+                this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
             }
-            tmpl.innerHTML = ""; 
-            this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
