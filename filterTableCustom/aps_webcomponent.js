@@ -22,6 +22,7 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
 			this._option = "";
+			this._isStylerOptionsChoosen
 			this._shadowRoot.getElementById("aps_VerticalLayout").addEventListener("click", this._submitVerticalLayout.bind(this));
 			this._shadowRoot.getElementById("aps_HorizontalLayout").addEventListener("click", this._submitHorizontalLayout.bind(this));
 		}
@@ -40,6 +41,14 @@
 						}
 					}
 			}));
+			this._isStylerOptionsChoosen = true;
+			this.dispatchEvent(new CustomEvent("propertiesChanged", {
+				detail: {
+					properties: {
+						isStylerOptionsChoosen: this._isStylerOptionsChoosen,
+					}
+				}
+			}));
 		}
 
 		_submitHorizontalLayout(e) {
@@ -56,6 +65,14 @@
 						}
 					}
 			}));
+			this._isStylerOptionsChoosen = true;
+			this.dispatchEvent(new CustomEvent("propertiesChanged", {
+				detail: {
+					properties: {
+						isStylerOptionsChoosen: this._isStylerOptionsChoosen,
+					}
+				}
+		}));
 		}
 
 		set orientationStyle(val) {
@@ -64,7 +81,12 @@
         get orientationStyle() {
 			return this._option;
 		}
-
+		set isStylerOptionsChoosen(val) {
+			this._isStylerOptionsChoosen = val;
+		}
+        get isStylerOptionsChoosen() {
+			return this._isStylerOptionsChoosen;
+		}
 	}
 
 customElements.define("com-sap-sample-filtertable-aps", ApsWebComponent);
