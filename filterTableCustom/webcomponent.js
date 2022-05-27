@@ -245,7 +245,7 @@
                     </mvc:View>
                 </script>   
             `;
-            console.log(this._shadowRoot.innerHTML());
+            console.log(this._shadowRoot.innerHTML);
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
         }
