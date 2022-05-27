@@ -208,8 +208,7 @@
                 let tagIDcombobox = "ComboBox" + i;
                 let tagIDbutton = "Button" + i;
                 let combobox =`
-                    <l:VerticalLayout
-                        width="100%">
+                    <l:VerticalLayout>
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagIDcombobox + `"/>
                         <m:ComboBox  
                             id ="` + tagIDcombobox + `" 
@@ -257,6 +256,7 @@
             `;
             this._shadowRoot.innerHTML = "";
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            console.log(this._shadowRoot.innerHTML)
             tmpl.innerHTML = ""; 
             this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
         }
