@@ -9,6 +9,8 @@
 						<td><input id="aps_VerticalLayout" type="radio" checked="checked"></td>
 						<td>Horizontal Layout:</td>
 						<td><input id="aps_HorizontalLayout" type="radio"></td>
+					</tr>
+					<tr>
 						<td><div id="currentStateLayout">"Current Layout: vertical layout</div></td>
 					</tr>
 				</table>
