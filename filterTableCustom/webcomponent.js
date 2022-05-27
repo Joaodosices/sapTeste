@@ -57,8 +57,10 @@
             if (this.firstConnection === true){
                 this.clearListDimensions();
                 this.clearListMembers();
-                this.draw();
-                loadthis(this);
+                if (this._isStylerOptionsChoosen === true) {
+                    this.draw();
+                    loadthis(this);
+                }
             }
         }
         
@@ -254,11 +256,9 @@
                 </script>   
             `;
             this._shadowRoot.innerHTML = "";
-            if (this._isStylerOptionsChoosen === true) {
-                this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-                tmpl.innerHTML = ""; 
-                this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
-            }
+            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            tmpl.innerHTML = ""; 
+            this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
