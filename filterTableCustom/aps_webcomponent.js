@@ -32,7 +32,7 @@
 		}
 
 		_submitVerticalLayout(e) {
-			// e.preventDefault();
+			e.preventDefault();
 			if (this._shadowRoot.getElementById("aps_VerticalLayout").checked === true) {
 				this._option = "VerticalLayout";
 			}
@@ -44,10 +44,12 @@
 						}
 					}
 			}));
+			this._shadowRoot.getElementById("aps_VerticalLayout").checked;
+			this._shadowRoot.getElementById("aps_HorizontalLayout").checked = false;
 		}
 
 		_submitHorizontalLayout(e) {
-			// e.preventDefault();
+			e.preventDefault();
 			if (this._shadowRoot.getElementById("aps_HorizontalLayout").checked === true) {
 				this._option = "HorizontalLayout";
 			}
@@ -59,6 +61,8 @@
 						}
 					}
 			}));
+			this._shadowRoot.getElementById("aps_VerticalLayout").checked = false;
+			this._shadowRoot.getElementById("aps_HorizontalLayout").checked;
 		}
 		set orientationStyle(val) {
 			this._option = val;

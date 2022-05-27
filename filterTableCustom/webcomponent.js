@@ -6,7 +6,7 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._id = this.createGuid();
 
-            this._orientationStyle = "VerticalLayout";
+            this._orientationStyle = "";
             this.firstConnection = false;
             this._listDimensions = [];
             this._cleanListDimensions = [];
