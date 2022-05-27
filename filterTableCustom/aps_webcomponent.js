@@ -20,7 +20,8 @@
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
-			this._shadowRoot.getElementById("formLayout").addEventListener("submit", this._submitLayout.bind(this));
+			this._shadowRoot.getElementById("aps_VerticalLayout").addEventListener("click", this._submitLayout.bind(this));
+			this._shadowRoot.getElementById("aps_HorizontalLayout").addEventListener("click", this._submitLayout.bind(this));
 			this._option = "";
 
 		}
