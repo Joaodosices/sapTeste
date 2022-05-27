@@ -309,9 +309,9 @@ function loadthis(that){
         
         addListsToComboBoxs(that, oView);
 
-        if (that_._designMode) {
-            oView.byId(that._id + "_oView").setEnabled(false);
-        }
+        // if (that_._designMode) {
+        //     oView.byId(that._id + "_oView").setEnabled(false);
+        // }
     });
  }
 
