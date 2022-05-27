@@ -6,7 +6,7 @@
 				<table>
 					<tr>
 						<td>Vertical Layout:</td>
-						<td><input id="aps_VerticalLayout" type="radio" checked="checked"></td>
+						<td><input id="aps_VerticalLayout" type="radio"></td>
 						<td>Horizontal Layout:</td>
 						<td><input id="aps_HorizontalLayout" type="radio"></td>
 					</tr>
@@ -22,6 +22,7 @@
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
 			this._shadowRoot.getElementById("formLayout").addEventListener("submit", this._submitLayout.bind(this));
 			this._option = "";
+
 		}
 
 		_submitLayout(e) {
