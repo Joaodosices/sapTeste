@@ -6,7 +6,7 @@
 				<table>
 					<tr>
 						<td>Vertical Layout:</td>
-						<td><input id="aps_VerticalLayout" type="radio" checked="checked"></td>
+						<td><input id="aps_VerticalLayout" type="radio"></td>
 						<td>Horizontal Layout:</td>
 						<td><input id="aps_HorizontalLayout" type="radio"></td>
 					</tr>
@@ -56,7 +56,7 @@
 					}
 			}));
 		}
-		
+
 		set orientationStyle(val) {
 			this._option = val;
 		}
