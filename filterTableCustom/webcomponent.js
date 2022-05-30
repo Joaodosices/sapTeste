@@ -254,7 +254,7 @@
                     </mvc:View>
                 </script>   
             `;
-            document.body.removeChild(document.querySelector("#oView"));
+            document.body.removeChild(document.getElementById("oView"));
             this._shadowRoot.querySelector("#oView")
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             
