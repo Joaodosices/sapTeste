@@ -35,15 +35,7 @@
 			this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: vertical layout";
 			this.setOrientationStyle("VerticalLayout");
 			console.log(this._option);
-			this._isStylerOptionsChoosen = true;
-			
-			this.dispatchEvent(new CustomEvent("propertiesChanged", {
-				detail: {
-					properties: {
-						isStylerOptionsChoosen: this._isStylerOptionsChoosen,
-					}
-				}
-			}));
+			this.setIsStylerOptionsChoosen(true);
 		}
 
 		_submitHorizontalLayout(e) {
@@ -53,15 +45,7 @@
 			this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: horizontal layout";
 			this.setOrientationStyle("HorizontalLayout");
 			console.log(this._option);
-			this._isStylerOptionsChoosen = true;
-			
-			this.dispatchEvent(new CustomEvent("propertiesChanged", {
-				detail: {
-					properties: {
-						isStylerOptionsChoosen: this._isStylerOptionsChoosen,
-					}
-				}
-		}));
+			this.setIsStylerOptionsChoosen(true);
 		}
 
 		set orientationStyle(val) {
@@ -91,6 +75,22 @@
 
         getOrientationStyle(){
             return this._option;
+        }
+
+		setIsStylerOptionsChoosen(newIsStylerOptionsChoosen){
+            this._isStylerOptionsChoosen = newIsStylerOptionsChoosen;
+            // fire "properties changed"
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+            detail: {
+                properties: {
+                    isStylerOptionsChoosen: this._isStylerOptionsChoosen
+                }
+            }
+            }));
+        }
+
+        getIsStylerOptionsChoosen(){
+            return this._isStylerOptionsChoosen;
         }
 	}
 
