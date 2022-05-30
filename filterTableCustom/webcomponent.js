@@ -203,7 +203,7 @@
         //XML view
 
         draw(){
-            let body = ` `;
+            let bodyContent = ` `;
             for (let i = 0; i < this._cleanListDimensions.length; i++) {
                 let tagIDcombobox = "ComboBox" + i;
                 let tagIDbutton = "Button" + i;
@@ -220,7 +220,7 @@
                             class="sapUiSmallMarginBottom"/>
                     </l:VerticalLayout>
                         `;
-                body = body.concat(combobox);
+                bodyContent = bodyContent.concat(combobox);
                 tagIDcombobox = ``;
                 tagIDbutton = ``;
                 combobox = ``;
@@ -248,7 +248,7 @@
                             <m:Label text="" labelFor="dateInput"/>
                             
                             <l:` + this._orientationStyle + `>
-                            ` + body + `
+                            ` + bodyContent + `
                             </l:` + this._orientationStyle + `>
                         </m:Panel>
                     </mvc:View>
