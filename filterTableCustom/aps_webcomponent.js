@@ -34,7 +34,6 @@
 			this._shadowRoot.getElementById("aps_HorizontalLayout").checked = false;
 			this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: vertical layout";
 			this.setOrientationStyle("VerticalLayout");
-			console.log(this._option);
 			this.setIsStylerOptionsChoosen(true);
 		}
 
@@ -44,7 +43,6 @@
 			this._shadowRoot.getElementById("aps_VerticalLayout").checked = false;
 			this._shadowRoot.getElementById("currentStateLayout").innerHTML = "Current Layout: horizontal layout";
 			this.setOrientationStyle("HorizontalLayout");
-			console.log(this._option);
 			this.setIsStylerOptionsChoosen(true);
 		}
 
