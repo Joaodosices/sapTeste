@@ -257,7 +257,7 @@
             // It duplicates the view because we are always appending a new child, gotta make a way to reset it
             // document.body.removeChild(document.getElementById("oView"));
             if (this._shadowRoot.innerHTML.length > 1) {
-                // document.getElementById("oView").parentNode.removeChild(document.getElementById("oView"));
+                document.getElementById("oView").parentNode.removeChild(document.getElementById("oView"));
                 console.log("SUCESS INSIDE");
             }
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
