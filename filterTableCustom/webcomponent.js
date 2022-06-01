@@ -258,8 +258,8 @@
             // document.body.removeChild(document.getElementById("oView"));
             if (this._shadowRoot.getElementById("oView")) {
                 var oView = getOview(this);
-                oView.byId("DatePanel").removeAllContent();
-                console.log(oView.byId("DatePanel").removeAllContent());
+                oView.byId("DatePanel").destroyContent();
+                console.log("SUCESS INSIDE");
             }
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             
