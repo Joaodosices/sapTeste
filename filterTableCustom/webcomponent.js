@@ -256,15 +256,15 @@
             `;
             // It duplicates the view because we are always appending a new child, gotta make a way to reset it
             // document.body.removeChild(document.getElementById("oView"));
-            if (this._shadowRoot.innerHTML.length > 1) {
-                document.getElementById("oView").parentNode.removeChild(document.getElementById("oView"));
+            if (this._shadowRoot.innerHTML.length < 1) {
+                // document.getElementById("oView").parentNode.removeChild(document.getElementById("oView"));
+                this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            
+                console.log(this._shadowRoot.textContent);
+
+                this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
                 console.log("SUCESS INSIDE");
             }
-            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            
-            console.log(this._shadowRoot.textContent);
-
-            this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
