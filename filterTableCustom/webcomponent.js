@@ -57,10 +57,10 @@
             if (this.firstConnection === true){
                 this.clearListDimensions();
                 this.clearListMembers();
-                // if (this._isStylerOptionsChoosen === true) {
+                if (this._shadowRoot.innerHTML.length < 1) { 
                     this.draw();
                     loadthis(this);
-                // }
+                }
             }
         }
         
@@ -256,7 +256,7 @@
             `;
             // It duplicates the view because we are always appending a new child, gotta make a way to reset it
             // document.body.removeChild(document.getElementById("oView"));
-            if (this._shadowRoot.innerHTML.length < 1) {
+            // if (this._shadowRoot.innerHTML.length < 1) {
                 // document.getElementById("oView").parentNode.removeChild(document.getElementById("oView"));
                 this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             
@@ -264,7 +264,7 @@
 
                 this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
                 console.log("SUCESS INSIDE");
-            }
+            // }
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
