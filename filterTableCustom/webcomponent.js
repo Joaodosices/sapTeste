@@ -257,8 +257,10 @@
             // It duplicates the view because we are always appending a new child, gotta make a way to reset it
             // document.body.removeChild(document.getElementById("oView"));
             var oView = getOview(this);
-            oView.byId("DatePanel").removeAllContent();
-            console.log(oView.byId("DatePanel").removeAllContent());
+            if (oView) {
+                oView.byId("DatePanel").removeAllContent();
+                console.log(oView.byId("DatePanel").removeAllContent());
+            }
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             
             console.log(this._shadowRoot.textContent);
