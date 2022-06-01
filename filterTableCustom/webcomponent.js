@@ -256,7 +256,7 @@
             `;
             // It duplicates the view because we are always appending a new child, gotta make a way to reset it
             // document.body.removeChild(document.getElementById("oView"));
-            if (this._shadowRoot.getElementById("oView")) {
+            if (document.getElementById("ui5_content")) {
                 var oView = getOview(this);
                 oView.byId("DatePanel").destroyContent();
                 console.log("SUCESS INSIDE");
