@@ -55,9 +55,9 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
-                this.clearListDimensions();
-                this.clearListMembers();
                 if (this._shadowRoot.innerHTML.length < 1) { 
+                    this.clearListDimensions();
+                    this.clearListMembers();
                     this.draw();
                     loadthis(this);
                 }
@@ -254,17 +254,9 @@
                     </mvc:View>
                 </script>   
             `;
-            // It duplicates the view because we are always appending a new child, gotta make a way to reset it
-            // document.body.removeChild(document.getElementById("oView"));
-            // if (this._shadowRoot.innerHTML.length < 1) {
-                // document.getElementById("oView").parentNode.removeChild(document.getElementById("oView"));
-                this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             
-                console.log(this._shadowRoot.textContent);
-
+                this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
                 this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
-                console.log("SUCESS INSIDE");
-            // }
         }
     };
     customElements.define('com-sap-sample-filtertable', FilterTable); 
