@@ -256,8 +256,8 @@
             `;
             // It duplicates the view because we are always appending a new child, gotta make a way to reset it
             // document.body.removeChild(document.getElementById("oView"));
-            var oView = getOview(this);
-            if (this._shadowRoot.getElementById(this._id + "_oView")) {
+            if (this._shadowRoot.getElementById("oView")) {
+                var oView = getOview(this);
                 oView.byId("DatePanel").removeAllContent();
                 console.log(oView.byId("DatePanel").removeAllContent());
             }
