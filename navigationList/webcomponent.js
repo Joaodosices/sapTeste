@@ -13,7 +13,7 @@
                 xmlns:l="sap.ui.layout"
                 xmlns:m="sap.m"
             >
-                
+                <tnt:NavigationList>
             </mvc:View>
         </script>   
     `;
