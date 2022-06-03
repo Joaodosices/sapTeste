@@ -39,7 +39,6 @@
             this._id = this.createGuid();
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
-            console.log("Constructor");
         }
         createGuid(){
             //Using UUID for now
@@ -67,7 +66,8 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            if (this._firstConnection === true){
+            console.log("After update before first connection");
+            if (this._firstConnection == true){
                 console.log("After update")
                 loadthis(this);
             }
