@@ -53,7 +53,7 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._id = this.createGuid();
-            this._shadowRoot.querySelector("#oView2").id = this._id + "_oView";
+            this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
         }
         createGuid(){
@@ -128,7 +128,7 @@ function loadthis(that){
 
  function getOview(that) {
     var oView = sap.ui.xmlview({
-        viewContent: jQuery(that._shadowRoot.getElementById(that._id + "_oView")).html()
+        viewContent: jQuery(that._shadowRoot.getElementById(that._id + "_oView2")).html()
     });
     return oView;
 }
