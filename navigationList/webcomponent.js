@@ -1,7 +1,21 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <h1 id="progressTotal">Hello World</h1>
+        <style>
+        </style>
+        <div id="ui5_content" name="ui5_content">
+            <slot name="content"></slot>
+        </div>
+        <script id="oView" name="oView" type="sapui5/xmlview">
+            <mvc:View
+                controllerName="sap.m.sample.NavigationList"
+                xmlns:mvc="sap.ui.core.mvc"
+                xmlns:l="sap.ui.layout"
+                xmlns:m="sap.m"
+            >
+                
+            </mvc:View>
+        </script>   
     `;
 
     class NavigationList extends HTMLElement {
@@ -10,8 +24,17 @@
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this._id = this.createGuid();
+            this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
             this._firstConnection = false;
-            
+        }
+        createGuid(){
+            //Using UUID for now
+            return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, c => {
+                let r = Math.random() * 16 | 0,
+                    v = c === "x" ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -32,7 +55,7 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this._firstConnection){
-                
+                loadthis(this);
             }
         }
         
@@ -45,3 +68,53 @@
     };
     customElements.define('com-sap-sample-navigationlist', NavigationList);
 })();
+
+// UTILS
+function loadthis(that){
+    var that_ = that;
+
+    let content = document.createElement('div');
+    content.slot = "content";
+    that_.appendChild(content);
+
+    sap.ui.getCore().attachInit(function () {
+        "use strict";
+
+        //### Controller ###
+        sap.ui.define([
+            "jquery.sap.global",
+            "sap/ui/core/mvc/Controller"
+        ], function (jQuery, Controller) {
+            "use strict";
+
+            return Controller.extend("sap.m.sample.NavigationList", {
+                
+            });
+        });
+
+        var oView = getOview(that);
+        oView.placeAt(content);
+
+        // for (let i = 0; i < that_._cleanListDimensions.length; i++) {
+        //     var combobox = document.getElementById("ComboBox" + i);
+
+        //     combobox.addEventListener("change", event => {
+        //         var event = new Event("onChange");
+        //         this.dispatchEvent(event);
+        //     });
+        // }
+        
+        addListsToComboBoxs(that, oView);
+
+        // if (that_._designMode) {
+        //     oView.byId(that._id + "_oView").setEnabled(false);
+        // }
+    });
+ }
+
+ function getOview(that) {
+    var oView = sap.ui.xmlview({
+        viewContent: jQuery(that._shadowRoot.getElementById(that._id + "_oView")).html()
+    });
+    return oView;
+}
