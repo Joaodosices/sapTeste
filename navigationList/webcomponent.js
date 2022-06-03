@@ -13,7 +13,11 @@
                 xmlns:l="sap.ui.layout"
                 xmlns:m="sap.m"
             >
-                <tnt:NavigationList>
+                <tnt:NavigationList id="navigationList" width="320px">
+                    <tnt:NavigationListItem text="Item 1" key="rootItem1" icon="">
+                        <tnt:NavigationListItem text="Sub Item 1" />
+                    </tnt:NavigationListItem>
+                </tnt:NavigationList>
             </mvc:View>
         </script>   
     `;
