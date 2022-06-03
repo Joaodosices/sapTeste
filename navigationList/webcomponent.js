@@ -6,7 +6,7 @@
         <div id="ui5_content" name="ui5_content">
             <slot name="content"></slot>
         </div>
-        <script id="oView" name="oView" type="sapui5/xmlview">
+        <script id="oView2" name="oView2" type="sapui5/xmlview">
             <mvc:View
                 controllerName="sap.m.sample.NavigationList"
                 xmlns:mvc="sap.ui.core.mvc"
@@ -29,7 +29,7 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._id = this.createGuid();
-            this._shadowRoot.querySelector("#oView").id = this._id + "_oView";
+            this._shadowRoot.querySelector("#oView2").id = this._id + "_oView";
             this._firstConnection = false;
         }
         createGuid(){
