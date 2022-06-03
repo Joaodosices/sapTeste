@@ -8,16 +8,40 @@
         </div>
         <script id="oView2" name="oView2" type="sapui5/xmlview">
             <mvc:View
-                controllerName="sap.m.sample.NavigationList"
+                controllerName="sap.tnt.sample.NavigationList.C"
                 xmlns:mvc="sap.ui.core.mvc"
                 xmlns:l="sap.ui.layout"
                 xmlns:m="sap.m"
+                xmlns:tnt="sap.tnt"
             >
-                <tnt:NavigationList id="navigationList" width="320px">
-                    <tnt:NavigationListItem text="Item 1" key="rootItem1" icon="">
-                        <tnt:NavigationListItem text="Sub Item 1" />
-                    </tnt:NavigationListItem>
-                </tnt:NavigationList>
+                <tnt:NavigationList
+                id="navigationList"
+                width="320px"
+                selectedKey="subItem3">
+                <tnt:NavigationListItem text="Item 1" key="rootItem1" icon="sap-icon://employee">
+                    <tnt:NavigationListItem text="Sub Item 1" />
+                    <tnt:NavigationListItem text="Sub Item 2" />
+                    <tnt:NavigationListItem text="Sub Item 3" id="subItemThree" key="subItem3" />
+                    <tnt:NavigationListItem text="Sub Item 4" />
+                    <tnt:NavigationListItem text="Invisible Sub Item 5" visible="false" />
+                    <tnt:NavigationListItem text="Invisible Sub Item 6" visible="false" />
+                </tnt:NavigationListItem>
+                <tnt:NavigationListItem
+                    text="Invisible Section"
+                    icon="sap-icon://employee"
+                    visible="false">
+                    <tnt:NavigationListItem text="Sub Item 1" />
+                    <tnt:NavigationListItem text="Sub Item 2" />
+                    <tnt:NavigationListItem text="Sub Item 3" />
+                    <tnt:NavigationListItem text="Sub Item 4" />
+                </tnt:NavigationListItem>
+                <tnt:NavigationListItem text="Item 2" icon="sap-icon://building">
+                    <tnt:NavigationListItem text="Sub Item 1" />
+                    <tnt:NavigationListItem text="Sub Item 2" />
+                    <tnt:NavigationListItem text="Sub Item 3" />
+                    <tnt:NavigationListItem text="Sub Item 4" />
+                </tnt:NavigationListItem>
+            </tnt:NavigationList>
             </mvc:View>
         </script>   
     `;
@@ -91,7 +115,7 @@ function loadthis(that){
         ], function (jQuery, Controller) {
             "use strict";
 
-            return Controller.extend("sap.m.sample.NavigationList", {
+            return Controller.extend("sap.tnt.sample.NavigationList.C", {
                 
             });
         });
@@ -99,20 +123,6 @@ function loadthis(that){
         var oView = getOview(that);
         oView.placeAt(content);
 
-        // for (let i = 0; i < that_._cleanListDimensions.length; i++) {
-        //     var combobox = document.getElementById("ComboBox" + i);
-
-        //     combobox.addEventListener("change", event => {
-        //         var event = new Event("onChange");
-        //         this.dispatchEvent(event);
-        //     });
-        // }
-        
-        addListsToComboBoxs(that, oView);
-
-        // if (that_._designMode) {
-        //     oView.byId(that._id + "_oView").setEnabled(false);
-        // }
     });
  }
 
