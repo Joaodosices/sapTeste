@@ -67,6 +67,7 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this._firstConnection){
+                console.log("After update")
                 loadthis(this);
             }
         }
