@@ -6,13 +6,13 @@
         <div id="ui5_content" name="ui5_content">
             <slot name="content"></slot>
         </div>
-        <script id="oView2" name="oView2" type="sapui5/xmlview">
+        <script id="oView" name="oView" type="sapui5/xmlview">
             <mvc:View
                 controllerName="sap.tnt.sample.NavigationList.C"
+                xmlns="sap.m"
                 xmlns:mvc="sap.ui.core.mvc"
-                xmlns:l="sap.ui.layout"
-                xmlns:m="sap.m"
                 xmlns:tnt="sap.tnt"
+                height="100%"
             >
                 <tnt:NavigationList
                 id="navigationList"
