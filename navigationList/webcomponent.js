@@ -1,22 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <style>
-        .progressionBar{
-            width: 200px;
-            height: 20px;
-            background: black;
-        }
-        #Bar{
-            width: 0px;
-            height: 20px;
-        }
-        </style>
-
-        <h1 id="progressTotal">Value</h1>
-        <div class='progressionBar'>
-            <div id='Bar'></div>
-        </div>
+        <h1 id="progressTotal">Hello World</h1>
     `;
 
     class NavigationList extends HTMLElement {
