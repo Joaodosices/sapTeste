@@ -16,30 +16,14 @@
             >
                 <tnt:NavigationList
                 id="navigationList"
-                width="320px"
-                selectedKey="subItem3">
-                <tnt:NavigationListItem text="Item 1" key="rootItem1" icon="sap-icon://employee">
+                width="320px">
+                <tnt:NavigationListItem text="Item 1" key="rootItem1" icon="">
                     <tnt:NavigationListItem text="Sub Item 1" />
                     <tnt:NavigationListItem text="Sub Item 2" />
                     <tnt:NavigationListItem text="Sub Item 3" id="subItemThree" key="subItem3" />
-                    <tnt:NavigationListItem text="Sub Item 4" />
-                    <tnt:NavigationListItem text="Invisible Sub Item 5" visible="false" />
-                    <tnt:NavigationListItem text="Invisible Sub Item 6" visible="false" />
                 </tnt:NavigationListItem>
-                <tnt:NavigationListItem
-                    text="Invisible Section"
-                    icon="sap-icon://employee"
-                    visible="false">
+                <tnt:NavigationListItem text="Item 2" icon="">
                     <tnt:NavigationListItem text="Sub Item 1" />
-                    <tnt:NavigationListItem text="Sub Item 2" />
-                    <tnt:NavigationListItem text="Sub Item 3" />
-                    <tnt:NavigationListItem text="Sub Item 4" />
-                </tnt:NavigationListItem>
-                <tnt:NavigationListItem text="Item 2" icon="sap-icon://building">
-                    <tnt:NavigationListItem text="Sub Item 1" />
-                    <tnt:NavigationListItem text="Sub Item 2" />
-                    <tnt:NavigationListItem text="Sub Item 3" />
-                    <tnt:NavigationListItem text="Sub Item 4" />
                 </tnt:NavigationListItem>
             </tnt:NavigationList>
             </mvc:View>
@@ -122,7 +106,7 @@ function loadthis(that){
 
         var oView = getOview(that);
         oView.placeAt(content);
-
+        console.log("banana");
     });
  }
 
