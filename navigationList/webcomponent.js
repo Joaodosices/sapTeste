@@ -49,7 +49,7 @@
                 headers : { 
                   'Content-Type': 'application/json',
                   'Accept': 'application/json',
-                  'Access-Control-Allow-Origin': '*'
+                  'Access-Control-Allow-Origin': 'https://joaodosices.github.io'
                  }
               }).then(results => results.json()).then(console.log);
         }
