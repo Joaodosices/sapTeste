@@ -115,10 +115,16 @@ function loadthis(that){
         oView.placeAt(content);
 
         var navigationList = oView.byId("navigationList");
-        that._shadowRoot.getElementById("oView2").addEventListener("mouseover",  ()=>{
+        // that._shadowRoot.getElementById("oView2").addEventListener("mouseover",  ()=>{
+        //     navigationList.setExpanded(true);
+        // });
+        // that._shadowRoot.getElementById("oView2").addEventListener("mouseout",  ()=>{
+        //     navigationList.setExpanded(false);
+        // });
+        that.addEventListener("mouseover",  ()=>{
             navigationList.setExpanded(true);
         });
-        that._shadowRoot.getElementById("oView2").addEventListener("mouseout",  ()=>{
+        that.addEventListener("mouseout",  ()=>{
             navigationList.setExpanded(false);
         });
     });
