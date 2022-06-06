@@ -45,12 +45,8 @@
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
             
-            fetch("https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
-                headers : { 
-                  'Content-Type': 'application/json',
-                  'Accept': 'application/json'
-                 }
-              }).then(results => results.json()).then(console.log);
+            fetch("https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json")
+            .then(results => results.json()).then(console.log);
         }
         createGuid(){
             //Using UUID for now
