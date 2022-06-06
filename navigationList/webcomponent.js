@@ -23,8 +23,6 @@
                 itemSelect="itemSelected"
                 >
                     <tnt:NavigationListItem text="{Name}" items="{ChildrenDirect}"  icon="sap-icon://menu2">
-                        <tnt:NavigationListItem text="{Name}" items="{ChildrenDirect}"> 
-                        </tnt:NavigationListItem>
                     </tnt:NavigationListItem>
                 </tnt:NavigationList>
             </mvc:View>
