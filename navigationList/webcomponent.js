@@ -116,6 +116,9 @@ function loadthis(that){
         that.addEventListener("mouseover",  ()=>{
             navigationList.setExpanded(true);
         });
+        that.addEventListener("mouseout",  ()=>{
+            navigationList.setExpanded(false);
+        });
     });
  }
 
