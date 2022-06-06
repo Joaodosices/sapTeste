@@ -40,6 +40,12 @@
             this._id = this.createGuid();
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
+
+            this.addEventListener("mouseover",  ()=>{
+                let oView = getOview();
+                oView.byId("navigationList").setExpanded(true);
+            }
+            );
         }
         createGuid(){
             //Using UUID for now

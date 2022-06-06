@@ -23,5 +23,8 @@
 	"methods": {
 	},
 	"events": {
+		"onHover": {
+			"description": "Called when the user changes value"
+		}
 	}
 }
