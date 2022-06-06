@@ -115,10 +115,10 @@ function loadthis(that){
         oView.placeAt(content);
 
         var navigationList = oView.byId("navigationList");
-        that._shadowRoot.getElementById("root").addEventListener("mouseover",  ()=>{
+        that._shadowRoot.getElementById("oView2").addEventListener("mouseover",  ()=>{
             navigationList.setExpanded(true);
         });
-        that._shadowRoot.getElementById("root").addEventListener("mouseout",  ()=>{
+        that._shadowRoot.getElementById("oView2").addEventListener("mouseout",  ()=>{
             navigationList.setExpanded(false);
         });
     });
