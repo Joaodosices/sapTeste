@@ -45,7 +45,7 @@
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
             
-            fetch("./navigationList/OrgUnitSet.json",{
+            fetch("https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
                 headers : { 
                   'Content-Type': 'application/json',
                   'Accept': 'application/json'
