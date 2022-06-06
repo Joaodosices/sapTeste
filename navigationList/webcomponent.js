@@ -19,10 +19,10 @@
                 width="200px"
                 itemSelect="itemSelected"
                 >
-                    <tnt:NavigationListItem text="Item 1" icon="sap-icon://menu2">
+                    <tnt:NavigationListItem text="Item 1" icon="sap-icon://menu2" select="handleSelect">
                         <tnt:NavigationListItem text="Sub Item 1" />
                     </tnt:NavigationListItem>
-                    <tnt:NavigationListItem text="Item 2" icon="sap-icon://menu2">
+                    <tnt:NavigationListItem text="Item 2" icon="sap-icon://menu2" select="handleSelect">
                         <tnt:NavigationListItem text="Sub Item 1" />
                     </tnt:NavigationListItem>
                 </tnt:NavigationList>
@@ -102,6 +102,10 @@ function loadthis(that){
 
             return Controller.extend("sap.tnt.sample.NavigationList.C", {
                 itemSelected: function(e) {
+                    console.log(e);
+                },
+                handleSelect: function(e) {
+                    console.log("handleSelect:")
                     console.log(e);
                 }
             });
