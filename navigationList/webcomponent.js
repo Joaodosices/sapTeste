@@ -6,6 +6,7 @@
         <div id="ui5_content" name="ui5_content">
             <slot name="content"></slot>
         </div>
+        <div id="root">
         <script id="oView2" name="oView2" type="sapui5/xmlview">
             <mvc:View
                 controllerName="sap.tnt.sample.NavigationList.C"
@@ -28,7 +29,8 @@
                     </tnt:NavigationListItem>
                 </tnt:NavigationList>
             </mvc:View>
-        </script>   
+        </script>  
+        </div> 
     `;
 
     class NavigationList extends HTMLElement {
@@ -113,10 +115,10 @@ function loadthis(that){
         oView.placeAt(content);
 
         var navigationList = oView.byId("navigationList");
-        that.addEventListener("mouseover",  ()=>{
+        that._shadowRoot.getElementById("root").addEventListener("mouseover",  ()=>{
             navigationList.setExpanded(true);
         });
-        that.addEventListener("mouseout",  ()=>{
+        that._shadowRoot.getElementById("root").addEventListener("mouseout",  ()=>{
             navigationList.setExpanded(false);
         });
     });
