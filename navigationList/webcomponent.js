@@ -17,11 +17,12 @@
                 <tnt:NavigationList
                 id="navigationList"
                 width="200px"
+                itemSelect="itemSelected"
                 >
-                    <tnt:NavigationListItem text="Item 1" icon="sap-icon://menu2" itemSelect="itemSelected">
+                    <tnt:NavigationListItem text="Item 1" icon="sap-icon://menu2">
                         <tnt:NavigationListItem text="Sub Item 1" />
                     </tnt:NavigationListItem>
-                    <tnt:NavigationListItem text="Item 2" icon="sap-icon://menu2" itemSelect="itemSelected">
+                    <tnt:NavigationListItem text="Item 2" icon="sap-icon://menu2">
                         <tnt:NavigationListItem text="Sub Item 1" />
                     </tnt:NavigationListItem>
                 </tnt:NavigationList>
