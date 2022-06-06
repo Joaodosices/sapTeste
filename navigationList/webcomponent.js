@@ -102,7 +102,7 @@ function loadthis(that){
 
             return Controller.extend("sap.tnt.sample.NavigationList.C", {
                 itemSelected: function(e) {
-                    console.log(e.items.selectedItem);
+                    console.log(e);
                 }
             });
         });
