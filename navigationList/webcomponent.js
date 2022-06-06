@@ -42,7 +42,7 @@
             this._firstConnection = false;
 
             this.addEventListener("mouseover",  ()=>{
-                let oView = getOview();
+                let oView = getOview(this);
                 oView.byId("navigationList").setExpanded(true);
             }
             );
