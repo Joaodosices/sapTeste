@@ -19,10 +19,15 @@
                 id="navigationList"
                 expanded="false"
                 width="100%"
-                items={/OrgUnitSet}
                 itemSelect="itemSelected"
                 >
-                    <tnt:NavigationListItem text="{Name}" items="{ChildrenDirect}"  icon="sap-icon://menu2">
+                    <tnt:NavigationListItem text="Name"   icon="sap-icon://menu2">
+                        <tnt:NavigationListItem text="Name 1">
+                        </tnt:NavigationListItem>
+                        <tnt:NavigationListItem text="Name 2">
+                        </tnt:NavigationListItem>
+                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="xd"   icon="sap-icon://menu2">
                     </tnt:NavigationListItem>
                 </tnt:NavigationList>
             </mvc:View>
@@ -39,7 +44,8 @@
             this._id = this.createGuid();
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
-
+            
+            fetch("./OrgUnitSet.json").then(results => results.json()).then(console.log);
         }
         createGuid(){
             //Using UUID for now
