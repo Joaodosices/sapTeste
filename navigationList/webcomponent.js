@@ -64,11 +64,10 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            console.log("After update before first connection");
-            if (this._firstConnection == true){
+            // if (this._firstConnection == true){
                 console.log("After update")
                 loadthis(this);
-            }
+            // }
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
