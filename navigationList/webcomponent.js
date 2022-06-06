@@ -49,7 +49,8 @@
                 headers : { 
                   'Content-Type': 'application/json',
                   'Accept': 'application/json',
-                  'Origin': 'https://rebisconsulting.eu10.hcs.cloud.sap',
+                  'method' : "GET",
+                  'mode': 'cors',
                   'Access-Control-Allow-Origin': 'https://joaodosices.github.io'
                  }
               }).then(results => results.json()).then(console.log);
