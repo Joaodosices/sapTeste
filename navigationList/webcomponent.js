@@ -112,10 +112,10 @@ function loadthis(that){
         var oView = getOview(that);
         oView.placeAt(content);
 
-        that.addEventListener("mouseover",  ()=>{
-            oView.byId("navigationList").setExpanded(true);
+        var navigationList = oView.byId("navigationList");
+        navigationList.addEventListener("mouseover",  ()=>{
+            navigationList.setExpanded(true);
         });
-        console.log("banana");
     });
  }
 
