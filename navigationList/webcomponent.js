@@ -18,7 +18,7 @@
                 <tnt:NavigationList
                 id="navigationList"
                 expanded="false"
-                width="200px"
+                width="100%"
                 itemSelect="itemSelected"
                 >
                     <tnt:NavigationListItem text="Item 1" icon="sap-icon://menu2">
