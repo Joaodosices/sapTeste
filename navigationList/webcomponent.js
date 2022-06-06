@@ -41,11 +41,6 @@
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
 
-            this.addEventListener("mouseover",  ()=>{
-                let oView = getOview(this);
-                oView.byId("navigationList").setExpanded(true);
-            }
-            );
         }
         createGuid(){
             //Using UUID for now
@@ -116,6 +111,10 @@ function loadthis(that){
 
         var oView = getOview(that);
         oView.placeAt(content);
+
+        that.addEventListener("mouseover",  ()=>{
+            oView.byId("navigationList").setExpanded(true);
+        });
         console.log("banana");
     });
  }
