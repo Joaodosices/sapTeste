@@ -17,11 +17,12 @@
                 <tnt:NavigationList
                 id="navigationList"
                 width="200px"
+                itemSelect="itemSelected"
                 >
-                    <tnt:NavigationListItem text="Item 1" icon="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+                    <tnt:NavigationListItem text="Item 1" icon="sap-icon://menu2">
                         <tnt:NavigationListItem text="Sub Item 1" />
                     </tnt:NavigationListItem>
-                    <tnt:NavigationListItem text="Item 2" icon="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+                    <tnt:NavigationListItem text="Item 2" icon="sap-icon://menu2">
                         <tnt:NavigationListItem text="Sub Item 1" />
                     </tnt:NavigationListItem>
                 </tnt:NavigationList>
@@ -100,7 +101,9 @@ function loadthis(that){
             "use strict";
 
             return Controller.extend("sap.tnt.sample.NavigationList.C", {
-                
+                itemSelected: function(e) {
+                    console.log(e.selectedItem());
+                }
             });
         });
 
