@@ -19,7 +19,7 @@
                 id="navigationList"
                 expanded="false"
                 width="100%"
-                items={/OrgUnitSet}
+                items={navigationList/OrgUnitSet.json}
                 itemSelect="itemSelected"
                 >
                     <tnt:NavigationListItem text="{Name}" items="{ChildrenDirect}"  icon="sap-icon://menu2">
