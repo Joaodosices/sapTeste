@@ -19,13 +19,12 @@
                 id="navigationList"
                 expanded="false"
                 width="100%"
+                items={/OrgUnitSet}
                 itemSelect="itemSelected"
                 >
-                    <tnt:NavigationListItem text="Item 1" icon="sap-icon://menu2">
-                        <tnt:NavigationListItem text="Sub Item 1" />
-                    </tnt:NavigationListItem>
-                    <tnt:NavigationListItem text="Item 2" icon="sap-icon://menu2">
-                        <tnt:NavigationListItem text="Sub Item 2" />
+                    <tnt:NavigationListItem text="{Name}" items="{ChildrenDirect}"  icon="sap-icon://menu2">
+                        <tnt:NavigationListItem text="{Name}" items="{ChildrenDirect}"> 
+                        </tnt:NavigationListItem>
                     </tnt:NavigationListItem>
                 </tnt:NavigationList>
             </mvc:View>

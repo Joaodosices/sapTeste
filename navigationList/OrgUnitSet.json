@@ -1,0 +1,20 @@
+{
+	"OrgUnitSet": [{
+		"Id": 1,
+		"Name": "Proxy Scope",
+		"ChildrenDirect": [{
+			"Id": 2,
+			"Name": "Proxy Sales"
+		},{
+            "Id": 3,
+			"Name": "Proxy Analysis"
+        }
+        ]
+	}, {
+		"Id": 4,
+		"Name": "AI Sales Forecasting"
+	}, {
+		"Id": 5,
+		"Name": "AI Cash Forecasting"
+	}]
+}
