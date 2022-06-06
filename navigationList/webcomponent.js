@@ -16,6 +16,7 @@
             >
                 <tnt:NavigationList
                 id="navigationList"
+                width="200px"
                 >
                     <tnt:NavigationListItem text="Item 1">
                         <tnt:NavigationListItem text="Sub Item 1" />
