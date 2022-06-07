@@ -43,7 +43,7 @@
         } else {
             navigationListItem = navigationListItem + `</tnt:NavigationListItem>`
         }
-        body.concat(navigationListItem);
+        body = body.concat(navigationListItem);
     }
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
