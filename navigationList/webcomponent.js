@@ -5,6 +5,7 @@
                   'Accept': 'application/json'
                  }
               }).then(results => results.json());
+              console.log(jsonData)
     // let jsonData = {
     //     "OrgUnitSet": [{
     //         "Id": 1,
