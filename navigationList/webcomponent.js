@@ -63,7 +63,7 @@
             >
                 <tnt:NavigationList
                 id="navigationList"
-                expanded="false"
+                expanded="true"
                 width="100%"
                 itemSelect="itemSelected"
                 >
