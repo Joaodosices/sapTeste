@@ -48,10 +48,8 @@
             fetch("https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
                 headers : { 
                   'Content-Type': 'application/json',
-                  'Accept': 'application/json',
-                  'method' : "GET",
-                  'mode': 'cors',
-                  'Access-Control-Allow-Origin': 'https://joaodosices.github.io'
+                  'Accept': 'application/json', 
+                  'Origin': 'https://joaodosices.github.io'
                  }
               }).then(results => results.json()).then(console.log);
         }
