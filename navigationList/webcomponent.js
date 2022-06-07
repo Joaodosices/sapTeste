@@ -84,7 +84,7 @@
             this._firstConnection = false;
             this._option = "";
             this.addEventListener("click", event => {
-                var event = new Event("onSelect");
+                var event = new Event("onClick");
                 this.dispatchEvent(event);
             });
         }
