@@ -73,8 +73,8 @@
             this._firstConnection = false;
 
             console.log(jsonData)
-            for (let i = 0; i < jsonData.length; i++) {
-                console.log(jsonData[i].id)
+            for (let i = 0; i < jsonData.OrgUnitSet.length; i++) {
+                console.log(jsonData.OrgUnitSet[i].id)
             }
         }
         createGuid(){
