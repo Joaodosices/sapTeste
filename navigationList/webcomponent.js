@@ -1,5 +1,5 @@
 (function()  {
-    let jsonData = fetch("https://cors-anywhere.herokuapp.com/https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
+    var jsonData = fetch("https://cors-anywhere.herokuapp.com/https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
                 headers : { 
                   'Content-Type': 'application/json',
                   'Accept': 'application/json'
