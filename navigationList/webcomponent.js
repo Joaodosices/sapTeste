@@ -1,10 +1,29 @@
 (function()  {
-    let jsonData = fetch("https://cors-anywhere.herokuapp.com/https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
-                headers : { 
-                  'Content-Type': 'application/json',
-                  'Accept': 'application/json'
-                 }
-              }).then(results => results.json());
+    // let jsonData = fetch("https://cors-anywhere.herokuapp.com/https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
+    //             headers : { 
+    //               'Content-Type': 'application/json',
+    //               'Accept': 'application/json'
+    //              }
+    //           }).then(results => results.json());
+    let jsonData = {
+        "OrgUnitSet": [{
+            "Id": 1,
+            "Name": "Proxy Scope",
+            "ChildrenDirect": [{
+                "Id": 2,
+                "Name": "Proxy Sales"
+            },{
+                "Id": 3,
+                "Name": "Proxy Analysis"
+            }]
+        }, {
+            "Id": 4,
+            "Name": "AI Sales Forecasting"
+        }, {
+            "Id": 5,
+            "Name": "AI Cash Forecasting"
+        }]
+    };
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
@@ -26,11 +45,11 @@
                 id="navigationList"
                 expanded="false"
                 width="100%"
-                items={` + jsonData + `}
+                items={` + jsonData.OrgUnitSet + `}
                 itemSelect="itemSelected"
                 >
                     <tnt:NavigationListItem text={Name}   icon="sap-icon://menu2">
-                        <tnt:NavigationListItem text={Name} items={ChildrenDirect}>
+                        <tnt:NavigationListItem text={Name} items={` + jsonData.OrgUnitSet.ChildrenDirect + `}>
                         </tnt:NavigationListItem>
                     </tnt:NavigationListItem>
                 </tnt:NavigationList>
