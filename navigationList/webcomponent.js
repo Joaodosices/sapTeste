@@ -26,6 +26,7 @@
         }]
     };
 
+    var body = ``
     var navigationListItem = ``;
     for (let i = 0; i < jsonData.OrgUnitSet.length; i++) {
 
@@ -42,6 +43,7 @@
         } else {
             navigationListItem = navigationListItem + `</tnt:NavigationListItem>`
         }
+        body.concat(navigationListItem);
     }
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
@@ -65,7 +67,7 @@
                 width="100%"
                 itemSelect="itemSelected"
                 >
-                    ` + navigationListItem + `
+                    ` + body + `
                 </tnt:NavigationList>
             </mvc:View>
         </script>  
