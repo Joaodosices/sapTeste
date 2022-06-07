@@ -25,7 +25,24 @@
             "Name": "AI Cash Forecasting"
         }]
     };
-    console.log(jsonData)
+
+    var navigationListItem = ``;
+    for (let i = 0; i < jsonData.OrgUnitSet.length; i++) {
+
+        navigationListItem = `<tnt:NavigationListItem text="` + jsonData.OrgUnitSet[i].Name + `"   icon="sap-icon://menu2">`
+        if (jsonData.OrgUnitSet[i].ChildrenDirect) {
+            var children = ``;
+            for (let x = 0; x < jsonData.OrgUnitSet[i].ChildrenDirect.length; x++) {
+                children = ``;
+                children = `<tnt:NavigationListItem text="` + jsonData.OrgUnitSet[i].ChildrenDirect[x].Name + `">
+                            </tnt:NavigationListItem>`
+                navigationListItem = navigationListItem + children;
+            }
+            navigationListItem = navigationListItem + `</tnt:NavigationListItem>`
+        } else {
+            navigationListItem = navigationListItem + `</tnt:NavigationListItem>`
+        }
+    }
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style>
@@ -48,20 +65,12 @@
                 width="100%"
                 itemSelect="itemSelected"
                 >
-                    <tnt:NavigationListItem text="name1"   icon="sap-icon://menu2">
-                        <tnt:NavigationListItem text="sub name1">
-                        </tnt:NavigationListItem>
-                    </tnt:NavigationListItem>
-                    <tnt:NavigationListItem text="name2"   icon="sap-icon://menu2">
-                        <tnt:NavigationListItem text="sub name2">
-                        </tnt:NavigationListItem>
-                    </tnt:NavigationListItem>
+                    ` + navigationListItem + `
                 </tnt:NavigationList>
             </mvc:View>
         </script>  
         </div> 
     `;
-
     class NavigationList extends HTMLElement {
 
 		constructor() {
@@ -72,15 +81,6 @@
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
 
-            console.log(jsonData)
-            for (let i = 0; i < jsonData.OrgUnitSet.length; i++) {
-                console.log(jsonData.OrgUnitSet[i].Id)
-                if (jsonData.OrgUnitSet[i].ChildrenDirect) {
-                    for (let x = 0; x < jsonData.OrgUnitSet[i].ChildrenDirect.length; x++) {
-                        console.log(jsonData.OrgUnitSet[i].ChildrenDirect[x].Id);
-                    }
-                }
-            }
         }
         createGuid(){
             //Using UUID for now
@@ -109,6 +109,7 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             // if (this._firstConnection == true){
+                this.draw();
                 loadthis(this);
             // }
         }
@@ -117,7 +118,12 @@
         onCustomWidgetDestroy(){
         }
 
-        
+        draw(){
+            
+
+            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
+        }
 
     };
     customElements.define('com-sap-sample-navigationlist', NavigationList);
