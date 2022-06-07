@@ -45,11 +45,14 @@
                 id="navigationList"
                 expanded="false"
                 width="100%"
-                items={` + jsonData.OrgUnitSet + `}
                 itemSelect="itemSelected"
                 >
-                    <tnt:NavigationListItem text={Name}   icon="sap-icon://menu2">
-                        <tnt:NavigationListItem text={Name} items={` + jsonData.OrgUnitSet.ChildrenDirect + `}>
+                    <tnt:NavigationListItem text="name1"   icon="sap-icon://menu2">
+                        <tnt:NavigationListItem text="sub name1">
+                        </tnt:NavigationListItem>
+                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="name2"   icon="sap-icon://menu2">
+                        <tnt:NavigationListItem text="sub name2">
                         </tnt:NavigationListItem>
                     </tnt:NavigationListItem>
                 </tnt:NavigationList>
@@ -67,6 +70,10 @@
             this._id = this.createGuid();
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
+
+            for (let i = 0; i < jsonData.length; i++) {
+                console.log(jsonData[i])
+            }
         }
         createGuid(){
             //Using UUID for now
@@ -95,7 +102,6 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             // if (this._firstConnection == true){
-                console.log("After update")
                 loadthis(this);
             // }
         }
@@ -145,12 +151,6 @@ function loadthis(that){
         that._shadowRoot.getElementById("ui5_content").addEventListener("mouseout",  ()=>{
             navigationList.setExpanded(false);
         });
-        // that.addEventListener("mouseover",  ()=>{
-        //     navigationList.setExpanded(true);
-        // });
-        // that.addEventListener("mouseout",  ()=>{
-        //     navigationList.setExpanded(false);
-        // });
     });
  }
 
