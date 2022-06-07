@@ -72,7 +72,7 @@
             this._firstConnection = false;
 
             for (let i = 0; i < jsonData.length; i++) {
-                console.log(jsonData[i])
+                console.log(jsonData[i].id)
             }
         }
         createGuid(){
