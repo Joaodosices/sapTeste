@@ -1,31 +1,31 @@
 (function()  {
-    var jsonData = fetch("https://cors-anywhere.herokuapp.com/https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
-                headers : { 
-                  'Content-Type': 'application/json',
-                  'Accept': 'application/json'
-                 }
-              }).then(results => results.json());
-              console.log(jsonData)
-    // let jsonData = {
-    //     "OrgUnitSet": [{
-    //         "Id": 1,
-    //         "Name": "Proxy Scope",
-    //         "ChildrenDirect": [{
-    //             "Id": 2,
-    //             "Name": "Proxy Sales"
-    //         },{
-    //             "Id": 3,
-    //             "Name": "Proxy Analysis"
-    //         }]
-    //     }, {
-    //         "Id": 4,
-    //         "Name": "AI Sales Forecasting"
-    //     }, {
-    //         "Id": 5,
-    //         "Name": "AI Cash Forecasting"
-    //     }]
-    // };
-
+    // var jsonData = fetch("https://cors-anywhere.herokuapp.com/https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
+    //             headers : { 
+    //               'Content-Type': 'application/json',
+    //               'Accept': 'application/json'
+    //              }
+    //           }).then(results => results.json());
+              
+    let jsonData = {
+        "OrgUnitSet": [{
+            "Id": 1,
+            "Name": "Proxy Scope",
+            "ChildrenDirect": [{
+                "Id": 2,
+                "Name": "Proxy Sales"
+            },{
+                "Id": 3,
+                "Name": "Proxy Analysis"
+            }]
+        }, {
+            "Id": 4,
+            "Name": "AI Sales Forecasting"
+        }, {
+            "Id": 5,
+            "Name": "AI Cash Forecasting"
+        }]
+    };
+    console.log(jsonData)
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style>
