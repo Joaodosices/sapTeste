@@ -82,7 +82,11 @@
             this._id = this.createGuid();
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
-
+            this._option = "";
+            this.addEventListener("click", event => {
+                var event = new Event("onSelect");
+                this.dispatchEvent(event);
+            });
         }
         createGuid(){
             //Using UUID for now
@@ -127,6 +131,21 @@
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
         }
 
+        getOption(){
+            return this._option;
+        }
+
+        setOption(newOption){
+            this._option = newOption;
+            // fire "properties changed"
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+            detail: {
+                properties: {
+                    option: this._option
+                }
+            }
+            }));
+        }
     };
     customElements.define('com-sap-sample-navigationlist', NavigationList);
 })();
@@ -151,7 +170,8 @@ function loadthis(that){
 
             return Controller.extend("sap.tnt.sample.NavigationList.C", {
                 itemSelected: function(e) {
-                    console.log(e.getParameter("item").mProperties.text);
+                    let value = e.getParameter("item").mProperties.text;
+                    that_.setOption(value);
                 }
             });
         });
