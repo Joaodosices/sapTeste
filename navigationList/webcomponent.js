@@ -75,6 +75,11 @@
             console.log(jsonData)
             for (let i = 0; i < jsonData.OrgUnitSet.length; i++) {
                 console.log(jsonData.OrgUnitSet[i].Id)
+                if (jsonData.OrgUnitSet[i].ChildrenDirect) {
+                    for (let x = 0; x < jsonData.OrgUnitSet[i].ChildrenDirect.length; x++) {
+                        console.log(jsonData.OrgUnitSet[i].ChildrenDirect[x].Id);
+                    }
+                }
             }
         }
         createGuid(){
