@@ -72,6 +72,7 @@
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
 
+            console.log(jsonData)
             for (let i = 0; i < jsonData.length; i++) {
                 console.log(jsonData[i].id)
             }
