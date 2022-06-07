@@ -1,4 +1,11 @@
 (function()  {
+    let jsonData = fetch("https://cors-anywhere.herokuapp.com/https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
+                headers : { 
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                 }
+              }).then(results => results.json());
+
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style>
@@ -19,15 +26,12 @@
                 id="navigationList"
                 expanded="false"
                 width="100%"
+                items={` + jsonData + `}
                 itemSelect="itemSelected"
                 >
-                    <tnt:NavigationListItem text="Name"   icon="sap-icon://menu2">
-                        <tnt:NavigationListItem text="Name 1">
+                    <tnt:NavigationListItem text={Name}   icon="sap-icon://menu2">
+                        <tnt:NavigationListItem text={Name} items={ChildrenDirect}>
                         </tnt:NavigationListItem>
-                        <tnt:NavigationListItem text="Name 2">
-                        </tnt:NavigationListItem>
-                    </tnt:NavigationListItem>
-                    <tnt:NavigationListItem text="xd"   icon="sap-icon://menu2">
                     </tnt:NavigationListItem>
                 </tnt:NavigationList>
             </mvc:View>
@@ -44,13 +48,6 @@
             this._id = this.createGuid();
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
-            
-            fetch("https://cors-anywhere.herokuapp.com/https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
-                headers : { 
-                  'Content-Type': 'application/json',
-                  'Accept': 'application/json'
-                 }
-              }).then(results => results.json()).then(console.log);
         }
         createGuid(){
             //Using UUID for now
