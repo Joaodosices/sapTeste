@@ -6,7 +6,7 @@
     //              }
     //           }).then(results => results.json());
               
-    let jsonData = {
+    var jsonData = {
         "OrgUnitSet": [{
             "Id": 1,
             "Name": "Proxy Scope",
