@@ -45,11 +45,10 @@
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
             
-            fetch("https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
+            fetch("https://cors-anywhere.herokuapp.com/https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
                 headers : { 
                   'Content-Type': 'application/json',
-                  'Accept': 'application/json', 
-                  'Origin': 'https://joaodosices.github.io'
+                  'Accept': 'application/json'
                  }
               }).then(results => results.json()).then(console.log);
         }
