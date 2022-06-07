@@ -74,7 +74,7 @@
 
             console.log(jsonData)
             for (let i = 0; i < jsonData.OrgUnitSet.length; i++) {
-                console.log(jsonData.OrgUnitSet[i].id)
+                console.log(jsonData.OrgUnitSet[i].Id)
             }
         }
         createGuid(){
