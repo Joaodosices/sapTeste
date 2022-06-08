@@ -52,7 +52,7 @@
     var navigationListItem = ``;
     for (let i = 0; i < jsonData.OrgUnitSet.length; i++) {
 
-        navigationListItem = `<tnt:NavigationListItem text="` + jsonData.OrgUnitSet[i].Name + `"   icon="sap-icon://menu2">`
+        navigationListItem = `<tnt:NavigationListItem  text="` + jsonData.OrgUnitSet[i].Name + `"   icon="` + jsonData.OrgUnitSet[i].Icon + `">`
         if (jsonData.OrgUnitSet[i].ChildrenDirect) {
             var children = ``;
             for (let x = 0; x < jsonData.OrgUnitSet[i].ChildrenDirect.length; x++) {
@@ -104,7 +104,7 @@
             this._id = this.createGuid();
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
-            this._option = "";
+            this._optionID = "";
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
                 this.dispatchEvent(event);
@@ -154,16 +154,16 @@
         }
 
         getOptionID(){
-            return this._option;
+            return this._optionID;
         }
 
         setOptionID(newOption){
-            this._option = newOption;
+            this._optionID = newOption;
             // fire "properties changed"
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
             detail: {
                 properties: {
-                    optionID: this._option
+                    optionID: this._optionID
                 }
             }
             }));
@@ -194,6 +194,7 @@ function loadthis(that){
                 itemSelected: function(e) {
                     let value = e.getParameter("item").mProperties.text;
                     that_.setOption(value);
+                    console.log(e);
                 }
             });
         });
