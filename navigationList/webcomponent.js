@@ -1,6 +1,7 @@
 (function()  {
     // var jsonData = fetch("https://cors-anywhere.herokuapp.com/https://joaodosices.github.io/sapTeste/navigationList/OrgUnitSet.json",{
     //             headers : { 
+    //               'Access-Control-Allow-Origin': '*',
     //               'Content-Type': 'application/json',
     //               'Accept': 'application/json'
     //              }
