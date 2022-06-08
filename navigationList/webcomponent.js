@@ -192,10 +192,11 @@ function loadthis(that){
 
             return Controller.extend("sap.tnt.sample.NavigationList.C", {
                 itemSelected: function(e) {
-                    let value = e.getParameter("item").mProperties.text;
-                    that_.setOptionID(value);
+                    // let value = e.getParameter("item").mProperties.text;
+                    let id = e.getParameter("id").split("--");
+                    that_.setOptionID(id);
 
-                    console.log(e.getParameter("id"));
+                    console.log(id);
                 }
             });
         });
