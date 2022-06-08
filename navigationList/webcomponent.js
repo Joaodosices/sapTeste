@@ -194,9 +194,9 @@ function loadthis(that){
                 itemSelected: function(e) {
                     // let value = e.getParameter("item").mProperties.text;
                     let id = e.getParameter("id").split("--");
-                    that_.setOptionID(id);
+                    that_.setOptionID(id[1]);
 
-                    console.log(id);
+                    console.log(id[1]);
                 }
             });
         });
