@@ -194,8 +194,8 @@ function loadthis(that){
                 itemSelected: function(e) {
                     let value = e.getParameter("item").mProperties.text;
                     that_.setOptionID(value);
-
-                    console.log(e.getSource());
+                    let id = e.getSource()._selectedItem.sId;
+                    console.log(e.getParameters());
                 }
             });
         });
