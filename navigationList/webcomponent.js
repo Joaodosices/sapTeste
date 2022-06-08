@@ -195,14 +195,13 @@ function loadthis(that){
                     let value = e.getParameter("item").mProperties.text;
                     that_.setOptionID(value);
                     console.log(e.getSource());
-                    console.log(Event.target);
                 }
             });
         });
 
         var oView = getOview(that);
         oView.placeAt(content);
-
+        
         var navigationList = oView.byId("navigationList");
         that._shadowRoot.getElementById("ui5_content").addEventListener("mouseover",  ()=>{
             navigationList.setExpanded(true);
