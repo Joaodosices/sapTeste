@@ -105,10 +105,6 @@
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
             this._firstConnection = false;
             this._optionID = "";
-            this.addEventListener("click", event => {
-                var event = new Event("onClick");
-                this.dispatchEvent(event);
-            });
         }
         createGuid(){
             //Using UUID for now
@@ -208,6 +204,10 @@ function loadthis(that){
         });
         that._shadowRoot.getElementById("ui5_content").addEventListener("mouseout",  ()=>{
             navigationList.setExpanded(false);
+        });
+        that._shadowRoot.getElementById("ui5_content").addEventListener("click", event => {
+            var event = new Event("onClick");
+            this.dispatchEvent(event);
         });
     });
  }
