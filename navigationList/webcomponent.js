@@ -194,14 +194,17 @@ function loadthis(that){
                 itemSelected: function(e) {
                     let value = e.getParameter("item").mProperties.text;
                     that_.setOptionID(value);
-                    console.log(e.getSource());
+                    
+                    document.onclick = (x) => {
+                        console.log(x.target.tagName)
+                    }
                 }
             });
         });
 
         var oView = getOview(that);
         oView.placeAt(content);
-        
+
         var navigationList = oView.byId("navigationList");
         that._shadowRoot.getElementById("ui5_content").addEventListener("mouseover",  ()=>{
             navigationList.setExpanded(true);
