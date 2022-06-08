@@ -52,12 +52,12 @@
     var navigationListItem = ``;
     for (let i = 0; i < jsonData.OrgUnitSet.length; i++) {
 
-        navigationListItem = `<tnt:NavigationListItem sId:"` + jsonData.OrgUnitSet[i].Id + `" text="` + jsonData.OrgUnitSet[i].Name + `"   icon="` + jsonData.OrgUnitSet[i].Icon + `">`
+        navigationListItem = `<tnt:NavigationListItem idOpt="` + jsonData.OrgUnitSet[i].Id + `" text="` + jsonData.OrgUnitSet[i].Name + `"   icon="` + jsonData.OrgUnitSet[i].Icon + `">`
         if (jsonData.OrgUnitSet[i].ChildrenDirect) {
             var children = ``;
             for (let x = 0; x < jsonData.OrgUnitSet[i].ChildrenDirect.length; x++) {
                 children = ``;
-                children = `<tnt:NavigationListItem sId:"` + jsonData.OrgUnitSet[i].Id + `" text="` + jsonData.OrgUnitSet[i].ChildrenDirect[x].Name + `">
+                children = `<tnt:NavigationListItem idOpt="` + jsonData.OrgUnitSet[i].Id + `" text="` + jsonData.OrgUnitSet[i].ChildrenDirect[x].Name + `">
                             </tnt:NavigationListItem>`
                 navigationListItem = navigationListItem + children;
             }
