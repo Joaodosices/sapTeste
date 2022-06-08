@@ -207,7 +207,7 @@ function loadthis(that){
         });
         that._shadowRoot.getElementById("ui5_content").addEventListener("click", event => {
             var event = new Event("onClick");
-            this.dispatchEvent(event);
+            that.dispatchEvent(event);
         });
     });
  }
