@@ -194,9 +194,9 @@ function loadthis(that){
                 itemSelected: function(e) {
                     let value = e.getParameter("item").mProperties.text;
                     that_.setOptionID(value);
-                    
+
                     document.onclick = (x) => {
-                        console.log(x.target.tagName)
+                        console.log(x.target)
                     }
                 }
             });
