@@ -195,9 +195,7 @@ function loadthis(that){
                     let value = e.getParameter("item").mProperties.text;
                     that_.setOptionID(value);
 
-                    document.onclick = (x) => {
-                        console.log(x.target)
-                    }
+                    console.log(e.getSource());
                 }
             });
         });
