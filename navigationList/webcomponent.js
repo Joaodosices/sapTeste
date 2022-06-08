@@ -8,21 +8,43 @@
               
     var jsonData = {
         "OrgUnitSet": [{
-            "Id": 1,
-            "Name": "Proxy Scope",
+            "Id": "Menu1",
+			"Icon": "sap-icon://bar-chart",			
+            "Name": "Sales Analytics",
             "ChildrenDirect": [{
-                "Id": 2,
+                "Id": "Menu1.4",
+				"Icon": "",
                 "Name": "Proxy Sales"
             },{
-                "Id": 3,
-                "Name": "Proxy Analysis"
+                "Id": "Menu1.5",
+				"Icon": "",
+                "Name": "Forecast Accuracy"
+            },{
+                "Id": "Menu1.6",
+				"Icon": "",
+                "Name": "PVM"
+            },{
+                "Id": "Menu1.7",
+				"Icon": "",
+                "Name": "ROPs"
             }]
         }, {
-            "Id": 4,
+            "Id": "Menu2",
+			"Icon": "sap-icon://area-chart",
             "Name": "AI Sales Forecasting"
         }, {
-            "Id": 5,
-            "Name": "AI Cash Forecasting"
+            "Id": "Menu3",
+			"Icon": "sap-icon://business-objects-experience",			
+            "Name": "AI Cash Forecasting",
+            "ChildrenDirect": [{
+                "Id": "Menu3.8",
+				"Icon": "",
+                "Name": "Option 1"
+            },{
+                "Id": "Menu3.9",
+				"Icon": "",
+                "Name": "Option 2"
+            }]			
         }]
     };
 
@@ -131,17 +153,17 @@
             this._shadowRoot.querySelector("#oView2").id = this._id + "_oView2";
         }
 
-        getOption(){
+        getOptionID(){
             return this._option;
         }
 
-        setOption(newOption){
+        setOptionID(newOption){
             this._option = newOption;
             // fire "properties changed"
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
             detail: {
                 properties: {
-                    option: this._option
+                    optionID: this._option
                 }
             }
             }));
