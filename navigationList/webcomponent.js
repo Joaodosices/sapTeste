@@ -57,7 +57,7 @@
             var children = ``;
             for (let x = 0; x < jsonData.OrgUnitSet[i].ChildrenDirect.length; x++) {
                 children = ``;
-                children = `<tnt:NavigationListItem id="` + jsonData.OrgUnitSet[i].Id + `" text="` + jsonData.OrgUnitSet[i].ChildrenDirect[x].Name + `">
+                children = `<tnt:NavigationListItem id="` + jsonData.OrgUnitSet[i].ChildrenDirect[x].Id + `" text="` + jsonData.OrgUnitSet[i].ChildrenDirect[x].Name + `">
                             </tnt:NavigationListItem>`
                 navigationListItem = navigationListItem + children;
             }
