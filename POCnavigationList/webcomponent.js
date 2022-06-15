@@ -9,28 +9,28 @@
               
     var jsonData = {
         "OrgUnitSet": [{
-            "Id": "Menu1",
+            "Id": "1",
 			"Icon": "sap-icon://bar-chart",			
             "Name": "Analytics",
             "ChildrenDirect": [{
-                "Id": "Menu1.4",
+                "Id": "1.1",
 				"Icon": "",
                 "Name": "Tables"
             },{
-                "Id": "Menu1.5",
+                "Id": "1.2",
 				"Icon": "",
                 "Name": "Charts"
             }]
         }, {
-            "Id": "Menu2",
+            "Id": "2",
 			"Icon": "sap-icon://area-chart",
             "Name": "Planning",
             "ChildrenDirect": [{
-                "Id": "Menu1.4",
+                "Id": "2.1",
 				"Icon": "",
                 "Name": "Input"
             },{
-                "Id": "Menu1.5",
+                "Id": "2.2",
 				"Icon": "",
                 "Name": "Visual"
             }]
