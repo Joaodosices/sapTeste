@@ -11,36 +11,29 @@
         "OrgUnitSet": [{
             "Id": "Menu1",
 			"Icon": "sap-icon://bar-chart",			
-            "Name": "Version",
+            "Name": "Analytics",
             "ChildrenDirect": [{
                 "Id": "Menu1.4",
 				"Icon": "",
-                "Name": "Proxy Sales"
+                "Name": "Tables"
             },{
                 "Id": "Menu1.5",
 				"Icon": "",
-                "Name": "Forecast Accuracy"
-            },{
-                "Id": "Menu1.6",
-				"Icon": "",
-                "Name": "PVM"
-            },{
-                "Id": "Menu1.7",
-				"Icon": "",
-                "Name": "ROPs"
+                "Name": "Charts"
             }]
         }, {
             "Id": "Menu2",
 			"Icon": "sap-icon://area-chart",
-            "Name": "Version2"
-        }, {
-            "Id": "Menu3",
-			"Icon": "sap-icon://business-objects-experience",			
-            "Name": "Version3",		
-        }, {
-            "Id": "Menu4",
-			"Icon": "sap-icon://business-objects-experience",			
-            "Name": "Version4",		
+            "Name": "Planning",
+            "ChildrenDirect": [{
+                "Id": "Menu1.4",
+				"Icon": "",
+                "Name": "Input"
+            },{
+                "Id": "Menu1.5",
+				"Icon": "",
+                "Name": "Visual"
+            }]
         }]
     };
 
