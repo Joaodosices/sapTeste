@@ -11,7 +11,7 @@
         "OrgUnitSet": [{
             "Id": "Menu1",
 			"Icon": "sap-icon://bar-chart",			
-            "Name": "Sales Analytics",
+            "Name": "Version",
             "ChildrenDirect": [{
                 "Id": "Menu1.4",
 				"Icon": "",
@@ -32,20 +32,15 @@
         }, {
             "Id": "Menu2",
 			"Icon": "sap-icon://area-chart",
-            "Name": "AI Sales Forecasting"
+            "Name": "Version2"
         }, {
             "Id": "Menu3",
 			"Icon": "sap-icon://business-objects-experience",			
-            "Name": "AI Cash Forecasting",
-            "ChildrenDirect": [{
-                "Id": "Menu3.8",
-				"Icon": "",
-                "Name": "Option 1"
-            },{
-                "Id": "Menu3.9",
-				"Icon": "",
-                "Name": "Option 2"
-            }]			
+            "Name": "Version3",		
+        }, {
+            "Id": "Menu4",
+			"Icon": "sap-icon://business-objects-experience",			
+            "Name": "Version4",		
         }]
     };
 
