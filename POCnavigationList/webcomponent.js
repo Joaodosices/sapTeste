@@ -161,7 +161,7 @@
             }));
         }
     };
-    customElements.define('com-sap-sample-navigationlist', NavigationList);
+    customElements.define('com-sap-sample-pocnavigationlist', NavigationList);
 })();
 
 // UTILS
