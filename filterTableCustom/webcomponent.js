@@ -208,7 +208,7 @@
                 let tagIDcombobox = "ComboBox" + i;
                 let tagIDbutton = "Button" + i;
                 let combobox =`
-                    <l:VerticalLayout>
+                    <l:VerticalLayout class="sapUiSmallMarginRight">
                         <m:Label text="` + this._cleanListDimensions[i][1] + `" labelFor="` + tagIDcombobox + `"/>
                         <m:ComboBox  
                             id ="` + tagIDcombobox + `" 
