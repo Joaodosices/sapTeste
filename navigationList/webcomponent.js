@@ -92,6 +92,7 @@
                 expanded="false"
                 width="100%"
                 itemSelect="itemSelected"
+                style="font-size:30px"
                 >
                     ` + body + `
                 </tnt:NavigationList>
@@ -203,10 +204,11 @@ function loadthis(that){
         oView.placeAt(content);
 
         var navigationList = oView.byId("navigationList");
-        jQuery(navigationList.css({
-            "font-size": "50px !important"
-        }))
-        navigationList.css("font-size: 50px !important;");
+        // jQuery(navigationList.css({
+        //     "font-size": "50px !important"
+        // }))
+        // navigationList.style.("font-size: 50px !important;");
+        
         that._shadowRoot.getElementById("ui5_content").addEventListener("mouseover",  ()=>{
             navigationList.setExpanded(true);
         });
