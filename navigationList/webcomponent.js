@@ -203,7 +203,7 @@ function loadthis(that){
         oView.placeAt(content);
 
         var navigationList = oView.byId("navigationList");
-        
+        navigationList.css("font-size: 20px !important;");
         that._shadowRoot.getElementById("ui5_content").addEventListener("mouseover",  ()=>{
             navigationList.setExpanded(true);
         });
