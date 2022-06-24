@@ -203,6 +203,9 @@ function loadthis(that){
         oView.placeAt(content);
 
         var navigationList = oView.byId("navigationList");
+        jQuery(navigationList.css({
+            "font-size": "50px !important"
+        }))
         navigationList.css("font-size: 50px !important;");
         that._shadowRoot.getElementById("ui5_content").addEventListener("mouseover",  ()=>{
             navigationList.setExpanded(true);
