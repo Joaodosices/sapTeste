@@ -53,12 +53,12 @@
     var navigationListItem = ``;
     for (let i = 0; i < jsonData.OrgUnitSet.length; i++) {
 
-        navigationListItem = `<tnt:NavigationListItem id="` + jsonData.OrgUnitSet[i].Id + `" text="` + jsonData.OrgUnitSet[i].Name + `"   icon="` + jsonData.OrgUnitSet[i].Icon + `" expanded="false">`
+        navigationListItem = `<tnt:NavigationListItem class="sapThemeFontSize" id="` + jsonData.OrgUnitSet[i].Id + `" text="` + jsonData.OrgUnitSet[i].Name + `"   icon="` + jsonData.OrgUnitSet[i].Icon + `" expanded="false">`
         if (jsonData.OrgUnitSet[i].ChildrenDirect) {
             var children = ``;
             for (let x = 0; x < jsonData.OrgUnitSet[i].ChildrenDirect.length; x++) {
                 children = ``;
-                children = `<tnt:NavigationListItem id="` + jsonData.OrgUnitSet[i].ChildrenDirect[x].Id + `" text="` + jsonData.OrgUnitSet[i].ChildrenDirect[x].Name + `" expanded="false">
+                children = `<tnt:NavigationListItem class="sapThemeFontSize" id="` + jsonData.OrgUnitSet[i].ChildrenDirect[x].Id + `" text="` + jsonData.OrgUnitSet[i].ChildrenDirect[x].Name + `" expanded="false">
                             </tnt:NavigationListItem>`
                 navigationListItem = navigationListItem + children;
             }
@@ -71,9 +71,6 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style>
-            #navigationList{
-                font-size: 50px !important;
-            }
         </style>
         <div id="ui5_content" name="ui5_content">
             <slot name="content"></slot>
@@ -92,7 +89,6 @@
                 expanded="false"
                 width="100%"
                 itemSelect="itemSelected"
-                style="font-size:30px"
                 >
                     ` + body + `
                 </tnt:NavigationList>
@@ -187,7 +183,8 @@ function loadthis(that){
         //### Controller ###
         sap.ui.define([
             "jquery.sap.global",
-            "sap/ui/core/mvc/Controller"
+            "sap/ui/core/mvc/Controller",
+            "sap/ui/core/theming/Parameters"
         ], function (jQuery, Controller) {
             "use strict";
 
