@@ -72,7 +72,7 @@
     tmpl.innerHTML = `
         <style>
             #navigationList{
-                font-size: 20px !important;
+                font-size: 50px !important;
             }
         </style>
         <div id="ui5_content" name="ui5_content">
@@ -203,7 +203,7 @@ function loadthis(that){
         oView.placeAt(content);
 
         var navigationList = oView.byId("navigationList");
-        navigationList.css("font-size: 20px !important;");
+        navigationList.css("font-size: 50px !important;");
         that._shadowRoot.getElementById("ui5_content").addEventListener("mouseover",  ()=>{
             navigationList.setExpanded(true);
         });
