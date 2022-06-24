@@ -71,6 +71,9 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style>
+            #navigationList{
+                font-size: 20px !important;
+            }
         </style>
         <div id="ui5_content" name="ui5_content">
             <slot name="content"></slot>
@@ -200,6 +203,7 @@ function loadthis(that){
         oView.placeAt(content);
 
         var navigationList = oView.byId("navigationList");
+        
         that._shadowRoot.getElementById("ui5_content").addEventListener("mouseover",  ()=>{
             navigationList.setExpanded(true);
         });
