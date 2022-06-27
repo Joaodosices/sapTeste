@@ -74,7 +74,7 @@
             >
                 <tnt:NavigationList
                 id="navigationList"
-                expanded="false"
+                expanded="true"
                 width="100%"
                 itemSelect="itemSelected"
                 >
@@ -188,12 +188,12 @@ function loadthis(that){
         oView.placeAt(content);
 
         var navigationList = oView.byId("navigationList");
-        that._shadowRoot.getElementById("ui5_content").addEventListener("mouseover",  ()=>{
-            navigationList.setExpanded(true);
-        });
-        that._shadowRoot.getElementById("ui5_content").addEventListener("mouseout",  ()=>{
-            navigationList.setExpanded(false);
-        });
+        // that._shadowRoot.getElementById("ui5_content").addEventListener("mouseover",  ()=>{
+        //     navigationList.setExpanded(true);
+        // });
+        // that._shadowRoot.getElementById("ui5_content").addEventListener("mouseout",  ()=>{
+        //     navigationList.setExpanded(false);
+        // });
         that._shadowRoot.getElementById("ui5_content").addEventListener("click", event => {
             var event = new Event("onClick");
             that.dispatchEvent(event);
