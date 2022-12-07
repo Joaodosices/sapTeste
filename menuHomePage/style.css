@@ -1,0 +1,26 @@
+#root{
+    width: 700px;
+    display: grid;
+    grid-template-columns: auto auto;
+    
+}
+.areaOption{
+    display: grid;
+    justify-content: center;
+    width: 100%; /*200px*/
+    height: 21.25rem; /*500px*/
+    background: white;
+}
+.areaOption h1{
+    color: black;
+}
+.optionCircle {
+    margin: 3rem auto 0;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: black;
+}
+.lineDecoration{
+    margin: 0 auto;
+}
