@@ -3,12 +3,15 @@ let arrMenuOptions =[`Informação Geral`, `Volume de negócios`, `Clientes`, `F
 
 let tempText = ``
 let totalText = ``
+let cont = 0
+
 arrMenuOptions.forEach(element => {
-    tempText = `
-        <div class='areaOption'>
-            <div class='optionCircle'></div>
-            <h1 class='lineDecoration'>-</h1>
-            <h1>` + element + `</h1>
+    cont = cont + 1
+    tempText = `    
+        <div class='areaOption areaOption` + cont + `'>
+            <div class='optionCircle'>
+                <h1>` + element + `</h1>
+            </div>
         </div>
     `
     totalText = totalText + tempText
@@ -17,3 +20,16 @@ arrMenuOptions.forEach(element => {
 
 root.innerHTML = totalText
 totalText = ``
+
+events()
+
+function events() {
+    let buttons = document.getElementsByClassName(`optionCircle`)
+
+    for (let i = 0; i < buttons.length; i++) {
+        const element = buttons[i];
+        element.addEventListener(`click`, ()=>{
+            root.innerHTML = ` `
+        })
+    }
+}

@@ -8,19 +8,81 @@
     display: grid;
     justify-content: center;
     width: 100%; /*200px*/
-    height: 21.25rem; /*500px*/
+    height: 16.25rem; /*500px*/
     background: white;
 }
 .areaOption h1{
     color: black;
 }
 .optionCircle {
-    margin: 3rem auto 0;
-    width: 10rem;
-    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem auto 0;
+    width: 13rem;
+    height: 13rem;
     border-radius: 50%;
-    background: black;
+    background: rgb(249, 128, 29);
+    border-style: solid;
+    border-width: 0.35rem;
+    border-color: rgb(181, 90, 15);
+    transition: ease-in-out 400ms;
 }
+.optionCircle:hover{
+    cursor: pointer;
+    background: rgb(173, 206, 0);
+    border-color: rgb(151, 180, 1);
+}
+.optionCircle h1 {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
 .lineDecoration{
     margin: 0 auto;
+}
+
+
+
+#areaSegundoMenu{
+    display: grid;
+    width: 800px;
+    grid-template-columns: auto auto auto auto auto ;
+}
+#areaMainCircle{
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 4;
+    align-self: center;
+}
+#sideMenu{
+    display: grid;
+    gap: 0.4rem;
+}
+#mainCircle{
+    width: 35rem;
+    height: 35rem;
+    border-radius: 50%;
+    background: rgb(249, 128, 29);
+    border-style: solid;
+    border-width: 0.35rem;
+    border-color: rgb(181, 90, 15);
+    transition: ease-in-out 400ms;
+}
+.optionBackCircle, .option1Circle, .option2Circle, .option3Circle {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background: rgb(249, 128, 29);
+    border-style: solid;
+    border-width: 0.35rem;
+    border-color: rgb(181, 90, 15);
+    transition: ease-in-out 400ms;
+}
+
+.optionBackCircle:hover, .option1Circle:hover, .option2Circle:hover, .option3Circle:hover{
+    cursor: pointer;
+    background: rgb(173, 206, 0);
+    border-color: rgb(151, 180, 1);
 }
