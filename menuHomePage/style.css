@@ -1,12 +1,13 @@
 #root{
     width: 700px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 350px 350px;
     
 }
 .areaOption{
     display: grid;
     justify-content: center;
+    align-items: center;
     width: 100%; /*200px*/
     height: 16.25rem; /*500px*/
     background: white;
@@ -46,23 +47,50 @@
 
 
 
-#areaSegundoMenu{
+#areaSecondMenu{
     display: grid;
+    padding-left: 2rem;
     width: 800px;
-    grid-template-columns: auto auto auto auto auto ;
+    grid-template-columns: 500px auto ;
 }
 #areaMainCircle{
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 4;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
     align-self: center;
+}
+#mainCircleTitle{
+    margin-top: 6rem;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #sideMenu{
     display: grid;
     gap: 0.4rem;
 }
+#sideMenu a{
+    text-decoration: none;
+    font-size: 0.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+#sideMenu h1{
+    margin-top: 37%;
+    margin-bottom: 0%;
+    text-align: center;
+}
+h1#option1CircleTitle{
+    margin-top: 33%;
+}
+h1#optionBackCircleTitle{
+    margin-top: 5%;
+    font-size: 4rem;
+}
 #mainCircle{
-    width: 35rem;
-    height: 35rem;
+    /* width: 35rem; */
+    width: 475px;
+    height: 475px;
+    /* height: 35rem; */
     border-radius: 50%;
     background: rgb(249, 128, 29);
     border-style: solid;
@@ -71,8 +99,10 @@
     transition: ease-in-out 400ms;
 }
 .optionBackCircle, .option1Circle, .option2Circle, .option3Circle {
-    width: 9rem;
-    height: 9rem;
+    /* width: 9rem; */
+    width: 100px;
+    height: 100px;
+    /* height: 9rem; */
     border-radius: 50%;
     background: rgb(249, 128, 29);
     border-style: solid;
