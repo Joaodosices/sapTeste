@@ -1,8 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <div id="root"></div>
-        <style>
+    <style>
         #root{
             width: 700px;
             display: grid;
@@ -150,6 +149,7 @@
             border-color: rgb(151, 180, 1);
         }
         </style>
+        <div id="root"></div>
     `;
 
     class HomePage extends HTMLElement {
@@ -177,7 +177,7 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
-                let root = document.getElementById("root")
+                let root = this._shadowRoot.document.getElementById("root")
                 let arrMenuOptions =[`Informação Geral`, `Volume de negócios`, `Clientes`, `Fornecedores`]
                 let arrOptionsList =[
                     [`Informação Geral`,`Página Inicial`,`Detalhado`],
@@ -247,10 +247,10 @@
                 totalText = totalText + secondMenu
                 root.innerHTML = totalText
                 totalText = ``
-                document.getElementById(`areaSecondMenu`).style.display = "none"
+                this._shadowRoot.document.getElementById(`areaSecondMenu`).style.display = "none"
 
                 var optionSelected = ``
-                events(optionSelected)
+                events(optionSelected, this)
             }
         }
         
@@ -264,9 +264,9 @@
     customElements.define('com-sap-sample-homepage', HomePage);
 })();
 
-function events(optionSelected) {
-    let buttons = document.getElementsByClassName(`optionCircle`)
-    let buttonsArea = document.getElementsByClassName(`areaOption`)
+function events(optionSelected, that) {
+    let buttons = that._shadowRoot.document.getElementsByClassName(`optionCircle`)
+    let buttonsArea = that._shadowRoot.document.getElementsByClassName(`areaOption`)
     for (let i = 0; i < buttons.length; i++) {
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
@@ -275,47 +275,47 @@ function events(optionSelected) {
             for (let j = 0; j < buttonsArea.length; j++) {
                 buttonsArea[j].style.display = "none"
             }
-            document.getElementById(`areaSecondMenu`).style.display = "grid"
+            that._shadowRoot.document.getElementById(`areaSecondMenu`).style.display = "grid"
         })
     }
 
     //Back button event
-    document.getElementById("optionBackCircleTitle").addEventListener(`click`, ()=>{
+    that._shadowRoot.document.getElementById("optionBackCircleTitle").addEventListener(`click`, ()=>{
         for (let j = 0; j < buttonsArea.length; j++) {
             buttonsArea[j].style.display = "grid"
             document.getElementById(`areaSecondMenu`).style.display = "none"
         }
     })
     //second menu side menu buttons
-    document.getElementsByClassName("option1Circle")[0].addEventListener("click", ()=>{
-        let option = document.getElementById("option1CircleTitle").textContent
+    that._shadowRoot.document.getElementsByClassName("option1Circle")[0].addEventListener("click", ()=>{
+        let option = that._shadowRoot.document.getElementById("option1CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
                 populateSecondMenu(option, i)
             }
         }
     })
-    document.getElementsByClassName("option2Circle")[0].addEventListener("click", ()=>{
-        let option = document.getElementById("option2CircleTitle").textContent
+    that._shadowRoot.document.getElementsByClassName("option2Circle")[0].addEventListener("click", ()=>{
+        let option = that._shadowRoot.document.getElementById("option2CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
                 populateSecondMenu(option, i)
             }
         }
     })
-    document.getElementsByClassName("option3Circle")[0].addEventListener("click", ()=>{
-        let option = document.getElementById("option3CircleTitle").textContent
+    that._shadowRoot.document.getElementsByClassName("option3Circle")[0].addEventListener("click", ()=>{
+        let option = that._shadowRoot.document.getElementById("option3CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
-                populateSecondMenu(option, i)
+                populateSecondMenu(option, i, that)
             }
         }
     })
 
 }
 
-function populateSecondMenu(optionSelected, id) {
-    document.getElementById("mainCircleTitle").textContent = optionSelected
+function populateSecondMenu(optionSelected, id, that) {
+    that._shadowRoot.document.getElementById("mainCircleTitle").textContent = optionSelected
     let optionsText = ``
     for (let i = 0; i < arrOptionsList.length; i++) {
         if (arrOptionsList[i][0] === optionSelected) {
@@ -326,7 +326,7 @@ function populateSecondMenu(optionSelected, id) {
         }
     }
     // optionsText = optionsText + `</div>`
-    document.getElementById("mainCircleOptionsArea").innerHTML = optionsText
+    that._shadowRoot.document.getElementById("mainCircleOptionsArea").innerHTML = optionsText
  
 
     let ID = id + 1
@@ -335,10 +335,10 @@ function populateSecondMenu(optionSelected, id) {
         const element = arrMenuOptions[i];
         if (contador < 4) {  
             if (contador !== ID){
-                document.getElementById("option" + contador + "CircleTitle").textContent = element
+                that._shadowRoot.document.getElementById("option" + contador + "CircleTitle").textContent = element
             }else {
                 i = i + 1
-                document.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[i]
+                that._shadowRoot.document.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[i]
             }
             contador = contador + 1
         }
