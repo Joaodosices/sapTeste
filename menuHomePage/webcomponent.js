@@ -250,7 +250,7 @@
                 this._shadowRoot.document.getElementById(`areaSecondMenu`).style.display = "none"
 
                 var optionSelected = ``
-                events(optionSelected, this)
+                events(optionSelected, this, arrOptionsList, arrOptionsLinks)
             }
         }
         
@@ -264,7 +264,7 @@
     customElements.define('com-sap-sample-homepage', HomePage);
 })();
 
-function events(optionSelected, that) {
+function events(optionSelected, that, arrOptionsList, arrOptionsLinks) {
     let buttons = that._shadowRoot.document.getElementsByClassName(`optionCircle`)
     let buttonsArea = that._shadowRoot.document.getElementsByClassName(`areaOption`)
     for (let i = 0; i < buttons.length; i++) {
@@ -291,7 +291,7 @@ function events(optionSelected, that) {
         let option = that._shadowRoot.document.getElementById("option1CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
-                populateSecondMenu(option, i)
+                populateSecondMenu(option, i, that, arrOptionsList, arrOptionsLinks)
             }
         }
     })
@@ -299,7 +299,7 @@ function events(optionSelected, that) {
         let option = that._shadowRoot.document.getElementById("option2CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
-                populateSecondMenu(option, i)
+                populateSecondMenu(option, i, that, arrOptionsList, arrOptionsLinks)
             }
         }
     })
@@ -307,14 +307,14 @@ function events(optionSelected, that) {
         let option = that._shadowRoot.document.getElementById("option3CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
-                populateSecondMenu(option, i, that)
+                populateSecondMenu(option, i, that, arrOptionsList, arrOptionsLinks)
             }
         }
     })
 
 }
 
-function populateSecondMenu(optionSelected, id, that) {
+function populateSecondMenu(optionSelected, id, that, arrOptionsList, arrOptionsLinks) {
     that._shadowRoot.document.getElementById("mainCircleTitle").textContent = optionSelected
     let optionsText = ``
     for (let i = 0; i < arrOptionsList.length; i++) {
