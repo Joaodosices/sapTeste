@@ -59,22 +59,48 @@
     align-self: center;
 }
 #mainCircleTitle{
-    margin-top: 6rem;
+    margin-top: 5rem;
+    margin-bottom: 0rem;
     text-align: center;
     font-size: 36px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#mainCircleOptionsArea{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+}
+#mainCircleOptionsArea a {
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+    border-width: 0.35rem;
+    border-color: transparent;
+    border-radius: 10%;
+}
+#mainCircleOptionsArea a:hover{
+    cursor: pointer;
+    background: rgb(173, 206, 0);
+    border-color: rgb(151, 180, 1);
+}
+.mainCircleOptions{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    margin: 0;
 }
 #sideMenu{
     display: grid;
     gap: 0.4rem;
 }
-#sideMenu a{
+
+#sideMenu h1{
     text-decoration: none;
-    font-size: 0.4rem;
+    font-size: 0.8rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
-}
-#sideMenu h1{
     margin-top: 37%;
     margin-bottom: 0%;
     text-align: center;

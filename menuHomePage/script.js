@@ -1,6 +1,18 @@
 let root = document.getElementById("root")
 let arrMenuOptions =[`Informação Geral`, `Volume de negócios`, `Clientes`, `Fornecedores`]
-let arrOptionsList =[[`Informação Geral`][`Página Inicial`,`Detalhado`],[`Volume de negócios`][`Overview`,`Global`,`Detalhado`,`Clientes`],[`Clientes`][`Global`,`Detalhado`],[`Fornecedores`][`Global`,`Detalhado`]]
+let arrOptionsList =[
+    [`Informação Geral`,`Página Inicial`,`Detalhado`],
+    [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
+    [`Clientes`, `Global`,`Detalhado`],
+    [`Fornecedores`,`Global`,`Detalhado`]
+]
+let arrOptionsLinks = [
+    [`Informação Geral`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/65180987E4F6BA9784218BC60DBE4475/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/65180987E4F6BA9784218BC60DBE4475/?mode=edit&resourceType=STORY`],
+    [`Volume de negócios`, `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`],
+    [`Clientes`, `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D9F042073F2D1B961A4667DDBA1DA097/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D9F042073F2D1B961A4667DDBA1DA097/?resourceType=STORY&mode=view`],
+    [`Fornecedores`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E6B90404DC4BC188BD6312EEE43BFF5B/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E6B90404DC4BC188BD6312EEE43BFF5B/?resourceType=STORY&mode=view`]
+]
+
 let tempText = ``
 let totalText = ``
 let cont = 0
@@ -36,25 +48,19 @@ let secondMenu = `
                     </div>
             </div>
             <div id="areaOption1Circle">
-                <a href="">
                     <div class="option1Circle">
                         <h1 id="option1CircleTitle"></h1>
                     </div>
-                </a>
             </div>
             <div id="areaOption2Circle">
-                <a href="">
                     <div class="option2Circle">
                         <h1 id="option2CircleTitle"></h1>
                     </div>
-                </a>
             </div>
             <div id="areaOption3Circle">
-                <a href="">
                     <div class="option3Circle">
                         <h1 id="option3CircleTitle"></h1>
                     </div>
-                </a>
             </div>
         </div>
     </div>
@@ -89,18 +95,47 @@ function events(optionSelected) {
             document.getElementById(`areaSecondMenu`).style.display = "none"
         }
     })
+    //second menu side menu buttons
+    document.getElementsByClassName("option1Circle")[0].addEventListener("click", ()=>{
+        let option = document.getElementById("option1CircleTitle").textContent
+        for (let i = 0; i < buttons.length; i++) {
+            if (option === arrMenuOptions[i]) {
+                populateSecondMenu(option, i)
+            }
+        }
+    })
+    document.getElementsByClassName("option2Circle")[0].addEventListener("click", ()=>{
+        let option = document.getElementById("option2CircleTitle").textContent
+        for (let i = 0; i < buttons.length; i++) {
+            if (option === arrMenuOptions[i]) {
+                populateSecondMenu(option, i)
+            }
+        }
+    })
+    document.getElementsByClassName("option3Circle")[0].addEventListener("click", ()=>{
+        let option = document.getElementById("option3CircleTitle").textContent
+        for (let i = 0; i < buttons.length; i++) {
+            if (option === arrMenuOptions[i]) {
+                populateSecondMenu(option, i)
+            }
+        }
+    })
+
 }
 function populateSecondMenu(optionSelected, id) {
     document.getElementById("mainCircleTitle").textContent = optionSelected
-
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
-        
+    let optionsText = ``
+    for (let i = 0; i < arrOptionsList.length; i++) {
+        if (arrOptionsList[i][0] === optionSelected) {
+            for (let z = 1; z < arrOptionsList[i].length; z++) {
+                const element = arrOptionsList[i][z];
+                optionsText = optionsText + ` <a target="_blank"  href="` + arrOptionsLinks[i][z] + `"> <h1 class="mainCircleOptions">-` + element + `</h1> </a>`
+            }
+        }
     }
-    document.getElementById("mainCircleOptionsArea").innerHTML = `
-
-    `
-
+    // optionsText = optionsText + `</div>`
+    document.getElementById("mainCircleOptionsArea").innerHTML = optionsText
+ 
 
     let ID = id + 1
     let contador = 1
