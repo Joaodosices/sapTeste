@@ -177,7 +177,7 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             // if (this.firstConnection === true){
-                let root = this._shadowRoot.document.getElementById("root")
+                let root = this._shadowRoot.getElementById("root")
                 let arrMenuOptions =[`Informação Geral`, `Volume de negócios`, `Clientes`, `Fornecedores`]
                 let arrOptionsList =[
                     [`Informação Geral`,`Página Inicial`,`Detalhado`],
@@ -247,7 +247,7 @@
                 totalText = totalText + secondMenu
                 root.innerHTML = totalText
                 totalText = ``
-                this._shadowRoot.document.getElementById(`areaSecondMenu`).style.display = "none"
+                this._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
 
                 var optionSelected = ``
                 // events(optionSelected, this, arrOptionsList, arrOptionsLinks)
