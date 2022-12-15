@@ -250,7 +250,7 @@
                 this._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
 
                 var optionSelected = ``
-                // events(optionSelected, this, arrOptionsList, arrOptionsLinks)
+                events(optionSelected, this, arrOptionsList, arrOptionsLinks)
             // }
         }
         
@@ -265,8 +265,8 @@
 })();
 
 function events(optionSelected, that, arrOptionsList, arrOptionsLinks) {
-    let buttons = that._shadowRoot.document.getElementsByClassName(`optionCircle`)
-    let buttonsArea = that._shadowRoot.document.getElementsByClassName(`areaOption`)
+    let buttons = that._shadowRoot.getElementsByClassName(`optionCircle`)
+    let buttonsArea = that._shadowRoot.getElementsByClassName(`areaOption`)
     for (let i = 0; i < buttons.length; i++) {
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
@@ -275,36 +275,36 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks) {
             for (let j = 0; j < buttonsArea.length; j++) {
                 buttonsArea[j].style.display = "none"
             }
-            that._shadowRoot.document.getElementById(`areaSecondMenu`).style.display = "grid"
+            that._shadowRoot.getElementById(`areaSecondMenu`).style.display = "grid"
         })
     }
 
     //Back button event
-    that._shadowRoot.document.getElementById("optionBackCircleTitle").addEventListener(`click`, ()=>{
+    that._shadowRoot.getElementById("optionBackCircleTitle").addEventListener(`click`, ()=>{
         for (let j = 0; j < buttonsArea.length; j++) {
             buttonsArea[j].style.display = "grid"
-            document.getElementById(`areaSecondMenu`).style.display = "none"
+            that._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
         }
     })
     //second menu side menu buttons
-    that._shadowRoot.document.getElementsByClassName("option1Circle")[0].addEventListener("click", ()=>{
-        let option = that._shadowRoot.document.getElementById("option1CircleTitle").textContent
+    that._shadowRoot.getElementsByClassName("option1Circle")[0].addEventListener("click", ()=>{
+        let option = that._shadowRoot.getElementById("option1CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
                 populateSecondMenu(option, i, that, arrOptionsList, arrOptionsLinks)
             }
         }
     })
-    that._shadowRoot.document.getElementsByClassName("option2Circle")[0].addEventListener("click", ()=>{
-        let option = that._shadowRoot.document.getElementById("option2CircleTitle").textContent
+    that._shadowRoot.getElementsByClassName("option2Circle")[0].addEventListener("click", ()=>{
+        let option = that._shadowRoot.getElementById("option2CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
                 populateSecondMenu(option, i, that, arrOptionsList, arrOptionsLinks)
             }
         }
     })
-    that._shadowRoot.document.getElementsByClassName("option3Circle")[0].addEventListener("click", ()=>{
-        let option = that._shadowRoot.document.getElementById("option3CircleTitle").textContent
+    that._shadowRoot.getElementsByClassName("option3Circle")[0].addEventListener("click", ()=>{
+        let option = that._shadowRoot.getElementById("option3CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
                 populateSecondMenu(option, i, that, arrOptionsList, arrOptionsLinks)
@@ -315,7 +315,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks) {
 }
 
 function populateSecondMenu(optionSelected, id, that, arrOptionsList, arrOptionsLinks) {
-    that._shadowRoot.document.getElementById("mainCircleTitle").textContent = optionSelected
+    that._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
     let optionsText = ``
     for (let i = 0; i < arrOptionsList.length; i++) {
         if (arrOptionsList[i][0] === optionSelected) {
@@ -326,7 +326,7 @@ function populateSecondMenu(optionSelected, id, that, arrOptionsList, arrOptions
         }
     }
     // optionsText = optionsText + `</div>`
-    that._shadowRoot.document.getElementById("mainCircleOptionsArea").innerHTML = optionsText
+    that._shadowRoot.getElementById("mainCircleOptionsArea").innerHTML = optionsText
  
 
     let ID = id + 1
@@ -335,10 +335,10 @@ function populateSecondMenu(optionSelected, id, that, arrOptionsList, arrOptions
         const element = arrMenuOptions[i];
         if (contador < 4) {  
             if (contador !== ID){
-                that._shadowRoot.document.getElementById("option" + contador + "CircleTitle").textContent = element
+                that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = element
             }else {
                 i = i + 1
-                that._shadowRoot.document.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[i]
+                that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[i]
             }
             contador = contador + 1
         }
