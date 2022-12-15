@@ -176,7 +176,7 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            if (this.firstConnection === true){
+            // if (this.firstConnection === true){
                 let root = this._shadowRoot.document.getElementById("root")
                 let arrMenuOptions =[`Informação Geral`, `Volume de negócios`, `Clientes`, `Fornecedores`]
                 let arrOptionsList =[
@@ -250,8 +250,8 @@
                 this._shadowRoot.document.getElementById(`areaSecondMenu`).style.display = "none"
 
                 var optionSelected = ``
-                events(optionSelected, this, arrOptionsList, arrOptionsLinks)
-            }
+                // events(optionSelected, this, arrOptionsList, arrOptionsLinks)
+            // }
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
