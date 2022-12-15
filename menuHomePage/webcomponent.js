@@ -159,6 +159,11 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.firstConnection = false
+
+            this.addEventListener("click", event => {
+                var event = new Event("onClick");
+                this.dispatchEvent(event);
+            });
         }
 
         //Fired when the widget is added to the html DOM of the page
