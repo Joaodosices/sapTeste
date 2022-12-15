@@ -1,5 +1,18 @@
 (function()  {
     let tmpl = document.createElement('template');
+    let arrMenuOptions =[`Informação Geral`, `Volume de negócios`, `Clientes`, `Fornecedores`]
+    let arrOptionsList =[
+        [`Informação Geral`,`Página Inicial`,`Detalhado`],
+        [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
+        [`Clientes`, `Global`,`Detalhado`],
+        [`Fornecedores`,`Global`,`Detalhado`]
+    ]
+    let arrOptionsLinks = [
+        [`Informação Geral`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/65180987E4F6BA9784218BC60DBE4475/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/65180987E4F6BA9784218BC60DBE4475/?mode=edit&resourceType=STORY`],
+        [`Volume de negócios`, `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`],
+        [`Clientes`, `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D9F042073F2D1B961A4667DDBA1DA097/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D9F042073F2D1B961A4667DDBA1DA097/?resourceType=STORY&mode=view`],
+        [`Fornecedores`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E6B90404DC4BC188BD6312EEE43BFF5B/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E6B90404DC4BC188BD6312EEE43BFF5B/?resourceType=STORY&mode=view`]
+    ]
     tmpl.innerHTML = `
     <style>
         #root{
@@ -183,19 +196,6 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             // if (this.firstConnection === true){
                 let root = this._shadowRoot.getElementById("root")
-                let arrMenuOptions =[`Informação Geral`, `Volume de negócios`, `Clientes`, `Fornecedores`]
-                let arrOptionsList =[
-                    [`Informação Geral`,`Página Inicial`,`Detalhado`],
-                    [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
-                    [`Clientes`, `Global`,`Detalhado`],
-                    [`Fornecedores`,`Global`,`Detalhado`]
-                ]
-                let arrOptionsLinks = [
-                    [`Informação Geral`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/65180987E4F6BA9784218BC60DBE4475/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/65180987E4F6BA9784218BC60DBE4475/?mode=edit&resourceType=STORY`],
-                    [`Volume de negócios`, `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C9500F0665AA9DEDEFC763E80222A87F/?resourceType=STORY&mode=view`],
-                    [`Clientes`, `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D9F042073F2D1B961A4667DDBA1DA097/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D9F042073F2D1B961A4667DDBA1DA097/?resourceType=STORY&mode=view`],
-                    [`Fornecedores`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E6B90404DC4BC188BD6312EEE43BFF5B/?resourceType=STORY&mode=view`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E6B90404DC4BC188BD6312EEE43BFF5B/?resourceType=STORY&mode=view`]
-                ]
 
                 let tempText = ``
                 let totalText = ``
