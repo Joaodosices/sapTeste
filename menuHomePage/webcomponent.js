@@ -265,7 +265,7 @@
 })();
 
 function events(optionSelected, that, arrOptionsList, arrOptionsLinks) {
-    let buttons = that._shadowRoot.getElementsByClassName(`optionCircle`)
+    let buttons = that._shadowRoot.querySelector(`.optionCircle`)
     let buttonsArea = that._shadowRoot.getElementsByClassName(`areaOption`)
     for (let i = 0; i < buttons.length; i++) {
         const element = buttons[i];
