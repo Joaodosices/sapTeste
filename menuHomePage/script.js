@@ -75,6 +75,8 @@ events(optionSelected)
 
 function events(optionSelected) {
     let buttons = document.getElementsByClassName(`optionCircle`)
+    console.log(document.querySelectorAll(`.optionCircle`))
+    console.log(document.getElementsByClassName(`optionCircle`))
     let buttonsArea = document.getElementsByClassName(`areaOption`)
     for (let i = 0; i < buttons.length; i++) {
         const element = buttons[i];

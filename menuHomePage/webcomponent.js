@@ -265,8 +265,8 @@
 })();
 
 function events(optionSelected, that, arrOptionsList, arrOptionsLinks) {
-    let buttons = that._shadowRoot.querySelector(`.optionCircle`)
-    let buttonsArea = that._shadowRoot.querySelector(`.areaOption`)
+    let buttons = that._shadowRoot.querySelectorAll(`.optionCircle`)
+    let buttonsArea = that._shadowRoot.querySelectorAll(`.areaOption`)
     for (let i = 0; i < buttons.length; i++) {
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
@@ -287,7 +287,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks) {
         }
     })
     //second menu side menu buttons
-    that._shadowRoot.querySelector(".option1Circle")[0].addEventListener("click", ()=>{
+    that._shadowRoot.querySelectorAll(".option1Circle")[0].addEventListener("click", ()=>{
         let option = that._shadowRoot.getElementById("option1CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
@@ -295,7 +295,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks) {
             }
         }
     })
-    that._shadowRoot.querySelector(".option2Circle")[0].addEventListener("click", ()=>{
+    that._shadowRoot.querySelectorAll(".option2Circle")[0].addEventListener("click", ()=>{
         let option = that._shadowRoot.getElementById("option2CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
@@ -303,7 +303,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks) {
             }
         }
     })
-    that._shadowRoot.querySelector(".option3Circle")[0].addEventListener("click", ()=>{
+    that._shadowRoot.querySelectorAll(".option3Circle")[0].addEventListener("click", ()=>{
         let option = that._shadowRoot.getElementById("option3CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
