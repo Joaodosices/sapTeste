@@ -326,8 +326,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
 
 }
 
-function populateSecondMenu(optionSelected, id, this, arrOptionsList, arrOptionsLinks) {
-    this._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
+function populateSecondMenu(optionSelected, id, thisthat, arrOptionsList, arrOptionsLinks) {
+    thisthat._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
     let optionsText = ``
     for (let i = 0; i < arrOptionsList.length; i++) {
         if (arrOptionsList[i][0] === optionSelected) {
@@ -338,7 +338,7 @@ function populateSecondMenu(optionSelected, id, this, arrOptionsList, arrOptions
         }
     }
     // optionsText = optionsText + `</div>`
-    this._shadowRoot.getElementById("mainCircleOptionsArea").innerHTML = optionsText
+    thisthat._shadowRoot.getElementById("mainCircleOptionsArea").innerHTML = optionsText
  
 
     let ID = id + 1
