@@ -294,14 +294,14 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
 
             let ID = i + 1
             let contador = 1
-            for (let i = 0; i < arrMenuOptions.length; i++) {
+            for (let x = 0; x < arrMenuOptions.length; x++) {
                 const element = arrMenuOptions[i];
                 if (contador < 4) {  
                     if (contador !== ID){
                         that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = element
                     }else {
-                        i = i + 1
-                        that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[i]
+                        x = x + 1
+                        that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[x]
                     }
                     contador = contador + 1
                 }
