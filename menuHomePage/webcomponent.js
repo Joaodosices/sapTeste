@@ -328,7 +328,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         let option = _that._shadowRoot.getElementById("option1CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
-                populateSecondMenu(option, i, _that, arrOptionsList, arrOptionsLinks)
+                populateSecondMenu(option, i, _that, arrOptionsList, arrOptionsLinks, arrMenuOptions)
             }
         }
     })
@@ -338,7 +338,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         let option = _that._shadowRoot.getElementById("option2CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
-                populateSecondMenu(option, i, _that, arrOptionsList, arrOptionsLinks)
+                populateSecondMenu(option, i, _that, arrOptionsList, arrOptionsLinks, arrMenuOptions)
             }
         }
     })
@@ -348,14 +348,14 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         let option = _that._shadowRoot.getElementById("option3CircleTitle").textContent
         for (let i = 0; i < buttons.length; i++) {
             if (option === arrMenuOptions[i]) {
-                populateSecondMenu(option, i, _that, arrOptionsList, arrOptionsLinks)
+                populateSecondMenu(option, i, _that, arrOptionsList, arrOptionsLinks, arrMenuOptions)
             }
         }
     })
 
 }
 
-function populateSecondMenu(optionSelected, id, thisthat, arrOptionsList, arrOptionsLinks) {
+function populateSecondMenu(optionSelected, id, thisthat, arrOptionsList, arrOptionsLinks, arrMenuOptions) {
     thisthat._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
     let optionsText = ``
     for (let i = 0; i < arrOptionsList.length; i++) {
