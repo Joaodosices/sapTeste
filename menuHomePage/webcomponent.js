@@ -277,7 +277,36 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
             optionSelected = arrMenuOptions[i]
-            populateSecondMenu(optionSelected, i, _that, arrOptionsList, arrOptionsLinks)
+            
+            _that._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
+            let optionsText = ``
+            for (let j = 0; j < arrOptionsList.length; j++) {
+                if (arrOptionsList[j][0] === optionSelected) {
+                    for (let z = 1; z < arrOptionsList[j].length; z++) {
+                        const element = arrOptionsList[j][z];
+                        optionsText = optionsText + ` <a target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <h1 class="mainCircleOptions">-` + element + `</h1> </a>`
+                    }
+                }
+            }
+            // optionsText = optionsText + `</div>`
+            _that._shadowRoot.getElementById("mainCircleOptionsArea").innerHTML = optionsText
+        
+
+            let ID = i + 1
+            let contador = 1
+            for (let i = 0; i < arrMenuOptions.length; i++) {
+                const element = arrMenuOptions[i];
+                if (contador < 4) {  
+                    if (contador !== ID){
+                        that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = element
+                    }else {
+                        i = i + 1
+                        that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[i]
+                    }
+                    contador = contador + 1
+                }
+            }
+
             for (let j = 0; j < buttonsArea.length; j++) {
                 buttonsArea[j].style.display = "none"
             }
