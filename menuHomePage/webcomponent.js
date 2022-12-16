@@ -376,10 +376,10 @@ function populateSecondMenu(optionSelected, id, thisthat, arrOptionsList, arrOpt
         const element = arrMenuOptions[i];
         if (contador < 4) {  
             if (contador !== ID){
-                that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = element
+                thisthat._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = element
             }else {
                 i = i + 1
-                that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[i]
+                thisthat._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[i]
             }
             contador = contador + 1
         }
