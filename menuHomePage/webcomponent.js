@@ -277,7 +277,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
             optionSelected = arrMenuOptions[i]
-            populateSecondMenu(optionSelected, i)
+            populateSecondMenu(optionSelected, i, _that, arrOptionsList, arrOptionsLinks)
             for (let j = 0; j < buttonsArea.length; j++) {
                 buttonsArea[j].style.display = "none"
             }
