@@ -15,7 +15,6 @@
             align-items: center;
             width: 100%; /*200px*/
             height: 16.25rem; /*500px*/
-            background: white;
         }
         .areaOption h1{
             color: black;
