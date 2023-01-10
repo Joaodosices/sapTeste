@@ -6,7 +6,7 @@
         #root{
             width: 700px;
             display: grid;
-            grid-template-columns: 270px 270px;
+            grid-template-columns: 260px 260px;
             background: transparent;
         }
         .areaOption{
