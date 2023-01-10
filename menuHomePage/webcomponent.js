@@ -291,7 +291,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         element.addEventListener(`click`, ()=>{
             optionSelected = arrMenuOptions[i]
             
-            _that._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
+            // _that._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
             let optionsText = ``
             for (let j = 0; j < arrOptionsList.length; j++) {
                 if (arrOptionsList[j][0] === optionSelected) {
