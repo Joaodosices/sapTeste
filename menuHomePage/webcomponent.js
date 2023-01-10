@@ -38,6 +38,9 @@
         }
         .areaText {
             background: rgba(24, 145, 186, 0.53);
+            width: 100%;
+            position: relative;
+            bottom: 0;
         }
         .areaText h1 {
             color: black;
