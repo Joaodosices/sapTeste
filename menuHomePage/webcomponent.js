@@ -228,44 +228,44 @@
                 }
             
 
-                let secondMenu = `
-                <div id="areaSecondMenu">
-                        <div id="areaMainCircle">
-                            <div id="mainCircle">
-                                <h1 id="mainCircleTitle"></h1>
-                                <div id="mainCircleOptionsArea">
+                // let secondMenu = `
+                // <div id="areaSecondMenu">
+                //         <div id="areaMainCircle">
+                //             <div id="mainCircle">
+                //                 <h1 id="mainCircleTitle"></h1>
+                //                 <div id="mainCircleOptionsArea">
                                     
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sideMenu">
-                            <div id="areaBackCircle">
-                                    <div class="optionBackCircle">
-                                        <h1 id="optionBackCircleTitle">⬅</h1>
-                                    </div>
-                            </div>
-                            <div id="areaOption1Circle">
-                                    <div class="option1Circle">
-                                        <h1 id="option1CircleTitle"></h1>
-                                    </div>
-                            </div>
-                            <div id="areaOption2Circle">
-                                    <div class="option2Circle">
-                                        <h1 id="option2CircleTitle"></h1>
-                                    </div>
-                            </div>
-                            <div id="areaOption3Circle">
-                                    <div class="option3Circle">
-                                        <h1 id="option3CircleTitle"></h1>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                `
-                totalText = totalText + secondMenu
-                root.innerHTML = totalText
-                totalText = ``
-                this._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
+                //                 </div>
+                //             </div>
+                //         </div>
+                //         <div id="sideMenu">
+                //             <div id="areaBackCircle">
+                //                     <div class="optionBackCircle">
+                //                         <h1 id="optionBackCircleTitle">⬅</h1>
+                //                     </div>
+                //             </div>
+                //             <div id="areaOption1Circle">
+                //                     <div class="option1Circle">
+                //                         <h1 id="option1CircleTitle"></h1>
+                //                     </div>
+                //             </div>
+                //             <div id="areaOption2Circle">
+                //                     <div class="option2Circle">
+                //                         <h1 id="option2CircleTitle"></h1>
+                //                     </div>
+                //             </div>
+                //             <div id="areaOption3Circle">
+                //                     <div class="option3Circle">
+                //                         <h1 id="option3CircleTitle"></h1>
+                //                     </div>
+                //             </div>
+                //         </div>
+                //     </div>
+                // `
+                // totalText = totalText + secondMenu
+                // root.innerHTML = totalText
+                // totalText = ``
+                // this._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
 
                 var optionSelected = ``
                 events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions)
@@ -320,10 +320,10 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 }
             }
 
-            for (let j = 0; j < buttonsArea.length; j++) {
-                buttonsArea[j].style.display = "none"
-            }
-            _that._shadowRoot.getElementById(`areaSecondMenu`).style.display = "grid"
+            // for (let j = 0; j < buttonsArea.length; j++) {
+            //     buttonsArea[j].style.display = "none"
+            // // }
+            // _that._shadowRoot.getElementById(`areaSecondMenu`).style.display = "grid"
         })
     }
 
