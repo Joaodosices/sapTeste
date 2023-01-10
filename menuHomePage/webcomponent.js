@@ -5,6 +5,7 @@
     <style>
         #root{
             width: 700px;
+            height: 500px;
             display: grid;
             grid-template-columns: 230px 230px;
             background: transparent;
