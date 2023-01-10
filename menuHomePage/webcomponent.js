@@ -301,8 +301,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                     }
                 }
             }
-            // optionsText = optionsText + `</div>`
-            _that._shadowRoot.getElementById("mainCircleOptionsArea").innerHTML = optionsText
+            // // optionsText = optionsText + `</div>`
+            // _that._shadowRoot.getElementById("mainCircleOptionsArea").innerHTML = optionsText
         
 
             // let ID = i + 1
