@@ -35,8 +35,8 @@
         }
         .optionCircle img{
             position: absolute;
-            top: 40%;
-            left: 50%;
+            top: 25%;
+            left: 25%;
         }
         .optionCircle:hover{
             cursor: pointer;
