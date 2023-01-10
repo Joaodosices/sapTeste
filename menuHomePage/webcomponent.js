@@ -31,7 +31,7 @@
             background: rgb(92, 177, 206);
             border-width: 0;
             transition: ease-in-out 400ms;
-            position: absolute;
+            position: relative;
         }
         .optionCircle:hover{
             cursor: pointer;
@@ -40,7 +40,7 @@
         .areaText {
             background: rgba(24, 145, 186, 0.53);
             width: 100%;
-            position: relative;
+            position: absolute;
             bottom: 0;
         }
         .areaText h1 {
