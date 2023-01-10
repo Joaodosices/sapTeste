@@ -263,8 +263,8 @@
                 //     </div>
                 // `
                 // totalText = totalText + secondMenu
-                // root.innerHTML = totalText
-                // totalText = ``
+                root.innerHTML = totalText
+                totalText = ``
                 // this._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
 
                 var optionSelected = ``
@@ -320,10 +320,10 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             //     }
             // }
 
-            for (let j = 0; j < buttonsArea.length; j++) {
-                buttonsArea[j].style.display = "none"
-            }
-            _that._shadowRoot.getElementById(`areaSecondMenu`).style.display = "grid"
+            // for (let j = 0; j < buttonsArea.length; j++) {
+            //     buttonsArea[j].style.display = "none"
+            // }
+            // _that._shadowRoot.getElementById(`areaSecondMenu`).style.display = "grid"
         })
     }
 
