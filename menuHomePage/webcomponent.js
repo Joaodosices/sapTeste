@@ -16,6 +16,7 @@
             width: 100%; /*200px*/
             height: 16.25rem; /*500px*/
         }
+
         .areaOption h1{
             color: black;
         }
@@ -26,19 +27,19 @@
             margin: 0rem auto 0;
             width: 13rem;
             height: 13rem;
-            border-radius: 50%;
-            background: rgb(249, 128, 29);
-            border-style: solid;
-            border-width: 0.35rem;
-            border-color: rgb(181, 90, 15);
+            border-radius: 0%;
+            background: rgb(92, 177, 206);
+            border-width: 0;
             transition: ease-in-out 400ms;
         }
         .optionCircle:hover{
             cursor: pointer;
             background: rgb(173, 206, 0);
-            border-color: rgb(151, 180, 1);
         }
-        .optionCircle h1 {
+        .areaText {
+            background: rgba(24, 145, 186, 0.53);
+        }
+        .areaText h1 {
             color: black;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 1rem;
@@ -206,7 +207,8 @@
                     tempText = `    
                         <div class='areaOption areaOption` + cont + `'>
                             <div class='optionCircle'>
-                                <h1>` + element + `</h1>
+                                <img src="" alt="">
+                                <div class='areaText'> <h1>` + element + `</h1> </div>
                             </div>
                         </div>
                     `
