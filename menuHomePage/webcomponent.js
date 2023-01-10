@@ -302,23 +302,23 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 }
             }
             // optionsText = optionsText + `</div>`
-            _that._shadowRoot.getElementById("mainCircleOptionsArea").innerHTML = optionsText
+            // _that._shadowRoot.getElementById("mainCircleOptionsArea").innerHTML = optionsText
         
 
-            let ID = i + 1
-            let contador = 1
-            for (let x = 0; x < arrMenuOptions.length; x++) {
-                const element = arrMenuOptions[i];
-                if (contador < 4) {  
-                    if (contador !== ID){
-                        that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = element
-                    }else {
-                        x = x + 1
-                        that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[x]
-                    }
-                    contador = contador + 1
-                }
-            }
+            // let ID = i + 1
+            // let contador = 1
+            // for (let x = 0; x < arrMenuOptions.length; x++) {
+            //     const element = arrMenuOptions[i];
+            //     if (contador < 4) {  
+            //         if (contador !== ID){
+            //             that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = element
+            //         }else {
+            //             x = x + 1
+            //             that._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[x]
+            //         }
+            //         contador = contador + 1
+            //     }
+            // }
 
             // for (let j = 0; j < buttonsArea.length; j++) {
             //     buttonsArea[j].style.display = "none"
