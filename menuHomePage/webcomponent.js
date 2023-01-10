@@ -189,7 +189,10 @@
             // if (this.firstConnection === true){
                 let root = this._shadowRoot.getElementById("root")
 
-                let arrMenuOptions =[`Informação Geral`, `Volume de negócios`, `Clientes`, `Fornecedores`]
+                let arrMenuOptions =[[`Informação Geral`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.png`], 
+                                     [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.png`], 
+                                     [`Clientes`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/clientes.png`], 
+                                     [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`]]
                 let arrOptionsList =[
                     [`Informação Geral`,`Página Inicial`,`Detalhado`],
                     [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
@@ -205,20 +208,32 @@
                 let tempText = ``
                 let totalText = ``
                 let cont = 0
-
-                arrMenuOptions.forEach(element => {
+                for (let i = 0; i < arrMenuOptions.length; i++) {
                     cont = cont + 1
                     tempText = `    
                         <div class='areaOption areaOption` + cont + `'>
                             <div class='optionCircle'>
-                                <img src="" alt="">
-                                <div class='areaText'> <h1>` + element + `</h1> </div>
+                                <img src="` + arrMenuOptions[i][1] + `" alt="imagem ` + arrMenuOptions[i][0] + `">
+                                <div class='areaText'> <h1>` + arrMenuOptions[i][0] + `</h1> </div>
                             </div>
                         </div>
                     `
                     totalText = totalText + tempText
                     tempText = ``
-                });
+                }
+                // arrMenuOptions.forEach(element => {
+                //     cont = cont + 1
+                //     tempText = `    
+                //         <div class='areaOption areaOption` + cont + `'>
+                //             <div class='optionCircle'>
+                //                 <img src="" alt="">
+                //                 <div class='areaText'> <h1>` + element + `</h1> </div>
+                //             </div>
+                //         </div>
+                //     `
+                //     totalText = totalText + tempText
+                //     tempText = ``
+                // });
 
                 let secondMenu = `
                 <div id="areaSecondMenu">
