@@ -33,6 +33,11 @@
             transition: ease-in-out 400ms;
             position: relative;
         }
+        .optionCircle img{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+        }
         .optionCircle:hover{
             cursor: pointer;
             background: rgb(173, 206, 0);
@@ -189,10 +194,11 @@
             // if (this.firstConnection === true){
                 let root = this._shadowRoot.getElementById("root")
 
-                let arrMenuOptions =[[`Informação Geral`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.png`], 
-                                     [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.png`], 
-                                     [`Clientes`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/clientes.png`], 
-                                     [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`]]
+                let arrMenuOptions =[
+                    [`Informação Geral`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.png`], 
+                    [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.png`], 
+                    [`Clientes`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/clientes.png`], 
+                    [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`]]
                 let arrOptionsList =[
                     [`Informação Geral`,`Página Inicial`,`Detalhado`],
                     [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
@@ -208,6 +214,7 @@
                 let tempText = ``
                 let totalText = ``
                 let cont = 0
+
                 for (let i = 0; i < arrMenuOptions.length; i++) {
                     cont = cont + 1
                     tempText = `    
@@ -221,19 +228,7 @@
                     totalText = totalText + tempText
                     tempText = ``
                 }
-                // arrMenuOptions.forEach(element => {
-                //     cont = cont + 1
-                //     tempText = `    
-                //         <div class='areaOption areaOption` + cont + `'>
-                //             <div class='optionCircle'>
-                //                 <img src="" alt="">
-                //                 <div class='areaText'> <h1>` + element + `</h1> </div>
-                //             </div>
-                //         </div>
-                //     `
-                //     totalText = totalText + tempText
-                //     tempText = ``
-                // });
+            
 
                 let secondMenu = `
                 <div id="areaSecondMenu">
