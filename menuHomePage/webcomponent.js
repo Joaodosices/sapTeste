@@ -31,6 +31,7 @@
             background: rgb(92, 177, 206);
             border-width: 0;
             transition: ease-in-out 400ms;
+            position: absolute;
         }
         .optionCircle:hover{
             cursor: pointer;
