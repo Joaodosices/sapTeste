@@ -305,7 +305,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                         // let newOption = document.createElement(`div`)
                         // newOption.className = `newArea`+z+element2
                         console.log(`1x terceira camada`)
-                        optionsText = optionsText + ` <a target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <h1 class="mainCircleOptions">-` + element2 + `</h1> </a>`
+                        optionsText = optionsText + ` <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <div class="areaText"><h1 class="mainCircleOptions">-` + element2 + `</h1></div> </a>`
                     }
                 }
             }
