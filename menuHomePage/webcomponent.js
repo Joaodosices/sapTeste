@@ -69,6 +69,13 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 1rem;
             text-align: center;
+            padding-top: 0.5rem; 
+        }
+        .areaTextShown p {
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding-top: 0.5rem;
         }
         
         .lineDecoration{
