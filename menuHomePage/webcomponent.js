@@ -268,7 +268,8 @@
                 // this._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
 
                 var optionSelected = ``
-                events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions)
+                var optionsShown = []
+                events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown)
             // }
         }
         
@@ -282,7 +283,7 @@
     customElements.define('com-sap-sample-homepage', HomePage);
 })();
 
-function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOptions) {
+function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown) {
     var _that = that
     let buttons = _that._shadowRoot.querySelectorAll(`.optionCircle`)
     let buttonsArea = _that._shadowRoot.querySelectorAll(`.areaOption`)
@@ -293,6 +294,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             
             // _that._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
             let optionsText = ``
+            let newOptionsList = []
             for (let j = 0; j < arrOptionsList.length; j++) {
                 console.log(`1x primeira camada`)
                 console.log(arrOptionsList[j][0])
@@ -301,8 +303,10 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
 
                     for (let z = 1; z < arrOptionsList[j].length; z++) {
                         const element2 = arrOptionsList[j][z];
+                        
                         let newOption = document.createElement(`div`)
                         newOption.id = `optionCircle`+element2
+                        newOptionsList.push(`optionCircle`+element2)
                         _that._shadowRoot.getElementById("root").appendChild(newOption)
                         _that._shadowRoot.getElementById(`optionCircle`+element2).innerHTML = `<a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <div class="areaText"><h1 class="mainCircleOptions">-` + element2 + `</h1></div> </a>`
                    
@@ -311,6 +315,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                     }
                 }
             }
+            newOptionsList = optionsShown
+            console.log(optionsShown)
             // // optionsText = optionsText + `</div>`
             // _that._shadowRoot.getElementById("root").innerHTML = _that._shadowRoot.getElementById("root") + optionstext
             // _that._shadowRoot.getElementById("newOptions").innerHTML = optionsText
