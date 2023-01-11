@@ -287,18 +287,23 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     var _that = that
     let buttons = _that._shadowRoot.querySelectorAll(`.optionCircle`)
     let buttonsArea = _that._shadowRoot.querySelectorAll(`.areaOption`)
+    
     for (let i = 0; i < buttons.length; i++) {
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
             optionSelected = arrMenuOptions[i][0]
-            
+
+            if (optionsShown.length > 0){
+                for (let n = 0; n < optionsShown.length; n++) {
+                    _that._shadowRoot.getElementById(optionsShown[n]).parentNode.removeChild(_that._shadowRoot.getElementById(optionsShown[n]))
+                    console.log(optionsShown[n]+` Removido`)
+                }
+            }
             // _that._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
             let optionsText = ``
             let newOptionsList = []
             for (let j = 0; j < arrOptionsList.length; j++) {
-                console.log(`1x primeira camada`)
-                console.log(arrOptionsList[j][0])
-                console.log(optionSelected )
+                
                 if (arrOptionsList[j][0] === optionSelected) {
 
                     for (let z = 1; z < arrOptionsList[j].length; z++) {
