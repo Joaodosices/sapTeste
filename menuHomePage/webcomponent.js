@@ -278,10 +278,15 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                         
                         let newOption = document.createElement(`div`)
                         newOption.id = `optionCircle`+element2
-                        newOption.style.height = "220px"
+                        newOption.style.height = "224px"
                         newOptionsList.push(`optionCircle`+element2)
                         _that._shadowRoot.getElementById("root").appendChild(newOption)
-                        _that._shadowRoot.getElementById(`optionCircle`+element2).innerHTML = `<a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <div class="areaText"><h1>` + element2 + `</h1></div> </a>`
+                        _that._shadowRoot.getElementById(`optionCircle`+element2).innerHTML = `
+                        <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> 
+                            <div class="areaText">
+                                <h1>` + element2 + `</h1>
+                            </div> 
+                        </a>`
                    
 
                         optionsText = optionsText + `
