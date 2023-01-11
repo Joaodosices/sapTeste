@@ -36,6 +36,11 @@
         .optionCircle img{
             margin-bottom: 30px;
         }
+        .optionShownImg{
+            margin-bottom: 0px;
+            position: absolute;
+            top: 0;
+        }
         .optionCircle:hover{
             cursor: pointer;
             background: rgb(173, 206, 0);
