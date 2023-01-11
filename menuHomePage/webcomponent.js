@@ -263,7 +263,6 @@
                 //     </div>
                 // `
                 // totalText = totalText + secondMenu
-                totalText = totalText + `<div id="newOptions"></div>`
                 root.innerHTML = totalText
                 totalText = ``
                 // this._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
