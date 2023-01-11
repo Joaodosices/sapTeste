@@ -278,7 +278,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                         
                         let newOption = document.createElement(`div`)
                         newOption.id = `optionCircle`+element2
-                        newOption.style.height = "224px"
+                        newOption.style.height = "222px"
+                        newOption.style.marginTop = "5px"
                         newOptionsList.push(`optionCircle`+element2)
                         _that._shadowRoot.getElementById("root").appendChild(newOption)
                         _that._shadowRoot.getElementById(`optionCircle`+element2).innerHTML = `
