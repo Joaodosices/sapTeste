@@ -305,7 +305,6 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                     }
                 }
             }
-            console.log(`banana`)
             // // optionsText = optionsText + `</div>`
             _that._shadowRoot.getElementById("newOptions").innerHTML = optionsText
         
