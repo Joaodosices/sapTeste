@@ -39,7 +39,7 @@
         .optionShownImg{
             margin-bottom: 0px;
             position: absolute;
-            top: 3px;
+            top: 2px;
         }
         .optionCircle:hover{
             cursor: pointer;
@@ -307,6 +307,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                         <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> 
                             <img class="optionShownImg" src="` + arrMenuOptions[j][1] + `" alt="imagem ` + arrMenuOptions[j][0] + `">
                             <div class="areaTextShown">
+                                <h1>` + arrMenuOptions[j][0] + `</h1>
                                 <h1>` + element2 + `</h1>
                             </div> 
                         </a>`
