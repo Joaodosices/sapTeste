@@ -308,7 +308,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                             <img class="optionShownImg" src="` + arrMenuOptions[j][1] + `" alt="imagem ` + arrMenuOptions[j][0] + `">
                             <div class="areaTextShown">
                                 <h1>` + arrMenuOptions[j][0] + `</h1>
-                                <h1>` + element2 + `</h1>
+                                <p>` + element2 + `</p>
                             </div> 
                         </a>`
                    
