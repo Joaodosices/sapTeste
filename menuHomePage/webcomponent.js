@@ -299,13 +299,14 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 console.log(arrOptionsList[j][0])
                 console.log(optionSelected )
                 if (arrOptionsList[j][0] === optionSelected) {
-                    console.log(`1x segunda camada`)
+
                     for (let z = 1; z < arrOptionsList[j].length; z++) {
                         const element2 = arrOptionsList[j][z];
                         let newOption = document.createElement(`div`)
-                        newOption.className = `optionCircle`+element2
+                        newOption.id = `optionCircle`+element2
                         _that._shadowRoot.getElementById("root").appendChild(newOption)
-                        console.log(`1x terceira camada`)
+                        _that._shadowRoot.getElementById(`optionCircle`+element2).innerHTML = `<a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <div class="areaText"><h1 class="mainCircleOptions">-` + element2 + `</h1></div> </a>`
+                   
 
                         optionsText = optionsText + ` <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <div class="areaText"><h1 class="mainCircleOptions">-` + element2 + `</h1></div> </a>`
                     }
