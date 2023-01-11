@@ -56,7 +56,10 @@
         .lineDecoration{
             margin: 0 auto;
         }
-        
+        .optionShownImg {
+            width: 22px;
+            height: 22px;
+        }
         
         
         #areaSecondMenu{
@@ -284,7 +287,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                         _that._shadowRoot.getElementById("root").appendChild(newOption)
                         _that._shadowRoot.getElementById(`optionCircle`+element2).innerHTML = `
                         <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> 
-                            <img src="` + arrMenuOptions[j][1] + `" alt="imagem ` + arrMenuOptions[j][0] + `">
+                            <img class="optionShownImg" src="` + arrMenuOptions[j][1] + `" alt="imagem ` + arrMenuOptions[j][0] + `">
                             <div class="areaText">
                                 <h1>` + element2 + `</h1>
                             </div> 
