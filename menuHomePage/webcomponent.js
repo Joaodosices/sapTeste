@@ -295,12 +295,14 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             // _that._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
             let optionsText = ``
             for (let j = 0; j < arrOptionsList.length; j++) {
+                console.log(`1x primeira camada`)
                 if (arrOptionsList[j][0] === optionSelected) {
+                    console.log(`1x segunda camada`)
                     for (let z = 1; z < arrOptionsList[j].length; z++) {
                         const element2 = arrOptionsList[j][z];
                         // let newOption = document.createElement(`div`)
                         // newOption.className = `newArea`+z+element2
-                        console.log(`banana`)
+                        console.log(`1x terceira camada`)
                         optionsText = optionsText + ` <a target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <h1 class="mainCircleOptions">-` + element2 + `</h1> </a>`
                     }
                 }
