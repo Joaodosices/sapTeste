@@ -299,7 +299,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                         const element2 = arrOptionsList[j][z];
                         // let newOption = document.createElement(`div`)
                         // newOption.className = `newArea`+z+element2
-                        
+                        console.log(`banana`)
                         optionsText = optionsText + ` <a target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <h1 class="mainCircleOptions">-` + element2 + `</h1> </a>`
                     }
                 }
