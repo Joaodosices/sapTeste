@@ -302,16 +302,18 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                     console.log(`1x segunda camada`)
                     for (let z = 1; z < arrOptionsList[j].length; z++) {
                         const element2 = arrOptionsList[j][z];
-                        // let newOption = document.createElement(`div`)
-                        // newOption.className = `newArea`+z+element2
+                        let newOption = document.createElement(`div`)
+                        newOption.className = `optionCircle`+element2
+                        _that._shadowRoot.getElementById("root").appendChild(newOption)
                         console.log(`1x terceira camada`)
+
                         optionsText = optionsText + ` <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <div class="areaText"><h1 class="mainCircleOptions">-` + element2 + `</h1></div> </a>`
                     }
                 }
             }
             // // optionsText = optionsText + `</div>`
             // _that._shadowRoot.getElementById("root").innerHTML = _that._shadowRoot.getElementById("root") + optionstext
-            _that._shadowRoot.getElementById("newOptions").innerHTML = optionsText
+            // _that._shadowRoot.getElementById("newOptions").innerHTML = optionsText
         
 
             // let ID = i + 1
