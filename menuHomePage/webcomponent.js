@@ -46,7 +46,20 @@
             position: absolute;
             bottom: 0;
         }
+        .areaTextShown{
+            background: rgba(24, 145, 186, 0.53);
+            width: 100%;
+            height: 90%;
+            position: absolute;
+            bottom: 0;
+        }
         .areaText h1 {
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+            text-align: center;
+        }
+        .areaTextShown h1 {
             color: black;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 1rem;
@@ -288,21 +301,21 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                         _that._shadowRoot.getElementById(`optionCircle`+element2).innerHTML = `
                         <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> 
                             <img class="optionShownImg" src="` + arrMenuOptions[j][1] + `" alt="imagem ` + arrMenuOptions[j][0] + `">
-                            <div class="areaText">
+                            <div class="areaTextShown">
                                 <h1>` + element2 + `</h1>
                             </div> 
                         </a>`
                    
 
-                        optionsText = optionsText + `
-                        <div class='areaOption'> 
-                            <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> 
-                                <div class="areaText">
-                                    <h1>-` + element2 + `</h1>
-                                </div> 
-                            </a>
-                        </div>
-                        ` 
+                        // optionsText = optionsText + `
+                        // <div class='areaOption'> 
+                        //     <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> 
+                        //         <div class="areaText">
+                        //             <h1>-` + element2 + `</h1>
+                        //         </div> 
+                        //     </a>
+                        // </div>
+                        // ` 
                     }
                 }
             }
