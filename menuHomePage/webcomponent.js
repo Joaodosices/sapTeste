@@ -39,7 +39,7 @@
         .optionShownImg{
             margin-bottom: 0px;
             position: absolute;
-            top: 0;
+            top: 3px;
         }
         .optionCircle:hover{
             cursor: pointer;
@@ -54,7 +54,7 @@
         .areaTextShown{
             background: rgba(24, 145, 186, 0.53);
             width: 100%;
-            height: 90%;
+            height: 88%;
             position: absolute;
             bottom: 0;
         }
