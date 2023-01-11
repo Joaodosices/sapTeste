@@ -316,7 +316,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                         _that._shadowRoot.getElementById(`optionCircle`+element2).innerHTML = `<a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <div class="areaText"><h1 class="mainCircleOptions">-` + element2 + `</h1></div> </a>`
                    
 
-                        optionsText = optionsText + ` <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <div class="areaText"><h1 class="mainCircleOptions">-` + element2 + `</h1></div> </a>`
+                        optionsText = optionsText + `<div class='areaOption> <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <div class="areaText"><h1>-` + element2 + `</h1></div> </a>`
                     }
                 }
             }
