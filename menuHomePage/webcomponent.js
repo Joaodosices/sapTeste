@@ -67,15 +67,15 @@
         .areaTextShown h1 {
             color: black;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 1rem;
+            font-size: 1.3rem;
             text-align: center;
-            padding-top: 0.5rem; 
+            padding-top: 0.8rem; 
         }
         .areaTextShown p {
             color: black;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            padding-top: 0.5rem;
+            padding-top: 0.8rem;
         }
         
         .lineDecoration{
