@@ -34,7 +34,7 @@
             position: relative;
         }
         .optionCircle img{
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .optionCircle:hover{
             cursor: pointer;
@@ -263,6 +263,7 @@
                 //     </div>
                 // `
                 // totalText = totalText + secondMenu
+                totalText = totalText + `<div id="newOptions"></div>`
                 root.innerHTML = totalText
                 totalText = ``
                 // this._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
@@ -306,7 +307,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             }
             console.log(`banana`)
             // // optionsText = optionsText + `</div>`
-            _that._shadowRoot.getElementById("root").innerHTML = _that._shadowRoot.getElementById("root").innerHTML + optionsText
+            _that._shadowRoot.getElementById("newOptions").innerHTML = optionsText
         
 
             // let ID = i + 1
