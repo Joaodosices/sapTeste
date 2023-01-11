@@ -290,7 +290,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     for (let i = 0; i < buttons.length; i++) {
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
-            optionSelected = arrMenuOptions[i]
+            optionSelected = arrMenuOptions[i][0]
             
             // _that._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
             let optionsText = ``
