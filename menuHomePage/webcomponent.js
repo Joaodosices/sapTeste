@@ -310,7 +310,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 }
             }
             // // optionsText = optionsText + `</div>`
-            _that._shadowRoot.getElementById("newOptions").innerHTML = optionsText
+            _that._shadowRoot.getElementById("root").innerHTML = _that._shadowRoot.getElementById("root").innerHTML + optionstext
+            // _that._shadowRoot.getElementById("newOptions").innerHTML = optionsText
         
 
             // let ID = i + 1
