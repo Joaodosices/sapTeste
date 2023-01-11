@@ -296,6 +296,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             let optionsText = ``
             for (let j = 0; j < arrOptionsList.length; j++) {
                 console.log(`1x primeira camada`)
+                console.log(arrOptionsList[j][0])
+                console.log(optionSelected )
                 if (arrOptionsList[j][0] === optionSelected) {
                     console.log(`1x segunda camada`)
                     for (let z = 1; z < arrOptionsList[j].length; z++) {
