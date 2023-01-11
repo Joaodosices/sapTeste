@@ -315,7 +315,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                     }
                 }
             }
-            newOptionsList = optionsShown
+            optionsShown = [...newOptionsList]
             console.log(optionsShown)
             // // optionsText = optionsText + `</div>`
             // _that._shadowRoot.getElementById("root").innerHTML = _that._shadowRoot.getElementById("root") + optionstext
