@@ -296,14 +296,17 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             for (let j = 0; j < arrOptionsList.length; j++) {
                 if (arrOptionsList[j][0] === optionSelected) {
                     for (let z = 1; z < arrOptionsList[j].length; z++) {
-                        const element = arrOptionsList[j][z];
-                        optionsText = optionsText + ` <a target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <h1 class="mainCircleOptions">-` + element + `</h1> </a>`
+                        const element2 = arrOptionsList[j][z];
+                        // let newOption = document.createElement(`div`)
+                        // newOption.className = `newArea`+z+element2
+                        
+                        optionsText = optionsText + ` <a target="_blank"  href="` + arrOptionsLinks[j][z] + `"> <h1 class="mainCircleOptions">-` + element2 + `</h1> </a>`
                     }
                 }
             }
             console.log(`banana`)
             // // optionsText = optionsText + `</div>`
-            // _that._shadowRoot.getElementById("mainCircleOptionsArea").innerHTML = optionsText
+            _that._shadowRoot.getElementById("root").innerHTML = _that._shadowRoot.getElementById("root").innerHTML + optionsText
         
 
             // let ID = i + 1
