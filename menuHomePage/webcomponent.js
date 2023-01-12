@@ -325,7 +325,9 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                         if (newOptionsList.length >= 1) {
                             _that._shadowRoot.getElementById("root").style.gridTemplateColumns = "230px 230px 230px"
                         }
-
+                        if (newOptionsList.length >= 3) {
+                            _that._shadowRoot.getElementById("root").style.gridTemplateColumns = "230px 230px 230px 230px"
+                        }
                         // optionsText = optionsText + `
                         // <div class='areaOption'> 
                         //     <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> 
