@@ -87,6 +87,7 @@
         }
         .card {
             perspective: 1000px;
+            position: relative;
          }
          
          .card.flip .front {
@@ -101,7 +102,10 @@
             backface-visibility: hidden;
             transition: transform 0.8s;
          }
-        
+        .back {
+            position: absolute;
+            top: 0;
+        }
         #areaSecondMenu{
             display: grid;
             padding-left: 2rem;
