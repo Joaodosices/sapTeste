@@ -104,8 +104,8 @@
          }
         .back {
             position: absolute;
-            top: 3px;
-            left: 3px;
+            top: 5px;
+            left: 5px;
         }
         #areaSecondMenu{
             display: grid;
