@@ -1,12 +1,12 @@
 (function()  {
     let tmpl = document.createElement('template');
-    
+    // grid-template-columns: 230px 230px;
     tmpl.innerHTML = `
     <style>
         #root{
             width: 700px;
             display: grid;
-            grid-template-columns: 230px 230px;
+            grid-template-columns: 500px 500px;
             background: transparent;
         }
         .areaOption{
