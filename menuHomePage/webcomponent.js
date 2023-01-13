@@ -20,7 +20,7 @@
         .areaOption h1{
             color: black;
         }
-        .optionCircle {
+        .optionCircle2,.optionCircle {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -33,7 +33,7 @@
             transition: ease-in-out 400ms;
             position: relative;
         }
-        .optionCircle img{
+        .optionCircle2 img, .optionCircle img{
             margin-bottom: 30px;
         }
         .optionShownImg{
@@ -41,7 +41,7 @@
             position: absolute;
             top: 2px;
         }
-        .optionCircle:hover{
+        .optionCircle2:hover, .optionCircle:hover{
             cursor: pointer;
             background: rgb(173, 206, 0);
         }
@@ -266,7 +266,7 @@
                                     <h1>` + arrMenuOptions[i][0] + `</h1> 
                                 </div>
                             </div>
-                            <div class="optionCircle back">
+                            <div class="optionCircle2 back">
                                 <img class="optionShownImg" src="` + arrMenuOptions[i][1] + `" alt="imagem ` + arrMenuOptions[i][0] + `">
                                 <div class="areaTextShown">
                                     <h1>` + arrMenuOptions[i][0] + `</h1>
