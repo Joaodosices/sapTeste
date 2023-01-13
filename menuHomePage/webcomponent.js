@@ -319,6 +319,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
             element.classList.toggle("flip")
+            _that._shadowRoot.querySelectorAll(`.optionCircle`)[i].classList.toggle(`flip`)
             // optionSelected = arrMenuOptions[i][0]
 
             // if (optionsShown.length > 0){
