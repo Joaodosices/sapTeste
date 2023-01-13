@@ -6,7 +6,7 @@
         #root{
             width: 700px;
             display: grid;
-            grid-template-columns: 500px 500px;
+            grid-template-columns: 230px 230px;
             background: transparent;
         }
         .areaOption{
@@ -100,8 +100,6 @@
          .front, .back {
             backface-visibility: hidden;
             transition: transform 0.8s;
-            width: 100%;
-            height: 100%;
          }
         
         #areaSecondMenu{
