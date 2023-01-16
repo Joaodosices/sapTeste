@@ -26,7 +26,7 @@
             align-items: center;
             margin: 0rem auto 0;
             height: 15.25rem;
-            height: 13rem;
+            width: 13rem;
             border-radius: 0%;
             background: rgb(92, 177, 206);
             border-width: 0;
