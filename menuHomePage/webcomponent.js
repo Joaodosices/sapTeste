@@ -25,7 +25,7 @@
             justify-content: center;
             align-items: center;
             margin: 0rem auto 0;
-            width: 13rem;
+            height: 15.25rem;
             height: 13rem;
             border-radius: 0%;
             background: rgb(92, 177, 206);
