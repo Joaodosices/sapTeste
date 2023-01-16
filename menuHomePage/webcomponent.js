@@ -14,7 +14,7 @@
             justify-content: center;
             align-items: center;
             width: 100%; /*200px*/
-            height: 14.25rem; /*500px*/
+            height: 15.25rem; /*500px*/
         }
 
         .areaOption h1{
