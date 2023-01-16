@@ -330,7 +330,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             console.log(arrMenuOptions[i][0])
             element.classList.toggle("flip")
             _that._shadowRoot.querySelectorAll(`.optionCircle`)[i].classList.toggle(`flip`)
-            _that._shadowRoot.querySelectorAll(`.card`)[i].style.left = "0%"
+            _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
             // optionSelected = arrMenuOptions[i][0]
 
             // if (optionsShown.length > 0){
