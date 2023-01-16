@@ -74,7 +74,7 @@
             color: black;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            padding-top: 0.8rem;
+            padding-top: 0rem;
         }
         
         .lineDecoration{
