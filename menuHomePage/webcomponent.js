@@ -112,6 +112,9 @@
             margin-left: 10px;
             transition: ease-in-out 400ms;
         }
+        .back a {
+            text-decoration: none;
+        }
         #areaSecondMenu{
             display: grid;
             padding-left: 2rem;
