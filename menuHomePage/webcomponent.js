@@ -42,7 +42,6 @@
             top: 2px;
         }
         .optionCircle2:hover, .optionCircle:hover{
-            cursor: pointer;
             background: rgb(173, 206, 0);
         }
         .areaText {
