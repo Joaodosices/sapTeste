@@ -108,7 +108,6 @@
             position: absolute;
             top: 0px;
             left: 100%;
-            height: 15.25rem;
             margin-top: 10px;
             margin-left: 10px;
             transition: ease-in-out 400ms;
