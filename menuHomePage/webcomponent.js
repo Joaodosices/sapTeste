@@ -68,7 +68,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 1.2rem;
             text-align: center;
-            padding-top: 0.8rem; 
+            padding-top: 0rem; 
         }
         .areaTextShown p {
             color: black;
