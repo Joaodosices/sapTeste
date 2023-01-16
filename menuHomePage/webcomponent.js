@@ -110,6 +110,7 @@
             left: 100%;
             margin-top: 10px;
             margin-left: 10px;
+            transition: ease-in-out 400ms;
         }
         #areaSecondMenu{
             display: grid;
