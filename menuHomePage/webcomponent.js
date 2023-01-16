@@ -323,7 +323,13 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     var _that = that
     let buttons = _that._shadowRoot.querySelectorAll(`.optionCircle`)
     let buttonsArea = _that._shadowRoot.querySelectorAll(`.areaOption`)
-    
+    let imgsShown = _that._shadowRoot.querySelectorAll(`.optionShownImg`)
+    for (let b = 0; b < imgsShown.length; b++) {
+        const e = imgsShown[b]
+        e.addEventListener(`click`, ()=>{
+            _that._shadowRoot.querySelectorAll(`.back`)[b].style.left = "100%"
+        })
+    }
     for (let i = 0; i < buttons.length; i++) {
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
