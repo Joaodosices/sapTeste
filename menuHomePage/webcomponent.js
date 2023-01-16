@@ -88,6 +88,7 @@
         .card {
             perspective: 1000px;
             position: relative;
+            overflow: hidden;
          }
          
          .card.flip .front {
@@ -105,6 +106,7 @@
         .back {
             position: absolute;
             top: 0px;
+            left: 100%;
             margin-top: 10px;
             margin-left: 10px;
         }
