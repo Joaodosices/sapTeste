@@ -4,6 +4,7 @@
     // .optionCircle2:hover, .optionCircle:hover{
     //     background: rgb(173, 206, 0);
     // }
+    //background: rgb(92, 177, 206);
     tmpl.innerHTML = `
     <style>
         #root{
@@ -31,10 +32,13 @@
             height: 15.55rem;
             width: 13rem;
             border-radius: 0%;
-            background: rgb(92, 177, 206);
+            background: white;
             border-width: 0;
             transition: ease-in-out 400ms;
             position: relative;
+        }
+        .optionCircle2:hover, .optionCircle:hover{
+            cursor: pointer;
         }
         .optionCircle2 img, .optionCircle img{
             margin-bottom: 30px;
