@@ -112,13 +112,15 @@
          }
          .front {
             position: absolute;
+
+            transition: ease-in-out 400ms;
          }
         .back {
             position: absolute;
             top: 0px;
             left: 100%;
-            margin-top: 9px;
-            margin-left: 10px;
+            margin-top: 0px;
+            margin-left: 0px;
             transition: ease-in-out 400ms;
         }
         .back a {
