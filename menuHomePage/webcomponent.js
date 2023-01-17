@@ -1,6 +1,9 @@
 (function()  {
     let tmpl = document.createElement('template');
     // grid-template-columns: 230px 230px;
+    // .optionCircle2:hover, .optionCircle:hover{
+    //     background: rgb(173, 206, 0);
+    // }
     tmpl.innerHTML = `
     <style>
         #root{
@@ -25,7 +28,7 @@
             justify-content: center;
             align-items: center;
             margin: 0rem auto 0;
-            height: 15.25rem;
+            height: 15.55rem;
             width: 13rem;
             border-radius: 0%;
             background: rgb(92, 177, 206);
@@ -41,9 +44,7 @@
             position: absolute;
             top: 2px;
         }
-        .optionCircle2:hover, .optionCircle:hover{
-            background: rgb(173, 206, 0);
-        }
+        
         .areaText {
             background: rgba(24, 145, 186, 0.53);
             width: 100%;
@@ -152,8 +153,7 @@
         }
         #mainCircleOptionsArea a:hover{
             cursor: pointer;
-            background: rgb(173, 206, 0);
-            border-color: rgb(151, 180, 1);
+            
         }
         .mainCircleOptions{
             text-align: center;
