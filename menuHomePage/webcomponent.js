@@ -337,6 +337,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         const e = imgsShown[b]
         e.addEventListener(`click`, ()=>{
             _that._shadowRoot.querySelectorAll(`.back`)[b].style.left = "100%"
+            _that._shadowRoot.querySelectorAll(`.front`)[b].style.right = "0%"
         })
     }
     for (let i = 0; i < buttons.length; i++) {
@@ -346,6 +347,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             element.classList.toggle("flip")
             _that._shadowRoot.querySelectorAll(`.optionCircle`)[i].classList.toggle(`flip`)
             _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
+            _that._shadowRoot.querySelectorAll(`.front`)[b].style.right = "100%"
             // optionSelected = arrMenuOptions[i][0]
 
             // if (optionsShown.length > 0){
