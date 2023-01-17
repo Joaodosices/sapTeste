@@ -4,6 +4,7 @@
     // .optionCircle2:hover, .optionCircle:hover{
     //     background: rgb(173, 206, 0);
     // }
+    //rgba(24, 145, 186, 0.53)
     //background: rgb(92, 177, 206);
     tmpl.innerHTML = `
     <style>
@@ -50,7 +51,7 @@
         }
         
         .areaText {
-            background: rgba(24, 145, 186, 0.53);
+            background: white;
             width: 100%;
             position: absolute;
             bottom: 0;
