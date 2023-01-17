@@ -119,7 +119,7 @@
             position: absolute;
             top: 0px;
             left: 100%;
-            margin-top: 0px;
+            margin-top: 7px;
             margin-left: 0px;
             transition: ease-in-out 400ms;
         }
