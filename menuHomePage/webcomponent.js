@@ -32,7 +32,7 @@
             height: 15.55rem;
             width: 13rem;
             border-radius: 0%;
-            background: white;
+            background: rgb(92, 177, 206);
             border-width: 0;
             transition: ease-in-out 400ms;
             position: relative;
@@ -56,7 +56,7 @@
             bottom: 0;
         }
         .areaTextShown{
-            background: rgba(24, 145, 186, 0.53);
+            background: white;
             width: 100%;
             height: 88%;
             position: absolute;
