@@ -112,7 +112,7 @@
          }
          .front {
             position: absolute;
-
+            margin-left: 7px;
             transition: ease-in-out 400ms;
          }
         .back {
