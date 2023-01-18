@@ -265,7 +265,10 @@
                     [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`], 
                     [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`],
                     [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`],
-                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`]]
+                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`],
+                    [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`],
+                    [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`],
+                    [`Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`]]
                 let arrOptionsList =[
                     [`Informação Geral`,`Página Inicial`],
                     [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
@@ -273,7 +276,10 @@
                     [`Fornecedores`,`Global`,`Detalhado`],
                     [`Investimentos`,`Global`,`Detalhado`],
                     [`Endividamento`,`Global`,`Detalhado`],
-                    [`OPEX`,`Global`,`Detalhado`]
+                    [`OPEX`,`Global`,`Detalhado`],
+                    [`Desvio de Custos de Capital`,`Desvio de Custos de Capital`],
+                    [`Indutores`,`Global`,`Detalhado`],
+                    [`Opex`,`Global`,`Detalhado`]
                 ]
                 let arrOptionsLinks = [
                     [`Informação Geral`,
@@ -295,7 +301,15 @@
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/EB9F0871691C90E035B8174913C5729/?mode=present&resourceType=STORY`],
                     [`OPEX`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/5951988716951BE3C6800AEF218C1F43/?mode=present&resourceType=STORY`,
-                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/5951988716951BE3C6800AEF218C1F43/?mode=present&resourceType=STORY`]
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/5951988716951BE3C6800AEF218C1F43/?mode=present&resourceType=STORY`],
+                    [`Desvio de Custos de Capital`,
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C7200D84F7636354C3FD0354D09B1FA2/?mode=present&resourceType=STORY`],
+                    [`Indutores`,
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C801D84F7660B7BC130CAADAD14EB1F/?mode=present&resourceType=STORY`,
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C801D84F7660B7BC130CAADAD14EB1F/?mode=present&resourceType=STORY`],
+                    [`Opex`,
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/43381087169633E1C72783A6478FAE44/?mode=present&resourceType=STORY`,
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/43381087169633E1C72783A6478FAE44/?mode=present&resourceType=STORY`]
                 ]
                 let tempText = ``
                 let totalText = ``
