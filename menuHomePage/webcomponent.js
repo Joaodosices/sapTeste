@@ -223,7 +223,7 @@
             border-color: rgb(151, 180, 1);
         }
         </style>
-        
+
         <div id="root"></div>
     `;
 
@@ -353,7 +353,6 @@
                 root.innerHTML = totalText
                 totalText = ``
                 // this._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
-
                 var optionSelected = ``
                 var optionsShown = []
                 events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown)
