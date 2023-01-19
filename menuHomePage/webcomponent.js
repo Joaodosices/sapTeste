@@ -30,7 +30,7 @@
             justify-content: center;
             align-items: center;
             margin: 0rem auto 0;
-            height: 15.55rem;
+            height: 15.65rem;
             width: 13rem;
             border-radius: 0%;
             background: rgb(92, 177, 206);
@@ -356,6 +356,7 @@
                 var optionSelected = ``
                 var optionsShown = []
                 events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown)
+                window.addEventListener(`resize`, setBreakpoint())
             // }
         }
         
@@ -482,6 +483,19 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     // })
 
 }
+
+function setBreakpoint() {
+    if (window.innerWidth < 600) {
+        // apply styles for small screens
+        console.log(`menos de 600px`)
+    } else if (window.innerWidth >= 600 && window.innerWidth < 900) {
+        // apply styles for medium screens
+        console.log(`entre 600 e 900`)
+    } else {
+        // apply styles for large screens
+        console.log(`superior a 900`)
+    }
+  }
 
 // function populateSecondMenu(optionSelected, id, thisthat, arrOptionsList, arrOptionsLinks, arrMenuOptions) {
 //     thisthat._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
