@@ -356,7 +356,7 @@
                 var optionSelected = ``
                 var optionsShown = []
                 events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown)
-                window.addEventListener(`resize`, setBreakpoint())
+                window.addEventListener(`resize`, setBreakpoint)
             // }
         }
         
