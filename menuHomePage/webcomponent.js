@@ -223,6 +223,7 @@
             border-color: rgb(151, 180, 1);
         }
         </style>
+        
         <div id="root"></div>
     `;
 
