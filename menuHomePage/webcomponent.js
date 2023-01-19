@@ -30,7 +30,7 @@
             justify-content: center;
             align-items: center;
             margin: 0rem auto 0;
-            height: 15.85rem;
+            height: 15.95rem;
             width: 13rem;
             border-radius: 0%;
             background: rgb(92, 177, 206);
