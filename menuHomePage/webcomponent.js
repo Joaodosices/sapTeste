@@ -347,7 +347,6 @@
                     tempText = ``
                 }
                 
-
                 
                 // totalText = totalText + secondMenu
                 root.innerHTML = totalText
