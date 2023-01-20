@@ -487,10 +487,10 @@ function setBreakpoint(that) {
     let _that = that
     if (window.innerWidth < 1366) {
         // apply styles for small screens
-        _that._shadowRoot.querySelectorAll(`#root`).style.gridTemplateColumns = "231px 231px"
+        _that._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px"
         console.log(`menos de 1366px`)
     } else {
-        _that._shadowRoot.querySelectorAll(`#root`).style.gridTemplateColumns = "231px 231px 231px 231px"
+        _that._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px"
     }
   }
 
