@@ -355,7 +355,7 @@
                 var optionSelected = ``
                 var optionsShown = []
                 events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown)
-                window.addEventListener(`resize`, setBreakpoint)
+                window.addEventListener(`resize`, setBreakpoint(this))
             // }
         }
         
@@ -483,7 +483,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
 
 }
 
-function setBreakpoint() {
+function setBreakpoint(that) {
+    let _that = that
     if (window.innerWidth < 1366) {
         // apply styles for small screens
         _that._shadowRoot.querySelectorAll(`#root`).style.gridTemplateColumns = "231px 231px"
