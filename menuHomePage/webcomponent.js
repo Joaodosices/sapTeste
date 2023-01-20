@@ -355,7 +355,17 @@
                 var optionSelected = ``
                 var optionsShown = []
                 events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown)
-                window.addEventListener(`resize`, setBreakpoint(this))
+                // window.addEventListener(`resize`, setBreakpoint(this))
+                window.addEventListener(`resize`, () => {
+                    if (window.innerWidth < 1366) {
+                        // apply styles for small screens
+                        _that._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px"
+                        console.log(`menos de 1366px`)
+                    } else {
+                        console.log(`mais de 1366px`)
+                        _that._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px"
+                    }
+                })
             // }
         }
         
