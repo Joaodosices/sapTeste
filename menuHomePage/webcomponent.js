@@ -264,12 +264,12 @@
                     [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.png`], 
                     [`Clientes`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/clientes.png`], 
                     [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`], 
-                    [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`],
-                    [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`],
-                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`],
-                    [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`],
+                    [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/investimentos.png`],
+                    [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/endividamento.png`],
+                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.png`],
+                    [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.png`],
                     [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`],
-                    [`Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`]]
+                    [`Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.png`]]
                 let arrOptionsList =[
                     [`Informação Geral`,`Página Inicial`],
                     [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
