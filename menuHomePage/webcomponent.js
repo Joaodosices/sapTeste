@@ -490,6 +490,7 @@ function setBreakpoint(that) {
         _that._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px"
         console.log(`menos de 1366px`)
     } else {
+        console.log(`mais de 1366px`)
         _that._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px"
     }
   }
