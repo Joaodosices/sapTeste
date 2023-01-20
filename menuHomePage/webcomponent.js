@@ -11,7 +11,7 @@
         #root{
             width: 700px;
             display: grid;
-            grid-template-columns: 230px 230px 230px 230px;
+            grid-template-columns: 231px 231px 231px 231px;
             background: transparent;
         }
         .areaOption{
@@ -68,8 +68,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 1rem;
             text-align: center;
-            padding-left: 1px;
-            padding-right: 1px;
         }
         .areaTextShown h1 {
             color: black;
