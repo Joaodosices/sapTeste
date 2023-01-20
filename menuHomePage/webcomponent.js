@@ -484,15 +484,12 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
 }
 
 function setBreakpoint() {
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 1366) {
         // apply styles for small screens
-        console.log(`menos de 600px`)
-    } else if (window.innerWidth >= 600 && window.innerWidth < 900) {
-        // apply styles for medium screens
-        console.log(`entre 600 e 900`)
+        _that._shadowRoot.querySelectorAll(`#root`).style.gridTemplateColumns = "231px 231px"
+        console.log(`menos de 1366px`)
     } else {
-        // apply styles for large screens
-        console.log(`superior a 900`)
+        _that._shadowRoot.querySelectorAll(`#root`).style.gridTemplateColumns = "231px 231px 231px 231px"
     }
   }
 
