@@ -359,15 +359,15 @@
                 window.addEventListener(`resize`, () => {
                     if (window.innerWidth >= 1796){
                             console.log(`mais de 1796px`)
-                            this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px"
+                            //this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px"
                     }
                     if(window.innerWidth < 1796) {
-                        this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px"
+                        //this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px"
                         console.log(`menos de 1796px`)
                     }
                     if (window.innerWidth < 1567) {
                         // apply styles for small screens
-                        this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px"
+                        //this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px"
                         console.log(`menos de 1567px`)
                     } 
                 })
