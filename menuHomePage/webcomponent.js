@@ -357,14 +357,19 @@
                 events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown)
                 // window.addEventListener(`resize`, setBreakpoint(this))
                 window.addEventListener(`resize`, () => {
-                    if (window.innerWidth < 1366) {
+                    if (window.innerWidth >= 1796){
+                            console.log(`mais de 1796px`)
+                            this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px"
+                    }
+                    if(window.innerWidth < 1796) {
+                        this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px"
+                        console.log(`menos de 1796px`)
+                    }
+                    if (window.innerWidth < 1567) {
                         // apply styles for small screens
                         this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px"
-                        console.log(`menos de 1366px`)
-                    } else {
-                        console.log(`mais de 1366px`)
-                        this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px"
-                    }
+                        console.log(`menos de 1567px`)
+                    } 
                 })
             // }
         }
