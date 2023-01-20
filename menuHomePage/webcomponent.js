@@ -68,6 +68,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 1rem;
             text-align: center;
+            padding-left: 2px;
+            padding-right: 2px;
         }
         .areaTextShown h1 {
             color: black;
