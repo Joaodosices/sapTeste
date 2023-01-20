@@ -365,9 +365,9 @@
                         this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px"
                         console.log(`menos de 1796px`)
                     }
-                    if (window.innerWidth < 1567) {
+                    if (window.innerWidth < 1048) {
                         // apply styles for small screens
-                        //this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px"
+                        this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px"
                         console.log(`menos de 1567px`)
                     } 
                 })
