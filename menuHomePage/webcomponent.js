@@ -269,7 +269,7 @@
                     [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.png`],
                     [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.png`],
                     [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.png`],
-                    [`Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.png`]]
+                    [`Contas reguladas Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.png`]]
                 let arrOptionsList =[
                     [`Informação Geral`,`Página Inicial`],
                     [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
@@ -280,7 +280,7 @@
                     [`OPEX`,`Global`,`Detalhado`],
                     [`Desvio de Custos de Capital`,`Desvio de Custos de Capital`],
                     [`Indutores`,`Global`,`Detalhado`],
-                    [`Opex`,`Global`,`Detalhado`]
+                    [`Contas reguladas Opex`,`Global`,`Detalhado`]
                 ]
                 let arrOptionsLinks = [
                     [`Informação Geral`,
@@ -308,7 +308,7 @@
                     [`Indutores`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C801D84F7660B7BC130CAADAD14EB1F/?mode=present&resourceType=STORY`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C801D84F7660B7BC130CAADAD14EB1F/?mode=present&resourceType=STORY`],
-                    [`Opex`,
+                    [`Contas reguladas Opex`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/43381087169633E1C72783A6478FAE44/?mode=present&resourceType=STORY`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/43381087169633E1C72783A6478FAE44/?mode=present&resourceType=STORY`]
                 ]
