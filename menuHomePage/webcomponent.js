@@ -400,102 +400,19 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     for (let i = 0; i < buttons.length; i++) {
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
+            if (optionSelected.length !== 0){
+                _that._shadowRoot.querySelectorAll(`.front`)[optionSelected].style.left = "0%"
+                _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
+            }
+            optionSelected = i
             console.log(arrMenuOptions[i][0])
             element.classList.toggle("flip")
             _that._shadowRoot.querySelectorAll(`.optionCircle`)[i].classList.toggle(`flip`)
             _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
             _that._shadowRoot.querySelectorAll(`.front`)[i].style.left = "100%"
-            // optionSelected = arrMenuOptions[i][0]
-
-            // if (optionsShown.length > 0){
-            //     for (let n = 0; n < optionsShown.length; n++) {
-            //         _that._shadowRoot.getElementById(optionsShown[n]).parentNode.removeChild(_that._shadowRoot.getElementById(optionsShown[n]))
-            //         console.log(optionsShown[n]+` Removido`)
-            //     }
-            // }
-            // // _that._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
-            // let optionsText = ``
-            // let newOptionsList = []
-            // for (let j = 0; j < arrOptionsList.length; j++) {
-                
-            //     if (arrOptionsList[j][0] === optionSelected) {
-
-            //         for (let z = 1; z < arrOptionsList[j].length; z++) {
-            //             const element2 = arrOptionsList[j][z];
-                        
-            //             let newOption = document.createElement(`div`)
-            //             newOption.id = `optionCircle`+element2
-            //             newOption.style.height = "222px"
-            //             newOption.style.marginTop = "5px"
-            //             newOptionsList.push(`optionCircle`+element2)
-            //             _that._shadowRoot.getElementById("root").appendChild(newOption)
-            //             _that._shadowRoot.getElementById(`optionCircle`+element2).innerHTML = `
-            //             <a class="optionCircle" target="_blank"  href="` + arrOptionsLinks[j][z] + `"> 
-            //                 <img class="optionShownImg" src="` + arrMenuOptions[j][1] + `" alt="imagem ` + arrMenuOptions[j][0] + `">
-            //                 <div class="areaTextShown">
-            //                     <h1>` + arrMenuOptions[j][0] + `</h1>
-            //                     <p>` + element2 + `</p>
-            //                 </div> 
-            //             </a>`
-                        
-            //             if (newOptionsList.length === 0) {
-            //                 _that._shadowRoot.getElementById("root").style.gridTemplateColumns = "230px 230px"
-            //             }
-            //             if (newOptionsList.length >= 1) {
-            //                 _that._shadowRoot.getElementById("root").style.gridTemplateColumns = "230px 230px 230px"
-            //             }
-            //             if (newOptionsList.length >= 3) {
-            //                 _that._shadowRoot.getElementById("root").style.gridTemplateColumns = "230px 230px 230px 230px"
-            //             }
-                        
-            //         }
-            //     }
-            // }
-            // optionsShown = [...newOptionsList]
-            // console.log(optionsShown)
-            
 
         })
     }
-
-    //Back button event
-    // _that._shadowRoot.getElementById("optionBackCircleTitle").addEventListener(`click`, ()=>{
-    //     for (let j = 0; j < buttonsArea.length; j++) {
-    //         buttonsArea[j].style.display = "grid"
-    //         _that._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
-    //     }
-    // })
-    //second menu side menu buttons
-    // _that._shadowRoot.querySelectorAll(".option1Circle")[0].addEventListener("click", ()=>{
-    //     var event = new Event("onClick");
-    //     _that.dispatchEvent(event);
-    //     let option = _that._shadowRoot.getElementById("option1CircleTitle").textContent
-    //     for (let i = 0; i < buttons.length; i++) {
-    //         if (option === arrMenuOptions[i]) {
-    //             populateSecondMenu(option, i, _that, arrOptionsList, arrOptionsLinks, arrMenuOptions)
-    //         }
-    //     }
-    // })
-    // _that._shadowRoot.querySelectorAll(".option2Circle")[0].addEventListener("click", ()=>{
-    //     var event = new Event("onClick");
-    //     _that.dispatchEvent(event);
-    //     let option = _that._shadowRoot.getElementById("option2CircleTitle").textContent
-    //     for (let i = 0; i < buttons.length; i++) {
-    //         if (option === arrMenuOptions[i]) {
-    //             populateSecondMenu(option, i, _that, arrOptionsList, arrOptionsLinks, arrMenuOptions)
-    //         }
-    //     }
-    // })
-    // _that._shadowRoot.querySelectorAll(".option3Circle")[0].addEventListener("click", ()=>{
-    //     var event = new Event("onClick");
-    //     _that.dispatchEvent(event);
-    //     let option = _that._shadowRoot.getElementById("option3CircleTitle").textContent
-    //     for (let i = 0; i < buttons.length; i++) {
-    //         if (option === arrMenuOptions[i]) {
-    //             populateSecondMenu(option, i, _that, arrOptionsList, arrOptionsLinks, arrMenuOptions)
-    //         }
-    //     }
-    // })
 
 }
 
@@ -510,34 +427,3 @@ function setBreakpoint(that) {
         _that._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px"
     }
   }
-
-// function populateSecondMenu(optionSelected, id, thisthat, arrOptionsList, arrOptionsLinks, arrMenuOptions) {
-//     thisthat._shadowRoot.getElementById("mainCircleTitle").textContent = optionSelected
-//     let optionsText = ``
-//     for (let i = 0; i < arrOptionsList.length; i++) {
-//         if (arrOptionsList[i][0] === optionSelected) {
-//             for (let z = 1; z < arrOptionsList[i].length; z++) {
-//                 const element = arrOptionsList[i][z];
-//                 optionsText = optionsText + ` <a target="_blank"  href="` + arrOptionsLinks[i][z] + `"> <h1 class="mainCircleOptions">-` + element + `</h1> </a>`
-//             }
-//         }
-//     }
-//     // optionsText = optionsText + `</div>`
-//     thisthat._shadowRoot.getElementById("mainCircleOptionsArea").innerHTML = optionsText
- 
-
-//     let ID = id + 1
-//     let contador = 1
-//     for (let i = 0; i < arrMenuOptions.length; i++) {
-//         const element = arrMenuOptions[i];
-//         if (contador < 4) {  
-//             if (contador !== ID){
-//                 thisthat._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = element
-//             }else {
-//                 i = i + 1
-//                 thisthat._shadowRoot.getElementById("option" + contador + "CircleTitle").textContent = arrMenuOptions[i]
-//             }
-//             contador = contador + 1
-//         }
-//     }
-// }
