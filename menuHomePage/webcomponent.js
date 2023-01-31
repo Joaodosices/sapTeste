@@ -357,19 +357,19 @@
                 events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown)
                 // window.addEventListener(`resize`, setBreakpoint(this))
                 window.addEventListener(`resize`, () => {
-                    if (window.innerWidth >= 1288){
-                            console.log(`mais de 1796px`)
-                            this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px"
-                    }
-                    if(window.innerWidth < 1288) {
-                        this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px"
-                        console.log(`menos de 1796px`)
-                    }
-                    if (window.innerWidth < 1048) {
-                        // apply styles for small screens
-                        this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px"
-                        console.log(`menos de 1567px`)
-                    } 
+                    // if (window.innerWidth >= 1288){
+                    //         console.log(`mais de 1796px`)
+                    //         this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px 231px"
+                    // }
+                    // if(window.innerWidth < 1288) {
+                    //     this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px"
+                    //     console.log(`menos de 1796px`)
+                    // }
+                    // if (window.innerWidth < 1048) {
+                    //     // apply styles for small screens
+                    //     this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px"
+                    //     console.log(`menos de 1567px`)
+                    // } 
                 })
             // }
         }
