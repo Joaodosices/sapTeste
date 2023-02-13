@@ -64,20 +64,20 @@
             bottom: 0;
         }
         .areaText h1 {
-            color: black;
+            color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 1rem;
             text-align: center;
         }
         .areaTextShown h1 {
-            color: black;
+            color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 1.2rem;
             text-align: center;
             padding-top: 0rem; 
         }
         .areaTextShown p {
-            color: black;
+            color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             padding-top: 0rem;
