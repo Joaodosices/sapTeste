@@ -262,8 +262,8 @@
 
                 let arrMenuOptions =[
                     [`Informação Geral`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
-                    [`Informações Agregadas`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`], 
-                    [`Holding`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`], 
+                    [`Informações Agregadas`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`], 
+                    [`Holding`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/multipleTable.svg`], 
                     [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`], 
                     [`Clientes`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/clientes.svg`], 
                     [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`], 
