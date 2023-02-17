@@ -262,7 +262,8 @@
 
                 let arrMenuOptions =[
                     [`Informação Geral`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
-                    [`Informações Agregadas`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],  
+                    [`Informações Agregadas`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`], 
+                    [`Holding`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`], 
                     [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`], 
                     [`Clientes`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/clientes.svg`], 
                     [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`], 
@@ -276,6 +277,7 @@
                 let arrOptionsList =[
                     [`Informação Geral`,`Informação Geral`],
                     [`Informações Agregadas`, `Overview`,`Volume de Negócios (€)`,`Volume de Negócios (t)`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`],
+                    [`Holding`, `Overview`,`Volume de Negócios (€)`,`Volume de Negócios (t)`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`],
                     [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
                     [`Clientes`, `Global`,`Detalhado`],
                     [`Fornecedores`,`Global`,`Detalhado`],
@@ -298,6 +300,14 @@
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/12FA18871697D2D879F811083EE91B9B/?mode=present&resourceType=STORY`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/12FA18871697D2D879F811083EE91B9B/?mode=present&resourceType=STORY`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/12FA18871697D2D879F811083EE91B9B/?mode=present&resourceType=STORY `],
+                    [`Holding`, 
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY `],
                     [`Volume de negócios`, 
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6141988716946319D4EACA18AC716D65/?mode=present&resourceType=STORY`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6141988716946319D4EACA18AC716D65/?mode=present&resourceType=STORY`,
