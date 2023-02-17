@@ -62,6 +62,7 @@
             height: 88%;
             position: absolute;
             bottom: 0;
+            overflow-y:auto
         }
         .areaText h1 {
             color: white;
