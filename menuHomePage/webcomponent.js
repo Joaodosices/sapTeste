@@ -270,7 +270,7 @@
                     [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`],
                     [`Contas reguladas Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
-                    [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`]]
+                    [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`]]
                 let arrOptionsList =[
                     [`Informação Geral`,`Informação Geral`],
                     [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
