@@ -269,10 +269,9 @@
                     [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
                     [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`],
-                    [`Contas reguladas Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
-                    [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`]]
+                    [`Contas reguladas Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`]]
                 let arrOptionsList =[
-                    [`Informação Geral`,`Informação Geral`],
+                    [`Informação Geral`,`Página Inicial`],
                     [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
                     [`Clientes`, `Global`,`Detalhado`],
                     [`Fornecedores`,`Global`,`Detalhado`],
@@ -281,17 +280,14 @@
                     [`OPEX`,`Global`,`Detalhado`],
                     [`Desvio de Custos de Capital`,`Desvio de Custos de Capital`],
                     [`Indutores`,`Global`,`Detalhado`],
-                    [`Contas reguladas Opex`,`Global`,`Detalhado`],
-                    [`Atividades Complementares`,`Atividades Complementares`]
+                    [`Contas reguladas Opex`,`Global`,`Detalhado`]
                 ]
                 let arrOptionsLinks = [
                     [`Informação Geral`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/3911988716919EADD738313BBC5A533C/?mode=present&resourceType=STORY`],
                     [`Volume de negócios`, 
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6141988716946319D4EACA18AC716D65/?mode=present&resourceType=STORY`,
-                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6141988716946319D4EACA18AC716D65/?mode=present&resourceType=STORY`,
-                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6141988716946319D4EACA18AC716D65/?mode=present&resourceType=STORY`,
-                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6141988716946319D4EACA18AC716D65/?mode=present&resourceType=STORY`],
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6141988716946319D4EACA18AC716D65/?mode=present&resourceType=STORY`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6141988716946319D4EACA18AC716D65/?mode=present&resourceType=STORY`,`https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6141988716946319D4EACA18AC716D65/?mode=present&resourceType=STORY`],
                     [`Clientes`, 
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C149988716920B8758E245B937117E4D/?mode=present&resourceType=STORY`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C149988716920B8758E245B937117E4D/?mode=present&resourceType=STORY`],
@@ -314,9 +310,7 @@
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C801D84F7660B7BC130CAADAD14EB1F/?mode=present&resourceType=STORY`],
                     [`Contas reguladas Opex`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/43381087169633E1C72783A6478FAE44/?mode=present&resourceType=STORY`,
-                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/43381087169633E1C72783A6478FAE44/?mode=present&resourceType=STORY`],
-                    [`Atividades Complementares`,
-                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/BC2A788716906A67F50CA5349ABEFAA9/?mode=present&resourceType=STORY`]
+                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/43381087169633E1C72783A6478FAE44/?mode=present&resourceType=STORY`]
                 ]
                 let tempText = ``
                 let totalText = ``
