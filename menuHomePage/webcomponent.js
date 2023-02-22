@@ -260,6 +260,10 @@
             // if (this.firstConnection === true){
                 let root = this._shadowRoot.getElementById("root")
 
+                /*
+                ZONA DE DADOS 
+                */
+
                 let arrMenuOptions =[
                     [`Informação Geral`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
                     [`Informações Agregadas`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`], 
@@ -274,6 +278,7 @@
                     [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`],
                     [`Contas reguladas Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
                     [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`]]
+                    
                 let arrOptionsList =[
                     [`Informação Geral`,`Informação Geral`],
                     [`Informações Agregadas`, `Overview`,`Volume de Negócios (€)`,`Volume de Negócios (t)`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`],
@@ -289,6 +294,7 @@
                     [`Contas reguladas Opex`,`Global`,`Detalhado`],
                     [`Atividades Complementares`,`Atividades Complementares`]
                 ]
+
                 let arrOptionsLinks = [
                     [`Informação Geral`,
                     `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/3911988716919EADD738313BBC5A533C/?mode=present&resourceType=STORY`],
