@@ -262,6 +262,11 @@
 
                 /*
                 ZONA DE DADOS 
+
+                Como adicionar dados: 
+
+                AVISO: O nome da opção deve ser igual em todos os arrays
+                AVISO: Os links devem estar na mesma que os nomes das páginas estão no array "arrOptionsList"
                 */
 
                 let arrMenuOptions =[
