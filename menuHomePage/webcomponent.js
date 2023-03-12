@@ -278,13 +278,17 @@
                     [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`], 
                     [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/investimentos.svg`],
                     [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/endividamento.svg`], 
-                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
+                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`]
+                ]
+                    
+                let arrMenuOptionsSecondMenu =[
                     [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Desvio de Preço`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`],
                     [`Contas reguladas Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
-                    [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`]]
-                    
+                    [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`]
+                ]
+
                 let arrOptionsList =[
                     [`Informação Geral`,`Informação Geral`],
                     [`Informações Agregadas`, `Overview`,`Volume de Negócios (€)`,`Volume de Negócios (t)`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`],
@@ -295,6 +299,9 @@
                     [`Investimentos`,`Global`,`Detalhado`],
                     [`Endividamento`,`Global`,`Detalhado`],
                     [`OPEX`,`Global`,`Detalhado`],
+                ]
+
+                let arrOptionsListSecondMenu =[
                     [`Desvio de Custos de Capital`,`Desvio de Custos de Capital`],
                     [`Desvio de Preço`,`Global`,`Detalhado`],
                     [`Indutores`,`Global`,`Detalhado`],
@@ -340,7 +347,9 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/25B1808716942E99A7BCAF7A3AAD890E/?mode=present&resourceType=STORY`],
                     [`OPEX`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/F43A7887169208674556B40214C201F8/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/F43A7887169208674556B40214C201F8/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/F43A7887169208674556B40214C201F8/?mode=present&resourceType=STORY`]
+                ]
+                let arrOptionsLinksSecondMenu = [
                     [`Desvio de Custos de Capital`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6BF01B017EA77A5907C54C3724F85DDB/?mode=present&resourceType=STORY`],
                     [`Desvio de Preço`,
@@ -355,6 +364,7 @@
                     [`Atividades Complementares`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/BC2A788716906A67F50CA5349ABEFAA9/?mode=present&resourceType=STORY`]
                 ]
+
                 let tempText = ``
                 let totalText = ``
                 let cont = 0
@@ -401,7 +411,7 @@
                 `
                 totalText = totalText + tempText
                 tempText = ``
-                
+
                 // totalText = totalText + secondMenu
                 root.innerHTML = totalText
                 totalText = ``
