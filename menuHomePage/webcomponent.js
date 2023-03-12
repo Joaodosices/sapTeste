@@ -399,6 +399,8 @@
                         </div>
                     </div>
                 `
+                totalText = totalText + tempText
+                tempText = ``
                 
                 // totalText = totalText + secondMenu
                 root.innerHTML = totalText
