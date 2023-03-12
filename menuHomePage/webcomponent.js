@@ -389,7 +389,16 @@
                     totalText = totalText + tempText
                     tempText = ``
                 }
-                
+                tempText = `
+                    <div class='card areaOption'>
+                        <div class='optionCircle front'>
+                            <img src="` + arrMenuOptions[0][1] + `" alt="imagem ` + arrMenuOptions[0][0] + `">
+                            <div class='areaText'> 
+                                <h1>Contas Reguladas</h1> 
+                            </div>
+                        </div>
+                    </div>
+                `
                 
                 // totalText = totalText + secondMenu
                 root.innerHTML = totalText
@@ -427,6 +436,10 @@
     };
     customElements.define('com-sap-sample-homepage', HomePage);
 })();
+
+function secondMenu(){
+
+}
 
 function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown) {
     var _that = that
