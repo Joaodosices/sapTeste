@@ -524,8 +524,9 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         for (let o = 0; o < buttons.length; o++) {
             _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "100%"
             _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "110%"
+            _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[0].style.display = "block"
             for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
-                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.display = "grid"
+                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.display = "block"
             }
         }
     })
