@@ -528,6 +528,10 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.visibility = "visible"
             }
+            if (optionSelected.length !== 0){
+                _that._shadowRoot.querySelectorAll(`.front`)[optionSelected].style.left = "0%"
+                _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
+            }
         }
     })
 }
