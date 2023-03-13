@@ -14,6 +14,9 @@
             grid-template-columns: 231px 231px 231px 231px 231px;
             background: transparent;
         }
+        .secondMenuArea{
+            visibility: hidden;
+        }
         .areaOption{
             display: grid;
             justify-content: center;
@@ -408,11 +411,47 @@
                             </div>
                         </div>
                     </div>
+
                 `
                 totalText = totalText + tempText
                 tempText = ``
 
-                // totalText = totalText + secondMenu
+                for (let i = 0; i < arrMenuOptionsSecondMenu.length; i++) {
+                    tempText = ` 
+                        <div class='card areaOption secondMenuArea'>
+                            <div class='optionCircle front'>
+                                <img src="` + arrMenuOptionsSecondMenu[i][1] + `" alt="imagem ` + arrMenuOptionsSecondMenu[i][0] + `">
+                                <div class='areaText'> 
+                                    <h1>` + arrMenuOptionsSecondMenu[i][0] + `</h1> 
+                                </div>
+                            </div>
+                            <div class="optionCircle2 back">
+                                <img class="optionShownImg" src="` + arrMenuOptionsSecondMenu[i][1] + `" alt="imagem ` + arrMenuOptionsSecondMenu[i][0] + `">
+                                <div class="areaTextShown">
+                                    <h1>` + arrMenuOptionsSecondMenu[i][0] + `</h1>
+                    `
+                    for (let u = 1; u < arrOptionsListSecondMenu[i].length; u++) {
+                        tempText = tempText + `
+                        <a target="_blank"  href="` + arrOptionsLinksSecondMenu[i][u] + `"> 
+                                <p>` + arrOptionsListSecondMenu[i][u] + `</p>
+                        </a>
+                        `
+                    }
+                    tempText = tempText + `
+                            </div>
+                        </div>
+                    </div>
+                    `
+                    totalText = totalText + tempText
+                    tempText = ``
+                }
+                tempText = tempText + `
+                    <div class='card areaOption secondMenuArea'>
+                    </div>
+                `
+                totalText = totalText + tempText
+                tempText = ``
+
                 root.innerHTML = totalText
                 totalText = ``
                 // this._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
@@ -477,7 +516,9 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             element.classList.toggle("flip")
             _that._shadowRoot.querySelectorAll(`.optionCircle`)[i].classList.toggle(`flip`)
             _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
-            _that._shadowRoot.querySelectorAll(`.front`)[i].style.left = "100%"
+            for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
+                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.visibility = "visible"
+            }
 
         })
     }
@@ -486,6 +527,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         for (let o = 0; o < buttons.length; o++) {
             _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "100%"
             _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "110%"
+            _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "100%"
         }
     })
 }
