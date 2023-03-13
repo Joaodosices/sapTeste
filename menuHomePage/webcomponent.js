@@ -15,7 +15,7 @@
             background: transparent;
         }
         .secondMenuArea{
-            display: none;
+            visibility: hidden;
         }
         .areaOption{
             display: grid;
