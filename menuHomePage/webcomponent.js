@@ -401,7 +401,7 @@
                 }
                 tempText = `
                     <div class='card areaOption'>
-                        <div class='optionCircle front'>
+                        <div class='optionCircle btnSecondMenu'>
                             <img src="` + arrMenuOptions[0][1] + `" alt="imagem ` + arrMenuOptions[0][0] + `">
                             <div class='areaText'> 
                                 <h1>Contas Reguladas</h1> 
@@ -482,6 +482,9 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         })
     }
 
+    _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].addEventListener(`click`, ()=>{
+        console.log(`BANANA HEHEHE`)
+    })
 }
 
 function setBreakpoint(that) {
