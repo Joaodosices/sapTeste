@@ -485,7 +485,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].addEventListener(`click`, ()=>{
         for (let o = 0; o < buttons.length; o++) {
             _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "100%"
-            _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "100%"
+            _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "110%"
         }
     })
 }
