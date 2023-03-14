@@ -528,8 +528,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             _that._shadowRoot.getElementById(`firstMenu`).display = `none`
             for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.visibility = "visible"
-                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x]._that._shadowRoot.getElementsByClassName(`front`)[0].style.left = "0%"
-                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x]._that._shadowRoot.getElementsByClassName(`back`)[0].style.left = "100%"
+                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`front`)[0].style.left = "0%"
+                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
             }
             
         }
