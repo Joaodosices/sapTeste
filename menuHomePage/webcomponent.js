@@ -368,7 +368,7 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/BC2A788716906A67F50CA5349ABEFAA9/?mode=present&resourceType=STORY`]
                 ]
 
-                let tempText = ``
+                let tempText = `<div id='firstMenu'>`
                 let totalText = ``
                 let cont = 0
 
@@ -395,6 +395,7 @@
                         `
                     }
                     tempText = tempText + `
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -524,6 +525,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         for (let o = 0; o < buttons.length; o++) {
             _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "100%"
             _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "110%"
+            _that._shadowRoot.getElementById(`firstMenu`).display = `none`
             _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[0].style.visibility = "visible"
             for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.visibility = "visible"
