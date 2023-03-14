@@ -513,7 +513,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
             }
             optionSelected = i;
-            
+              
             element.classList.toggle("flip")
             _that._shadowRoot.querySelectorAll(`.optionCircle`)[i].classList.toggle(`flip`)
             _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
