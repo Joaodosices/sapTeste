@@ -537,6 +537,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                     _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].getElementsByClassName(`front`)[0].style.left = "100%"
                     _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].style.display = `none`
                 }
+                _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.display = `none`
             }
             
         }
