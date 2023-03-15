@@ -420,7 +420,7 @@
 
                 for (let i = 0; i < arrMenuOptionsSecondMenu.length; i++) {
                     tempText = ` 
-                        <div class='card areaOption secondzMenuArea'>
+                        <div class='card areaOption secondMenuArea'>
                             <div class='optionCircle front'>
                                 <img src="` + arrMenuOptionsSecondMenu[i][1] + `" alt="imagem ` + arrMenuOptionsSecondMenu[i][0] + `">
                                 <div class='areaText'> 
