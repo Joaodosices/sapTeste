@@ -395,7 +395,6 @@
                         `
                     }
                     tempText = tempText + `
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -412,7 +411,7 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
                 `
                 totalText = totalText + tempText
                 tempText = ``
