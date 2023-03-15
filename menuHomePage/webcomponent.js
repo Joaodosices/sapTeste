@@ -17,7 +17,9 @@
             grid-template-columns: 231px 231px 231px 231px 231px;
             background: transparent;
         }
-        
+        .secondMenuArea front, .secondMenuArea back{
+            left: 100%;
+        }
         .areaOption{
             display: grid;
             justify-content: center;
