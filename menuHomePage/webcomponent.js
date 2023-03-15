@@ -14,12 +14,7 @@
             grid-template-columns: 231px 231px 231px 231px 231px;
             background: transparent;
         }
-        #firstMenu{
-            width: 700px;
-            display: grid;
-            grid-template-columns: 231px 231px 231px 231px 231px;
-            background: transparent;
-        }
+        
         .secondMenuArea{
             visibility: hidden;
         }
@@ -374,7 +369,7 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/BC2A788716906A67F50CA5349ABEFAA9/?mode=present&resourceType=STORY`]
                 ]
 
-                let tempText = `<div id='firstMenu'>`
+                let tempText = ``
                 let totalText = ``
                 let cont = 0
 
@@ -417,7 +412,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
                 `
                 totalText = totalText + tempText
                 tempText = ``
