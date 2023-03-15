@@ -535,6 +535,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 for (let v = 0; v < arrMenuOptions.length; v++) {
                     let count = v + 1
                     _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].getElementsByClassName(`front`)[0].style.left = "100%"
+                    _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].style.display = `none`
                 }
             }
             
