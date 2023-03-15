@@ -447,10 +447,10 @@
                     totalText = totalText + tempText
                     tempText = ``
                 }
-                tempText = tempText + `
-                    <div class='card areaOption secondMenuArea'>
-                    </div>
-                `
+                // tempText = tempText + `
+                //     <div class='card areaOption secondMenuArea'>
+                //     </div>
+                // `
                 totalText = totalText + tempText
                 tempText = ``
 
