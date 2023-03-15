@@ -6,6 +6,9 @@
     // }
     //rgba(24, 145, 186, 0.53)
     //background: rgb(92, 177, 206);
+    // .secondMenuArea{
+    //     visibility: hidden;
+    // }
     tmpl.innerHTML = `
     <style>
         #root{
@@ -15,9 +18,6 @@
             background: transparent;
         }
         
-        .secondMenuArea{
-            visibility: hidden;
-        }
         .areaOption{
             display: grid;
             justify-content: center;
