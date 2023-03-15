@@ -406,7 +406,7 @@
                     tempText = ``
                 }
                 tempText = `
-                    <div class='card areaOption'>
+                    <div class='card areaOption btnSecondMenuArea'>
                         <div class='optionCircle btnSecondMenu'>
                             <img src="` + arrMenuOptions[0][1] + `" alt="imagem ` + arrMenuOptions[0][0] + `">
                             <div class='areaText'> 
@@ -537,7 +537,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                     _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].getElementsByClassName(`front`)[0].style.left = "100%"
                     _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].style.display = `none`
                 }
-                _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.display = `none`
+                _that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display = `none`
             }
             
         }
