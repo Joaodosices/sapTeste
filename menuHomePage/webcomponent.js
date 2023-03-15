@@ -550,26 +550,26 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         }
     })
 
-    // _that._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].addEventListener(`click`, ()=>{
-    //     for (let o = 0; o < buttons.length; o++) {
-    //         _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "0%"
-    //         _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "0%"
-    //         // _that._shadowRoot.querySelectorAll(`#firstMenu`).style.display = `none` 
-    //         for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
-    //             // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.visibility = "visible"
-    //             _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`front`)[0].style.left = "100%"
-    //             _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
+    _that._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].addEventListener(`click`, ()=>{
+        for (let o = 0; o < buttons.length; o++) {
+            _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "0%"
+            _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "0%"
+            // _that._shadowRoot.querySelectorAll(`#firstMenu`).style.display = `none` 
+            for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
+                // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.visibility = "visible"
+                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`front`)[0].style.left = "100%"
+                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
 
-    //             for (let v = 0; v < arrMenuOptions.length; v++) {
-    //                 let count = v + 1
-    //                 _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].getElementsByClassName(`front`)[0].style.left = "0%"
-    //                 _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].style.display = `grid`
-    //             }
-    //             _that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display = `grid`
-    //         }
+                for (let v = 0; v < arrMenuOptions.length; v++) {
+                    let count = v + 1
+                    _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].getElementsByClassName(`front`)[0].style.left = "0%"
+                    _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].style.display = `grid`
+                }
+                _that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display = `grid`
+            }
             
-    //     }
-    // })
+        }
+    })
 }
 
 function setBreakpoint(that) {
