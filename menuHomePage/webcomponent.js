@@ -533,7 +533,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
 
                 for (let v = 0; v < arrMenuOptions.length; v++) {
-                    _that._shadowRoot.querySelectorAll(`.areaOption`+ (v + 1) + ``)[v].getElementsByClassName(`front`)[0].style.left = "100%"
+                    let count = v + 1
+                    _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].getElementsByClassName(`front`)[0].style.left = "100%"
                 }
             }
             
