@@ -14,6 +14,12 @@
             grid-template-columns: 231px 231px 231px 231px 231px;
             background: transparent;
         }
+        #firstMenu{
+            width: 700px;
+            display: grid;
+            grid-template-columns: 231px 231px 231px 231px 231px;
+            background: transparent;
+        }
         .secondMenuArea{
             visibility: hidden;
         }
