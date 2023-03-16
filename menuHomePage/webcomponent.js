@@ -516,6 +516,10 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     for (let i = 0; i < buttons.length; i++) {
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
+            console.log(i)
+            if (_that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display === `none`) {
+                console.log(`Escolhi uma opção do segundo menu!`)
+            }
             _that._shadowRoot.querySelectorAll(`.front`)[i].style.left = "100%"
             _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
     //         if (optionSelected.length !== 0){
