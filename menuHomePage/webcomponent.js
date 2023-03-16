@@ -506,28 +506,28 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     let buttons = _that._shadowRoot.querySelectorAll(`.optionCircle`)
     let buttonsArea = _that._shadowRoot.querySelectorAll(`.areaOption`)
     let imgsShown = _that._shadowRoot.querySelectorAll(`.optionShownImg`)
-    for (let b = 0; b < imgsShown.length; b++) {
-        const e = imgsShown[b]
-        e.addEventListener(`click`, ()=>{
-            _that._shadowRoot.querySelectorAll(`.front`)[b].style.left = "0%"
-            _that._shadowRoot.querySelectorAll(`.back`)[b].style.left = "100%"
-        })
-    }
-    for (let i = 0; i < buttons.length; i++) {
-        const element = buttons[i];
-        element.addEventListener(`click`, ()=>{
-            if (optionSelected.length !== 0){
-                _that._shadowRoot.querySelectorAll(`.front`)[optionSelected].style.left = "0%"
-                _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
-            }
-            optionSelected = i;
+    // for (let b = 0; b < imgsShown.length; b++) {
+    //     const e = imgsShown[b]
+    //     e.addEventListener(`click`, ()=>{
+    //         _that._shadowRoot.querySelectorAll(`.front`)[b].style.left = "0%"
+    //         _that._shadowRoot.querySelectorAll(`.back`)[b].style.left = "100%"
+    //     })
+    // }
+    // for (let i = 0; i < buttons.length; i++) {
+    //     const element = buttons[i];
+    //     element.addEventListener(`click`, ()=>{
+    //         if (optionSelected.length !== 0){
+    //             _that._shadowRoot.querySelectorAll(`.front`)[optionSelected].style.left = "0%"
+    //             _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
+    //         }
+    //         optionSelected = i;
               
-            element.classList.toggle("flip")
-            _that._shadowRoot.querySelectorAll(`.optionCircle`)[i].classList.toggle(`flip`)
-            _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
-            _that._shadowRoot.querySelectorAll(`.front`)[i].style.left = "100%"
-        })
-    }
+    //         element.classList.toggle("flip")
+    //         _that._shadowRoot.querySelectorAll(`.optionCircle`)[i].classList.toggle(`flip`)
+    //         _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
+    //         _that._shadowRoot.querySelectorAll(`.front`)[i].style.left = "100%"
+    //     })
+    // }
 
     _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].addEventListener(`click`, ()=>{
         for (let o = 0; o < buttons.length; o++) {
