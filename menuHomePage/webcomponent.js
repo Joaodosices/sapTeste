@@ -463,11 +463,9 @@
 
                 root.innerHTML = totalText
                 totalText = ``
-                // this._shadowRoot.getElementById(`areaSecondMenu`).style.display = "none"
                 var optionSelected = ``
                 var optionsShown = []
                 events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown)
-                // window.addEventListener(`resize`, setBreakpoint(this))
                 window.addEventListener(`resize`, () => {
                     if (window.innerWidth >= 1288){
                         this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px 231px"
@@ -535,12 +533,6 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
                 optionSelected = i;
             }
-
-              
-    //         element.classList.toggle("flip")
-    //         _that._shadowRoot.querySelectorAll(`.optionCircle`)[i].classList.toggle(`flip`)
-    //         _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
-    //         _that._shadowRoot.querySelectorAll(`.front`)[i].style.left = "100%"
         })
     }
 
@@ -549,9 +541,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         for (let o = 0; o < buttons.length; o++) {
             _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "100%"
             _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "110%"
-            // _that._shadowRoot.querySelectorAll(`#firstMenu`).style.display = `none` 
             for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
-                // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.visibility = "visible"
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`front`)[0].style.left = "0%"
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
 
@@ -571,7 +561,6 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         for (let o = 0; o < buttons.length; o++) {
             
             for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
-                // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.visibility = "visible"
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`front`)[0].style.left = "100%"
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
 
@@ -585,7 +574,6 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
 
             _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "0%"
             _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "0%"
-            // _that._shadowRoot.querySelectorAll(`#firstMenu`).style.display = `none`  
         }
     })
 }
