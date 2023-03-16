@@ -506,16 +506,18 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     let buttons = _that._shadowRoot.querySelectorAll(`.optionCircle`)
     let buttonsArea = _that._shadowRoot.querySelectorAll(`.areaOption`)
     let imgsShown = _that._shadowRoot.querySelectorAll(`.optionShownImg`)
-    // for (let b = 0; b < imgsShown.length; b++) {
-    //     const e = imgsShown[b]
-    //     e.addEventListener(`click`, ()=>{
-    //         _that._shadowRoot.querySelectorAll(`.front`)[b].style.left = "0%"
-    //         _that._shadowRoot.querySelectorAll(`.back`)[b].style.left = "100%"
-    //     })
-    // }
-    // for (let i = 0; i < buttons.length; i++) {
-    //     const element = buttons[i];
-    //     element.addEventListener(`click`, ()=>{
+    for (let b = 0; b < imgsShown.length; b++) {
+        const e = imgsShown[b]
+        e.addEventListener(`click`, ()=>{
+            _that._shadowRoot.querySelectorAll(`.front`)[b].style.left = "0%"
+            _that._shadowRoot.querySelectorAll(`.back`)[b].style.left = "100%"
+        })
+    }
+    for (let i = 0; i < buttons.length; i++) {
+        const element = buttons[i];
+        element.addEventListener(`click`, ()=>{
+            _that._shadowRoot.querySelectorAll(`.front`)[i].style.left = "100%"
+            _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
     //         if (optionSelected.length !== 0){
     //             _that._shadowRoot.querySelectorAll(`.front`)[optionSelected].style.left = "0%"
     //             _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
@@ -526,9 +528,10 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     //         _that._shadowRoot.querySelectorAll(`.optionCircle`)[i].classList.toggle(`flip`)
     //         _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
     //         _that._shadowRoot.querySelectorAll(`.front`)[i].style.left = "100%"
-    //     })
-    // }
+        })
+    }
 
+    //Btn que abre o segundo menu
     _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].addEventListener(`click`, ()=>{
         for (let o = 0; o < buttons.length; o++) {
             _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "100%"
@@ -550,6 +553,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
         }
     })
 
+    //Btn que abre o primeiro menu 
     _that._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].addEventListener(`click`, ()=>{
         for (let o = 0; o < buttons.length; o++) {
             
