@@ -17,6 +17,19 @@
             grid-template-columns: 231px 231px 231px 231px 231px;
             background: transparent;
         }
+        .card a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0rem auto 0;
+            height: 15.55rem;
+            width: 13rem;
+            border-radius: 0%;
+            background: rgb(131, 179, 119);
+            border-width: 0;
+            transition: ease-in-out 400ms;
+            position: relative;
+        }
         .secondMenuArea .front, .secondMenuArea .back{
             left: 100%;
         }
@@ -377,29 +390,20 @@
 
                 for (let i = 0; i < arrMenuOptions.length; i++) {
                     cont = cont + 1
+                    //<a target="_blank"  href="` + arrOptionsLinks[i][1] + `"> 
+                    //</a>
                     tempText = tempText + ` 
-                        <div class='card areaOption areaOption` + cont + `'>
+                    <div class='card areaOption areaOption` + cont + `'>
                             <div class='optionCircle front'>
                                 <img src="` + arrMenuOptions[i][1] + `" alt="imagem ` + arrMenuOptions[i][0] + `">
                                 <div class='areaText'> 
                                     <h1>` + arrMenuOptions[i][0] + `</h1> 
                                 </div>
                             </div>
-                            <div class="optionCircle2 back">
-                                <img class="optionShownImg" src="` + arrMenuOptions[i][1] + `" alt="imagem ` + arrMenuOptions[i][0] + `">
-                                <div class="areaTextShown">
-                                    <h1>` + arrMenuOptions[i][0] + `</h1>
+                        
                     `
-                    for (let u = 1; u < arrOptionsList[i].length; u++) {
-                        tempText = tempText + `
-                        <a target="_blank"  href="` + arrOptionsLinks[i][u] + `"> 
-                                <p>` + arrOptionsList[i][u] + `</p>
-                        </a>
-                        `
-                    }
+                    
                     tempText = tempText + `
-                            </div>
-                        </div>
                     </div>
                     
                     `
@@ -420,6 +424,8 @@
                 tempText = ``
 
                 for (let i = 0; i < arrMenuOptionsSecondMenu.length; i++) {
+                    //<a target="_blank"  href="` + arrOptionsLinksSecondMenu[i][1] + `"> 
+                    //</a>
                     tempText = ` 
                         <div class='card areaOption secondMenuArea'>
                             <div class='optionCircle front'>
@@ -428,21 +434,8 @@
                                     <h1>` + arrMenuOptionsSecondMenu[i][0] + `</h1> 
                                 </div>
                             </div>
-                            <div class="optionCircle2 back">
-                                <img class="optionShownImg" src="` + arrMenuOptionsSecondMenu[i][1] + `" alt="imagem ` + arrMenuOptionsSecondMenu[i][0] + `">
-                                <div class="areaTextShown">
-                                    <h1>` + arrMenuOptionsSecondMenu[i][0] + `</h1>
                     `
-                    for (let u = 1; u < arrOptionsListSecondMenu[i].length; u++) {
-                        tempText = tempText + `
-                        <a target="_blank"  href="` + arrOptionsLinksSecondMenu[i][u] + `"> 
-                                <p>` + arrOptionsListSecondMenu[i][u] + `</p>
-                        </a>
-                        `
-                    }
                     tempText = tempText + `
-                            </div>
-                        </div>
                     </div>
                     `
                     totalText = totalText + tempText
