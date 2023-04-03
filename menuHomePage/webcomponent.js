@@ -517,6 +517,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             console.log(i)
             if (_that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display === `none`) {
                 console.log(`Escolhi uma opção do segundo menu!`)
+            
                 if (optionSelected.length !== 0){
                     // _that._shadowRoot.querySelectorAll(`.front`)[optionSelected - 1].style.left = "0%"
                     // _that._shadowRoot.querySelectorAll(`.back`)[optionSelected - 1].style.left = "100%"
@@ -525,6 +526,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 // _that._shadowRoot.querySelectorAll(`.back`)[i - 1].style.left = "0%"
                 optionSelected = i;
             } else{
+                console.log(`Escolhi uma opção do primeiro menu!`)
+                // window.open(arrOptionsLinks[i][1])
                 if (optionSelected.length !== 0){
                     // _that._shadowRoot.querySelectorAll(`.front`)[optionSelected].style.left = "0%"
                     // _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
