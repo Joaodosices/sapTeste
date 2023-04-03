@@ -507,8 +507,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     for (let b = 0; b < imgsShown.length; b++) {
         const e = imgsShown[b]
         e.addEventListener(`click`, ()=>{
-            _that._shadowRoot.querySelectorAll(`.front`)[b].style.left = "0%"
-            _that._shadowRoot.querySelectorAll(`.back`)[b].style.left = "100%"
+            // _that._shadowRoot.querySelectorAll(`.front`)[b].style.left = "0%"
+            // _that._shadowRoot.querySelectorAll(`.back`)[b].style.left = "100%"
         })
     }
     for (let i = 0; i < buttons.length; i++) {
@@ -519,18 +519,18 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 console.log(`Escolhi uma opção do segundo menu!`)
                 if (optionSelected.length !== 0){
                     _that._shadowRoot.querySelectorAll(`.front`)[optionSelected - 1].style.left = "0%"
-                    _that._shadowRoot.querySelectorAll(`.back`)[optionSelected - 1].style.left = "100%"
+                    // _that._shadowRoot.querySelectorAll(`.back`)[optionSelected - 1].style.left = "100%"
                 }
                 _that._shadowRoot.querySelectorAll(`.front`)[i - 1].style.left = "100%"
-                _that._shadowRoot.querySelectorAll(`.back`)[i - 1].style.left = "0%"
+                // _that._shadowRoot.querySelectorAll(`.back`)[i - 1].style.left = "0%"
                 optionSelected = i;
             } else{
                 if (optionSelected.length !== 0){
                     _that._shadowRoot.querySelectorAll(`.front`)[optionSelected].style.left = "0%"
-                    _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
+                    // _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
                 }
                 _that._shadowRoot.querySelectorAll(`.front`)[i].style.left = "100%"
-                _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
+                // _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
                 optionSelected = i;
             }
         })
@@ -544,7 +544,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
 
             for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`front`)[0].style.left = "0%"
-                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
+                // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.display = "flex"  //new
 
                 for (let v = 0; v < arrMenuOptions.length; v++) {
@@ -565,7 +565,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             
             for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`front`)[0].style.left = "100%"
-                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
+                // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
                 _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.display = "none"  //new
 
                 for (let v = 0; v < arrMenuOptions.length; v++) {
