@@ -381,14 +381,15 @@
                 for (let i = 0; i < arrMenuOptions.length; i++) {
                     cont = cont + 1
                     tempText = tempText + ` 
-                    <a target="_blank"  href="` + arrOptionsLinks[i][1] + `"> 
                         <div class='card areaOption areaOption` + cont + `'>
+                        <a target="_blank"  href="` + arrOptionsLinks[i][1] + `"> 
                             <div class='optionCircle front'>
                                 <img src="` + arrMenuOptions[i][1] + `" alt="imagem ` + arrMenuOptions[i][0] + `">
                                 <div class='areaText'> 
                                     <h1>` + arrMenuOptions[i][0] + `</h1> 
                                 </div>
                             </div>
+                        </a>
                             <div class="optionCircle2 back">
                                 <img class="optionShownImg" src="` + arrMenuOptions[i][1] + `" alt="imagem ` + arrMenuOptions[i][0] + `">
                                 <div class="areaTextShown">
@@ -405,7 +406,6 @@
                             </div>
                         </div>
                     </div>
-                    </a>
                     `
                     totalText = totalText + tempText
                     tempText = ``
@@ -425,14 +425,15 @@
 
                 for (let i = 0; i < arrMenuOptionsSecondMenu.length; i++) {
                     tempText = ` 
-                    <a target="_blank"  href="` + arrOptionsLinksSecondMenu[i][1] + `"> 
                         <div class='card areaOption secondMenuArea'>
+                        <a target="_blank"  href="` + arrOptionsLinksSecondMenu[i][1] + `"> 
                             <div class='optionCircle front'>
                                 <img src="` + arrMenuOptionsSecondMenu[i][1] + `" alt="imagem ` + arrMenuOptionsSecondMenu[i][0] + `">
                                 <div class='areaText'> 
                                     <h1>` + arrMenuOptionsSecondMenu[i][0] + `</h1> 
                                 </div>
                             </div>
+                        </a>
                             <div class="optionCircle2 back">
                                 <img class="optionShownImg" src="` + arrMenuOptionsSecondMenu[i][1] + `" alt="imagem ` + arrMenuOptionsSecondMenu[i][0] + `">
                                 <div class="areaTextShown">
@@ -449,7 +450,6 @@
                             </div>
                         </div>
                     </div>
-                    </a>
                     `
                     totalText = totalText + tempText
                     tempText = ``
