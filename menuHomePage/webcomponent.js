@@ -390,16 +390,17 @@
 
                 for (let i = 0; i < arrMenuOptions.length; i++) {
                     cont = cont + 1
+                    //<a target="_blank"  href="` + arrOptionsLinks[i][1] + `"> 
+                    //</a>
                     tempText = tempText + ` 
                     <div class='card areaOption areaOption` + cont + `'>
-                        <a target="_blank"  href="` + arrOptionsLinks[i][1] + `"> 
                             <div class='optionCircle front'>
                                 <img src="` + arrMenuOptions[i][1] + `" alt="imagem ` + arrMenuOptions[i][0] + `">
                                 <div class='areaText'> 
                                     <h1>` + arrMenuOptions[i][0] + `</h1> 
                                 </div>
                             </div>
-                        </a>
+                        
                     `
                     
                     tempText = tempText + `
@@ -422,16 +423,16 @@
                 tempText = ``
 
                 for (let i = 0; i < arrMenuOptionsSecondMenu.length; i++) {
+                    //<a target="_blank"  href="` + arrOptionsLinksSecondMenu[i][1] + `"> 
+                    //</a>
                     tempText = ` 
                         <div class='card areaOption secondMenuArea'>
-                        <a target="_blank"  href="` + arrOptionsLinksSecondMenu[i][1] + `"> 
                             <div class='optionCircle front'>
                                 <img src="` + arrMenuOptionsSecondMenu[i][1] + `" alt="imagem ` + arrMenuOptionsSecondMenu[i][0] + `">
                                 <div class='areaText'> 
                                     <h1>` + arrMenuOptionsSecondMenu[i][0] + `</h1> 
                                 </div>
                             </div>
-                        </a>
                     `
                     tempText = tempText + `
                     </div>
