@@ -17,6 +17,9 @@
             grid-template-columns: 231px 231px 231px 231px 231px;
             background: transparent;
         }
+        a {
+            display: flex;
+        }
         .secondMenuArea .front, .secondMenuArea .back{
             left: 100%;
         }
