@@ -401,6 +401,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     `
                     totalText = totalText + tempText
                     tempText = ``
