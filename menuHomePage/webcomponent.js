@@ -519,6 +519,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 console.log(`Escolhi uma opção do segundo menu!`)
                 for (let n = 0; n < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; n++) {
                     _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[n].addEventListener(`click`, ()=>{
+                        console.log(arrOptionsLinksSecondMenu[n][0])
                         window.open(arrOptionsLinksSecondMenu[n][1])
                     })
                 }
