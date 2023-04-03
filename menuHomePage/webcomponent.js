@@ -391,7 +391,7 @@
                 for (let i = 0; i < arrMenuOptions.length; i++) {
                     cont = cont + 1
                     tempText = tempText + ` 
-                        <div class='card areaOption areaOption` + cont + `'>
+                    <div class='card areaOption areaOption` + cont + `'>
                         <a target="_blank"  href="` + arrOptionsLinks[i][1] + `"> 
                             <div class='optionCircle front'>
                                 <img src="` + arrMenuOptions[i][1] + `" alt="imagem ` + arrMenuOptions[i][0] + `">
@@ -400,21 +400,9 @@
                                 </div>
                             </div>
                         </a>
-                            <div class="optionCircle2 back">
-                                <img class="optionShownImg" src="` + arrMenuOptions[i][1] + `" alt="imagem ` + arrMenuOptions[i][0] + `">
-                                <div class="areaTextShown">
-                                    <h1>` + arrMenuOptions[i][0] + `</h1>
                     `
-                    for (let u = 1; u < arrOptionsList[i].length; u++) {
-                        tempText = tempText + `
-                        <a target="_blank"  href="` + arrOptionsLinks[i][u] + `"> 
-                                <p>` + arrOptionsList[i][u] + `</p>
-                        </a>
-                        `
-                    }
+                    
                     tempText = tempText + `
-                            </div>
-                        </div>
                     </div>
                     `
                     totalText = totalText + tempText
@@ -444,21 +432,8 @@
                                 </div>
                             </div>
                         </a>
-                            <div class="optionCircle2 back">
-                                <img class="optionShownImg" src="` + arrMenuOptionsSecondMenu[i][1] + `" alt="imagem ` + arrMenuOptionsSecondMenu[i][0] + `">
-                                <div class="areaTextShown">
-                                    <h1>` + arrMenuOptionsSecondMenu[i][0] + `</h1>
                     `
-                    for (let u = 1; u < arrOptionsListSecondMenu[i].length; u++) {
-                        tempText = tempText + `
-                        <a target="_blank"  href="` + arrOptionsLinksSecondMenu[i][u] + `"> 
-                                <p>` + arrOptionsListSecondMenu[i][u] + `</p>
-                        </a>
-                        `
-                    }
                     tempText = tempText + `
-                            </div>
-                        </div>
                     </div>
                     `
                     totalText = totalText + tempText
