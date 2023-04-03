@@ -465,7 +465,7 @@
                 totalText = ``
                 var optionSelected = ``
                 var optionsShown = []
-                events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown)
+                events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu)
                 window.addEventListener(`resize`, () => {
                     if (window.innerWidth >= 1288){
                         this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px 231px"
@@ -499,7 +499,7 @@ function secondMenu(){
 
 }
 
-function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown) {
+function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu) {
     var _that = that
     let buttons = _that._shadowRoot.querySelectorAll(`.optionCircle`)
     let buttonsArea = _that._shadowRoot.querySelectorAll(`.areaOption`)
@@ -517,7 +517,11 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             console.log(i)
             if (_that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display === `none`) {
                 console.log(`Escolhi uma opção do segundo menu!`)
-            
+                for (let n = 0; n < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; n++) {
+                    _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[n].addEventListener(`click`, ()=>{
+                        window.open(arrOptionsLinksSecondMenu[n][1])
+                    })
+                }
                 if (optionSelected.length !== 0){
                     // _that._shadowRoot.querySelectorAll(`.front`)[optionSelected - 1].style.left = "0%"
                     // _that._shadowRoot.querySelectorAll(`.back`)[optionSelected - 1].style.left = "100%"
