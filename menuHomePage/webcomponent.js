@@ -17,10 +17,18 @@
             grid-template-columns: 231px 231px 231px 231px 231px;
             background: transparent;
         }
-        a {
+        .card a {
             display: flex;
-            width: 100%;
-            height: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 0rem auto 0;
+            height: 15.55rem;
+            width: 13rem;
+            border-radius: 0%;
+            background: rgb(131, 179, 119);
+            border-width: 0;
+            transition: ease-in-out 400ms;
+            position: relative;
         }
         .secondMenuArea .front, .secondMenuArea .back{
             left: 100%;
