@@ -378,6 +378,7 @@
                 for (let i = 0; i < arrMenuOptions.length; i++) {
                     cont = cont + 1
                     tempText = tempText + ` 
+                    <a target="_blank"  href="` + arrOptionsLinks[i][1] + `"> 
                         <div class='card areaOption areaOption` + cont + `'>
                             <div class='optionCircle front'>
                                 <img src="` + arrMenuOptions[i][1] + `" alt="imagem ` + arrMenuOptions[i][0] + `">
@@ -401,6 +402,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                     `
                     totalText = totalText + tempText
                     tempText = ``
@@ -420,6 +422,7 @@
 
                 for (let i = 0; i < arrMenuOptionsSecondMenu.length; i++) {
                     tempText = ` 
+                    <a target="_blank"  href="` + arrOptionsLinksSecondMenu[i][1] + `"> 
                         <div class='card areaOption secondMenuArea'>
                             <div class='optionCircle front'>
                                 <img src="` + arrMenuOptionsSecondMenu[i][1] + `" alt="imagem ` + arrMenuOptionsSecondMenu[i][0] + `">
@@ -443,6 +446,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                     `
                     totalText = totalText + tempText
                     tempText = ``
