@@ -19,6 +19,8 @@
         }
         a {
             display: flex;
+            width: 100%;
+            height: 100%;
         }
         .secondMenuArea .front, .secondMenuArea .back{
             left: 100%;
