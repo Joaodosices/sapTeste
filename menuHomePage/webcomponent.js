@@ -317,12 +317,12 @@
 
                 let arrOptionsLinks = [
                     [`Informação Geral`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/DF30D3017EA538105ED8106FE53C6837/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/64981101B2792898C7E9B5280A8A8590/?mode=present&resourceType=STORY`],
                     [`Volume de negócios`, 
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B91835037E223ED726500D30BB8BAC10/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B91835037E223ED726500D30BB8BAC10/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B91835037E223ED726500D30BB8BAC10/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B91835037E223ED726500D30BB8BAC10/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E9C03901B27F9C3B78B95D62016093C5/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E9C03901B27F9C3B78B95D62016093C5/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E9C03901B27F9C3B78B95D62016093C5/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E9C03901B27F9C3B78B95D62016093C5/?mode=present&resourceType=STORY`],
                     [`Informações Agregadas`, 
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/12FA18871697D2D879F811083EE91B9B/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/12FA18871697D2D879F811083EE91B9B/?mode=present&resourceType=STORY`,
@@ -346,29 +346,29 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D0A0C6056E234B26D2E001A211ABCEEB/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D0A0C6056E234B26D2E001A211ABCEEB/?mode=present&resourceType=STORY`],
                     [`Investimentos`,
-                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7E688B017EA615E8E7DD4889EB39780D/?mode=present&resourceType=STORY`,
-                    `https://mota-engil-q.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7E688B017EA615E8E7DD4889EB39780D/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B1888881F21B4466F7C4BEF8048B59F7/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B1888881F21B4466F7C4BEF8048B59F7/?mode=present&resourceType=STORY`],
                     [`Endividamento`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/25B1808716942E99A7BCAF7A3AAD890E/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/25B1808716942E99A7BCAF7A3AAD890E/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D1888881F21D31B5F3D5D99287B89FEB/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D1888881F21D31B5F3D5D99287B89FEB/?mode=present&resourceType=STORY`],
                     [`OPEX`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/F43A7887169208674556B40214C201F8/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/F43A7887169208674556B40214C201F8/?mode=present&resourceType=STORY`]
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FCC01101B27CC2A0C349603C23F65222/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FCC01101B27CC2A0C349603C23F65222/?mode=present&resourceType=STORY`]
                 ]
                 let arrOptionsLinksSecondMenu = [
                     [`Desvio de Custos de Capital`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6BF01B017EA77A5907C54C3724F85DDB/?mode=present&resourceType=STORY`],
                     [`Desvio de Preço`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/2703D037E24AA1C44E7C0A7BC304A2D/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/2703D037E24AA1C44E7C0A7BC304A2D/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/30986081F21AA6B286003913CC380920/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/30986081F21AA6B286003913CC380920/?mode=present&resourceType=STORY`],
                     [`Indutores`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/CA281B017EA715086FA10DBB2F38CB44/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/CA281B017EA715086FA10DBB2F38CB44/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C10B881F21AF9D510291F211635CA4E/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C10B881F21AF9D510291F211635CA4E/?mode=present&resourceType=STORY`],
                     [`Contas reguladas Opex`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/666A788716903AC9BC54501CA1B5C645/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/666A788716903AC9BC54501CA1B5C645/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`],
                     [`Atividades Complementares`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/BC2A788716906A67F50CA5349ABEFAA9/?mode=present&resourceType=STORY`]
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C18B881F21EF85E42CF99A8E89ABF2B/?mode=present&resourceType=STORY`]
                 ]
 
                 let tempText = ``
