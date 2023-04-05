@@ -558,10 +558,10 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             } else{
                 console.log(`Escolhi uma opção do primeiro menu!`)
                 for (let j = 0; j < hasFlipAnimationFirstMenu.length; j++) {
-                    if (hasFlipAnimationSecondMenu[j][1] === false) {
+                    if (hasFlipAnimationFirstMenu[j][1] === false) {
                         window.open(arrOptionsLinks[i][1])
-                    } else if (hasFlipAnimationSecondMenu[j][1] === true){
-                        console.log(`VALIDADO:` + hasFlipAnimationSecondMenu[j][0])
+                    } else if (hasFlipAnimationFirstMenu[j][1] === true){
+                        console.log(`VALIDADO:` + hasFlipAnimationFirstMenu[j][0])
                         if (optionSelected.length !== 0){
                             _that._shadowRoot.querySelectorAll(`.front`)[optionSelected].style.left = "0%"
                             _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
