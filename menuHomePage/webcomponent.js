@@ -527,8 +527,8 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     for (let b = 0; b < imgsShown.length; b++) {
         const e = imgsShown[b]
         e.addEventListener(`click`, ()=>{
-            // _that._shadowRoot.querySelectorAll(`.front`)[b].style.left = "0%"
-            // _that._shadowRoot.querySelectorAll(`.back`)[b].style.left = "100%"
+            _that._shadowRoot.querySelectorAll(`.front`)[b].style.left = "0%"
+            _that._shadowRoot.querySelectorAll(`.back`)[b].style.left = "100%"
         })
     }
     for (let i = 0; i < buttons.length; i++) {
