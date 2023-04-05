@@ -286,7 +286,7 @@
                     [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/endividamento.svg`],
                     [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`]
                 ]
-                    
+    
                 let arrMenuOptionsSecondMenu =[
                     [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Desvio de Preço`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
@@ -369,6 +369,26 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`],
                     [`Atividades Complementares`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C18B881F21EF85E42CF99A8E89ABF2B/?mode=present&resourceType=STORY`]
+                ]
+
+                let hasFlipAnimationFirstMenu = [
+                    [`Informação Geral`, false],
+                    [`Volume de negócios`, false], 
+                    [`Informações Agregadas`, true], 
+                    [`Holding`, true],
+                    [`Clientes`, false],
+                    [`Fornecedores`, false], 
+                    [`Investimentos`, false],
+                    [`Endividamento`, false],
+                    [`OPEX`, false]
+                ]
+
+                let hasFlipAnimationSecondMenu = [
+                    [`Desvio de Custos de Capital`, false],
+                    [`Desvio de Preço`, false],
+                    [`Indutores`, false],
+                    [`Contas reguladas Opex`, false],
+                    [`Atividades Complementares`, false]
                 ]
 
                 let tempText = ``
@@ -465,7 +485,7 @@
                 totalText = ``
                 var optionSelected = ``
                 var optionsShown = []
-                events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu)
+                events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu)
                 window.addEventListener(`resize`, () => {
                     if (window.innerWidth >= 1288){
                         this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px 231px"
@@ -499,7 +519,7 @@ function secondMenu(){
 
 }
 
-function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu) {
+function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu) {
     var _that = that
     let buttons = _that._shadowRoot.querySelectorAll(`.optionCircle`)
     let buttonsArea = _that._shadowRoot.querySelectorAll(`.areaOption`)
@@ -517,28 +537,37 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             console.log(i)
             if (_that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display === `none`) {
                 console.log(`Escolhi uma opção do segundo menu!`)
+
                 for (let n = 0; n < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; n++) {
-                    _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[n].addEventListener(`click`, ()=>{
-                        console.log(arrOptionsLinksSecondMenu[n][0])
-                        window.open(arrOptionsLinksSecondMenu[n][1])
-                    })
+                    if (hasFlipAnimationSecondMenu[n][1] === false) {
+                        _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[n].addEventListener(`click`, ()=>{
+                            window.open(arrOptionsLinksSecondMenu[n][1])
+                        })
+                    } else if (hasFlipAnimationSecondMenu[n][1] === true) {
+                        if (optionSelected.length !== 0){
+                            _that._shadowRoot.querySelectorAll(`.front`)[optionSelected - 1].style.left = "0%"
+                            _that._shadowRoot.querySelectorAll(`.back`)[optionSelected - 1].style.left = "100%"
+                        }
+                        _that._shadowRoot.querySelectorAll(`.front`)[i - 1].style.left = "100%"
+                        _that._shadowRoot.querySelectorAll(`.back`)[i - 1].style.left = "0%"
+                    }
                 }
-                if (optionSelected.length !== 0){
-                    // _that._shadowRoot.querySelectorAll(`.front`)[optionSelected - 1].style.left = "0%"
-                    // _that._shadowRoot.querySelectorAll(`.back`)[optionSelected - 1].style.left = "100%"
-                }
-                // _that._shadowRoot.querySelectorAll(`.front`)[i - 1].style.left = "100%"
-                // _that._shadowRoot.querySelectorAll(`.back`)[i - 1].style.left = "0%"
+                
                 optionSelected = i;
             } else{
                 console.log(`Escolhi uma opção do primeiro menu!`)
-                window.open(arrOptionsLinks[i][1])
-                if (optionSelected.length !== 0){
-                    // _that._shadowRoot.querySelectorAll(`.front`)[optionSelected].style.left = "0%"
-                    // _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
+                for (let j = 0; j < hasFlipAnimationFirstMenu.length; j++) {
+                    if (hasFlipAnimationSecondMenu[j][1] === false) {
+                        window.open(arrOptionsLinks[i][1])
+                    } else if (hasFlipAnimationSecondMenu[j][1] === true){
+                        if (optionSelected.length !== 0){
+                            _that._shadowRoot.querySelectorAll(`.front`)[optionSelected].style.left = "0%"
+                            _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
+                        }
+                        _that._shadowRoot.querySelectorAll(`.front`)[i].style.left = "100%"
+                        _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
+                    }
                 }
-                // _that._shadowRoot.querySelectorAll(`.front`)[i].style.left = "100%"
-                // _that._shadowRoot.querySelectorAll(`.back`)[i].style.left = "0%"
                 optionSelected = i;
             }
         })
