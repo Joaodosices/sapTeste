@@ -560,7 +560,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 // for (let j = 0; j < hasFlipAnimationFirstMenu.length; j++) {
                     if (hasFlipAnimationFirstMenu[i][1] === false) {
                         window.open(arrOptionsLinks[i][1])
-                        console.log(hasFlipAnimationFirstMenu[j][1])
+                        console.log(hasFlipAnimationFirstMenu[i][1])
                     } else if (hasFlipAnimationFirstMenu[i][1] === true){
                         console.log(`VALIDADO:` + hasFlipAnimationFirstMenu[i][0] +` `+ hasFlipAnimationFirstMenu[i][1])
                         if (optionSelected.length !== 0){
