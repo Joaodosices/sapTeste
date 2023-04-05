@@ -540,11 +540,11 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
 
                 for (let n = 0; n < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; n++) {
                     if (hasFlipAnimationSecondMenu[n][1] === false) {
-                        _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[n].addEventListener(`click`, ()=>{
+                        // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[n].addEventListener(`click`, ()=>{
                             window.open(arrOptionsLinksSecondMenu[n][1])
-                        })
+                        // })
                     } else if (hasFlipAnimationSecondMenu[n][1] === true) {
-                        console.log(`VALIDADO SECOND MENU:` + hasFlipAnimationSecondMenu[n][0] + ` `+ hasFlipAnimationSecondMenu[n][1])
+                        // console.log(`VALIDADO SECOND MENU:` + hasFlipAnimationSecondMenu[n][0] + ` `+ hasFlipAnimationSecondMenu[n][1])
                         if (optionSelected.length !== 0){
                             _that._shadowRoot.querySelectorAll(`.front`)[optionSelected - 1].style.left = "0%"
                             _that._shadowRoot.querySelectorAll(`.back`)[optionSelected - 1].style.left = "100%"
@@ -560,6 +560,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                 for (let j = 0; j < hasFlipAnimationFirstMenu.length; j++) {
                     if (hasFlipAnimationFirstMenu[j][1] === false) {
                         window.open(arrOptionsLinks[i][1])
+                        console.log(hasFlipAnimationFirstMenu[j][1])
                     } else if (hasFlipAnimationFirstMenu[j][1] === true){
                         console.log(`VALIDADO:` + hasFlipAnimationFirstMenu[j][0] +` `+ hasFlipAnimationFirstMenu[j][1])
                         if (optionSelected.length !== 0){
