@@ -544,7 +544,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                             window.open(arrOptionsLinksSecondMenu[n][1])
                         })
                     } else if (hasFlipAnimationSecondMenu[n][1] === true) {
-                        console.log(`VALIDADO SECOND MENU:` + hasFlipAnimationSecondMenu[n][0])
+                        console.log(`VALIDADO SECOND MENU:` + hasFlipAnimationSecondMenu[n][0] + ` `+ hasFlipAnimationSecondMenu[n][1])
                         if (optionSelected.length !== 0){
                             _that._shadowRoot.querySelectorAll(`.front`)[optionSelected - 1].style.left = "0%"
                             _that._shadowRoot.querySelectorAll(`.back`)[optionSelected - 1].style.left = "100%"
@@ -561,7 +561,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
                     if (hasFlipAnimationFirstMenu[j][1] === false) {
                         window.open(arrOptionsLinks[i][1])
                     } else if (hasFlipAnimationFirstMenu[j][1] === true){
-                        console.log(`VALIDADO:` + hasFlipAnimationFirstMenu[j][0])
+                        console.log(`VALIDADO:` + hasFlipAnimationFirstMenu[j][0] +` `+ hasFlipAnimationFirstMenu[j][1])
                         if (optionSelected.length !== 0){
                             _that._shadowRoot.querySelectorAll(`.front`)[optionSelected].style.left = "0%"
                             _that._shadowRoot.querySelectorAll(`.back`)[optionSelected].style.left = "100%"
