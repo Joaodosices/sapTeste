@@ -540,9 +540,9 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
 
                 for (let n = 0; n < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; n++) {
                     if (hasFlipAnimationSecondMenu[n][1] === false) {
-                        // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[n].addEventListener(`click`, ()=>{
+                        _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[n].addEventListener(`click`, ()=>{
                             window.open(arrOptionsLinksSecondMenu[n][1])
-                        // })
+                        })
                     } else if (hasFlipAnimationSecondMenu[n][1] === true) {
                         // console.log(`VALIDADO SECOND MENU:` + hasFlipAnimationSecondMenu[n][0] + ` `+ hasFlipAnimationSecondMenu[n][1])
                         if (optionSelected.length !== 0){
