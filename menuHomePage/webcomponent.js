@@ -277,14 +277,14 @@
 
                 let arrMenuOptions =[
                     [`Informação Geral`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
-                    [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`], 
-                    [`Informações Agregadas`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`], 
-                    [`Holding`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/multipleTable.svg`],
+                    [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Clientes`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/clientes.svg`],
                     [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`], 
                     [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/investimentos.svg`],
                     [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/endividamento.svg`],
-                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`]
+                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`], 
+                    [`Informações Agregadas`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`], 
+                    [`Holding`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/multipleTable.svg`]
                 ]
     
                 let arrMenuOptionsSecondMenu =[
@@ -298,13 +298,13 @@
                 let arrOptionsList =[
                     [`Informação Geral`,`Informação Geral`],
                     [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
-                    [`Informações Agregadas`, `Overview`,`Volume de Negócios (€)`,`Volume de Negócios (t)`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`],
-                    [`Holding`, `Overview`,`Volume de Negócios (€)`,`Volume de Negócios (t)`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`],
                     [`Clientes`, `Global`,`Detalhado`],
                     [`Fornecedores`,`Global`,`Detalhado`],
                     [`Investimentos`,`Global`,`Detalhado`],
                     [`Endividamento`,`Global`,`Detalhado`],
                     [`OPEX`,`Global`,`Detalhado`],
+                    [`Informações Agregadas`, `Overview`,`Volume de Negócios (€)`,`Volume de Negócios (t)`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`],
+                    [`Holding`, `Overview`,`Volume de Negócios (€)`,`Volume de Negócios (t)`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`]
                 ]
 
                 let arrOptionsListSecondMenu =[
@@ -323,6 +323,21 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E9C03901B27F9C3B78B95D62016093C5/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E9C03901B27F9C3B78B95D62016093C5/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/E9C03901B27F9C3B78B95D62016093C5/?mode=present&resourceType=STORY`],
+                    [`Clientes`, 
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7F70BE056E25588E30CD527FE8962FC7/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7F70BE056E25588E30CD527FE8962FC7/?mode=present&resourceType=STORY`],
+                    [`Fornecedores`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D0A0C6056E234B26D2E001A211ABCEEB/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D0A0C6056E234B26D2E001A211ABCEEB/?mode=present&resourceType=STORY`],
+                    [`Investimentos`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B1888881F21B4466F7C4BEF8048B59F7/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B1888881F21B4466F7C4BEF8048B59F7/?mode=present&resourceType=STORY`],
+                    [`Endividamento`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D1888881F21D31B5F3D5D99287B89FEB/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D1888881F21D31B5F3D5D99287B89FEB/?mode=present&resourceType=STORY`],
+                    [`OPEX`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FCC01101B27CC2A0C349603C23F65222/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FCC01101B27CC2A0C349603C23F65222/?mode=present&resourceType=STORY`],
                     [`Informações Agregadas`, 
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/12FA18871697D2D879F811083EE91B9B/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/12FA18871697D2D879F811083EE91B9B/?mode=present&resourceType=STORY`,
@@ -338,22 +353,7 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`],
-                    [`Clientes`, 
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7F70BE056E25588E30CD527FE8962FC7/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7F70BE056E25588E30CD527FE8962FC7/?mode=present&resourceType=STORY`],
-                    [`Fornecedores`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D0A0C6056E234B26D2E001A211ABCEEB/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D0A0C6056E234B26D2E001A211ABCEEB/?mode=present&resourceType=STORY`],
-                    [`Investimentos`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B1888881F21B4466F7C4BEF8048B59F7/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B1888881F21B4466F7C4BEF8048B59F7/?mode=present&resourceType=STORY`],
-                    [`Endividamento`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D1888881F21D31B5F3D5D99287B89FEB/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D1888881F21D31B5F3D5D99287B89FEB/?mode=present&resourceType=STORY`],
-                    [`OPEX`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FCC01101B27CC2A0C349603C23F65222/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FCC01101B27CC2A0C349603C23F65222/?mode=present&resourceType=STORY`]
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`]
                 ]
                 let arrOptionsLinksSecondMenu = [
                     [`Desvio de Custos de Capital`,
@@ -373,14 +373,14 @@
 
                 let hasFlipAnimationFirstMenu = [
                     [`Informação Geral`, false],
-                    [`Volume de negócios`, false], 
-                    [`Informações Agregadas`, true], 
-                    [`Holding`, true],
+                    [`Volume de negócios`, false],
                     [`Clientes`, false],
                     [`Fornecedores`, false], 
                     [`Investimentos`, false],
                     [`Endividamento`, false],
-                    [`OPEX`, false]
+                    [`OPEX`, false], 
+                    [`Informações Agregadas`, true], 
+                    [`Holding`, true]
                 ]
 
                 let hasFlipAnimationSecondMenu = [
