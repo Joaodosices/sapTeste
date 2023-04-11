@@ -291,7 +291,7 @@
                     [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Desvio de Preço`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`],
-                    [`Contas reguladas Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
+                    [`Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
                     [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`]
                 ]
                 
@@ -311,7 +311,7 @@
                     [`Desvio de Custos de Capital`,`Desvio de Custos de Capital`],
                     [`Desvio de Preço`,`Global`,`Detalhado`],
                     [`Indutores`,`Global`,`Detalhado`],
-                    [`Contas reguladas Opex`,`Global`,`Detalhado`],
+                    [`Opex`,`Global`,`Detalhado`],
                     [`Atividades Complementares`,`Atividades Complementares`]
                 ]
 
@@ -364,7 +364,7 @@
                     [`Indutores`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C10B881F21AF9D510291F211635CA4E/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C10B881F21AF9D510291F211635CA4E/?mode=present&resourceType=STORY`],
-                    [`Contas reguladas Opex`,
+                    [`Opex`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`],
                     [`Atividades Complementares`,
@@ -380,14 +380,14 @@
                     [`Endividamento`, false],
                     [`OPEX`, false], 
                     [`Informações Agregadas`, true], 
-                    [`Holding`, true]
+                    [`Holding`, true] 
                 ]
 
                 let hasFlipAnimationSecondMenu = [
                     [`Desvio de Custos de Capital`, false],
                     [`Desvio de Preço`, false],
                     [`Indutores`, false],
-                    [`Contas reguladas Opex`, false],
+                    [`Opex`, false],
                     [`Atividades Complementares`, false]
                 ]
 
