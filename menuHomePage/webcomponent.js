@@ -515,10 +515,6 @@
     customElements.define('com-sap-sample-homepage', HomePage);
 })();
 
-function secondMenu(){
-
-}
-
 function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu) {
     var _that = that
     let buttons = _that._shadowRoot.querySelectorAll(`.optionCircle`)
