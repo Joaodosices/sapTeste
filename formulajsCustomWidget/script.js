@@ -16,6 +16,8 @@
     }
 
     let data = makeFormula("DATE", 2008, 7, 8)
+    let sum = makeFormula("SUM", [1, 2, 3])
     console.log(data)
+    console.log(sum)
 // console.log(formulajs.DATE(2008, 7, 8))
 // console.log(formulajs.SUM([1, 2, 3]))
