@@ -9,6 +9,7 @@
             }
         }
         formula = formula + ")"
+        
         // + arg1 + ", " + arg2 + ", " + arg3 + ")"
         console.log(formula)
         return eval(formula)
