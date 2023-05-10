@@ -21,6 +21,34 @@
 	"properties": {
 	},
 	"methods": {
+		"setListDimensions": {
+			"description": "Set the list of dimensions",
+			"parameters": [
+				{
+					"name": "newValue",
+					"type": "string[]",
+					"description": "The new category"
+				}
+			],
+			"body": "this.listDimensions = newValue;"
+		},
+
+		"callFunction": {
+			"description": "Call function library",
+			"parameters" : [
+				{
+					"name":"functionName",
+					"type":"string",
+					"description":"Name of the function"
+				},
+				{
+					"name":"param1",
+					"type":"any",
+					"description":"Parameter 1"
+				}
+		 	],
+		 	"body": "this.functionN name = fucntionName; this.param1 = param1;"
+		}
 	},
 	"events": {
 	}
