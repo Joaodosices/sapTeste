@@ -1,6 +1,6 @@
 // import * as formulajs from '/@formulajs/formulajs' // import entire package
     function makeFormula(typeFormula, arg1, arg2, arg3, arg4, arg5, arg6, arg7){
-        ListArguments = [arg1, arg2, arg3, arg4, arg5, arg6, arg7]
+        let ListArguments = [arg1, arg2, arg3, arg4, arg5, arg6, arg7]
         let formula = "formulajs." + typeFormula + "("
         for (let x = 0; x < ListArguments.length; x++) {
             const element = ListArguments[x];
@@ -9,7 +9,7 @@
             }
         }
         formula = formula + ")"
-        
+
         // + arg1 + ", " + arg2 + ", " + arg3 + ")"
         console.log(formula)
         return eval(formula)
