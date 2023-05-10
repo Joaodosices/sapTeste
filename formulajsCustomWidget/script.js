@@ -12,7 +12,11 @@
 
         // + arg1 + ", " + arg2 + ", " + arg3 + ")"
         console.log(formula)
-        return eval(formula)
+        try {
+            return eval(formula)
+        } catch (e) {
+            alert (e.stack)
+        }
     }
 
     let data = makeFormula("DATE", 2008, 7, 8)
