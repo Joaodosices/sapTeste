@@ -17,17 +17,18 @@
         } catch (e) {
             alert (e.stack)
         }
-        
+
     }
 
     let data = makeFormula("DATE", 2008, 7, 8)
     let sum = makeFormula("SUM", [1, 2, 3])
     let now = makeFormula("NOW")
+    let now2 = makeFormula("NOWs")
    
     
     console.log(data)
     console.log(sum)
     console.log(now)
- 
+    console.log(now2)
 // console.log(formulajs.DATE(2008, 7, 8))
 // console.log(formulajs.SUM([1, 2, 3]))
