@@ -29,9 +29,9 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection === true){
-                console.log(formulajs.DATE(2008, 7, 8))
-                console.log(formulajs.SUM([1, 2, 3]))
             }
+            console.log(formulajs.DATE(2008, 7, 8))
+            console.log(formulajs.SUM([1, 2, 3]))
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed

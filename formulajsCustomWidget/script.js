@@ -16,6 +16,7 @@
             return eval(formula)
         } catch (e) {
             alert (e.stack)
+            // console.log(e.stack)
         }
 
     }
