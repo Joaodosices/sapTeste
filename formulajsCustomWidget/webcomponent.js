@@ -28,8 +28,8 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            if (this.firstConnection === true){
-            }
+            // if (this.firstConnection === true){
+            // }
             console.log(formulajs.DATE(2008, 7, 8))
             console.log(formulajs.SUM([1, 2, 3]))
         }
