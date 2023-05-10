@@ -20,9 +20,9 @@
     let now = makeFormula("NOW")
     let imsub = makeFormula("IMSUB", "3+4i", "1+2i")
     
-    console.log(data)
-    console.log(sum)
+    // console.log(data)
+    // console.log(sum)
     console.log(now)
-    console.log(imsub)
+    // console.log(imsub)
 // console.log(formulajs.DATE(2008, 7, 8))
 // console.log(formulajs.SUM([1, 2, 3]))
