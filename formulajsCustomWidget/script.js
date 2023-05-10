@@ -15,14 +15,14 @@
         return eval(formula)
     }
 
-    // let data = makeFormula("DATE", 2008, 7, 8)
-    // let sum = makeFormula("SUM", [1, 2, 3])
-    // let now = makeFormula("NOW")
-    let IMSQRT = makeFormula("IMSQRT", "1+i")
+    let data = makeFormula("DATE", 2008, 7, 8)
+    let sum = makeFormula("SUM", [1, 2, 3])
+    let now = makeFormula("NOW")
+   
     
-    // console.log(data)
-    // console.log(sum)
-    // console.log(now)
-    console.log(IMSQRT)
+    console.log(data)
+    console.log(sum)
+    console.log(now)
+ 
 // console.log(formulajs.DATE(2008, 7, 8))
 // console.log(formulajs.SUM([1, 2, 3]))
