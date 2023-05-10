@@ -17,6 +17,7 @@
         } catch (e) {
             alert (e.stack)
         }
+        
     }
 
     let data = makeFormula("DATE", 2008, 7, 8)
