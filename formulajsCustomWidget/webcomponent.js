@@ -28,19 +28,21 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            // if (this.firstConnection === true){
-            // }
-            // var script = document.createElement('script');
-            // script.type = 'text/javascript';
-
-            // script.src = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
-            // document.appendChild(script);
+            
             var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
             loadLibrary(libraryUrl, function() {
                 // The library has been loaded, you can now use its functionality
                 // Your code here...
-                console.log(formulajs.DATE(2008, 7, 8))
-                console.log(formulajs.SUM([1, 2, 3]))
+                let data = makeFormula("DATE", 2008, 7, 8)
+                let sum = makeFormula("SUM", [1, 2, 3])
+                let now = makeFormula("NOW")
+                // let now2 = makeFormula("NOWs")
+            
+                
+                console.log(data)
+                console.log(sum)
+                console.log(now)
+                // console.log(now2)
               });
         }
         
@@ -67,3 +69,25 @@ function loadLibrary(url, callback) {
   
     document.head.appendChild(script);
   }
+
+  function makeFormula(typeFormula, arg1, arg2, arg3, arg4, arg5, arg6, arg7){
+    let ListArguments = [arg1, arg2, arg3, arg4, arg5, arg6, arg7]
+    let formula = "formulajs." + typeFormula + "("
+    for (let x = 0; x < ListArguments.length; x++) {
+        const element = ListArguments[x];
+        if (element != null) {
+            formula = formula + element + ", "
+        }
+    }
+    formula = formula + ")"
+
+    // + arg1 + ", " + arg2 + ", " + arg3 + ")"
+    console.log(formula)
+    try {
+        return eval(formula)
+    } catch (e) {
+        alert (e.stack)
+        // console.log(e.stack)
+    }
+
+}
