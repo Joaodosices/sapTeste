@@ -30,6 +30,11 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             // if (this.firstConnection === true){
             // }
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+
+            script.src = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
+            this._shadowRoot.document.body.appendChild(script);
             console.log(formulajs.DATE(2008, 7, 8))
             console.log(formulajs.SUM([1, 2, 3]))
         }
