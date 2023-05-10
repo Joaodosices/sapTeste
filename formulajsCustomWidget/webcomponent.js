@@ -30,13 +30,18 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             // if (this.firstConnection === true){
             // }
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
+            // var script = document.createElement('script');
+            // script.type = 'text/javascript';
 
-            script.src = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
-            document.appendChild(script);
-            console.log(formulajs.DATE(2008, 7, 8))
-            console.log(formulajs.SUM([1, 2, 3]))
+            // script.src = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
+            // document.appendChild(script);
+            var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
+            loadLibrary(libraryUrl, function() {
+                // The library has been loaded, you can now use its functionality
+                // Your code here...
+                console.log(formulajs.DATE(2008, 7, 8))
+                console.log(formulajs.SUM([1, 2, 3]))
+              });
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
@@ -48,3 +53,17 @@
     };
     customElements.define('com-sap-sample-formulajs', FormulaJS);
 })();
+
+function loadLibrary(url, callback) {
+    var script = document.createElement('script');
+    script.src = url;
+  
+    script.onload = function() {
+      // Library has been loaded successfully
+      if (typeof callback === 'function') {
+        callback();
+      }
+    };
+  
+    document.head.appendChild(script);
+  }
