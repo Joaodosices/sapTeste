@@ -149,8 +149,10 @@ function loadLibrary(url, callback) {
     let formula = "formulajs." + typeFormula + "("
     for (let x = 0; x < ListArguments.length; x++) {
         const element = ListArguments[x];
-        if (element != null) {
-            formula = formula + element + ", "
+        if (element != "-") {
+            if (element != null) {
+                formula = formula + element + ", "
+            }
         }
     }
     formula = formula + ")"

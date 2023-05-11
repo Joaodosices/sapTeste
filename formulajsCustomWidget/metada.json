@@ -6,7 +6,7 @@
 	"license": "",
 	"id": "com.sap.sample.formulajscustomwidget",
 	"newInstancePrefix": "FormulaJSCustomWidget",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAAb1BMVEX///+ZmZl4dXdBPj9hYGGOjpE6ODo8OjwvLC0lISIpJSaMiooyLzH/cjMxLi9GREb/ZSk2MzV9fX1MSks4NjcrJyn/WR9ycnJRT1AtKiv/TRVdXF1ra2v7VCfJyMk+PD6tra+rqqtUUlU0MTNqaGpjxDg2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKhJREFUGNM9z9EagiAMBeDpEGkWNAGhqFTq/Z8xwK/+q7PtZgeg6npEMcBPJ0d1Kmg6ZnFGRZcLESnR7tpoouuVSCPPZYHWee+XxTsrvQeYQrwV97tL5uZigMeoqucTUSnWEVBX4fWaW2BYz1W3bXsLDPldcD8MoYZ3glmMjNbGLJk5igDgnLTGHazdAPo1Gdms2bZXhRmbMuNR5rNWJuX075sMYg57jV94IQ2Xqt1atQAAAABJRU5ErkJggg==",
 	"imports": [ "input-controls" ],
 	"webcomponents": [
@@ -27,52 +27,40 @@
 		"param1": {
 			"type": "any",
 			"description": "Parameter 1",
-			"default" : ""
+			"default" : "-"
 		},
 		"param2": {
 			"type": "any",
 			"description": "Parameter 2",
-			"default" : ""
+			"default" : "-"
 		},
 		"param3": {
 			"type": "any",
 			"description": "Parameter 3",
-			"default" : ""
+			"default" : "-"
 		},
 		"param4": {
 			"type": "any",
 			"description": "Parameter 4",
-			"default" : ""
+			"default" : "-"
 		},
 		"param5": {
 			"type": "any",
 			"description": "Parameter 5",
-			"default" : ""
+			"default" : "-"
 		},
 		"param6": {
 			"type": "any",
 			"description": "Parameter 6",
-			"default" : ""
+			"default" : "-"
 		},
 		"param7": {
 			"type": "any",
 			"description": "Parameter 7",
-			"default" : ""
+			"default" : "-"
 		}
 	},
 	"methods": {
-		"setListDimensions": {
-			"description": "Set the list of dimensions",
-			"parameters": [
-				{
-					"name": "newValue",
-					"type": "string[]",
-					"description": "The new category"
-				}
-			],
-			"body": "this.listDimensions = newValue;"
-		},
-
 		"callFunction": {
 			"description": "Call function library",
 			"parameters" : [
@@ -109,11 +97,15 @@
 				{
 					"name":"param6",
 					"type":"any",
+					"description":"Parameter 6"
+				},
+				{
+					"name":"param7",
+					"type":"any",
 					"description":"Parameter 7"
 				}
-				
 		 	],
-		 	"body": "this.functionN = fucntionName; this.param1 = param1; this.param2 = param2; this.param3 = param3; this.param4 = param4; this.param5 = param5; this.param6 = param6; this.param7 = param7;"
+		 	"body": "this.functionN = functionName; this.param1 = param1; this.param2 = param2; this.param3 = param3; this.param4 = param4; this.param5 = param5; this.param6 = param6; this.param7 = param7;"
 		}
 	},
 	"events": {
