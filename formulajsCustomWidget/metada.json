@@ -19,6 +19,46 @@
         }
     ],
 	"properties": {
+		"functionN": {
+			"type": "string",
+			"description": "Name of the FormulaJS calculation",
+			"default" : ""
+		},
+		"param1": {
+			"type": "any",
+			"description": "Parameter 1",
+			"default" : ""
+		},
+		"param2": {
+			"type": "any",
+			"description": "Parameter 2",
+			"default" : ""
+		},
+		"param3": {
+			"type": "any",
+			"description": "Parameter 3",
+			"default" : ""
+		},
+		"param4": {
+			"type": "any",
+			"description": "Parameter 4",
+			"default" : ""
+		},
+		"param5": {
+			"type": "any",
+			"description": "Parameter 5",
+			"default" : ""
+		},
+		"param6": {
+			"type": "any",
+			"description": "Parameter 6",
+			"default" : ""
+		},
+		"param7": {
+			"type": "any",
+			"description": "Parameter 7",
+			"default" : ""
+		}
 	},
 	"methods": {
 		"setListDimensions": {
@@ -45,9 +85,35 @@
 					"name":"param1",
 					"type":"any",
 					"description":"Parameter 1"
+				},
+				{
+					"name":"param2",
+					"type":"any",
+					"description":"Parameter 2"
+				},
+				{
+					"name":"param3",
+					"type":"any",
+					"description":"Parameter 3"
+				},
+				{
+					"name":"param4",
+					"type":"any",
+					"description":"Parameter 4"
+				},
+				{
+					"name":"param5",
+					"type":"any",
+					"description":"Parameter 5"
+				},
+				{
+					"name":"param6",
+					"type":"any",
+					"description":"Parameter 7"
 				}
+				
 		 	],
-		 	"body": "this.functionN name = fucntionName; this.param1 = param1;"
+		 	"body": "this.functionN = fucntionName; this.param1 = param1; this.param2 = param2; this.param3 = param3; this.param4 = param4; this.param5 = param5; this.param6 = param6; this.param7 = param7;"
 		}
 	},
 	"events": {

@@ -11,6 +11,14 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.firstConnection = false;
+            this._functionN = ""
+            this._param1
+            this._param2
+            this._param3
+            this._param4
+            this._param5
+            this._param6
+            this._param7
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -33,16 +41,20 @@
             loadLibrary(libraryUrl, function() {
                 // The library has been loaded, you can now use its functionality
                 // Your code here...
-                let data = makeFormula("DATE", 2008, 7, 8)
-                let sum = makeFormula("SUM", [1, 2, 3])
-                let now = makeFormula("NOW")
-                // let now2 = makeFormula("NOWs")
-            
-                
-                console.log(data)
-                console.log(sum)
-                console.log(now)
-                // console.log(now2)
+                if (this._functionN.length > 0) {
+                    let formula = makeFormula(this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
+                  
+                    console.log(formula)
+
+                    this._functionN = ""
+                    this._param1 = ""
+                    this._param2 = ""
+                    this._param3 = ""
+                    this._param4 = ""
+                    this._param5 = ""
+                    this._param6 = "" 
+                    this._param7 = ""
+                }
               });
         }
         
@@ -51,7 +63,69 @@
         }
 
         //Getters and Setters
-        
+        get functionN() {
+            return this._functionN;
+        }
+
+        set functionN(value) {
+            this._functionN = value;
+        }
+
+        get param1() {
+            return this._param1;
+        }
+
+        set param1(value) {
+            this._param1 = value;
+        }
+
+        get param2() {
+            return this._param2;
+        }
+
+        set param2(value) {
+            this._param2 = value;
+        }
+
+        get param3() {
+            return this._param3;
+        }
+
+        set param3(value) {
+            this._param3 = value;
+        }
+
+        get param4() {
+            return this._param4;
+        }
+
+        set param4(value) {
+            this._param4 = value;
+        }
+
+        get param5() {
+            return this._param5;
+        }
+
+        set param5(value) {
+            this._param5 = value;
+        }
+
+        get param6() {
+            return this._param6;
+        }
+
+        set param6(value) {
+            this._param6 = value;
+        }
+
+        get param7() {
+            return this._param7;
+        }
+
+        set param7(value) {
+            this._param7 = value;
+        }
     };
     customElements.define('com-sap-sample-formulajs', FormulaJS);
 })();
