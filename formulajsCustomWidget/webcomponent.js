@@ -41,11 +41,6 @@
             loadLibrary(libraryUrl, () => {
                 // The library has been loaded, you can now use its functionality
                 // Your code here...
-                console.log(this.firstConnection)
-                console.log("TESTEEEE")
-                console.log(this._functionN)
-                console.log(this._functionN.length)
-                
         
                 if (this._functionN != "-") {
                     let formula = makeFormula(this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
