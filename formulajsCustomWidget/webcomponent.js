@@ -47,6 +47,7 @@
                     let formula = makeFormula(this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
                   
                     this._result = formula
+                    console.log(formula)
 
                     this._functionN = "-"
                     this._param1 = "-"
