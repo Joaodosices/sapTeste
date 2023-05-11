@@ -11,14 +11,14 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.firstConnection = false;
-            this._functionN = ""
-            this._param1
-            this._param2
-            this._param3
-            this._param4
-            this._param5
-            this._param6
-            this._param7
+            this._functionN = "";
+            this._param1 = "-";
+            this._param2 = "-";
+            this._param3 = "-";
+            this._param4 = "-";
+            this._param5 = "-";
+            this._param6 = "-";
+            this._param7 = "-";
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -36,8 +36,8 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            
-            var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
+            if (this.firstConnection = true) {
+                var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
             loadLibrary(libraryUrl, function() {
                 // The library has been loaded, you can now use its functionality
                 // Your code here...
@@ -60,6 +60,7 @@
                     this._param7 = ""
                 }
               });
+            }
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
