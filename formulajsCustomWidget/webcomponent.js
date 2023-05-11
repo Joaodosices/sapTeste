@@ -19,7 +19,7 @@
             this._param5 = "-";
             this._param6 = "-";
             this._param7 = "-";
-            this._result = "-"
+            this._result;
         }
 
         //Fired when the widget is added to the html DOM of the page
