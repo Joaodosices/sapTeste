@@ -20,6 +20,7 @@
             this._param6 = "-";
             this._param7 = "-";
             this._result;
+            this._result2;
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -48,7 +49,8 @@
                   
                     console.log(formula)
                     // this._result = formula
-                    console.log(this._result)
+                    this._result2 = formula
+                    console.log(this._result2)
 
                     this._functionN = "-"
                     this._param1 = "-"
