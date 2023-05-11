@@ -40,7 +40,7 @@
             if (this.firstConnection = true) {
                 var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
             loadLibrary(libraryUrl, () => {
-                
+
                 // Your code here...
         
                 if (this._functionN != "-") {
@@ -170,13 +170,10 @@ function loadLibrary(url, callback) {
     }
     formula = formula + ")"
 
-    // + arg1 + ", " + arg2 + ", " + arg3 + ")"
-    console.log(formula)
     try {
         return eval(formula)
     } catch (e) {
         return e.stack
-        // console.log(e.stack)
     }
 
 }

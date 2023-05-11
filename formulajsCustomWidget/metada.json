@@ -60,9 +60,9 @@
 			"default" : "-"
 		},
 		"result": {
-			"type": "string",
+			"type": "any",
 			"description": "Result of the formula",
-			"default" : "-"
+			"default" : ""
 		}
 	},
 	"methods": {
@@ -115,7 +115,7 @@
 		"getResult": {
 			"description": "Return the value of the formula",
 			"body": "return this.result;",
-			"returnType": "string"
+			"returnType": "any"
 		}
 	},
 	"events": {
