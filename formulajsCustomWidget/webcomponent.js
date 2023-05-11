@@ -19,6 +19,7 @@
             this._param5 = "-";
             this._param6 = "-";
             this._param7 = "-";
+            this._result = "-"
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -45,7 +46,7 @@
                 if (this._functionN != "-") {
                     let formula = makeFormula(this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
                   
-                    console.log(formula)
+                    this._result = formula
 
                     this._functionN = "-"
                     this._param1 = "-"
@@ -128,6 +129,14 @@
         set param7(value) {
             this._param7 = value;
         }
+
+        get result() {
+            return this._result;
+        }
+
+        set result(value) {
+            this._result = value;
+        }
     };
     customElements.define('com-sap-sample-formulajs', FormulaJS);
 })();
@@ -164,7 +173,7 @@ function loadLibrary(url, callback) {
     try {
         return eval(formula)
     } catch (e) {
-        alert (e.stack)
+        return e.stack
         // console.log(e.stack)
     }
 
