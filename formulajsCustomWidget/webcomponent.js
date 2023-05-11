@@ -49,8 +49,8 @@
                   
                     console.log(formula)
                     // this._result = formula
-                    this._result2 = formula
-                    console.log(this._result2)
+                    this._result = formula
+                    console.log(this._result)
 
                     this._functionN = "-"
                     this._param1 = "-"
