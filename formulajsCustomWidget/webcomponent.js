@@ -40,7 +40,6 @@
             if (this.firstConnection = true) {
                 var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
             loadLibrary(libraryUrl, () => {
-                // The library has been loaded, you can now use its functionality
                 // Your code here...
         
                 if (this._functionN != "-") {
