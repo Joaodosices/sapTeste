@@ -11,7 +11,7 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.firstConnection = false;
-            this._functionN = "";
+            this._functionN = "-";
             this._param1 = "-";
             this._param2 = "-";
             this._param3 = "-";
@@ -45,19 +45,19 @@
                 console.log(this._functionN)
                 console.log(this._functionN.length)
         
-                if (this._functionN.length > 0) {
+                if (this._functionN != "-") {
                     let formula = makeFormula(this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
                   
                     console.log(formula)
 
-                    this._functionN = ""
-                    this._param1 = ""
-                    this._param2 = ""
-                    this._param3 = ""
-                    this._param4 = ""
-                    this._param5 = ""
-                    this._param6 = "" 
-                    this._param7 = ""
+                    this._functionN = "-"
+                    this._param1 = "-"
+                    this._param2 = "-"
+                    this._param3 = "-"
+                    this._param4 = "-"
+                    this._param5 = "-"
+                    this._param6 = "-" 
+                    this._param7 = "-"
                 }
               });
             }
