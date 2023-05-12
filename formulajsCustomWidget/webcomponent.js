@@ -19,8 +19,7 @@
             this._param5 = "-";
             this._param6 = "-";
             this._param7 = "-";
-            this._result;
-            this._result2;
+            this._result = "";
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -49,8 +48,7 @@
                   
                     console.log(formula)
                     // this._result = formula
-                    this._result = formula
-                    this.setResult(this._result)
+                    this.setResult(formula)
                     console.log("()this._result: " + this._result)
 
                     this._functionN = "-"
@@ -144,20 +142,28 @@
         }
         
         setResult(newResult){
+            this._result = newResult
             // fire "properties changed"
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
             detail: {
                 properties: {
-                    text: newResult
+                    text: this._result
                 }
             }
             }));
+
         }
 
         getResult(){
             return this._result;
         }
 		// "body": "return this.result;",
+        // ,
+		// "result": {
+		// 	"type": "string",
+		// 	"description": "Result of the formula",
+		// 	"default" : ""
+		// }
     };
     customElements.define('com-sap-sample-formulajs', FormulaJS);
 })();
