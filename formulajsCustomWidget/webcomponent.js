@@ -19,7 +19,7 @@
             this._param5 = "-";
             this._param6 = "-";
             this._param7 = "-";
-            this._result = " ";
+            this._result = "xx";
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -47,8 +47,8 @@
                     let formula = makeFormula(this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
                   
                     // console.log(formula)
-                    // this._result = formula
-                    this.setResult(formula)
+                    this._result = formula
+                    this.setResult(this._result)
                     // console.log("()this._result: " + this._result)
 
                     this._functionN = "-"
