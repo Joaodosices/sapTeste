@@ -39,7 +39,7 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection = true) {
                 var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
-            loadLibrary(libraryUrl, () => {
+                loadLibrary(libraryUrl, () => {
 
                 // Your code here...
         
@@ -138,11 +138,11 @@
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
             detail: {
                 properties: {
-                    text: this._result
+                    result: this._result
                 }
             }
             }));
-
+            // text: this._result
         }
 
         getResult(){
