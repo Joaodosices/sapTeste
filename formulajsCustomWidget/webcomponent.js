@@ -48,6 +48,7 @@
                   
                     // console.log(formula)
                     this._result = formula
+                    console.log("this._result:" + this._result)
                     this.setResult(this._result)
                     // console.log("()this._result: " + this._result)
 
