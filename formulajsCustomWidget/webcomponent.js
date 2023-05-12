@@ -141,6 +141,11 @@
         set result(value) {
             this._result = value;
         }
+        
+        getResult(){
+            return this._result;
+        }
+		// "body": "return this.result;",
     };
     customElements.define('com-sap-sample-formulajs', FormulaJS);
 })();

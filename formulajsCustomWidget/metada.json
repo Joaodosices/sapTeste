@@ -114,7 +114,6 @@
 		},
 		"getResult": {
 			"description": "Return the value of the formula",
-			"body": "return this.result;",
 			"returnType": "string"
 		}
 	},
