@@ -20,6 +20,7 @@
             this._param6 = "-";
             this._param7 = "-";
             this._result = "banana";
+            this.isFormulaMade = false;
         }
 
         //Fired when the widget is added to the html DOM of the page
@@ -48,6 +49,7 @@
                   
                     console.log(formula)
                     this._result = formula
+                    this.isFormulaMade = true;
                     // console.log("this._result:" + this._result)
                     this.setResult(this._result)
                     
@@ -147,16 +149,18 @@
         }
 
         getResult(){
-            this._functionN = "-"
-            this._param1 = "-"
-            this._param2 = "-"
-            this._param3 = "-"
-            this._param4 = "-"
-            this._param5 = "-"
-            this._param6 = "-" 
-            this._param7 = "-"
-            console.log("getResult this._result:" + this._result)
-            return this._result;
+            if (this.isFormulaMade === true) {
+                this._functionN = "-"
+                this._param1 = "-"
+                this._param2 = "-"
+                this._param3 = "-"
+                this._param4 = "-"
+                this._param5 = "-"
+                this._param6 = "-" 
+                this._param7 = "-"
+                console.log("getResult this._result:" + this._result)
+                return this._result;
+            }
         }
 		// "body": "return this.result;",
         // ,
