@@ -48,7 +48,7 @@
                   
                     // console.log(formula)
                     this._result = formula
-                    console.log("this._result:" + this._result)
+                    // console.log("this._result:" + this._result)
                     this.setResult(this._result)
                 }
               });
@@ -154,6 +154,7 @@
             this._param5 = "-"
             this._param6 = "-" 
             this._param7 = "-"
+            console.log("getResult this._result:" + this._result)
             return this._result;
         }
 		// "body": "return this.result;",
