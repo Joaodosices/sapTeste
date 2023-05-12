@@ -50,7 +50,8 @@
                     console.log(formula)
                     // this._result = formula
                     this._result = formula
-                    console.log("this._result: " + this._result)
+                    this.setResult(this._result)
+                    console.log("()this._result: " + this._result)
 
                     this._functionN = "-"
                     this._param1 = "-"
@@ -142,6 +143,17 @@
             this._result = value;
         }
         
+        setResult(newResult){
+            // fire "properties changed"
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+            detail: {
+                properties: {
+                    text: newResult
+                }
+            }
+            }));
+        }
+
         getResult(){
             return this._result;
         }
