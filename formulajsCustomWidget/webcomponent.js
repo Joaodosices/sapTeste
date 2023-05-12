@@ -50,6 +50,14 @@
                     this._result = formula
                     // console.log("this._result:" + this._result)
                     this.setResult(this._result)
+                    this._functionN = "-"
+                    this._param1 = "-"
+                    this._param2 = "-"
+                    this._param3 = "-"
+                    this._param4 = "-"
+                    this._param5 = "-"
+                    this._param6 = "-" 
+                    this._param7 = "-"
                 }
               });
             }
@@ -145,18 +153,18 @@
             // text: this._result
         }
 
-        getResult(){
-            this._functionN = "-"
-            this._param1 = "-"
-            this._param2 = "-"
-            this._param3 = "-"
-            this._param4 = "-"
-            this._param5 = "-"
-            this._param6 = "-" 
-            this._param7 = "-"
-            console.log("getResult this._result:" + this._result)
-            return this._result;
-        }
+        // getResult(){
+            // this._functionN = "-"
+            // this._param1 = "-"
+            // this._param2 = "-"
+            // this._param3 = "-"
+            // this._param4 = "-"
+            // this._param5 = "-"
+            // this._param6 = "-" 
+            // this._param7 = "-"
+        //     console.log("getResult this._result:" + this._result)
+        //     return this._result;
+        // }
 		// "body": "return this.result;",
         // ,
 		// "result": {

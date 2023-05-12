@@ -116,7 +116,8 @@
 			"parameters": [{"name": "newResult", "type": "string"}]
 		},
 		"getResult": {
-			"returnType": "string"
+			"returnType": "string",
+			"body": "return this.result;"
 		}
 	},
 	"events": {
