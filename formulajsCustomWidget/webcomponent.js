@@ -154,9 +154,9 @@
                   
                     console.log(formula)
                     this._result = formula
-                    this.isFormulaMade = true;
+                    // this.isFormulaMade = true;
                     // console.log("this._result:" + this._result)
-                    this.setResult(this._result)
+                    // this.setResult(this._result)
                     
                 }
               });
@@ -165,21 +165,21 @@
 		// "setResult": {
 		// 	"parameters": [{"name": "newResult", "type": "string"}]
 		// }
-        setResult(newResult){
-            this._result = newResult
-            // fire "properties changed"
-            this.dispatchEvent(new CustomEvent("propertiesChanged", {
-            detail: {
-                properties: {
-                    result: this._result
-                }
-            }
-            }));
-            // text: this._result
-        }
+        // setResult(newResult){
+        //     this._result = newResult
+        //     // fire "properties changed"
+        //     this.dispatchEvent(new CustomEvent("propertiesChanged", {
+        //     detail: {
+        //         properties: {
+        //             result: this._result
+        //         }
+        //     }
+        //     }));
+        //     // text: this._result
+        // }
 
         getResult(){
-            if (this.isFormulaMade === true) {
+            // if (this.isFormulaMade === true) {
                 this._functionN = "-"
                 this._param1 = "-"
                 this._param2 = "-"
@@ -190,9 +190,9 @@
                 this._param7 = "-"
                 console.log("getResult this._result:" + this._result)
                 return this._result;
-            } else {
-                console.log("FALHOU")
-            }
+            // } else {
+            //     console.log("FALHOU")
+            // }
         }
 		// "body": "return this.result;",
         // ,
