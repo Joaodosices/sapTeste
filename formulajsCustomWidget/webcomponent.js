@@ -39,22 +39,22 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this.firstConnection = true) {
-                var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
-                loadLibrary(libraryUrl, () => {
+            //     var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
+            //     loadLibrary(libraryUrl, () => {
 
-                // Your code here...
+            //     // Your code here...
         
-                if (this._functionN != "-") {
-                    let formula = makeFormula(this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
+            //     if (this._functionN != "-") {
+            //         let formula = makeFormula(this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
                   
-                    console.log(formula)
-                    this._result = formula
-                    this.isFormulaMade = true;
-                    // console.log("this._result:" + this._result)
-                    this.setResult(this._result)
+            //         console.log(formula)
+            //         this._result = formula
+            //         this.isFormulaMade = true;
+            //         // console.log("this._result:" + this._result)
+            //         this.setResult(this._result)
                     
-                }
-              });
+            //     }
+            //   });
             }
         }
         
@@ -134,7 +134,37 @@
         set result(value) {
             this._result = value;
         }
+
+        callFunction(functionN, param1, param2, param3, param4, param5, param6, param7){
+            this._functionN = functionN;
+            this._param1 = param1;
+            this._param2 = param2;
+            this._param3 = param3;
+            this._param4 = param4;
+            this._param5 = param5;
+            this._param6 = param6;
+            this._param7 = param7;
+            var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
+                loadLibrary(libraryUrl, () => {
+
+                // Your code here...
         
+                if (this._functionN != "-") {
+                    let formula = makeFormula(this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
+                  
+                    console.log(formula)
+                    this._result = formula
+                    this.isFormulaMade = true;
+                    // console.log("this._result:" + this._result)
+                    this.setResult(this._result)
+                    
+                }
+              });
+        }
+        // ,
+		// "setResult": {
+		// 	"parameters": [{"name": "newResult", "type": "string"}]
+		// }
         setResult(newResult){
             this._result = newResult
             // fire "properties changed"
