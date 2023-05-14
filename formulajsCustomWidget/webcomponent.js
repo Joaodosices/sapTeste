@@ -136,6 +136,7 @@
         }
 
         callFunction(functionN, param1, param2, param3, param4, param5, param6, param7){
+            console.log("CALLFUNCTION ESTA A FUNCIONAR POW")
             this._functionN = functionN;
             this._param1 = param1;
             this._param2 = param2;
@@ -161,6 +162,9 @@
                 }
               });
         }
+        // ,
+		//  	"body": "this.functionN = functionN; this.param1 = param1; this.param2 = param2; this.param3 = param3; this.param4 = param4; this.param5 = param5; this.param6 = param6; this.param7 = param7;"
+		
         // ,
 		// "setResult": {
 		// 	"parameters": [{"name": "newResult", "type": "string"}]
