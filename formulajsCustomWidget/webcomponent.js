@@ -191,7 +191,7 @@
                 console.log("getResult this._result:" + this._result)
                 return this._result;
             } else {
-                console.log(FALHOU)
+                console.log("FALHOU")
             }
         }
 		// "body": "return this.result;",
