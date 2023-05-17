@@ -170,7 +170,7 @@
         getResult(){
             // if (this.isFormulaMade === true) {
                 var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
-                loadLibrary(libraryUrl, () => {
+                loadLibrary(libraryUrl,this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7, () => {
                     console.log("BIBLIOTECA CARREGADA")
                     
                 // Your code here...
@@ -212,7 +212,7 @@
     customElements.define('com-sap-sample-formulajs', FormulaJS);
 })();
 
- function loadLibrary(url, callback) {
+ function loadLibrary(url, functionN, param1, param2, param3, param4, param5, param6, param7, callback) {
     var script = document.createElement('script');
     script.src = url;
   
