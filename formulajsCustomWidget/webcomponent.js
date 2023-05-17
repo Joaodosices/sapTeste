@@ -167,10 +167,11 @@
         //     // text: this._result
         // }
 
-        getResult(){
+        async getResult(){
             // if (this.isFormulaMade === true) {
                 var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
-                loadLibrary(libraryUrl, () => {
+                await loadLibrary(libraryUrl, () => {
+                    console.log("BIBLIOTECA CARREGADA")
                     console.log("BIBLIOTECA CARREGADA")
                 // Your code here...
         
@@ -211,7 +212,7 @@
     customElements.define('com-sap-sample-formulajs', FormulaJS);
 })();
 
-function loadLibrary(url, callback) {
+async function loadLibrary(url, callback) {
     var script = document.createElement('script');
     script.src = url;
   
