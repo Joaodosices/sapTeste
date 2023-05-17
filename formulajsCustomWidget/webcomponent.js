@@ -136,7 +136,7 @@
         }
 
         callFunction(functionN, param1, param2, param3, param4, param5, param6, param7){
-            console.log("CALLFUNCTION ESTA A FUNCIONAR POW")
+            console.log("call function: " + functionN, param1, param2, param3, param4, param5, param6, param7)
             this._functionN = functionN;
             this._param1 = param1;
             this._param2 = param2;
@@ -184,6 +184,7 @@
 
         getResult(){
             // if (this.isFormulaMade === true) {
+                console.log("get Result: " + this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
                 this._functionN = "-"
                 this._param1 = "-"
                 this._param2 = "-"
