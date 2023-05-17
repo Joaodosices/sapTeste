@@ -172,13 +172,13 @@
                 var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
                 await loadLibrary(libraryUrl, () => {
                     console.log("BIBLIOTECA CARREGADA")
-                    console.log("BIBLIOTECA CARREGADA")
+                    
                 // Your code here...
         
                 if (this._functionN != "-") {
                     let formula = makeFormula(this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
                   
-                    console.log(formula)
+                    console.log("formula:" + formula)
                     this._result = formula
                     // this.isFormulaMade = true;
                     console.log("this._result:" + this._result)
@@ -216,10 +216,10 @@ async function loadLibrary(url, callback) {
     var script = document.createElement('script');
     script.src = url;
   
-    script.onload = function() {
+    script.onload = async function() {
       // Library has been loaded successfully
       if (typeof callback === 'function') {
-        callback();
+        await callback();
       }
     };
   
