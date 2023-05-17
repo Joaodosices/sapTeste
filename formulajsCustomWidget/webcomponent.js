@@ -145,7 +145,31 @@
             this._param5 = param5;
             this._param6 = param6;
             this._param7 = param7;
-            var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
+            
+        }
+        // ,
+		//  	"body": "this.functionN = functionN; this.param1 = param1; this.param2 = param2; this.param3 = param3; this.param4 = param4; this.param5 = param5; this.param6 = param6; this.param7 = param7;"
+		
+        // ,
+		// "setResult": {
+		// 	"parameters": [{"name": "newResult", "type": "string"}]
+		// }
+        // setResult(newResult){
+        //     this._result = newResult
+        //     // fire "properties changed"
+        //     this.dispatchEvent(new CustomEvent("propertiesChanged", {
+        //     detail: {
+        //         properties: {
+        //             result: this._result
+        //         }
+        //     }
+        //     }));
+        //     // text: this._result
+        // }
+
+        getResult(){
+            // if (this.isFormulaMade === true) {
+                var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
                 loadLibrary(libraryUrl, () => {
 
                 // Your code here...
@@ -157,33 +181,10 @@
                     this._result = formula
                     // this.isFormulaMade = true;
                     console.log("this._result:" + this._result)
-                    this.setResult(this._result)
+                    // this.setResult(this._result)
                     
                 }
               });
-        }
-        // ,
-		//  	"body": "this.functionN = functionN; this.param1 = param1; this.param2 = param2; this.param3 = param3; this.param4 = param4; this.param5 = param5; this.param6 = param6; this.param7 = param7;"
-		
-        // ,
-		// "setResult": {
-		// 	"parameters": [{"name": "newResult", "type": "string"}]
-		// }
-        setResult(newResult){
-            this._result = newResult
-            // fire "properties changed"
-            this.dispatchEvent(new CustomEvent("propertiesChanged", {
-            detail: {
-                properties: {
-                    result: this._result
-                }
-            }
-            }));
-            // text: this._result
-        }
-
-        getResult(){
-            // if (this.isFormulaMade === true) {
                 console.log("get Result: " + this._functionN, this._param1, this._param2, this._param3, this._param4, this._param5, this._param6, this._param7)
                 this._functionN = "-"
                 this._param1 = "-"
