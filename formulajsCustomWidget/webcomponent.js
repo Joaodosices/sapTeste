@@ -171,7 +171,7 @@
             // if (this.isFormulaMade === true) {
                 var libraryUrl = 'https://cdn.jsdelivr.net/npm/@formulajs/formulajs/lib/browser/formula.min.js';
                 loadLibrary(libraryUrl, () => {
-
+                    console.log("BIBLIOTECA CARREGADA")
                 // Your code here...
         
                 if (this._functionN != "-") {
