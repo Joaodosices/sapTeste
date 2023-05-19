@@ -482,7 +482,9 @@
                 totalText = ``
                 var optionSelected = ``
                 var optionsShown = []
+
                 this._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].style.display = "none"
+                
                 events(optionSelected, this, hasSecondMenu, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu)
                 window.addEventListener(`resize`, () => {
                     if (window.innerWidth >= 1288){
