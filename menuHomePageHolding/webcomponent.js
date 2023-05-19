@@ -459,7 +459,7 @@
                 totalText = ``
                 var optionSelected = ``
                 var optionsShown = []
-                events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu)
+                events(optionSelected, this, arrOptionsList, hasSecondMenu, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu)
                 window.addEventListener(`resize`, () => {
                     if (window.innerWidth >= 1288){
                         this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px 231px"
@@ -489,7 +489,7 @@
     customElements.define('com-sap-sample-homepageholding', HomePage);
 })();
 
-function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu) {
+function events(optionSelected, that, hasSecondMenu, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu) {
     var _that = that
     let buttons = _that._shadowRoot.querySelectorAll(`.optionCircle`)
     let buttonsArea = _that._shadowRoot.querySelectorAll(`.areaOption`)
@@ -569,7 +569,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             
         }
     })
-    }
+    } 
     //Btn que abre o primeiro menu 
     _that._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].addEventListener(`click`, ()=>{
         for (let o = 0; o < buttons.length; o++) {
