@@ -441,6 +441,7 @@
                     totalText = totalText + tempText
                     tempText = ``
                 }
+                if (hasSecondMenu === true) {
                 tempText = `
                     <div class='card areaOption btnFirstMenuArea'>
                         <div class='optionCircle btnFirstMenu'>
@@ -451,7 +452,7 @@
                         </div>
                     </div>
                 `
-                
+                }
                 totalText = totalText + tempText
                 tempText = ``
 
