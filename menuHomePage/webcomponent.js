@@ -528,7 +528,7 @@ function events(optionSelected, that, hasSecondMenu, arrOptionsLinks, arrMenuOpt
         const element = buttons[i];
         element.addEventListener(`click`, ()=>{
             console.log(i)
-            if (_that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display === `none`) {
+            if (_that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display === `none` && hasSecondMenu === true) {
                 console.log(`Escolhi uma opção do segundo menu!`)
 
                 for (let n = 0; n < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; n++) {
