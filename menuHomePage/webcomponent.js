@@ -418,7 +418,7 @@
                     tempText = ``
                 }
 
-                if (hasSecondMenu === true) {
+                // if (hasSecondMenu === true) {
                 tempText = `
                     <div class='card areaOption btnSecondMenuArea'>
                         <div class='optionCircle btnSecondMenu'>
@@ -429,7 +429,7 @@
                         </div>
                     </div>
                 `
-                }
+                // }
                 totalText = totalText + tempText
                 tempText = ``
 
@@ -462,7 +462,7 @@
                     totalText = totalText + tempText
                     tempText = ``
                 }
-                if (hasSecondMenu === true) {
+                // if (hasSecondMenu === true) {
                 tempText = `
                     <div class='card areaOption btnFirstMenuArea'>
                         <div class='optionCircle btnFirstMenu'>
@@ -473,7 +473,7 @@
                         </div>
                     </div>
                 `
-                }
+                // }
 
                 totalText = totalText + tempText
                 tempText = ``
@@ -568,7 +568,7 @@ function events(optionSelected, that, hasSecondMenu, arrOptionsLinks, arrMenuOpt
             }
         })
     }
-    if (hasSecondMenu === true) {
+    // if (hasSecondMenu === true) {
         //Btn que abre o segundo menu
         _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].addEventListener(`click`, ()=>{
             for (let o = 0; o < buttons.length; o++) {
@@ -615,7 +615,7 @@ function events(optionSelected, that, hasSecondMenu, arrOptionsLinks, arrMenuOpt
             }
         })
     }
-}
+// }
 
 function setBreakpoint(that) {
     let _that = that
