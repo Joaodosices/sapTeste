@@ -547,6 +547,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
     }
 
     //Btn que abre o segundo menu
+    if (hasSecondMenu === true) {
     _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].addEventListener(`click`, ()=>{
         for (let o = 0; o < buttons.length; o++) {
             _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "100%"
@@ -568,7 +569,7 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             
         }
     })
-
+    }
     //Btn que abre o primeiro menu 
     _that._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].addEventListener(`click`, ()=>{
         for (let o = 0; o < buttons.length; o++) {
