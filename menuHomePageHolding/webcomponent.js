@@ -360,6 +360,8 @@
 
                 let hasFlipAnimationSecondMenu = []
 
+                let hasSecondMenu = false
+
                 let tempText = ``
                 let totalText = ``
                 let cont = 0
@@ -394,7 +396,8 @@
                     totalText = totalText + tempText
                     tempText = ``
                 }
-                tempText = `
+                if (hasSecondMenu === true) {
+                    tempText = `
                     <div class='card areaOption btnSecondMenuArea'>
                         <div class='optionCircle btnSecondMenu'>
                             <img src="` + arrMenuOptions[0][1] + `" alt="imagem ` + arrMenuOptions[0][0] + `">
@@ -403,7 +406,9 @@
                             </div>
                         </div>
                     </div>
-                `
+                ` 
+                }
+    
                 totalText = totalText + tempText
                 tempText = ``
 
