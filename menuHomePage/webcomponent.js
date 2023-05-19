@@ -283,8 +283,7 @@
                     [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/investimentos.svg`],
                     [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/endividamento.svg`],
                     [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`], 
-                    [`Informações Agregadas`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`], 
-                    [`Holding`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/multipleTable.svg`]
+                    [`Informações Agregadas`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`]
                 ]
     
                 let arrMenuOptionsSecondMenu =[
@@ -303,8 +302,7 @@
                     [`Investimentos`,`Global`,`Detalhado`],
                     [`Endividamento`,`Global`,`Detalhado`],
                     [`OPEX`,`Global`,`Detalhado`],
-                    [`Informações Agregadas`, `Overview`,`Volume de Negócios`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`, `Investimentos`, `DR`],
-                    [`Holding`, `Overview`,`Volume de Negócios (€)`,`Volume de Negócios (t)`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`]
+                    [`Informações Agregadas`, `Overview`,`Volume de Negócios`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`, `Investimentos`, `DR`]
                 ]
 
                 let arrOptionsListSecondMenu =[
@@ -346,15 +344,7 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/5440B081F2189B829BE0FBA963F5E850/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/EC40B081F2185C0B781D2B8299BA4766/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/2C38B081F21FBCF68BE39BFA5AE2B116/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/CC38B081F21F66DB26C644E78CF45CB0/?mode=present&resourceType=STORY`],
-                    [`Holding`, 
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/94C9A8871692E203BB6790064E7F2145/?mode=present&resourceType=STORY`]
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/CC38B081F21F66DB26C644E78CF45CB0/?mode=present&resourceType=STORY`]
                 ]
                 let arrOptionsLinksSecondMenu = [
                     [`Desvio de Custos de Capital`,
@@ -380,8 +370,7 @@
                     [`Investimentos`, false],
                     [`Endividamento`, false],
                     [`OPEX`, false], 
-                    [`Informações Agregadas`, true], 
-                    [`Holding`, true] 
+                    [`Informações Agregadas`, true]
                 ]
 
                 let hasFlipAnimationSecondMenu = [
@@ -391,6 +380,8 @@
                     [`Opex`, false],
                     [`Atividades Complementares`, false]
                 ]
+
+                let hasSecondMenu = true
 
                 let tempText = ``
                 let totalText = ``
@@ -426,6 +417,8 @@
                     totalText = totalText + tempText
                     tempText = ``
                 }
+
+                if (hasSecondMenu === true) {
                 tempText = `
                     <div class='card areaOption btnSecondMenuArea'>
                         <div class='optionCircle btnSecondMenu'>
@@ -436,6 +429,7 @@
                         </div>
                     </div>
                 `
+                }
                 totalText = totalText + tempText
                 tempText = ``
 
@@ -468,6 +462,7 @@
                     totalText = totalText + tempText
                     tempText = ``
                 }
+                if (hasSecondMenu === true) {
                 tempText = `
                     <div class='card areaOption btnFirstMenuArea'>
                         <div class='optionCircle btnFirstMenu'>
@@ -478,7 +473,8 @@
                         </div>
                     </div>
                 `
-                
+                }
+
                 totalText = totalText + tempText
                 tempText = ``
 
@@ -486,7 +482,7 @@
                 totalText = ``
                 var optionSelected = ``
                 var optionsShown = []
-                events(optionSelected, this, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu)
+                events(optionSelected, this, hasSecondMenu, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu)
                 window.addEventListener(`resize`, () => {
                     if (window.innerWidth >= 1288){
                         this._shadowRoot.getElementById(`root`).style.gridTemplateColumns = "231px 231px 231px 231px 231px"
@@ -516,7 +512,7 @@
     customElements.define('com-sap-sample-homepage', HomePage);
 })();
 
-function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu) {
+function events(optionSelected, that, hasSecondMenu, arrOptionsLinks, arrMenuOptions, optionsShown, arrOptionsLinksSecondMenu, hasFlipAnimationFirstMenu, hasFlipAnimationSecondMenu) {
     var _that = that
     let buttons = _that._shadowRoot.querySelectorAll(`.optionCircle`)
     let buttonsArea = _that._shadowRoot.querySelectorAll(`.areaOption`)
@@ -572,52 +568,53 @@ function events(optionSelected, that, arrOptionsList, arrOptionsLinks, arrMenuOp
             }
         })
     }
+    if (hasSecondMenu === true) {
+        //Btn que abre o segundo menu
+        _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].addEventListener(`click`, ()=>{
+            for (let o = 0; o < buttons.length; o++) {
+                _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "100%"
+                _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "110%"
 
-    //Btn que abre o segundo menu
-    _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].addEventListener(`click`, ()=>{
-        for (let o = 0; o < buttons.length; o++) {
-            _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "100%"
-            _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "110%"
+                for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
+                    _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`front`)[0].style.left = "0%"
+                    // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
+                    _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.display = "flex"  //new
 
-            for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
-                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`front`)[0].style.left = "0%"
-                // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
-                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.display = "flex"  //new
-
-                for (let v = 0; v < arrMenuOptions.length; v++) {
-                    let count = v + 1
-                    _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].getElementsByClassName(`front`)[0].style.left = "100%"
-                    _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].style.display = `none`
+                    for (let v = 0; v < arrMenuOptions.length; v++) {
+                        let count = v + 1
+                        _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].getElementsByClassName(`front`)[0].style.left = "100%"
+                        _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].style.display = `none`
+                    }
+                    _that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display = `none`
+                    _that._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].style.display = "flex" //new
                 }
-                _that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display = `none`
-                _that._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].style.display = "flex" //new
+                
             }
-            
-        }
-    })
+        })
 
-    //Btn que abre o primeiro menu 
-    _that._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].addEventListener(`click`, ()=>{
-        for (let o = 0; o < buttons.length; o++) {
-            
-            for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
-                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`front`)[0].style.left = "100%"
-                // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
-                _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.display = "none"  //new
+        //Btn que abre o primeiro menu 
+        _that._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].addEventListener(`click`, ()=>{
+            for (let o = 0; o < buttons.length; o++) {
+                
+                for (let x = 0; x < _that._shadowRoot.querySelectorAll(`.secondMenuArea`).length; x++) {
+                    _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`front`)[0].style.left = "100%"
+                    // _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].getElementsByClassName(`back`)[0].style.left = "100%"
+                    _that._shadowRoot.querySelectorAll(`.secondMenuArea`)[x].style.display = "none"  //new
 
-                for (let v = 0; v < arrMenuOptions.length; v++) {
-                    let count = v + 1
-                    _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].getElementsByClassName(`front`)[0].style.left = "0%"
-                    _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].style.display = `grid`
+                    for (let v = 0; v < arrMenuOptions.length; v++) {
+                        let count = v + 1
+                        _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].getElementsByClassName(`front`)[0].style.left = "0%"
+                        _that._shadowRoot.querySelectorAll(`.areaOption`+ count)[0].style.display = `grid`
+                    }
+                    _that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display = `grid`
                 }
-                _that._shadowRoot.querySelectorAll(`.btnSecondMenuArea`)[0].style.display = `grid`
-            }
 
-            _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "0%"
-            _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "0%"
-            _that._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].style.display = "none" //new
-        }
-    })
+                _that._shadowRoot.querySelectorAll(`.front`)[o].style.left = "0%"
+                _that._shadowRoot.querySelectorAll(`.btnSecondMenu`)[0].style.left = "0%"
+                _that._shadowRoot.querySelectorAll(`.btnFirstMenu`)[0].style.display = "none" //new
+            }
+        })
+    }
 }
 
 function setBreakpoint(that) {
