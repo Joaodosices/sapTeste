@@ -277,13 +277,14 @@
 
                 let arrMenuOptions =[
                     [`Informação Geral`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
+                    [`DR`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`]
                     [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
+                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
                     [`Clientes`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/clientes.svg`],
                     [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`], 
                     [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/investimentos.svg`],
                     [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/endividamento.svg`],
-                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`], 
-                    [`Informações Agregadas`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`]
+                    [`Fluxo de caixa e Orçamento de tesouraria`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`]
                 ]
     
                 let arrMenuOptionsSecondMenu =[
@@ -296,13 +297,14 @@
                 
                 let arrOptionsList =[
                     [`Informação Geral`,`Informação Geral`],
+                    [`DR`,`DR`],
                     [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
+                    [`OPEX`,`Global`,`Detalhado`],
                     [`Clientes`, `Global`,`Detalhado`],
                     [`Fornecedores`,`Global`,`Detalhado`],
                     [`Investimentos`,`Global`,`Detalhado`],
                     [`Endividamento`,`Global`,`Detalhado`],
-                    [`OPEX`,`Global`,`Detalhado`],
-                    [`Informações Agregadas`, `Overview`,`Volume de Negócios`,`Clientes`, `Opex`, `Fornecedores`, `Endividamento`, `Investimentos`, `DR`]
+                    [`Fluxo de caixa e Orçamento de tesouraria`, `Fluxo de caixa e Orçamento de tesouraria`]
                 ]
 
                 let arrOptionsListSecondMenu =[
@@ -316,11 +318,16 @@
                 let arrOptionsLinks = [
                     [`Informação Geral`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/64981101B2792898C7E9B5280A8A8590/?mode=present&resourceType=STORY`],
+                    [`DR`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/CC38B081F21F66DB26C644E78CF45CB0/?mode=present&resourceType=STORY`],
                     [`Volume de negócios`, 
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7910BF0372A5A45C9CD3385A592138A1/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7910BF0372A5A45C9CD3385A592138A1/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7910BF0372A5A45C9CD3385A592138A1/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7910BF0372A5A45C9CD3385A592138A1/?mode=present&resourceType=STORY`],
+                    [`OPEX`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/8C18470372A27464603B43E74C9E1EEF/?mode=present&resourceType=STORY`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/8C18470372A27464603B43E74C9E1EEF/?mode=present&resourceType=STORY`],
                     [`Clientes`, 
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B420470372A4D1D91F933C41AC8AF884/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B420470372A4D1D91F933C41AC8AF884/?mode=present&resourceType=STORY`],
@@ -333,18 +340,8 @@
                     [`Endividamento`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/57C84901B27AB795C7020211602B3BC4/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/57C84901B27AB795C7020211602B3BC4/?mode=present&resourceType=STORY`],
-                    [`OPEX`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/8C18470372A27464603B43E74C9E1EEF/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/8C18470372A27464603B43E74C9E1EEF/?mode=present&resourceType=STORY`],
-                    [`Informações Agregadas`, 
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/48303901B27A36274B5F19CE773FE598/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7438B081F21FDEFB40BA1B27A7A8B2EC/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7C40B081F21A2F80059C0E293E82EA91/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/8C40B081F21927E3BB9BC26672C119D4/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/5440B081F2189B829BE0FBA963F5E850/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/EC40B081F2185C0B781D2B8299BA4766/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/2C38B081F21FBCF68BE39BFA5AE2B116/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/CC38B081F21F66DB26C644E78CF45CB0/?mode=present&resourceType=STORY`]
+                    [`Fluxo de caixa e Orçamento de tesouraria`,
+                    `#`] 
                 ]
                 let arrOptionsLinksSecondMenu = [
                     [`Desvio de Custos de Capital`,
@@ -364,13 +361,14 @@
 
                 let hasFlipAnimationFirstMenu = [
                     [`Informação Geral`, false],
+                    [`DR`, false],
                     [`Volume de negócios`, false],
+                    [`OPEX`, false], 
                     [`Clientes`, false],
                     [`Fornecedores`, false], 
                     [`Investimentos`, false],
                     [`Endividamento`, false],
-                    [`OPEX`, false], 
-                    [`Informações Agregadas`, true]
+                    [`Fluxo de caixa e Orçamento de tesouraria`, false]
                 ]
 
                 let hasFlipAnimationSecondMenu = [
