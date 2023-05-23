@@ -319,7 +319,7 @@
 
                 let arrOptionsLinks = [
                     [`Informação Geral`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/64981101B2792898C7E9B5280A8A8590/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/1348BF0372A78960E177C7400EDB4469/?mode=present&resourceType=STORY&resourceName=Informa%25C3%25A7%25C3%25A3oGeral_v11`],
                     [`Informações Agregadas`, 
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/48303901B27A36274B5F19CE773FE598/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7438B081F21FDEFB40BA1B27A7A8B2EC/?mode=present&resourceType=STORY`,

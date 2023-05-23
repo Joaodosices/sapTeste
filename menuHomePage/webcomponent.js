@@ -317,7 +317,7 @@
 
                 let arrOptionsLinks = [
                     [`Informação Geral`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/64981101B2792898C7E9B5280A8A8590/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/1348BF0372A78960E177C7400EDB4469/?mode=present&resourceType=STORY&resourceName=Informa%25C3%25A7%25C3%25A3oGeral_v11`],
                     [`DR`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D138D70372A161EB61FB33B175AC3FEE/?resourceName=DR.&resourceType=STORY&mode=view`],
                     [`Volume de negócios`, 
