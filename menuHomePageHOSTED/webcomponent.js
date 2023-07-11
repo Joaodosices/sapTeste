@@ -275,26 +275,27 @@
                 AVISO: Os links devem estar na mesma que os nomes das páginas estão no array "arrOptionsList"
                 */
 
+                    //Campo 1 - Nome do painel, Campo 2 - url da imagem 
                 let arrMenuOptions =[
-                    [`Informação Geral`, `/imgs/informacaoGeral.svg`],
-                    [`DR`, `/imgs/Chart.svg`],
-                    [`Volume de negócios`, `/imgs/volumeNegocios.svg`],
-                    [`OPEX`, `/imgs/informacaoGeral.svg`],
-                    [`Clientes`, `/imgs/clientes.svg`],
-                    [`Fornecedores`, `/imgs/fornecedores.svg`], 
-                    [`Investimentos`, `/imgs/investimentos.svg`],
-                    [`Endividamento`, `/imgs/endividamento.svg`],
-                    [`Fluxo de caixa e Orçamento de tesouraria`, `/imgs/Chart.svg`]
+                    [`Informação Geral`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
+                    [`DR`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`],
+                    [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
+                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
+                    [`Clientes`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/clientes.svg`],
+                    [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`], 
+                    [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/investimentos.svg`],
+                    [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/endividamento.svg`],
+                    [`Fluxo de caixa e Orçamento de tesouraria`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`]
                 ]
-    
+                    //Campo 1 -> Nome do painel, Campo 2 -> url da imagem 
                 let arrMenuOptionsSecondMenu =[
-                    [`Desvio de Custos de Capital`, `/imgs/volumeNegocios.svg`],
-                    [`Desvio de Preço`, `/imgs/volumeNegocios.svg`],
-                    [`Indutores`, `/imgs/fornecedores.svg`],
-                    [`Opex`, `/imgs/informacaoGeral.svg`],
-                    [`Atividades Complementares`, `/imgs/tableIcon.svg`]
+                    [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
+                    [`Desvio de Preço`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
+                    [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`],
+                    [`Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
+                    [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`]
                 ]
-                
+                    //Campo 1 -> Nome do painel, Campo 2+ -> nome de subpáginas
                 let arrOptionsList =[
                     [`Informação Geral`,`Informação Geral`],
                     [`DR`,`DR`],
@@ -306,7 +307,7 @@
                     [`Endividamento`,`Global`,`Detalhado`],
                     [`Fluxo de caixa e Orçamento de tesouraria`, `Fluxo de caixa e Orçamento de tesouraria`]
                 ]
-
+                    //Campo 1 -> Nome do painel, Campo 2+ -> nome de subpáginas
                 let arrOptionsListSecondMenu =[
                     [`Desvio de Custos de Capital`,`Desvio de Custos de Capital`],
                     [`Desvio de Preço`,`Global`,`Detalhado`],
@@ -314,10 +315,10 @@
                     [`Opex`,`Global`,`Detalhado`],
                     [`Atividades Complementares`,`Atividades Complementares`]
                 ]
-
+                    //Campo 1 -> Nome do painel, Campo 2+ -> Links das páginas
                 let arrOptionsLinks = [
                     [`Informação Geral`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/1348BF0372A78960E177C7400EDB4469/?mode=present&resourceType=STORY&resourceName=Informa%25C3%25A7%25C3%25A3oGeral_v11`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/82808A84D572762F8D6CCF55987D9C33/?mode=present&resourceType=STORY&resourceName=Informa%25C3%25A7%25C3%25A3oGeral_v12`],
                     [`DR`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D138D70372A161EB61FB33B175AC3FEE/?resourceName=DR.&resourceType=STORY&mode=view`],
                     [`Volume de negócios`, 
@@ -343,6 +344,7 @@
                     [`Fluxo de caixa e Orçamento de tesouraria`,
                     `#`] 
                 ]
+                    //Campo 1 -> Nome do painel, Campo 2+ -> Links das páginas
                 let arrOptionsLinksSecondMenu = [
                     [`Desvio de Custos de Capital`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6BF01B017EA77A5907C54C3724F85DDB/?mode=present&resourceType=STORY`],
@@ -359,6 +361,7 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C18B881F21EF85E42CF99A8E89ABF2B/?mode=present&resourceType=STORY`]
                 ]
 
+                    //Campo 1 -> Nome do painel, Campo 2 -> se a página
                 let hasFlipAnimationFirstMenu = [
                     [`Informação Geral`, false],
                     [`DR`, false],
