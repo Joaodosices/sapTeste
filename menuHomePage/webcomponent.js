@@ -284,15 +284,18 @@
                     [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`], 
                     [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/investimentos.svg`],
                     [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/endividamento.svg`],
-                    [`Fluxo de caixa e Orçamento de tesouraria`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`]
+                    [`Fluxo de caixa e Orçamento de tesouraria`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`],
                 ]
-    
+                
                 let arrMenuOptionsSecondMenu =[
                     [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Desvio de Preço`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`],
                     [`Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
-                    [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`]
+                    [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`],
+                    [`Ajustamento tarifário`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`]
+                    [`Desvio incremental`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`],
+                    [`Desvio de quantidade`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`]
                 ]
                 
                 let arrOptionsList =[
@@ -304,7 +307,7 @@
                     [`Fornecedores`,`Global`,`Detalhado`],
                     [`Investimentos`,`Global`,`Detalhado`],
                     [`Endividamento`,`Global`,`Detalhado`],
-                    [`Fluxo de caixa e Orçamento de tesouraria`, `Fluxo de caixa e Orçamento de tesouraria`]
+                    [`Fluxo de caixa e Orçamento de tesouraria`, `Fluxo de caixa e Orçamento de tesouraria`],
                 ]
 
                 let arrOptionsListSecondMenu =[
@@ -312,7 +315,10 @@
                     [`Desvio de Preço`,`Global`,`Detalhado`],
                     [`Indutores`,`Global`,`Detalhado`],
                     [`Opex`,`Global`,`Detalhado`],
-                    [`Atividades Complementares`,`Atividades Complementares`]
+                    [`Atividades Complementares`,`Atividades Complementares`],
+                    [`Ajustamento tarifário`,`Ajustamento tarifário`],
+                    [`Desvio incremental`,`Desvio incremental`]
+                    [`Desvio de quantidade`, `Desvio de quantidade`]
                 ]
 
                 let arrOptionsLinks = [
@@ -356,7 +362,13 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`],
                     [`Atividades Complementares`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C18B881F21EF85E42CF99A8E89ABF2B/?mode=present&resourceType=STORY`]
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C18B881F21EF85E42CF99A8E89ABF2B/?mode=present&resourceType=STORY`],
+                    [`Ajustamento tarifário`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/45313204AE02552FA03440D078F33D98/?mode=present&resourceType=STORY&resourceName=CR_Ajustamento_Tarif%25C3%25A1rio`],
+                    [`Desvio incremental`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9BD01901B27B07CDFAFD45463FC94526/?mode=present&resourceType=STORY&resourceName=Desvio%2520Incremental`],
+                    [`Desvio de quantidade`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/27986901B27E1A2CFC13721C8CF74BFF/?mode=present&resourceType=STORY&resourceName=Desvio%2520de%2520Quantidade%2520Real`]
                 ]
 
                 let hasFlipAnimationFirstMenu = [
