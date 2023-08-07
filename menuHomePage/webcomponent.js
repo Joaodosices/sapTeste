@@ -284,7 +284,7 @@
                     [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`], 
                     [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/investimentos.svg`],
                     [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/endividamento.svg`],
-                    [`Fluxo de caixa e Orçamento de tesouraria`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`],
+                    [`Fluxo de caixa e Orçamento de tesouraria`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`]
                 ]
                 
                 let arrMenuOptionsSecondMenu =[
