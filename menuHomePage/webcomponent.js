@@ -295,7 +295,7 @@
                     [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`],
                     [`Ajustamento tarifário`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`]
                     [`Desvio incremental`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`],
-                    [`Desvio de quantidade`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`]
+                    [`Desvio de quantidade`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`]
                 ]
                 
                 let arrOptionsList =[
@@ -317,7 +317,7 @@
                     [`Opex`,`Global`,`Detalhado`],
                     [`Atividades Complementares`,`Atividades Complementares`],
                     [`Ajustamento tarifário`,`Ajustamento tarifário`],
-                    [`Desvio incremental`,`Desvio incremental`]
+                    [`Desvio incremental`,`Desvio incremental`],
                     [`Desvio de quantidade`, `Desvio de quantidade`]
                 ]
 
