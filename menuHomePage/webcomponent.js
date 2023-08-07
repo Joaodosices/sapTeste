@@ -293,7 +293,7 @@
                     [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`],
                     [`Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
                     [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`],
-                    [`Ajustamento tarifário`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`]
+                    [`Ajustamento tarifário`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`],
                     [`Desvio incremental`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`],
                     [`Desvio de quantidade`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`]
                 ]
@@ -389,6 +389,9 @@
                     [`Indutores`, false],
                     [`Opex`, false],
                     [`Atividades Complementares`, false]
+                    [`Ajustamento tarifário`, false],
+                    [`Desvio incremental`, false],
+                    [`Desvio de quantidade`, false]
                 ]
 
                 let hasSecondMenu = true
