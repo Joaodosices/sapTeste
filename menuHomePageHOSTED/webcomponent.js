@@ -276,102 +276,102 @@
                 */
 
                     //Campo 1 - Nome do painel, Campo 2 - url da imagem 
-                let arrMenuOptions =[
-                    [`Informação Geral`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
-                    [`DR`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`],
-                    [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
-                    [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
-                    [`Clientes`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/clientes.svg`],
-                    [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`], 
-                    [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/investimentos.svg`],
-                    [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/endividamento.svg`],
-                    [`Fluxo de caixa e Orçamento de tesouraria`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`]
-                ]
+                    let arrMenuOptions =[
+                        [`Informação Geral`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
+                        [`DR`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`],
+                        [`Volume de negócios`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
+                        [`OPEX`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
+                        [`Clientes`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/clientes.svg`],
+                        [`Fornecedores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`], 
+                        [`Investimentos`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/investimentos.svg`],
+                        [`Endividamento`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/endividamento.svg`],
+                        [`Fluxo de caixa e Orçamento de tesouraria`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`]
+                    ]
                     //Campo 1 -> Nome do painel, Campo 2 -> url da imagem 
-                let arrMenuOptionsSecondMenu =[
-                    [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
-                    [`Desvio de Preço`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
-                    [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`],
-                    [`Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
-                    [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`],
-                    [`Ajustamento tarifário`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`]
-                    [`Desvio incremental`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`],
-                    [`Desvio de quantidade`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`]
-                ]
+                    let arrMenuOptionsSecondMenu =[
+                        [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
+                        [`Desvio de Preço`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
+                        [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`],
+                        [`Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
+                        [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`],
+                        [`Ajustamento tarifário`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`],
+                        [`Desvio incremental`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`],
+                        [`Desvio de quantidade`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`]
+                    ]
                     //Campo 1 -> Nome do painel, Campo 2+ -> nome de subpáginas
-                let arrOptionsList =[
-                    [`Informação Geral`,`Informação Geral`],
-                    [`DR`,`DR`],
-                    [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
-                    [`OPEX`,`Global`,`Detalhado`],
-                    [`Clientes`, `Global`,`Detalhado`],
-                    [`Fornecedores`,`Global`,`Detalhado`],
-                    [`Investimentos`,`Global`,`Detalhado`],
-                    [`Endividamento`,`Global`,`Detalhado`],
-                    [`Fluxo de caixa e Orçamento de tesouraria`, `Fluxo de caixa e Orçamento de tesouraria`]
-                ]
+                    let arrOptionsList =[
+                        [`Informação Geral`,`Informação Geral`],
+                        [`DR`,`DR`],
+                        [`Volume de negócios`, `Overview`,`Global`,`Detalhado`,`Clientes`],
+                        [`OPEX`,`Global`,`Detalhado`],
+                        [`Clientes`, `Global`,`Detalhado`],
+                        [`Fornecedores`,`Global`,`Detalhado`],
+                        [`Investimentos`,`Global`,`Detalhado`],
+                        [`Endividamento`,`Global`,`Detalhado`],
+                        [`Fluxo de caixa e Orçamento de tesouraria`, `Fluxo de caixa e Orçamento de tesouraria`],
+                    ]
                     //Campo 1 -> Nome do painel, Campo 2+ -> nome de subpáginas
-                let arrOptionsListSecondMenu =[
-                    [`Desvio de Custos de Capital`,`Desvio de Custos de Capital`],
-                    [`Desvio de Preço`,`Global`,`Detalhado`],
-                    [`Indutores`,`Global`,`Detalhado`],
-                    [`Opex`,`Global`,`Detalhado`],
-                    [`Atividades Complementares`,`Atividades Complementares`],
-                    [`Ajustamento tarifário`,`Ajustamento tarifário`],
-                    [`Desvio incremental`,`Desvio incremental`],
-                    [`Desvio de quantidade`, `Desvio de quantidade`]
-                ]
+                    let arrOptionsListSecondMenu =[
+                        [`Desvio de Custos de Capital`,`Desvio de Custos de Capital`],
+                        [`Desvio de Preço`,`Global`,`Detalhado`],
+                        [`Indutores`,`Global`,`Detalhado`],
+                        [`Opex`,`Global`,`Detalhado`],
+                        [`Atividades Complementares`,`Atividades Complementares`],
+                        [`Ajustamento tarifário`,`Ajustamento tarifário`],
+                        [`Desvio incremental`,`Desvio incremental`],
+                        [`Desvio de quantidade`, `Desvio de quantidade`]
+                    ]
                     //Campo 1 -> Nome do painel, Campo 2+ -> Links das páginas
-                let arrOptionsLinks = [
-                    [`Informação Geral`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/82808A84D572762F8D6CCF55987D9C33/?mode=present&resourceType=STORY&resourceName=Informa%25C3%25A7%25C3%25A3oGeral_v12`],
-                    [`DR`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D138D70372A161EB61FB33B175AC3FEE/?resourceName=DR.&resourceType=STORY&mode=view`],
-                    [`Volume de negócios`, 
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4B012204AE06BBDA8A47BE151A66B93C/?mode=present&resourceType=STORY&resourceName=RG_Volume%2520de%2520Neg%25C3%25B3cios`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4B012204AE06BBDA8A47BE151A66B93C/?mode=present&resourceType=STORY&resourceName=RG_Volume%2520de%2520Neg%25C3%25B3cios`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4B012204AE06BBDA8A47BE151A66B93C/?mode=present&resourceType=STORY&resourceName=RG_Volume%2520de%2520Neg%25C3%25B3cios`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4B012204AE06BBDA8A47BE151A66B93C/?mode=present&resourceType=STORY&resourceName=RG_Volume%2520de%2520Neg%25C3%25B3cios`],
-                    [`OPEX`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/8C18470372A27464603B43E74C9E1EEF/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/8C18470372A27464603B43E74C9E1EEF/?mode=present&resourceType=STORY`],
-                    [`Clientes`, 
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B420470372A4D1D91F933C41AC8AF884/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B420470372A4D1D91F933C41AC8AF884/?mode=present&resourceType=STORY`],
-                    [`Fornecedores`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B8608204AE00ED2C902904A49C57A33A/?mode=present&resourceType=STORY&resourceName=Fornecedores`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B8608204AE00ED2C902904A49C57A33A/?mode=present&resourceType=STORY&resourceName=Fornecedores`],
-                    [`Investimentos`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/F330CF0372A582990BEBF626D15EB38D/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/F330CF0372A582990BEBF626D15EB38D/?mode=present&resourceType=STORY`],
-                    [`Endividamento`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FB38CF0372A74C660E2A913F3E797220/?mode=present&resourceType=STORY&resourceName=Endividamento`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FB38CF0372A74C660E2A913F3E797220/?mode=present&resourceType=STORY&resourceName=Endividamento`],
-                    [`Fluxo de caixa e Orçamento de tesouraria`,
-                    `#`]  
-                ]
+                    let arrOptionsLinks = [
+                        [`Informação Geral`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/82808A84D572762F8D6CCF55987D9C33/?mode=present&resourceType=STORY&resourceName=Informa%25C3%25A7%25C3%25A3oGeral_v12`],
+                        [`DR`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D138D70372A161EB61FB33B175AC3FEE/?resourceName=DR.&resourceType=STORY&mode=view`],
+                        [`Volume de negócios`, 
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4B012204AE06BBDA8A47BE151A66B93C/?mode=present&resourceType=STORY&resourceName=RG_Volume%2520de%2520Neg%25C3%25B3cios`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4B012204AE06BBDA8A47BE151A66B93C/?mode=present&resourceType=STORY&resourceName=RG_Volume%2520de%2520Neg%25C3%25B3cios`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4B012204AE06BBDA8A47BE151A66B93C/?mode=present&resourceType=STORY&resourceName=RG_Volume%2520de%2520Neg%25C3%25B3cios`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4B012204AE06BBDA8A47BE151A66B93C/?mode=present&resourceType=STORY&resourceName=RG_Volume%2520de%2520Neg%25C3%25B3cios`],
+                        [`OPEX`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/8C18470372A27464603B43E74C9E1EEF/?mode=present&resourceType=STORY`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/8C18470372A27464603B43E74C9E1EEF/?mode=present&resourceType=STORY`],
+                        [`Clientes`, 
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B420470372A4D1D91F933C41AC8AF884/?mode=present&resourceType=STORY`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B420470372A4D1D91F933C41AC8AF884/?mode=present&resourceType=STORY`],
+                        [`Fornecedores`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B8608204AE00ED2C902904A49C57A33A/?mode=present&resourceType=STORY&resourceName=Fornecedores`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/B8608204AE00ED2C902904A49C57A33A/?mode=present&resourceType=STORY&resourceName=Fornecedores`],
+                        [`Investimentos`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/F330CF0372A582990BEBF626D15EB38D/?mode=present&resourceType=STORY`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/F330CF0372A582990BEBF626D15EB38D/?mode=present&resourceType=STORY`],
+                        [`Endividamento`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FB38CF0372A74C660E2A913F3E797220/?mode=present&resourceType=STORY&resourceName=Endividamento`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FB38CF0372A74C660E2A913F3E797220/?mode=present&resourceType=STORY&resourceName=Endividamento`],
+                        [`Fluxo de caixa e Orçamento de tesouraria`,
+                        `#`] 
+                    ]
                     //Campo 1 -> Nome do painel, Campo 2+ -> Links das páginas
-                let arrOptionsLinksSecondMenu = [
-                    [`Desvio de Custos de Capital`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6BF01B017EA77A5907C54C3724F85DDB/?mode=present&resourceType=STORY`],
-                    [`Desvio de Preço`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/30986081F21AA6B286003913CC380920/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/30986081F21AA6B286003913CC380920/?mode=present&resourceType=STORY`],
-                    [`Indutores`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C10B881F21AF9D510291F211635CA4E/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C10B881F21AF9D510291F211635CA4E/?mode=present&resourceType=STORY`],
-                    [`Opex`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`],
-                    [`Atividades Complementares`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C18B881F21EF85E42CF99A8E89ABF2B/?mode=present&resourceType=STORY`],
-                    [`Ajustamento tarifário`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/45313204AE02552FA03440D078F33D98/?mode=present&resourceType=STORY&resourceName=CR_Ajustamento_Tarif%25C3%25A1rio`],
-                    [`Desvio incremental`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9BD01901B27B07CDFAFD45463FC94526/?mode=present&resourceType=STORY&resourceName=Desvio%2520Incremental`],
-                    [`Desvio de quantidade`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/27986901B27E1A2CFC13721C8CF74BFF/?mode=present&resourceType=STORY&resourceName=Desvio%2520de%2520Quantidade%2520Real`]
-                ]
+                    let arrOptionsLinksSecondMenu = [
+                        [`Desvio de Custos de Capital`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6BF01B017EA77A5907C54C3724F85DDB/?mode=present&resourceType=STORY`],
+                        [`Desvio de Preço`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/30986081F21AA6B286003913CC380920/?mode=present&resourceType=STORY`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/30986081F21AA6B286003913CC380920/?mode=present&resourceType=STORY`],
+                        [`Indutores`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C10B881F21AF9D510291F211635CA4E/?mode=present&resourceType=STORY`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C10B881F21AF9D510291F211635CA4E/?mode=present&resourceType=STORY`],
+                        [`Opex`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`],
+                        [`Atividades Complementares`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C18B881F21EF85E42CF99A8E89ABF2B/?mode=present&resourceType=STORY`],
+                        [`Ajustamento tarifário`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/45313204AE02552FA03440D078F33D98/?mode=present&resourceType=STORY&resourceName=CR_Ajustamento_Tarif%25C3%25A1rio`],
+                        [`Desvio incremental`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9BD01901B27B07CDFAFD45463FC94526/?mode=present&resourceType=STORY&resourceName=Desvio%2520Incremental`],
+                        [`Desvio de quantidade`,
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/27986901B27E1A2CFC13721C8CF74BFF/?mode=present&resourceType=STORY&resourceName=Desvio%2520de%2520Quantidade%2520Real`]
+                    ]
 
                     //Campo 1 -> Nome do painel, Campo 2 -> se a página
                 let hasFlipAnimationFirstMenu = [
@@ -392,6 +392,9 @@
                     [`Indutores`, false],
                     [`Opex`, false],
                     [`Atividades Complementares`, false]
+                    [`Ajustamento tarifário`, false],
+                    [`Desvio incremental`, false],
+                    [`Desvio de quantidade`, false]
                 ]
 
                 let hasSecondMenu = true
