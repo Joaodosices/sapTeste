@@ -288,12 +288,12 @@
                 ]
                 
                 let arrMenuOptionsSecondMenu =[
+                    [`Ajustamento tarifário`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`],
                     [`Desvio de Custos de Capital`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Desvio de Preço`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/volumeNegocios.svg`],
                     [`Indutores`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/fornecedores.svg`],
                     [`Opex`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`],
                     [`Atividades Complementares`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`],
-                    [`Ajustamento tarifário`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/tableIcon.svg`],
                     [`Desvio incremental`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/Chart.svg`],
                     [`Desvio de quantidade`, `https://joaodosices.github.io/sapTeste/menuHomePage/imgs/informacaoGeral.svg`]
                 ]
@@ -311,12 +311,12 @@
                 ]
 
                 let arrOptionsListSecondMenu =[
+                    [`Ajustamento tarifário`,`Ajustamento tarifário`],
                     [`Desvio de Custos de Capital`,`Desvio de Custos de Capital`],
                     [`Desvio de Preço`,`Global`,`Detalhado`],
                     [`Indutores`,`Global`,`Detalhado`],
                     [`Opex`,`Global`,`Detalhado`],
                     [`Atividades Complementares`,`Atividades Complementares`],
-                    [`Ajustamento tarifário`,`Ajustamento tarifário`],
                     [`Desvio incremental`,`Desvio incremental`],
                     [`Desvio de quantidade`, `Desvio de quantidade`]
                 ]
@@ -350,6 +350,8 @@
                     `#`] 
                 ]
                 let arrOptionsLinksSecondMenu = [
+                    [`Ajustamento tarifário`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/45313204AE02552FA03440D078F33D98/?mode=present&resourceType=STORY&resourceName=CR_Ajustamento_Tarif%25C3%25A1rio`],
                     [`Desvio de Custos de Capital`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6BF01B017EA77A5907C54C3724F85DDB/?mode=present&resourceType=STORY`],
                     [`Desvio de Preço`,
@@ -363,8 +365,6 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`],
                     [`Atividades Complementares`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C18B881F21EF85E42CF99A8E89ABF2B/?mode=present&resourceType=STORY`],
-                    [`Ajustamento tarifário`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/45313204AE02552FA03440D078F33D98/?mode=present&resourceType=STORY&resourceName=CR_Ajustamento_Tarif%25C3%25A1rio`],
                     [`Desvio incremental`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9BD01901B27B07CDFAFD45463FC94526/?mode=present&resourceType=STORY&resourceName=Desvio%2520Incremental`],
                     [`Desvio de quantidade`,
@@ -384,11 +384,11 @@
                 ]
 
                 let hasFlipAnimationSecondMenu = [
+                    [`Atividades Complementares`, false],
                     [`Desvio de Custos de Capital`, false],
                     [`Desvio de Preço`, false],
                     [`Indutores`, false],
                     [`Opex`, false],
-                    [`Atividades Complementares`, false]
                     [`Ajustamento tarifário`, false],
                     [`Desvio incremental`, false],
                     [`Desvio de quantidade`, false]
