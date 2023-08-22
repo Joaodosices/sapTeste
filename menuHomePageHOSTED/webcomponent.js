@@ -326,7 +326,7 @@
                         [`Informação Geral`,
                         `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/82808A84D572762F8D6CCF55987D9C33/?mode=present&resourceType=STORY&resourceName=Informa%25C3%25A7%25C3%25A3oGeral_v12`],
                         [`DR`,
-                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/D138D70372A161EB61FB33B175AC3FEE/?resourceName=DR.&resourceType=STORY&mode=view`],
+                        `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7F0B9847761C20F2BB562B554368FA5/?mode=present&resourceType=STORY&resourceName=RG_DR`],
                         [`Volume de negócios`, 
                         `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4B012204AE06BBDA8A47BE151A66B93C/?mode=present&resourceType=STORY&resourceName=RG_Volume%2520de%2520Neg%25C3%25B3cios`,
                         `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4B012204AE06BBDA8A47BE151A66B93C/?mode=present&resourceType=STORY&resourceName=RG_Volume%2520de%2520Neg%25C3%25B3cios`,
