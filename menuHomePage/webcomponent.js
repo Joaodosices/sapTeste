@@ -347,7 +347,7 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FB38CF0372A74C660E2A913F3E797220/?mode=present&resourceType=STORY&resourceName=Endividamento`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FB38CF0372A74C660E2A913F3E797220/?mode=present&resourceType=STORY&resourceName=Endividamento`],
                     [`Fluxo de caixa e Orçamento de tesouraria`,
-                    `#`] 
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FA588583392238BA45AB633EA90B998F/?mode=present&resourceType=STORY&resourceName=Fluxo%2520de%2520Caixa`] 
                 ]
                 let arrOptionsLinksSecondMenu = [
                     [`Ajustamento tarifário`,
