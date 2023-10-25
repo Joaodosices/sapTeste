@@ -344,8 +344,8 @@
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/F330CF0372A582990BEBF626D15EB38D/?mode=present&resourceType=STORY`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/F330CF0372A582990BEBF626D15EB38D/?mode=present&resourceType=STORY`],
                     [`Endividamento`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FB38CF0372A74C660E2A913F3E797220/?mode=present&resourceType=STORY&resourceName=Endividamento`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FB38CF0372A74C660E2A913F3E797220/?mode=present&resourceType=STORY&resourceName=Endividamento`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4D002387598CD73086557AD6C26E93ED/?mode=present&resourceType=STORY&resourceName=Endividamento`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/4D002387598CD73086557AD6C26E93ED/?mode=present&resourceType=STORY&resourceName=Endividamento`],
                     [`Fluxo de caixa e Orçamento de tesouraria`,
                     `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/FA588583392238BA45AB633EA90B998F/?mode=present&resourceType=STORY&resourceName=Fluxo%2520de%2520Caixa`] 
                 ]
