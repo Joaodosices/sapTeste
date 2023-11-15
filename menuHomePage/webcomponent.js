@@ -351,24 +351,24 @@
                 ]
                 let arrOptionsLinksSecondMenu = [
                     [`Ajustamento tarifário`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/45313204AE02552FA03440D078F33D98/?mode=present&resourceType=STORY&resourceName=CR_Ajustamento_Tarif%25C3%25A1rio`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/tenants/67c2a/app.html#/story&/s/C930DB875989E27A4C56F5C1D7EA6A94/?mode=present&resourceType=STORY&resourceName=Ajustamento%2520Tarif%25C3%25A1rio`],
                     [`Desvio de Custos de Capital`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/6BF01B017EA77A5907C54C3724F85DDB/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/tenants/67c2a/app.html#/story&/s/CF582280B38E7E64EF71F67D643A5BB1/?mode=present&resourceType=STORY&resourceName=Desvio%2520de%2520Custos%2520de%2520Capital`],
                     [`Desvio de Preço`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/30986081F21AA6B286003913CC380920/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/30986081F21AA6B286003913CC380920/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/tenants/67c2a/app.html#/story&/s/8CA0CB87598E3024403545945FDBFBB7/?mode=present&resourceType=STORY&resourceName=Desvio%2520de%2520Pre%25C3%25A7o`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/tenants/67c2a/app.html#/story&/s/8CA0CB87598E3024403545945FDBFBB7/?mode=present&resourceType=STORY&resourceName=Desvio%2520de%2520Pre%25C3%25A7o`],
                     [`Indutores`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C10B881F21AF9D510291F211635CA4E/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/C10B881F21AF9D510291F211635CA4E/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/tenants/67c2a/app.html#/story&/s/93C02387598B8C1274FA382712285395/?mode=present&resourceType=STORY&resourceName=Indutores`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/tenants/67c2a/app.html#/story&/s/93C02387598B8C1274FA382712285395/?mode=present&resourceType=STORY&resourceName=Indutores`],
                     [`Opex`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/7298A881F21E62F15EFFFF55A1F8B316/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/tenants/67c2a/app.html#/story&/s/E2503A80B38DF38D56E6F078058A3A98/?mode=present&resourceType=STORY&resourceName=Opex`,
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/tenants/67c2a/app.html#/story&/s/E2503A80B38DF38D56E6F078058A3A98/?mode=present&resourceType=STORY&resourceName=Opex`],
                     [`Atividades Complementares`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9C18B881F21EF85E42CF99A8E89ABF2B/?mode=present&resourceType=STORY`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/tenants/67c2a/app.html#/story&/s/C4F81A80B38D5B53C9BF69A9F878F2EB/?mode=present&resourceType=STORY&resourceName=Atividades%2520Complementares`],
                     [`Desvio incremental`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/9BD01901B27B07CDFAFD45463FC94526/?mode=present&resourceType=STORY&resourceName=Desvio%2520Incremental`],
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/tenants/67c2a/app.html#/story&/s/50101A80B38E1429BF784EF6038B178D/?mode=present&resourceType=STORY&resourceName=Desvio%2520Incremental`],
                     [`Desvio de quantidade`,
-                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/app.html#/story&/s/27986901B27E1A2CFC13721C8CF74BFF/?mode=present&resourceType=STORY&resourceName=Desvio%2520de%2520Quantidade%2520Real`]
+                    `https://mota-engil.eu10.hcs.cloud.sap/sap/fpa/ui/tenants/67c2a/app.html#/story&/s/44C87387598E97385D5641D8EF428198/?mode=present&resourceType=STORY&resourceName=Desvio%2520de%2520Quantidade%2520Real`]
                 ]
 
                 let hasFlipAnimationFirstMenu = [
