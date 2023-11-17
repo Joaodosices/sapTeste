@@ -1,0 +1,29 @@
+{
+	"name": "Menu Home Page v2",
+	"description": "Menu Home Page v2",
+	"eula": "",
+	"vendor": "",
+	"license": "",
+	"id": "com.sap.sample.menuhomepage2",
+	"newInstancePrefix": "Menu_Home_Page_V2",
+	"version": "0.2.0",
+	"icon": "",
+	"webcomponents": [
+        {
+			"kind": "main",
+			"tag": "com-sap-sample-homepage",
+            "url": "/webcomponent.js",
+            "integrity": "",
+            "ignoreIntegrity" : true
+        }
+    ],
+	"properties": {
+	},
+	"methods": {
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user changes value"
+		}
+	}
+}
